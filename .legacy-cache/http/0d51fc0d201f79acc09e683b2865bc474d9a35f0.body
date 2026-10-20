@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=1, minimum-scale=1.0, maximum-scale=3.0">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="keywords" content="EMRD,在職專班,進修,EMBA,台科大" />
+<meta name="description" content="Executive Master of Research and Development" />
+<meta property="og:image"  content="https://emrd.ntust.edu.tw/var/file/39/1039/pictures/469/m/mczh-tw1920x700_small107721_746878145120.jpg" />
+
+<meta name="robots" content="noindex,nofollow">
+
+<meta property="og:image"  content="/var/file/39/1039/msys_1039_3814768_65990.png" />
+
+<title>友善列印 - 高階科技研發碩士學位學程 (EMRD)  - EMRD</title>
+
+<link rel="shortcut icon" href="/var/file/39/1039/msys_1039_3814768_65990.png" type="image/x-icon" />
+<link rel="icon" href="/var/file/39/1039/msys_1039_3814768_65990.png" type="image/x-icon" />
+<link rel="bookmark" href="/var/file/39/1039/msys_1039_3814768_65990.png" type="image/x-icon" />
+
+<link rel="apple-touch-icon-precomposed" href="/var/file/39/1039/msys_1039_3814768_65990.png">
+<link rel="apple-touch-icon" href="/var/file/39/1039/msys_1039_3814768_65990.png">
+
+<link rel="stylesheet" href="/var/file/39/1039/mobilestyle/combine-zh-tw.css?t=747adb3577" type="text/css" />
+<style>@media (min-width: 481px) {.row_0 .col_01 { width: 0%;}.row_0 .col_02 { width: 100%;}.row_0 .col_03 { width: 0%;}}</style>
+
+<script language="javascript"><!--
+ var isHome = false 
+ --></script>
+<script language="javascript"><!--
+ var isExpanMenu = false 
+ --></script>
+<script type="text/javascript" src="/var/file/js/combine_fr_ea0c4f7141.js" ></script>
+</head>
+<body class='page_fprint'>
+<div class="fprint_logo"><img src="/var/file/39/1039/msys_1039_2618995_65958.png"  width="576" height="576" alt="高階科技研發碩士在職專班EMRD" border="0"></div>
+
+
+
+
+<div class="module module-detail ">
+	<div class="module-inner">
+	<section class="mb">
+		<div class="mpgtitle" >
+		<h2 class="hdline"><a href="https://emrd.ntust.edu.tw/index.php" title='高階科技研發碩士學位學程 (EMRD)(另開新視窗)' >高階科技研發碩士學位學程 (EMRD)</a></h2>
+		</div>
+		<div class="mcont">
+			
+
+			
+
+
+
+<div class="mpgdetail">
+	
+		
+ 		
+		
+		
+		
+		
+	
+	
+   <div class="meditor"></div>
+	
+	
+	
+</div>
+
+
+
+
+
+		</div>
+	</section>
+	</div>
+</div>
+
+
+
+
+
+
+
+<script defer="defer">
+$(document).ready(function(){
+	$('.artctrl .addfav').click(function(){
+		ptdetail_addfav();	
+	});
+  $('.share_btn').click(function(){
+    $(this).siblings('.shareto').toggle();
+  })
+	function ptdetail_addfav(){
+		if(popChkLogin()){
+			if($(".artctrl .addfav").hasClass("active")){
+				var url = "/app/index.php?Action=mobileaddtofav&Part=107721&Op=delfav";
+			}else{
+				var url = "/app/index.php?Action=mobileaddtofav&Part=107721&Op=addfav";
+			}
+			var a = [];
+			$.post(url,a,function(data){
+				d = eval("("+data+")");
+				if(d.stat)
+					$(".artctrl .addfav").addClass("active");
+				else
+					$(".artctrl .addfav").removeClass("active");
+				mCallBack(data);
+			});
+		}
+		else	showPopDiv($('#_pop_login.mpopdiv'),$('#_pop_login.mpopdiv .mbox'));
+	}
+	function ptdetail_chkfav(){
+		var url = "/app/index.php?Action=mobileaddtofav&Part=107721&Op=chkfav";
+		var a = [];
+		$.post(url,a,function(data){
+			d = eval("("+data+")");
+			if(d.stat)
+				$(".artctrl .addfav").addClass("active");
+		});
+	}
+	ptdetail_chkfav();
+	
+		$.hajaxOpenUrl("/app/index.php?Action=mobilestsns",'.shareto');
+	
+	
+
+	
+});
+
+</script>
+
+
+</body>
+<script>
+$(document).ready(function(){
+			window.print();
+	});
+</script>
+</html>

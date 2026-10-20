@@ -1,0 +1,455 @@
+@import "tailwindcss";
+
+/*
+ * NTUST EMRD — Executive Portal design tokens
+ * 基底：純白 #FFFFFF ／ 文字：Slate-900 #0F172A
+ * 主色：臺科大藍 brand（大面積海軍藍＋互動藍）／點綴：香檳金 champagne、鈦金屬 titanium
+ *
+ * 對比度（WCAG 2.1，白底）：
+ *   brand-600 6.8:1、brand-700 8.7:1（白字於其上同值）、brand-900 13.6:1
+ *   champagne-700 6.5:1、champagne-600 4.6:1（小字請用 700）、titanium-600 6.1:1
+ *   深色底（brand-900/950）上：文字 white / brand-100、點綴 brand-300、champagne-300
+ */
+@theme {
+  --color-champagne-50: #fbf8f1;
+  --color-champagne-100: #f5eedd;
+  --color-champagne-200: #eadbb8;
+  --color-champagne-300: #dcc392;
+  --color-champagne-400: #c9a86a;
+  --color-champagne-500: #b08d4f;
+  --color-champagne-600: #8f703c;
+  --color-champagne-700: #725a31;
+  --color-champagne-800: #564427;
+  --color-champagne-900: #3d311d;
+
+  --color-titanium-50: #f7f7f8;
+  --color-titanium-100: #eeeff1;
+  --color-titanium-200: #dddfe3;
+  --color-titanium-300: #c3c7ce;
+  --color-titanium-400: #9aa0aa;
+  --color-titanium-500: #767d88;
+  --color-titanium-600: #5c626c;
+  --color-titanium-700: #474c54;
+  --color-titanium-800: #33373d;
+
+  /* 臺科大藍：600 取樣自官方標準字校徽（#005BAC）。大面積用 900–950，互動元件用 600–700 */
+  --color-brand-50: #eef5fc;
+  --color-brand-100: #d7e8f8;
+  --color-brand-200: #afd0f0;
+  --color-brand-300: #7bafe2;
+  --color-brand-400: #3f88d0;
+  --color-brand-500: #156bbe;
+  --color-brand-600: #005bac;
+  --color-brand-700: #004b90;
+  --color-brand-800: #003c75;
+  --color-brand-900: #002e5b;
+  --color-brand-950: #001a36;
+
+  /* 版面表面：偏藍的冷灰底與髮絲線 */
+  --color-surface: #f4f6f9;
+  --color-stroke: #dde3ec;
+
+  --animate-grid-drift: grid-drift 48s linear infinite;
+  --animate-node-pulse: node-pulse 4.8s ease-in-out infinite;
+  --animate-glow-float: glow-float 18s ease-in-out infinite;
+
+  @keyframes grid-drift {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 240px 120px;
+    }
+  }
+
+  @keyframes node-pulse {
+    0%,
+    100% {
+      opacity: 0.35;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes glow-float {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(-3%, 4%, 0) scale(1.06);
+    }
+  }
+}
+
+@theme inline {
+  /* 全站一律 Noto Sans TC；字型載入前或失敗時退回微軟正黑體 */
+  --font-sans:
+    var(--font-noto-tc), "Microsoft JhengHei", "微軟正黑體", "PingFang TC",
+    ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    /* 固定導覽列高度，讓錨點捲動不會被遮住 */
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    background-color: #ffffff;
+    color: var(--color-slate-900);
+    font-feature-settings: "palt" 0;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-100);
+    color: var(--color-brand-950);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
+ * BEGIN legacy-prose — 原站搬遷內容排版
+ * 由 src/components/site/LegacyContent.tsx 輸出；HTML 的伺服器端改寫見
+ * src/components/site/legacyHtml.ts（.legacy-table／.legacy-layout／.legacy-gallery 等 class 皆由該檔加上）。
+ * ========================================================================== */
+@layer components {
+  .legacy-prose {
+    color: var(--color-slate-700);
+    font-size: 1rem;
+    line-height: 1.85;
+    overflow-wrap: break-word;
+  }
+
+  /* 區塊間距：統一由上方留白控制，容器內第一個元素歸零 */
+  .legacy-prose
+    :where(p, ul, ol, blockquote, figure, video, .legacy-table, .legacy-layout, .legacy-gallery, .legacy-lead) {
+    margin-top: 1em;
+  }
+  .legacy-prose :where(figure, video, .legacy-table, .legacy-layout, .legacy-gallery) {
+    margin-top: 1.5em;
+  }
+  .legacy-prose :where(h2, h3, h4) + :where(*) {
+    margin-top: 0.75em;
+  }
+  .legacy-prose > :first-child,
+  .legacy-prose :where(td, th, li, blockquote, figure) > :first-child {
+    margin-top: 0;
+  }
+
+  .legacy-prose :where(h2, h3, h4) {
+    color: var(--color-brand-950);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.45;
+    text-wrap: balance;
+  }
+  .legacy-prose h2 {
+    margin-top: 2.25em;
+    font-size: 1.375rem;
+  }
+  .legacy-prose h3 {
+    margin-top: 2em;
+    font-size: 1.1875rem;
+  }
+  .legacy-prose h4 {
+    margin-top: 1.75em;
+    font-size: 1.0625rem;
+    color: var(--color-brand-900);
+  }
+  /* 原站把整段內文設成標題者，於改寫時降為導言段落 */
+  .legacy-prose .legacy-lead {
+    color: var(--color-slate-800);
+    font-size: 1.0625rem;
+    font-weight: 500;
+    line-height: 1.8;
+  }
+
+  .legacy-prose :where(strong, b) {
+    color: var(--color-slate-900);
+    font-weight: 600;
+  }
+  /* 原站以底線強調：改用香檳金粗底線，與連結的藍色底線區隔 */
+  .legacy-prose u {
+    text-decoration-color: var(--color-champagne-400);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.3em;
+  }
+  .legacy-prose :where(sub, sup) {
+    font-size: 0.75em;
+  }
+
+  .legacy-prose a {
+    color: var(--color-brand-700);
+    font-weight: 500;
+    text-decoration-line: underline;
+    text-decoration-color: var(--color-brand-200);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+    transition:
+      color 200ms,
+      text-decoration-color 200ms;
+  }
+  .legacy-prose a:hover {
+    color: var(--color-brand-800);
+    text-decoration-color: var(--color-brand-700);
+  }
+  .legacy-prose u a,
+  .legacy-prose a u {
+    text-decoration-color: inherit;
+  }
+  /* 站內跳轉連結（如【107學年度】）在窄螢幕整組換行，不在標籤中間斷開；
+     包在 <u> 內者改設 <u>，底線才不會因 inline-block 而中斷 */
+  .legacy-prose u:has(> a[href^="#"]),
+  .legacy-prose :not(u) > a[href^="#"] {
+    display: inline-block;
+  }
+
+  .legacy-prose ul {
+    list-style: disc;
+    padding-left: 1.5em;
+  }
+  .legacy-prose ol {
+    list-style: decimal;
+    padding-left: 1.75em;
+  }
+  .legacy-prose li {
+    padding-left: 0.25em;
+  }
+  .legacy-prose li + li {
+    margin-top: 0.375em;
+  }
+  .legacy-prose li::marker {
+    color: var(--color-brand-600);
+  }
+
+  .legacy-prose blockquote {
+    border-left: 3px solid var(--color-champagne-400);
+    padding: 0.25em 0 0.25em 1.25em;
+    color: var(--color-slate-700);
+  }
+
+  .legacy-prose hr {
+    margin-block: 2.5em;
+    border: 0;
+    border-top: 1px solid var(--color-stroke);
+  }
+
+  /* 圖片：不放大超過原始寬度；寬高屬性由改寫時依原圖比例補上 */
+  .legacy-prose img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+    vertical-align: middle;
+  }
+  .legacy-prose figure img {
+    display: block;
+  }
+  .legacy-prose figcaption {
+    margin-top: 0.625rem;
+    color: var(--color-slate-600);
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  /* 相簿：連續 3 張以上的 figure，以多欄瀑布流排列，保留每張原始比例不裁切 */
+  .legacy-prose .legacy-gallery {
+    column-count: 2;
+    column-gap: 1rem;
+  }
+  .legacy-prose .legacy-gallery > figure {
+    margin: 0 0 1rem;
+    break-inside: avoid;
+  }
+  .legacy-prose .legacy-gallery img {
+    width: 100%;
+  }
+  @media (max-width: 30rem) {
+    .legacy-prose .legacy-gallery {
+      column-count: 1;
+    }
+  }
+
+  /* 嵌入影片與日曆：等比例縮放 */
+  .legacy-prose iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-brand-950);
+  }
+  .legacy-prose iframe.legacy-embed--calendar {
+    aspect-ratio: 4 / 3;
+    min-height: 26rem;
+    background-color: var(--color-surface);
+  }
+  .legacy-prose video {
+    display: block;
+    width: 100%;
+    max-height: 80vh;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-brand-950);
+  }
+
+  /* ---------- 資料表：外框可左右捲動、可鍵盤聚焦 ---------- */
+  .legacy-prose .legacy-table {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    border: 1px solid var(--color-stroke);
+    border-radius: var(--radius-md);
+    background-color: #ffffff;
+  }
+  .legacy-prose .legacy-table:focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 2px;
+  }
+  .legacy-prose .legacy-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+  /* 欄數多的表格保留最小寬度，窄螢幕改為左右捲動，而非把文字擠成一字一行 */
+  .legacy-prose .legacy-table table[data-size="m"] {
+    min-width: 36rem;
+  }
+  .legacy-prose .legacy-table table[data-size="l"] {
+    min-width: 54rem;
+  }
+  .legacy-prose .legacy-table :where(th, td) {
+    padding: 0.625rem 0.875rem;
+    border-bottom: 1px solid var(--color-stroke);
+    border-left: 1px solid var(--color-stroke);
+    text-align: left;
+    vertical-align: top;
+  }
+  .legacy-prose .legacy-table :where(th, td):first-child {
+    border-left: 0;
+  }
+  .legacy-prose .legacy-table tr:last-child > :where(th, td) {
+    border-bottom: 0;
+  }
+  .legacy-prose .legacy-table thead tr:last-child > :where(th, td) {
+    border-bottom: 1px solid var(--color-stroke);
+  }
+  .legacy-prose .legacy-table th {
+    background-color: var(--color-surface);
+    color: var(--color-brand-950);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .legacy-prose .legacy-table tbody tr:nth-child(even) > td {
+    background-color: color-mix(in srgb, var(--color-surface) 55%, #ffffff);
+  }
+  .legacy-prose .legacy-table :where(td, th) p + p {
+    margin-top: 0.375em;
+  }
+  /* 原站首列整列合併的表格標題，改寫為 <caption> */
+  .legacy-prose .legacy-table caption {
+    padding: 0.625rem 0.875rem;
+    border-bottom: 1px solid var(--color-stroke);
+    background-color: var(--color-surface);
+    color: var(--color-brand-950);
+    font-weight: 600;
+    text-align: left;
+  }
+
+  /* ---------- 排版用表格（role="presentation"）：桌機並排、手機堆疊 ---------- */
+  .legacy-prose caption {
+    caption-side: top;
+    padding-bottom: 0.5rem;
+    text-align: start;
+    font-weight: 600;
+    color: var(--color-brand-950);
+  }
+
+  .legacy-prose table.legacy-layout {
+    display: block;
+    width: 100%;
+  }
+  .legacy-prose .legacy-layout > :where(thead, tbody, tfoot) {
+    display: block;
+  }
+  .legacy-prose .legacy-layout > :where(thead, tbody, tfoot) > tr {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .legacy-prose .legacy-layout > :where(thead, tbody, tfoot) > tr + tr {
+    margin-top: 1.5rem;
+  }
+  .legacy-prose .legacy-layout > :where(thead, tbody, tfoot) > tr > :where(td, th) {
+    display: block;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font-weight: inherit;
+    text-align: left;
+  }
+  .legacy-prose .legacy-layout > :where(thead, tbody, tfoot) > tr > :where(td, th):empty {
+    display: none;
+  }
+  .legacy-prose .legacy-layout h2 {
+    font-size: 1.125rem;
+  }
+  .legacy-prose .legacy-layout :where(td, th) > h2:not(:first-child) {
+    margin-top: 0.5em;
+  }
+  @media (min-width: 48rem) {
+    .legacy-prose .legacy-layout > :where(thead, tbody, tfoot) > tr {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+    .legacy-prose .legacy-layout > :where(thead, tbody, tfoot) > tr > :where(td, th) {
+      flex: 1 1 0;
+    }
+    /* 只有一張圖片的儲存格（人像、Logo）維持圖片寬度，其餘欄位分配剩餘空間 */
+    .legacy-prose
+      .legacy-layout
+      > :where(thead, tbody, tfoot)
+      > tr
+      > :where(td, th):has(> img:only-child, > p:only-child > img:only-child) {
+      flex: 0 1 auto;
+      max-width: 40%;
+    }
+    /* 內含資料表的儲存格（如講座嘉賓表）取得較大寬度 */
+    .legacy-prose
+      .legacy-layout
+      > :where(thead, tbody, tfoot)
+      > tr
+      > :where(td, th):has(> .legacy-table) {
+      flex: 4 1 0;
+    }
+  }
+}
+/* END legacy-prose ========================================================= */

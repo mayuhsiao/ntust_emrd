@@ -1,0 +1,286 @@
+{
+  "$comment": "新網站資訊架構（取代 emrd.ntust.edu.tw）。legacy 為原站頁面代碼；scripts/migrate_legacy.py 與前端導覽共用此檔。",
+  "groups": [
+    {
+      "key": "about",
+      "label": "專班特色",
+      "englishLabel": "About EMRD",
+      "description": "臺科大工程學院 104 學年度首創的技術長（CTO）學程，系統化培育企業研發高階人才。",
+      "legacy": "412-1039-7691",
+      "overview": {
+        "label": "專班特色總覽",
+        "href": "/#features"
+      },
+      "pages": [
+        {
+          "slug": "about/features",
+          "label": "特色簡介",
+          "description": "全國唯一的技術長學程：EMRD 自 104 學年度由臺科大工程學院首創，系統化培育科技產業技術長（CTO）人才，以企業未來 3～5 年技術與產品藍圖為畢業論文，平均每學期逾 30 位校內外專家授課。",
+          "legacy": "412-1039-11023"
+        },
+        {
+          "slug": "about/logo",
+          "label": "學程 Logo",
+          "description": "EMRD 學程 Logo 設計概念：以臺科大校徽發想，中心晶圓球體象徵科技產業，下方「EMRD」為專班英文縮寫，外圍圓框代表母校與同學校友團結一心；由第一屆校友吳啟豪發想並協助設計，108/01/01 完成商標註冊。",
+          "legacy": "412-1039-7698"
+        },
+        {
+          "slug": "about/recommendations",
+          "label": "業界推薦",
+          "description": "業界推薦 EMRD 技術長學程：研華何春盛執行董事、奕微科半導體何昭霆總經理、鈞理知識產權事務所林誠夏顧問等業界人士，分享對產業人才需求的觀察與推薦在職工程師進修 EMRD 的理由。",
+          "legacy": "412-1039-7699"
+        },
+        {
+          "slug": "about/milestone-video",
+          "label": "學程里程碑紀念影片",
+          "description": "EMRD 學程里程碑紀念影片：觀看臺科大高階科技研發碩士學位學程（EMRD）的紀念影片，影片由 107 級江宗栩學長製作設計，可於本頁直接播放。",
+          "legacy": "412-1039-10021"
+        }
+      ]
+    },
+    {
+      "key": "curriculum",
+      "label": "前瞻課綱",
+      "englishLabel": "Curriculum",
+      "description": "三大課程主軸對應技術決策者的關鍵能力：前瞻技術判讀、智慧製造系統思維與研發策略領導；另收錄歷屆畢業論文題目。",
+      "overview": {
+        "label": "課綱總覽",
+        "href": "/#curriculum"
+      },
+      "pages": [
+        {
+          "slug": "curriculum/courses",
+          "label": "課程介紹",
+          "description": "EMRD 課程介紹（112 學年度起適用）：畢業學分 45 學分，必修 24 學分（專業核心 12、智財核心 6、專業必修 6）、跨領域選修 21 學分，並列出一上至二下各學期的課程規劃。",
+          "legacy": "412-1039-7714"
+        },
+        {
+          "slug": "curriculum/theses",
+          "label": "歷屆畢業論文",
+          "description": "EMRD 歷屆畢業論文：依學年度列出 105 至 109 學年度畢業生的中英文論文名稱、院內指導教授與非本院指導教授（含業界高階主管），並提供臺科大碩博士論文系統館藏查詢連結。",
+          "legacy": "412-1039-7710"
+        }
+      ]
+    },
+    {
+      "key": "faculty",
+      "label": "卓越師資",
+      "englishLabel": "Faculty & Staff",
+      "description": "整合臺科大跨學院師資，並延攬科技大廠高階主管與法人智庫專家擔任業師，平均每學期逾 30 位校內外專家授課。",
+      "legacy": "412-1039-7692",
+      "overview": {
+        "label": "師資總覽",
+        "href": "/#faculty"
+      },
+      "pages": [
+        {
+          "slug": "faculty/executives",
+          "label": "現任執行長 / 副執行長",
+          "description": "EMRD 現任執行長與副執行長：執行長游進陽（臺科大材料系教授，2022 年 8 月起兼任）、副執行長蔡孟霖（材料系副教授，2024 年 8 月起兼任）的學歷、聯絡電話與 E-mail。",
+          "legacy": "412-1039-11800"
+        },
+        {
+          "slug": "faculty/internal",
+          "label": "校內師資",
+          "description": "EMRD 校內授課專任師資（112-02 更新）：整合機械、材料、營建、化工、企管、工管、財金、電子、資工、科管、建築、專利及醫工等系所教師，列出各教師的任職單位與教授科目。",
+          "legacy": "412-1039-11663"
+        },
+        {
+          "slug": "faculty/industry",
+          "label": "外校 & 業界師資",
+          "description": "EMRD 外校與業界兼任師資：經濟部智慧財產局、資策會產業情報研究所、法律事務所與科技企業等業界講師，以及東吳大學、國立臺北商業大學等他校教師的任職單位、職稱與教授科目。",
+          "legacy": "412-1039-11664"
+        },
+        {
+          "slug": "faculty/speakers",
+          "label": "演講講座嘉賓",
+          "description": "EMRD 歷年演講講座嘉賓與講題：依產業界 I、產業界 II 及政府機關、學界、法人分類，列出研華科技、台灣精材、台達電子等企業與機構講者的任職單位與歷年演講講題。",
+          "legacy": "412-1039-11665"
+        },
+        {
+          "slug": "faculty/past-executives",
+          "label": "歷任執行長",
+          "description": "EMRD 歷任執行長：第一任顏怡文、第二任鄭正元（EMRD 創辦人）、第三任郭進星、第四任施劭儒、第五任鄭正元及現任第六任游進陽，附各任兼任期間、本職與學歷。",
+          "legacy": "412-1039-11698"
+        },
+        {
+          "slug": "faculty/office",
+          "label": "學程辦公室",
+          "description": "EMRD 學程辦公室：位於臺科大 IB-809（工程學院院辦公室），電話 (02) 2730-1026、E-mail EMRD@mail.ntust.edu.tw，服務時間週一至週五 9:00–12:00、13:30–17:00。",
+          "legacy": "412-1039-7706"
+        }
+      ]
+    },
+    {
+      "key": "study",
+      "label": "修業規定",
+      "englishLabel": "Study & Regulations",
+      "description": "畢業 45 學分、修業 2 年；法規、論文與學位考試流程、學分抵免與表單下載等在學期間的大小事都在這裡。",
+      "legacy": "412-1039-7694",
+      "overview": {
+        "label": "修業規定總覽",
+        "href": "/#requirements"
+      },
+      "pages": [
+        {
+          "slug": "study/regulations",
+          "label": "法規",
+          "description": "EMRD 修業相關法規：學生修業規定、學分學雜費收費標準說明表、學分抵免暨減繳辦法、學分費學雜費暨教師鐘點費標準，以及臺科大論文指導教授與研究生互動準則、研究生學位考試辦法。",
+          "legacy": "412-1039-7711"
+        },
+        {
+          "slug": "study/graduation",
+          "label": "論文. 學位考試. 畢業流程",
+          "description": "EMRD 論文、學位考試與畢業流程：碩士學位口試申請與離校流程、論文指導教授資格、學位考試委員資格，以及論文與學位考試等畢業相關申請書與文件範例說明。",
+          "legacy": "412-1039-7716"
+        },
+        {
+          "slug": "study/oral-exam",
+          "label": "學位考試視訊口試連結",
+          "description": "EMRD 學位考試視訊口試連結專區：目前公告 113/04/18 學位考試視訊口試連結（Google 雲端硬碟文件）；學位考試申請與畢業相關規定請見「論文. 學位考試. 畢業流程」頁。",
+          "legacy": "412-1039-11655"
+        },
+        {
+          "slug": "study/credit-transfer",
+          "label": "學分抵免公告",
+          "description": "EMRD 學分抵免公告：各學年度學分抵免申請事宜（入學前至 7/31 截止，向 EMRD 辦公室申請），以及 108、109、110、112、113 學年度學分抵免申請結果。",
+          "legacy": "412-1039-7718"
+        },
+        {
+          "slug": "study/course-lottery",
+          "label": "修課名額抽選結果公告",
+          "description": "EMRD 修課名額抽選結果公告：112-2 學期「談判理論與實務」修課名額抽選結果名單，列出抽中同學的序號、學號與姓名（姓名部分遮蔽），共 10 名。",
+          "legacy": "412-1039-11601"
+        },
+        {
+          "slug": "study/tuition",
+          "label": "學分費調整專區",
+          "description": "EMRD 學分費調整專區：112 學年度起入學新生每學分費由 8,200 元調整為 11,000 元，說明調整對象、理由與流程，並提供院務會議、審議小組會議紀錄及公聽會簡報與會議紀錄。",
+          "legacy": "404-1039-103121"
+        },
+        {
+          "slug": "study/forms",
+          "label": "表單下載",
+          "description": "EMRD 表單下載：抵免學分申請書、論文與學位考試等畢業相關申請書與文件、各項證明申請書（成績單、學位證書影本用印、補換發學生證、修業證明）、休退學申請書及傑出系友推薦表。",
+          "legacy": "412-1039-7719"
+        },
+        {
+          "slug": "study/links",
+          "label": "常用網站",
+          "description": "EMRD 在學常用網站：臺科大學生資訊系統、學術研究倫理課程報名、課程查詢與選課教學、Moodle 數位學習平台、博碩士論文系統、圖書館論文比對與上傳、學雜費專區及教務處研究所表單與法規。",
+          "legacy": "412-1039-7720"
+        },
+        {
+          "slug": "study/alumni-update",
+          "label": "校友資訊更新區",
+          "description": "EMRD 校友資訊更新區：邀請校友透過線上表單更新任職與聯絡資訊，並提供 EMRD 校友會正式立案與招募會員公告、校友會介紹及校友空間「薈萃堂」等連結。",
+          "legacy": "404-1039-83051"
+        }
+      ]
+    },
+    {
+      "key": "admissions",
+      "label": "招生專區",
+      "englishLabel": "Admissions",
+      "description": "招生考試採書面審查 50%＋口試 50%；招生資訊、隨班附讀與招生公告集中於此。",
+      "legacy": "412-1039-7693",
+      "overview": {
+        "label": "招生總覽",
+        "href": "/#admissions"
+      },
+      "pages": [
+        {
+          "slug": "admissions/info",
+          "label": "招生資訊",
+          "description": "EMRD 招生資訊：碩士在職專班最新招生簡章公告與報名期間、招生資訊說明、報考常見 Q&A，以及媒體報導與學員推薦，提供有意報考臺科大 EMRD 技術長學程者參考。",
+          "legacy": "412-1039-11971"
+        },
+        {
+          "slug": "admissions/audit",
+          "label": "隨班附讀",
+          "description": "EMRD 隨班附讀：隨班附讀辦法說明，以及 107-02 至 111-02 學期的隨班附讀招生公告與通過名單；具報考碩士學位學歷資格者，可報名隨班修讀 EMRD 課程。",
+          "legacy": "412-1039-7709"
+        },
+        {
+          "slug": "admissions/news",
+          "label": "招生公告",
+          "description": "EMRD 招生公告：碩士在職專班招生簡章、招生說明會、先修學分班（SEMI-EMRD）與隨班附讀招生，以及歷年招生相關公告，依發布順序由新到舊排列，可依關鍵字與標籤篩選。",
+          "legacy": "403-1039-1782",
+          "collection": true
+        }
+      ]
+    },
+    {
+      "key": "news",
+      "label": "最新消息",
+      "englishLabel": "News",
+      "description": "學程公告、活動集錦、榮譽榜、媒體報導與影音紀錄，掌握 EMRD 最新動態。",
+      "pages": [
+        {
+          "slug": "news",
+          "label": "公告欄",
+          "description": "EMRD 公告欄：彙整學程各類最新消息，包括招生簡章與招生說明會、隨班附讀與學分抵免公告、活動紀錄及師生榮譽喜訊，依發布順序由新到舊排列，可依關鍵字與標籤篩選。",
+          "legacy": "403-1039-1293",
+          "collection": true
+        },
+        {
+          "slug": "news/events",
+          "label": "活動集錦",
+          "description": "EMRD 活動集錦：記錄學程歷年活動，包括開學典禮、新生破冰營、迎新送舊烤肉會、招生說明會、專題演講、企業參訪與畢業典禮等，依時間由新到舊排列。",
+          "legacy": "403-1039-1366",
+          "collection": true
+        },
+        {
+          "slug": "news/honors",
+          "label": "榮譽榜",
+          "description": "EMRD 榮譽榜：師生與校友的獲獎及榮譽消息，包括發明競賽獲獎、碩士論文獲獎與期刊發表、斐陶斐榮譽會員、教師教學優良獎，以及學程 Logo 註冊商標通過等喜訊。",
+          "legacy": "403-1039-1367",
+          "collection": true
+        },
+        {
+          "slug": "news/media",
+          "label": "媒體報導",
+          "description": "EMRD 媒體報導：DIGITIMES、天下雜誌、商業周刊等媒體對臺科大 EMRD 技術長學程的專題報導，以及學員推薦與招生廣告看板等相關消息。",
+          "legacy": "403-1039-1368",
+          "collection": true
+        },
+        {
+          "slug": "news/videos",
+          "label": "影音專區",
+          "description": "EMRD 影音專區：收錄學程活動影片與照片紀錄，包括歷屆畢業典禮、新生破冰營、迎新送舊烤肉會、臺科大校慶與 EMRD 校友會年末聚餐等。",
+          "legacy": "403-1039-2092",
+          "collection": true
+        }
+      ]
+    }
+  ],
+  "standalone": [
+    {
+      "slug": "contact",
+      "label": "聯絡資訊",
+      "description": "EMRD 聯絡資訊：學程辦公室電話 (02) 2730-1026、E-mail emrd@mail.ntust.edu.tw，地址臺北市大安區基隆路四段 43 號 IB-809；並列出執行長、副執行長與行政組員的聯絡方式。",
+      "legacy": "412-1039-7726"
+    },
+    {
+      "slug": "alumni-hall",
+      "label": "EMRD 校友薈萃堂",
+      "description": "EMRD 校友薈萃堂：由校友與工程學院協力打造的校友交流空間，2018 年 6 月 30 日正式揭幕，位於臺科大第一教學大樓三樓 T1-300，並提供使用規範、預約教學與預約網址。",
+      "legacy": "404-1039-119872"
+    }
+  ],
+  "aliases": {
+    "$comment": "原站其他代碼 → 新路徑（用於站內連結改寫與 301 轉址）",
+    "412-1039-7695": "/study/forms",
+    "412-1039-7707": "/study/alumni-update",
+    "17-1039": "/sitemap",
+    "404-1039-107225": "/admissions/info",
+    "404-1039-76505": "/admissions/info",
+    "412-1039-7696": "/news",
+    "412-1039-7721": "/news",
+    "412-1039-7723": "/news/honors",
+    "412-1039-7724": "/news/media"
+  },
+  "posts": {
+    "$comment": "文章（405 / 406）一律對應 /posts/{數字代碼}，例如 406-1039-141774,r1293 → /posts/141774"
+  }
+}

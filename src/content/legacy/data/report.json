@@ -1,0 +1,4381 @@
+{
+  "counts": {
+    "pages": 25,
+    "collections": 6,
+    "posts": 153,
+    "linkPosts": 3,
+    "listBodyPosts": 9,
+    "printViewPosts": 1,
+    "linkRecordPosts": 13,
+    "orphanPosts": 0,
+    "redirects": 919,
+    "assetRedirects": 352,
+    "queryRedirects": 11,
+    "images": 426,
+    "files": 22,
+    "resizedImages": 49,
+    "convertedImages": 5,
+    "localImgTags": 419,
+    "localImgTagsWithSize": 419,
+    "imgAspectAdjusted": 4,
+    "externalImages": 0,
+    "ownedImagesDownloaded": 83,
+    "ownedFilesDownloaded": 4,
+    "ownedImagesDead": 0,
+    "ownedUnrecoverable": 2,
+    "deadExternalImages": 0,
+    "unresolvedLinks": 0,
+    "failedDownloads": 0,
+    "linkItems404": 0,
+    "deadPosts": 2,
+    "datedListItems": 0,
+    "datedPosts": 0,
+    "galleryImages": 65,
+    "galleryCaptions": 7,
+    "docsWithGallery": 34,
+    "inlineDataImages": 1,
+    "deadLinksRewritten": 3,
+    "mergedAliasPages": 1,
+    "duplicateContentAssets": 3,
+    "attachments": 11,
+    "hiddenElementsDropped": 195,
+    "anchors": 10,
+    "fragmentLinksKept": 12,
+    "collectionSizes": {
+      "admissions/news": 18,
+      "news": 88,
+      "news/events": 63,
+      "news/honors": 9,
+      "news/media": 6,
+      "news/videos": 9
+    },
+    "a11y": {
+      "altOverride": 7,
+      "droppedExternal": 1,
+      "externalToText": 54,
+      "headingDemoted": 24,
+      "headingLevelsShifted": 2,
+      "headingPromoted": 6,
+      "junkAltCleared": 73,
+      "langEn": 100,
+      "singleImageAlt": 54,
+      "tableHeaders": 10,
+      "textVersion": 6,
+      "videoTitle": 10
+    }
+  },
+  "assetBytes": {
+    "total": 214894762,
+    "images": 197308310,
+    "files": 17586452,
+    "originalTotal": 303174548,
+    "originalImages": 285588096
+  },
+  "imageProcessing": {
+    "mode": "default",
+    "maxWidth": 2000,
+    "convertBmp": true,
+    "encoder": {
+      "resample": "LANCZOS",
+      "jpeg": "quality 85, progressive, optimize",
+      "png": "optimize",
+      "exif": "先依 EXIF 方向轉正（縮圖時）"
+    },
+    "backupDir": "legacy-originals/",
+    "backupManifest": "legacy-originals/manifest.json",
+    "backupBytes": 117131441,
+    "rollback": "python -X utf8 scripts/migrate_legacy.py --original-images（說明見 legacy-originals/README.md）",
+    "modified": 54,
+    "bytesBefore": 117131441,
+    "bytesAfter": 28851655,
+    "items": [
+      {
+        "original": "/legacy/img/059117ef52-533636112.jpg",
+        "current": "/legacy/img/059117ef52-533636112.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1651212,
+        "bytesAfter": 453482,
+        "widthBefore": 2394,
+        "widthAfter": 2000,
+        "heightBefore": 3452,
+        "heightAfter": 2884,
+        "sha1Before": "d4b12a13567a295a6c5c8d7bc4660a73cce91dda",
+        "sha1After": "5603a739684ef5a4519cf8df68076930e1af0387"
+      },
+      {
+        "original": "/legacy/img/06a7ceac4c-25.jpg",
+        "current": "/legacy/img/06a7ceac4c-25.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1793527,
+        "bytesAfter": 452589,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "07c30c6cb85c24622a005a7125501b46f93a30b2",
+        "sha1After": "53d41909955a216662411162524e262612f62917"
+      },
+      {
+        "original": "/legacy/img/1674cfcccc-944315992.bmp",
+        "current": "/legacy/img/1674cfcccc-944315992.png",
+        "reason": "bmp-to-png",
+        "bytesBefore": 190818,
+        "bytesAfter": 87474,
+        "widthBefore": 302,
+        "widthAfter": 302,
+        "heightBefore": 210,
+        "heightAfter": 210,
+        "sha1Before": "5ef2c0219b4087f6aff715e05dac37f1be072b74",
+        "sha1After": "ec5cf3afeaa3291644c1ffa53cd6430f9de418e5"
+      },
+      {
+        "original": "/legacy/img/176f843136-15.jpg",
+        "current": "/legacy/img/176f843136-15.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1330822,
+        "bytesAfter": 343050,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "c1cddcf0290269f0be95122f56f587667b29d852",
+        "sha1After": "47f6a58e5f77a252086255301e0bce420ff98544"
+      },
+      {
+        "original": "/legacy/img/188ff5186e-03.jpg",
+        "current": "/legacy/img/188ff5186e-03.jpg",
+        "reason": "downscale",
+        "bytesBefore": 3581304,
+        "bytesAfter": 853641,
+        "widthBefore": 3024,
+        "widthAfter": 2000,
+        "heightBefore": 4032,
+        "heightAfter": 2667,
+        "sha1Before": "760df85b161f9a24569bd329f0d35f541452f2dd",
+        "sha1After": "04874d727530c49413c37a73749154aa9129200b"
+      },
+      {
+        "original": "/legacy/img/1b9d939e8f-20.jpg",
+        "current": "/legacy/img/1b9d939e8f-20.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1608298,
+        "bytesAfter": 418730,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "dcb4cd7a538c67851b7ae82a0aef0e15896210b7",
+        "sha1After": "9dc6dc6e2519416acb20ed2da60709c383566f2c"
+      },
+      {
+        "original": "/legacy/img/1d84756543-08.jpg",
+        "current": "/legacy/img/1d84756543-08.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1143474,
+        "bytesAfter": 319993,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "1ea61cb1abf832cd2775f140f7556b95f309d1ae",
+        "sha1After": "501d30f1bb5afbd0102c24ec7d7d83934629b219"
+      },
+      {
+        "original": "/legacy/img/1fe7cff3fa-s-89505820-0.jpg",
+        "current": "/legacy/img/1fe7cff3fa-s-89505820-0.jpg",
+        "reason": "downscale",
+        "bytesBefore": 3696256,
+        "bytesAfter": 539003,
+        "widthBefore": 4032,
+        "widthAfter": 2000,
+        "heightBefore": 3024,
+        "heightAfter": 1500,
+        "sha1Before": "148ab59938da04951dd2709072487c743b25da91",
+        "sha1After": "109840ec98a0521d307c797ced90191b3926d563"
+      },
+      {
+        "original": "/legacy/img/20258881dc-06.jpg",
+        "current": "/legacy/img/20258881dc-06.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1288415,
+        "bytesAfter": 340047,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "4584355b3969c32c49acdd3419cb48e8ef337051",
+        "sha1After": "2596d461316ad5980d7467a4f7d02f2eab3d41db"
+      },
+      {
+        "original": "/legacy/img/2c4b170423-28.jpg",
+        "current": "/legacy/img/2c4b170423-28.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1522158,
+        "bytesAfter": 398956,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "14a25c04508041fcf027f88025bba609d7bd8942",
+        "sha1After": "c7c9c23b52d15a717f8235c586d4b0d910b2a3ac"
+      },
+      {
+        "original": "/legacy/img/3082abb8a3-s-89505825-0.jpg",
+        "current": "/legacy/img/3082abb8a3-s-89505825-0.jpg",
+        "reason": "downscale",
+        "bytesBefore": 2542082,
+        "bytesAfter": 551027,
+        "widthBefore": 4032,
+        "widthAfter": 2000,
+        "heightBefore": 3024,
+        "heightAfter": 1500,
+        "sha1Before": "58107890cc27c310fa12d7a83265978f50ba62b4",
+        "sha1After": "0bfbaff0ab8fab97abbd5ed5ace25c6fcf7fa8ff"
+      },
+      {
+        "original": "/legacy/img/32031428dd-27.jpg",
+        "current": "/legacy/img/32031428dd-27.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1662416,
+        "bytesAfter": 396663,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "70c74dcb6bea9e68d71364ff2bab1626c0177bb5",
+        "sha1After": "4d111a7f4f8c68e638630606d88d2889be5877ae"
+      },
+      {
+        "original": "/legacy/img/3894e5a666-s-89579528-0.jpg",
+        "current": "/legacy/img/3894e5a666-s-89579528-0.jpg",
+        "reason": "downscale",
+        "bytesBefore": 3810785,
+        "bytesAfter": 650832,
+        "widthBefore": 4032,
+        "widthAfter": 2000,
+        "heightBefore": 3024,
+        "heightAfter": 1500,
+        "sha1Before": "4344d4db2e639de19d55ae0416fdc1b8403f61c6",
+        "sha1After": "d2f0986ceb03b3c07a2bd2a75ae6e2a98e325415"
+      },
+      {
+        "original": "/legacy/img/3d66db61fa-02.jpg",
+        "current": "/legacy/img/3d66db61fa-02.jpg",
+        "reason": "downscale",
+        "bytesBefore": 2488542,
+        "bytesAfter": 550958,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "f0153375726ec74fb70a58931d7c674cf0cf0b79",
+        "sha1After": "d20c2e73130fba18a77b445c1003bc7867d80107"
+      },
+      {
+        "original": "/legacy/img/4484a8000d-14.jpg",
+        "current": "/legacy/img/4484a8000d-14.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1476113,
+        "bytesAfter": 365540,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "b2f971a632297662af2de44be126025c3f4c6273",
+        "sha1After": "f05b2f3778de4ff6610202ba4559c6f79c3d8304"
+      },
+      {
+        "original": "/legacy/img/49eb0f5b55-mczh-tw1920x700-large3564-868313860347.bmp",
+        "current": "/legacy/img/49eb0f5b55-mczh-tw1920x700-large3564-868313860347.png",
+        "reason": "bmp-to-png",
+        "bytesBefore": 2606938,
+        "bytesAfter": 378906,
+        "widthBefore": 1241,
+        "widthAfter": 1241,
+        "heightBefore": 700,
+        "heightAfter": 700,
+        "sha1Before": "1ab3b88b45e9956d7eb761d8c236abecaec28811",
+        "sha1After": "f66c96825c98d5dd4a66b7554ebcd29ed58ba824"
+      },
+      {
+        "original": "/legacy/img/4a1e395245-715487136.jpg",
+        "current": "/legacy/img/4a1e395245-715487136.jpg",
+        "reason": "downscale",
+        "bytesBefore": 5100645,
+        "bytesAfter": 514294,
+        "widthBefore": 3600,
+        "widthAfter": 2000,
+        "heightBefore": 3600,
+        "heightAfter": 2000,
+        "sha1Before": "c53f6c65991cd85783782198fa1561eec6c20cb4",
+        "sha1After": "1f2e00e1bd717229f083038a1c3ea379a96a6a63"
+      },
+      {
+        "original": "/legacy/img/502295b578-mczh-tw1920x700-large3562-311107860346.bmp",
+        "current": "/legacy/img/502295b578-mczh-tw1920x700-large3562-311107860346.png",
+        "reason": "bmp-to-png",
+        "bytesBefore": 2223338,
+        "bytesAfter": 340927,
+        "widthBefore": 1058,
+        "widthAfter": 1058,
+        "heightBefore": 700,
+        "heightAfter": 700,
+        "sha1Before": "e0b5ff8124fade2178e774eb3ec2a3a4ff0227b8",
+        "sha1After": "125d7901e168117f68373dcd0ba92318de96ca6d"
+      },
+      {
+        "original": "/legacy/img/547077b41a-09.jpg",
+        "current": "/legacy/img/547077b41a-09.jpg",
+        "reason": "downscale",
+        "bytesBefore": 852381,
+        "bytesAfter": 209874,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "1431013ae750f2c7f2117314d6cc4c19131c6392",
+        "sha1After": "57f7ca09fac5e5386a4b955bdee92ed034f55480"
+      },
+      {
+        "original": "/legacy/img/561817e1a7-13.jpg",
+        "current": "/legacy/img/561817e1a7-13.jpg",
+        "reason": "downscale",
+        "bytesBefore": 564640,
+        "bytesAfter": 144709,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "1358c57115284ba51c28d4acdd5db84620531f98",
+        "sha1After": "80be7786e9e8f28c8302e84ca5d1c28988b173ce"
+      },
+      {
+        "original": "/legacy/img/5abc0cf4a1-838765448.png",
+        "current": "/legacy/img/5abc0cf4a1-838765448.png",
+        "reason": "downscale",
+        "bytesBefore": 8454802,
+        "bytesAfter": 5494345,
+        "widthBefore": 2586,
+        "widthAfter": 2000,
+        "heightBefore": 3448,
+        "heightAfter": 2667,
+        "sha1Before": "b94896711e587bdd75a1c3c420a3bbd3044949f4",
+        "sha1After": "d4711fb078a2ac0d191f070d32f218069147742a"
+      },
+      {
+        "original": "/legacy/img/5cb212cde5-23.jpg",
+        "current": "/legacy/img/5cb212cde5-23.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1353380,
+        "bytesAfter": 368289,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "c5c803ea1b1d5bc8eaa5dd469abcf50804f55a18",
+        "sha1After": "ff7da03be35b412f3acd07dc2c51a61e70ee32dd"
+      },
+      {
+        "original": "/legacy/img/640c9a7dba-18.jpg",
+        "current": "/legacy/img/640c9a7dba-18.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1277182,
+        "bytesAfter": 328655,
+        "widthBefore": 4244,
+        "widthAfter": 2000,
+        "heightBefore": 2827,
+        "heightAfter": 1332,
+        "sha1Before": "92f8e7e78397ee722b5ef52aa8130c126d83e50a",
+        "sha1After": "c3726474bf176b579606a0a9606175fe0d764e41"
+      },
+      {
+        "original": "/legacy/img/683aafff43-409528370-212564981893201-5349719354806163286-n.jpg",
+        "current": "/legacy/img/683aafff43-409528370-212564981893201-5349719354806163286-n.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1412852,
+        "bytesAfter": 367593,
+        "widthBefore": 2048,
+        "widthAfter": 2000,
+        "heightBefore": 1367,
+        "heightAfter": 1335,
+        "sha1Before": "609e4eeb4fcf6926c6f291373c7c0ba537d934bb",
+        "sha1After": "f52e9d7d5984a7fbff5f67c97e5589ed6e020afe"
+      },
+      {
+        "original": "/legacy/img/6cd18bd6c8-03.jpg",
+        "current": "/legacy/img/6cd18bd6c8-03.jpg",
+        "reason": "downscale",
+        "bytesBefore": 543151,
+        "bytesAfter": 150778,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "ebf5bb50e8efca3ff2ea7b981b938d19609fd321",
+        "sha1After": "13af1f8f0adc13fa003019bcd29b29a59a802a50"
+      },
+      {
+        "original": "/legacy/img/6e2f8ad93f-s-89505811-0.jpg",
+        "current": "/legacy/img/6e2f8ad93f-s-89505811-0.jpg",
+        "reason": "downscale",
+        "bytesBefore": 2406565,
+        "bytesAfter": 344851,
+        "widthBefore": 3892,
+        "widthAfter": 2000,
+        "heightBefore": 2919,
+        "heightAfter": 1500,
+        "sha1Before": "3f01b7a3e014939e55deb449fad52c13325f74a4",
+        "sha1After": "dba1ab4e50c663318c499dfd5e7028ab93eb57ad"
+      },
+      {
+        "original": "/legacy/img/7444a94369-04.jpg",
+        "current": "/legacy/img/7444a94369-04.jpg",
+        "reason": "downscale",
+        "bytesBefore": 3217261,
+        "bytesAfter": 609953,
+        "widthBefore": 4032,
+        "widthAfter": 2000,
+        "heightBefore": 3024,
+        "heightAfter": 1500,
+        "sha1Before": "2208258aec6fda293765397eafc53d212757614c",
+        "sha1After": "f99c6218dc82fefbb44bc853a4a437f2125d90a3"
+      },
+      {
+        "original": "/legacy/img/7efc89c664-10.jpg",
+        "current": "/legacy/img/7efc89c664-10.jpg",
+        "reason": "downscale",
+        "bytesBefore": 996013,
+        "bytesAfter": 271013,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "5e9a37d60c0620aa726a3f09fbe03ae0308f2d63",
+        "sha1After": "694cd4cf06767065381291af3c986bcbe9cdfabd"
+      },
+      {
+        "original": "/legacy/img/82bd647c7e-575270401.jpg",
+        "current": "/legacy/img/82bd647c7e-575270401.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1666558,
+        "bytesAfter": 461054,
+        "widthBefore": 2394,
+        "widthAfter": 2000,
+        "heightBefore": 3452,
+        "heightAfter": 2884,
+        "sha1Before": "b02154d88a172c744d913ea5e7b2151849c45be9",
+        "sha1After": "5c4ab33312704dac674f58f0a304cf6ad6cf9b05"
+      },
+      {
+        "original": "/legacy/img/858d47a6cd-17.jpg",
+        "current": "/legacy/img/858d47a6cd-17.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1280207,
+        "bytesAfter": 324147,
+        "widthBefore": 4244,
+        "widthAfter": 2000,
+        "heightBefore": 2827,
+        "heightAfter": 1332,
+        "sha1Before": "6f24d5ce310a3540879caa5b5c8d1650a63952fa",
+        "sha1After": "87e63d731339b1eb094d8fa6904899f345d1b388"
+      },
+      {
+        "original": "/legacy/img/85993b565f-05.jpg",
+        "current": "/legacy/img/85993b565f-05.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1288994,
+        "bytesAfter": 355092,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "d958ef00f167c0feb35b844d4bd1de5fd8c54090",
+        "sha1After": "b3d718379d97bfc3939e84a270de0628c5e94281"
+      },
+      {
+        "original": "/legacy/img/86c29b1f07-07.jpg",
+        "current": "/legacy/img/86c29b1f07-07.jpg",
+        "reason": "downscale",
+        "bytesBefore": 589437,
+        "bytesAfter": 158241,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "450b90b3abca84052e861eb0ce35c323e60ae353",
+        "sha1After": "c0b84bf9f85f0a959a49f68521e7ea361b488246"
+      },
+      {
+        "original": "/legacy/img/9c01578c44-s-89505803-0.jpg",
+        "current": "/legacy/img/9c01578c44-s-89505803-0.jpg",
+        "reason": "downscale",
+        "bytesBefore": 3324265,
+        "bytesAfter": 450959,
+        "widthBefore": 4032,
+        "widthAfter": 2000,
+        "heightBefore": 3024,
+        "heightAfter": 1500,
+        "sha1Before": "c2a636baf20c3e4881e976ea76ee4a804698ca35",
+        "sha1After": "6eec1133f3e6463c66c362a2872b1e80a11cd70f"
+      },
+      {
+        "original": "/legacy/img/a6cba3ec30-01.jpg",
+        "current": "/legacy/img/a6cba3ec30-01.jpg",
+        "reason": "downscale",
+        "bytesBefore": 4000333,
+        "bytesAfter": 481166,
+        "widthBefore": 4032,
+        "widthAfter": 2000,
+        "heightBefore": 3024,
+        "heightAfter": 1500,
+        "sha1Before": "e4b99911d0b76d6815c2a2fc5210b690779ed221",
+        "sha1After": "8b5af6d2c5efa8523c9c7e97c1faa3eb9dc3fbc7"
+      },
+      {
+        "original": "/legacy/img/a6e32d8031-283429040.jpg",
+        "current": "/legacy/img/a6e32d8031-283429040.jpg",
+        "reason": "downscale",
+        "bytesBefore": 3490831,
+        "bytesAfter": 481404,
+        "widthBefore": 2937,
+        "widthAfter": 2000,
+        "heightBefore": 2463,
+        "heightAfter": 1677,
+        "sha1Before": "ce3cda02feccf089393403c4ce1157376c47a5cf",
+        "sha1After": "68da5dbed66c0ec3b1824e23dcfa804ea40e16a8"
+      },
+      {
+        "original": "/legacy/img/a726182944-s-89505806-0.jpg",
+        "current": "/legacy/img/a726182944-s-89505806-0.jpg",
+        "reason": "downscale",
+        "bytesBefore": 2301021,
+        "bytesAfter": 413123,
+        "widthBefore": 3326,
+        "widthAfter": 2000,
+        "heightBefore": 2496,
+        "heightAfter": 1501,
+        "sha1Before": "0248093c48d87e30d1feec4073d10240e99f1aa9",
+        "sha1After": "9c09f70b878f3a19cbf2ba04219365e0deb12da3"
+      },
+      {
+        "original": "/legacy/img/a765da75e4-mczh-tw1920x700-large3563-511938360346.bmp",
+        "current": "/legacy/img/a765da75e4-mczh-tw1920x700-large3563-511938360346.png",
+        "reason": "bmp-to-png",
+        "bytesBefore": 1982538,
+        "bytesAfter": 412989,
+        "widthBefore": 944,
+        "widthAfter": 944,
+        "heightBefore": 700,
+        "heightAfter": 700,
+        "sha1Before": "b3a17999c6dbbaf5215f5db495ba70d99eaec165",
+        "sha1After": "0ad7294f4d9152160162661bfc82704eb2b0d2e7"
+      },
+      {
+        "original": "/legacy/img/a9dc8864a0-s-89505827-0.jpg",
+        "current": "/legacy/img/a9dc8864a0-s-89505827-0.jpg",
+        "reason": "downscale",
+        "bytesBefore": 3492767,
+        "bytesAfter": 557461,
+        "widthBefore": 4032,
+        "widthAfter": 2000,
+        "heightBefore": 3024,
+        "heightAfter": 1500,
+        "sha1Before": "7a34053d7f4b9a219a2c64bce125a7928fb341b9",
+        "sha1After": "a1362cd4340fac69c140386a9685945628725afc"
+      },
+      {
+        "original": "/legacy/img/b8d09f008f-img-68371.png",
+        "current": "/legacy/img/b8d09f008f-img-68371.png",
+        "reason": "downscale",
+        "bytesBefore": 4717741,
+        "bytesAfter": 2630188,
+        "widthBefore": 2984,
+        "widthAfter": 2000,
+        "heightBefore": 1232,
+        "heightAfter": 826,
+        "sha1Before": "0e6247b81076607bf660ba2f7eba46f6d481234c",
+        "sha1After": "3bb2f4b823b12dd2aa20a14fba80cd199ff8c1da"
+      },
+      {
+        "original": "/legacy/img/b92b107767-26.jpg",
+        "current": "/legacy/img/b92b107767-26.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1514799,
+        "bytesAfter": 389899,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "ae7e6cc6b2ee96d8ec20bd2504be0e14e2e9b448",
+        "sha1After": "6b4e31df1b9881a191fc45acd1cf51adf02e039f"
+      },
+      {
+        "original": "/legacy/img/c910c3835d-16.jpg",
+        "current": "/legacy/img/c910c3835d-16.jpg",
+        "reason": "downscale",
+        "bytesBefore": 625613,
+        "bytesAfter": 139278,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "ebf3fc2a69e436d8f2368a84b5d356f07a847fdd",
+        "sha1After": "c72dd1645913a7c831c505f2c0839729c410ceb7"
+      },
+      {
+        "original": "/legacy/img/cd41d7859e-05.jpg",
+        "current": "/legacy/img/cd41d7859e-05.jpg",
+        "reason": "downscale",
+        "bytesBefore": 2999139,
+        "bytesAfter": 574245,
+        "widthBefore": 4032,
+        "widthAfter": 2000,
+        "heightBefore": 3024,
+        "heightAfter": 1500,
+        "sha1Before": "3409cc964d9bd0d662db63a97b78f7b04446bf2a",
+        "sha1After": "b9435698d9c07cb35ae702586ed38204e361c9b0"
+      },
+      {
+        "original": "/legacy/img/d06803fd92-19.jpg",
+        "current": "/legacy/img/d06803fd92-19.jpg",
+        "reason": "downscale",
+        "bytesBefore": 715663,
+        "bytesAfter": 168440,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "3dd0227e25148e45c17c3ef01319a8bf91341c2b",
+        "sha1After": "facf09ce707e11b8017c4c2e9a47d403ca648e16"
+      },
+      {
+        "original": "/legacy/img/d4e9341ebc-22.jpg",
+        "current": "/legacy/img/d4e9341ebc-22.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1104267,
+        "bytesAfter": 293377,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "5e12f302d26242d1bd618d3b5f6ede5ab038fe6a",
+        "sha1After": "61465edbccb53d897c75b5371294f5c7f3eee916"
+      },
+      {
+        "original": "/legacy/img/d61b3af05d-03.bmp",
+        "current": "/legacy/img/d61b3af05d-03.png",
+        "reason": "bmp-to-png",
+        "bytesBefore": 4161690,
+        "bytesAfter": 364530,
+        "widthBefore": 1448,
+        "widthAfter": 1448,
+        "heightBefore": 958,
+        "heightAfter": 958,
+        "sha1Before": "bf55457faae7d9434d752cfc6070ea418b123d35",
+        "sha1After": "04620d81670ec6af75a5ecaa0a0e54690eb9d8ab"
+      },
+      {
+        "original": "/legacy/img/d82555ba2c-29.jpg",
+        "current": "/legacy/img/d82555ba2c-29.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1533021,
+        "bytesAfter": 403550,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "67c406f165a8062dee67e38d9237259c890a4969",
+        "sha1After": "ef39231ff83099f29c1722a4e67ea8692288abc7"
+      },
+      {
+        "original": "/legacy/img/d8a520b8e0-173525025.jpg",
+        "current": "/legacy/img/d8a520b8e0-173525025.jpg",
+        "reason": "downscale",
+        "bytesBefore": 4944947,
+        "bytesAfter": 688473,
+        "widthBefore": 3508,
+        "widthAfter": 2000,
+        "heightBefore": 4961,
+        "heightAfter": 2828,
+        "sha1Before": "274b00109075e4e2e3156e7e1da8d4e14f08b92a",
+        "sha1After": "4539802b0b1351e34e3520c3913ff20cde7b9d2b"
+      },
+      {
+        "original": "/legacy/img/e0558bada8-s-89579529-0.jpg",
+        "current": "/legacy/img/e0558bada8-s-89579529-0.jpg",
+        "reason": "downscale",
+        "bytesBefore": 2862477,
+        "bytesAfter": 571688,
+        "widthBefore": 3811,
+        "widthAfter": 2000,
+        "heightBefore": 2858,
+        "heightAfter": 1500,
+        "sha1Before": "f6b1f4fd0917793a2039df6672161471ee6ac2b8",
+        "sha1After": "9c47760f9041de78d0e61a9836f271e1cc1f352c"
+      },
+      {
+        "original": "/legacy/img/e3049dce0d-11.jpg",
+        "current": "/legacy/img/e3049dce0d-11.jpg",
+        "reason": "downscale",
+        "bytesBefore": 727235,
+        "bytesAfter": 161912,
+        "widthBefore": 4244,
+        "widthAfter": 2000,
+        "heightBefore": 2827,
+        "heightAfter": 1332,
+        "sha1Before": "7c1ad71ecb123714c1a2e273dfcb36a32010903d",
+        "sha1After": "ad04c1888d24953bf30c7012611960dccf8f1917"
+      },
+      {
+        "original": "/legacy/img/e996243362-24.jpg",
+        "current": "/legacy/img/e996243362-24.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1738722,
+        "bytesAfter": 433331,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "6f77f54e5b4607d1753abdc4a04dcdb13f80d16c",
+        "sha1After": "f0c5b8fbced0321171dfa3695b950898ffd13635"
+      },
+      {
+        "original": "/legacy/img/ee598411a3-s-89505828.jpg",
+        "current": "/legacy/img/ee598411a3-s-89505828.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1719001,
+        "bytesAfter": 555175,
+        "widthBefore": 2617,
+        "widthAfter": 2000,
+        "heightBefore": 1963,
+        "heightAfter": 1500,
+        "sha1Before": "1767b8acbd0ebfbe80915597af2a072b0d7eec5e",
+        "sha1After": "d9140ad01d74fd1c9c8a730b40bb1f4d396fcfb7"
+      },
+      {
+        "original": "/legacy/img/f6c527145e-335307601.jpg",
+        "current": "/legacy/img/f6c527145e-335307601.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1068754,
+        "bytesAfter": 481942,
+        "widthBefore": 2189,
+        "widthAfter": 2000,
+        "heightBefore": 2479,
+        "heightAfter": 2265,
+        "sha1Before": "8b659ea922e618bce899fb5b27a4e6f7f648e29f",
+        "sha1After": "14898343e5453662c3fd6677b3121dca7054aebb"
+      },
+      {
+        "original": "/legacy/img/f9ae87e2d8-01.jpg",
+        "current": "/legacy/img/f9ae87e2d8-01.jpg",
+        "reason": "downscale",
+        "bytesBefore": 735939,
+        "bytesAfter": 188183,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "f08a702b1e7d2581384e30071d4f176f4996d859",
+        "sha1After": "f51619203ff3a6d122209867bf162af3ea983289"
+      },
+      {
+        "original": "/legacy/img/fe10eef4af-12.jpg",
+        "current": "/legacy/img/fe10eef4af-12.jpg",
+        "reason": "downscale",
+        "bytesBefore": 1750112,
+        "bytesAfter": 465636,
+        "widthBefore": 4242,
+        "widthAfter": 2000,
+        "heightBefore": 2828,
+        "heightAfter": 1333,
+        "sha1Before": "401e62b30b04a3ff47dcc4b0049a0540cebdd498",
+        "sha1After": "e134ef097bb57983f36e7344652592059b73c7f7"
+      }
+    ],
+    "errors": []
+  },
+  "redirectChecks": {
+    "assetRedirectsMissing": [],
+    "aliasMirrors": [
+      {
+        "code": "412-1039-7695",
+        "destination": "/study/forms",
+        "postUrls": 0,
+        "postUrlsMissing": [],
+        "pageUrls": 1,
+        "pageUrlsMissing": []
+      },
+      {
+        "code": "412-1039-7696",
+        "destination": "/news",
+        "postUrls": 24,
+        "postUrlsMissing": [],
+        "pageUrls": 6,
+        "pageUrlsMissing": []
+      },
+      {
+        "code": "412-1039-7707",
+        "destination": "/study/alumni-update",
+        "postUrls": 3,
+        "postUrlsMissing": [],
+        "pageUrls": 2,
+        "pageUrlsMissing": []
+      },
+      {
+        "code": "412-1039-7721",
+        "destination": "/news",
+        "postUrls": 22,
+        "postUrlsMissing": [],
+        "pageUrls": 6,
+        "pageUrlsMissing": []
+      },
+      {
+        "code": "412-1039-7723",
+        "destination": "/news/honors",
+        "postUrls": 2,
+        "postUrlsMissing": [],
+        "pageUrls": 2,
+        "pageUrlsMissing": []
+      },
+      {
+        "code": "412-1039-7724",
+        "destination": "/news/media",
+        "postUrls": 1,
+        "postUrlsMissing": [],
+        "pageUrls": 2,
+        "pageUrlsMissing": []
+      }
+    ],
+    "collectionUnits": [
+      {
+        "code": "403-1039-1782",
+        "destination": "/admissions/news",
+        "pages": 2,
+        "missing": []
+      },
+      {
+        "code": "403-1039-1293",
+        "destination": "/news",
+        "pages": 8,
+        "missing": []
+      },
+      {
+        "code": "403-1039-1366",
+        "destination": "/news/events",
+        "pages": 5,
+        "missing": []
+      },
+      {
+        "code": "403-1039-1367",
+        "destination": "/news/honors",
+        "pages": 1,
+        "missing": []
+      },
+      {
+        "code": "403-1039-1368",
+        "destination": "/news/media",
+        "pages": 1,
+        "missing": []
+      },
+      {
+        "code": "403-1039-2092",
+        "destination": "/news/videos",
+        "pages": 1,
+        "missing": []
+      }
+    ]
+  },
+  "unresolved": [],
+  "failedDownloads": [],
+  "emptyPages": [],
+  "emptyPosts": [
+    "76708"
+  ],
+  "externalImageHosts": {},
+  "externalImages": [],
+  "ownedImages": {
+    "hosts": [
+      "emrd.tw",
+      "www.emrd.tw"
+    ],
+    "downloaded": [
+      {
+        "url": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/1524457627_orig.jpg",
+        "path": "/legacy/img/4c820a4ac2-1524457627-orig.jpg"
+      },
+      {
+        "url": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/2363_orig.jpg",
+        "path": "/legacy/img/a4e7ab0c77-2363-orig.jpg"
+      },
+      {
+        "url": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/4554_orig.jpg",
+        "path": "/legacy/img/56928606b7-4554-orig.jpg"
+      },
+      {
+        "url": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/566_orig.jpg",
+        "path": "/legacy/img/8bc7b464ec-566-orig.jpg"
+      },
+      {
+        "url": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/6477_orig.jpg",
+        "path": "/legacy/img/4a50e34cbe-6477-orig.jpg"
+      },
+      {
+        "url": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/999_orig.jpg",
+        "path": "/legacy/img/80ef6fa140-999-orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/001_1_orig.jpg",
+        "path": "/legacy/img/2c1eaedb5b-001-1-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/001_1_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/1-emrd%E6%8B%9B%E7%94%9F%E8%AA%AA%E6%98%8E%E6%9C%831125ver4.pdf",
+        "path": "/legacy/files/3d22ecc369-1-emrd1125ver4.pdf",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/1-emrd%E6%8B%9B%E7%94%9F%E8%AA%AA%E6%98%8E%E6%9C%831125ver4.pdf"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/1061024_%E5%AD%B8%E5%88%86%E6%8A%B5%E5%85%8D%E5%8F%8A%E6%B8%9B%E7%B9%B3%E8%BE%A6%E6%B3%95_%E6%AD%A3%E5%BC%8F%E9%80%9A%E9%81%8E_.pdf",
+        "path": "/legacy/files/7fb56d8ec0-1061024.pdf",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/1061024_%E5%AD%B8%E5%88%86%E6%8A%B5%E5%85%8D%E5%8F%8A%E6%B8%9B%E7%B9%B3%E8%BE%A6%E6%B3%95_%E6%AD%A3%E5%BC%8F%E9%80%9A%E9%81%8E_.pdf"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/1070526-meitu-1_orig.jpg",
+        "path": "/legacy/img/e865225450-1070526-meitu-1-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/1070526-meitu-1_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/108%E5%AD%B8%E5%B9%B4%E5%BA%A6%E7%AC%AC%E3%84%A7%E5%AD%B8%E6%9C%9F%E9%9A%A8%E7%8F%AD%E9%99%84%E8%AE%80%E5%A0%B1%E5%90%8D%E8%A1%A8%E5%96%AE.docx",
+        "path": "/legacy/files/e2edc4bd06-108.docx",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/108%E5%AD%B8%E5%B9%B4%E5%BA%A6%E7%AC%AC%E3%84%A7%E5%AD%B8%E6%9C%9F%E9%9A%A8%E7%8F%AD%E9%99%84%E8%AE%80%E5%A0%B1%E5%90%8D%E8%A1%A8%E5%96%AE.docx"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/108%E5%B9%B4%E6%8B%9B%E7%94%9F%E7%B0%A1%E7%AB%A0.pdf",
+        "path": "/legacy/files/622ea079fa-108.pdf",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/108%E5%B9%B4%E6%8B%9B%E7%94%9F%E7%B0%A1%E7%AB%A0.pdf"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/10801_orig.png",
+        "path": "/legacy/img/4d0dd7e2d1-10801-orig.png",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/10801_orig.png"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/1386402255_orig.png",
+        "path": "/legacy/img/b01688353c-1386402255-orig.png",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/1386402255_orig.png"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/180312-0029_orig.jpg",
+        "path": "/legacy/img/04d654e17c-180312-0029-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/180312-0029_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/20171224-family-day-171228-0020_1_orig.jpg",
+        "path": "/legacy/img/8824cdf08e-20171224-family-day-171228-0020-1-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/20171224-family-day-171228-0020_1_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/25660250-1905897706390488-687665445234880803-n_orig.jpg",
+        "path": "/legacy/img/97e536500e-25660250-1905897706390488-687665445234880803-n-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/25660250-1905897706390488-687665445234880803-n_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/31395956-1970071213306470-6923211569970329872-n_orig.jpg",
+        "path": "/legacy/img/65a71d54cf-31395956-1970071213306470-6923211569970329872-n-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/31395956-1970071213306470-6923211569970329872-n_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/555_orig.png",
+        "path": "/legacy/img/8e3eef7a13-555-orig.png",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/555_orig.png"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/71837978-2350476835265904-4173037684182220800-n_orig.jpg",
+        "path": "/legacy/img/ba39284bd8-71837978-2350476835265904-4173037684182220800-n-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/71837978-2350476835265904-4173037684182220800-n_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/72192561-2350477718599149-3818217739936333824-n_orig.jpg",
+        "path": "/legacy/img/e3c36c6490-72192561-2350477718599149-3818217739936333824-n-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/72192561-2350477718599149-3818217739936333824-n_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/72334260-2350476345265953-8960327456300990464-n_orig.jpg",
+        "path": "/legacy/img/b51d0427f3-72334260-2350476345265953-8960327456300990464-n-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/72334260-2350476345265953-8960327456300990464-n_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/72549335-2350477608599160-6172738894870609920-n_orig.jpg",
+        "path": "/legacy/img/e97d5ed722-72549335-2350477608599160-6172738894870609920-n-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/72549335-2350477608599160-6172738894870609920-n_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/dsc-100_orig.jpg",
+        "path": "/legacy/img/1ebe6b123c-dsc-100-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/dsc-100_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/dsc-106_orig.jpg",
+        "path": "/legacy/img/cd3930b68d-dsc-106-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/dsc-106_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/dsc-109-meitu-9-meitu-1_orig.jpg",
+        "path": "/legacy/img/4ea3618e7a-dsc-109-meitu-9-meitu-1-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/dsc-109-meitu-9-meitu-1_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/dsc-96_orig.jpg",
+        "path": "/legacy/img/4ce6cd2bff-dsc-96-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/dsc-96_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/dscf7458_orig.jpg",
+        "path": "/legacy/img/c70aa90593-dscf7458-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/dscf7458_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/dscf7532_orig.jpg",
+        "path": "/legacy/img/973b1cdf8b-dscf7532-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/dscf7532_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/dscf7823_orig.jpg",
+        "path": "/legacy/img/9931f62bd1-dscf7823-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/dscf7823_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/dscf7918_orig.jpg",
+        "path": "/legacy/img/73d97e9063-dscf7918-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/dscf7918_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0001.jpg",
+        "path": "/legacy/img/7462cd41ff-emrd-190603-0001.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0001.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0001_orig.jpg",
+        "path": "/legacy/img/fc25cb77ad-emrd-190603-0001-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0001_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0004.jpg",
+        "path": "/legacy/img/8010a77cff-emrd-190603-0004.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0004.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0004_orig.jpg",
+        "path": "/legacy/img/317187dc2b-emrd-190603-0004-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0004_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0005.jpg",
+        "path": "/legacy/img/78d56c54a9-emrd-190603-0005.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0005.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0005_orig.jpg",
+        "path": "/legacy/img/35d7e16f07-emrd-190603-0005-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0005_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0020.jpg",
+        "path": "/legacy/img/8dca651c62-emrd-190603-0020.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0020.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0020_orig.jpg",
+        "path": "/legacy/img/0284d5e5e9-emrd-190603-0020-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0020_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0023.jpg",
+        "path": "/legacy/img/850eb634c0-emrd-190603-0023.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0023.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0023_orig.jpg",
+        "path": "/legacy/img/42d2ed4081-emrd-190603-0023-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0023_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0024.jpg",
+        "path": "/legacy/img/07db11a271-emrd-190603-0024.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0024.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0024_orig.jpg",
+        "path": "/legacy/img/d8119e147c-emrd-190603-0024-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0024_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0025.jpg",
+        "path": "/legacy/img/4284b631ec-emrd-190603-0025.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0025.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0025_orig.jpg",
+        "path": "/legacy/img/dfb6d5e83e-emrd-190603-0025-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0025_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0027.jpg",
+        "path": "/legacy/img/d026f17b4c-emrd-190603-0027.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0027.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0027_orig.jpg",
+        "path": "/legacy/img/0661da8cc7-emrd-190603-0027-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0027_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0031.jpg",
+        "path": "/legacy/img/0a5b43314d-emrd-190603-0031.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0031.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0031_orig.jpg",
+        "path": "/legacy/img/27483c7a28-emrd-190603-0031-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0031_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0032.jpg",
+        "path": "/legacy/img/168236a53d-emrd-190603-0032.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0032.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0032_orig.jpg",
+        "path": "/legacy/img/581e6d9ac7-emrd-190603-0032-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0032_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0035.jpg",
+        "path": "/legacy/img/e730f1008f-emrd-190603-0035.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0035.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0035_orig.jpg",
+        "path": "/legacy/img/0edf85ec28-emrd-190603-0035-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0035_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0036.jpg",
+        "path": "/legacy/img/53ecbe5f86-emrd-190603-0036.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0036.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0036_orig.jpg",
+        "path": "/legacy/img/de1c3502f8-emrd-190603-0036-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0036_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0039.jpg",
+        "path": "/legacy/img/9b469b9600-emrd-190603-0039.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0039.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0039_orig.jpg",
+        "path": "/legacy/img/fdda81d925-emrd-190603-0039-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0039_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0040.jpg",
+        "path": "/legacy/img/799d026c85-emrd-190603-0040.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0040.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0040_orig.jpg",
+        "path": "/legacy/img/799d026c85-emrd-190603-0040.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-190603-0040_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-web_orig.jpg",
+        "path": "/legacy/img/529d508964-emrd-web-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/emrd-web_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/img-1343_orig.jpg",
+        "path": "/legacy/img/42c314ad0b-img-1343-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/img-1343_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/img-1348_orig.jpg",
+        "path": "/legacy/img/dac0a8b02d-img-1348-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/img-1348_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/img-1355_orig.jpg",
+        "path": "/legacy/img/23d1709038-img-1355-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/img-1355_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/img-4036_orig.jpg",
+        "path": "/legacy/img/6a747a3bf9-img-4036-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/img-4036_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/img-4079_orig.jpg",
+        "path": "/legacy/img/57a9d43327-img-4079-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/img-4079_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/img-6190_orig.jpg",
+        "path": "/legacy/img/753ef02774-img-6190-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/img-6190_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/img-7225_orig.jpg",
+        "path": "/legacy/img/b7e33cb110-img-7225-orig.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/img-7225_orig.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/invitation0601_orig.png",
+        "path": "/legacy/img/1cf6dc42d4-invitation0601-orig.png",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/invitation0601_orig.png"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/layout_ntust_map_ib301.png",
+        "path": "/legacy/img/fdb726e3d0-layout-ntust-map-ib301.png",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/layout_ntust_map_ib301.png"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/ntust_map_rb102.jpg",
+        "path": "/legacy/img/1b47384c22-ntust-map-rb102.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/ntust_map_rb102.jpg"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/02.jpg?1513133985",
+        "path": "/legacy/img/06516ecce5-02.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/02.jpg?1513133985"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/0630.jpg?1526953502",
+        "path": "/legacy/img/8232a6fe43-0630.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/0630.jpg?1526953502"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/0910mail-page-0001.jpg?1568790002",
+        "path": "/legacy/img/ad642c666c-0910mail-page-0001.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/0910mail-page-0001.jpg?1568790002"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/0919.png?1568951546",
+        "path": "/legacy/img/710c4dc113-0919.png",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/0919.png?1568951546"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/10701.png?1533781408",
+        "path": "/legacy/img/4160ae034d-10701.png",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/10701.png?1533781408"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/1943968127.png?1531808420",
+        "path": "/legacy/img/186c08bbf3-1943968127.png",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/1943968127.png?1531808420"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/695378813.jpg?1538527643",
+        "path": "/legacy/img/290a524478-695378813.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/695378813.jpg?1538527643"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/834338154.png?1548641042",
+        "path": "/legacy/img/14d3da8d9c-834338154.png",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/834338154.png?1548641042"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/dsc-105-meitu-1.jpg?1541034952",
+        "path": "/legacy/img/08ce5f5ceb-dsc-105-meitu-1.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/dsc-105-meitu-1.jpg?1541034952"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/emrd-fb.jpg?1513309022",
+        "path": "/legacy/img/0e197770de-emrd-fb.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/emrd-fb.jpg?1513309022"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/fb-info.png?1535014835",
+        "path": "/legacy/img/0b628c1edb-fb-info.png",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/fb-info.png?1535014835"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/img-0370_1.jpg?1553504620",
+        "path": "/legacy/img/9349d18372-img-0370-1.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/img-0370_1.jpg?1553504620"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/img-2115.jpeg?1513323244",
+        "path": "/legacy/img/e5646c9a6b-img-2115.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/img-2115.jpeg?1513323244"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/img-2185.jpg?1546918075",
+        "path": "/legacy/img/d597029ccf-img-2185.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/img-2185.jpg?1546918075"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/join.jpeg?1521594336",
+        "path": "/legacy/img/b06c5da990-join.jpg",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/join.jpeg?1521594336"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/youtube.png?1513578726",
+        "path": "/legacy/img/e67e489937-youtube.png",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/youtube.png?1513578726"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/qr_orig.png",
+        "path": "/legacy/img/1c715014e9-qr-orig.png",
+        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/qr_orig.png"
+      }
+    ],
+    "dead": [],
+    "deadLinks": [
+      {
+        "href": "https://www.emrd.tw/107-02234162639938568296773846835712-225772151733267172513027490.html",
+        "foundIn": [
+          "post:76698"
+        ],
+        "mirrorPage": {
+          "url": "https://115637951-491297898992377255.preview.editmysite.com/107-02234162639938568296773846835712-225772151733267172513027490.html",
+          "ok": false,
+          "status": 404,
+          "contentType": "text/html"
+        }
+      },
+      {
+        "href": "https://www.emrd.tw/emrd-2665721451341843379522530.html",
+        "foundIn": [
+          "post:76725"
+        ],
+        "mirrorPage": {
+          "url": "https://115637951-491297898992377255.preview.editmysite.com/emrd-2665721451341843379522530.html",
+          "ok": false,
+          "status": 404,
+          "contentType": "text/html"
+        }
+      }
+    ],
+    "mirrorAvailable": 0,
+    "unrecoverable": [
+      {
+        "url": "https://www.emrd.tw/107-02234162639938568296773846835712-225772151733267172513027490.html",
+        "kind": "link",
+        "reason": "Weebly 頁面（非 /uploads/ 檔案），不屬於圖片／檔案搬移範圍；連結保留原網址",
+        "foundIn": [
+          "post:76698"
+        ]
+      },
+      {
+        "url": "https://www.emrd.tw/emrd-2665721451341843379522530.html",
+        "kind": "link",
+        "reason": "Weebly 頁面（非 /uploads/ 檔案），不屬於圖片／檔案搬移範圍；連結保留原網址",
+        "foundIn": [
+          "post:76725"
+        ]
+      }
+    ],
+    "note": "www.emrd.tw 網域已無法解析（NXDOMAIN）；客戶（網站所有者）同意 1:1 搬移，其 /uploads/ 圖片與檔案由同一個 Weebly 網站（站台 115637951）的預覽主機下載到 public/legacy/（downloaded 的 fetchedFrom）。dead／deadLinks／unrecoverable 為仍無法取得而保留原網址者。"
+  },
+  "externalImageChecks": [],
+  "deadExternalImages": [],
+  "queryRedirects": [
+    {
+      "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9Mek15TDNCMFlWODBNek00TUY4MU5UTTJPVGcwWHpjMU5UazRMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWJGWTKK303035IGJCUSGC41VXQPOOOKZWPP5400HG45PKPKCCTXLPA404ROJGKOSWTSLODGB035LKZTJDDCA034B0B4FCUSSS45FCXSLKMPKKDGA0EGGDZSTWCG35OP24SWXSUTRLGGSSUSUSUSUW00A4HHHH",
+      "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9Mek15TDNCMFlWODBNek00TUY4MU5UTTJPVGcwWHpjMU5UazRMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWJGWTKK303035IGJCUSGC41VXQPOOOKZWPP5400HG45PKPKCCTXLPA404ROJGKOSWTSLODGB035LKZTJDDCA034B0B4FCUSSS45FCXSLKMPKKDGA0EGGDZSTWCG35OP24SWXSUTRLGGSSUSUSUSUW00A4HHHH",
+      "path": "/app/index.php",
+      "query": "Action=downloadfile&file=WVhSMFlXTm9Mek15TDNCMFlWODBNek00TUY4MU5UTTJPVGcwWHpjMU5UazRMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWJGWTKK303035IGJCUSGC41VXQPOOOKZWPP5400HG45PKPKCCTXLPA404ROJGKOSWTSLODGB035LKZTJDDCA034B0B4FCUSSS45FCXSLKMPKKDGA0EGGDZSTWCG35OP24SWXSUTRLGGSSUSUSUSUW00A4HHHH",
+      "destination": "/legacy/files/d76bf6497c-110-1-semi-emrd-r.pdf"
+    },
+    {
+      "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFNemt3TTE4M056QTFOVFUyWHpreE1URTNMbkJrWmc9PQ==&fname=WW54RPOKRK44VXHHVS04FCWTZSB4TSYWSSB0UWMPNPQLWSB5ROB4A0LLDGOKJGWXZTPOHD00A404MOWSXSMOICWSYSROXSGCHDYTLOB5WSROWXTWFHPOXSFCUS00HH25HCA0EGXWZSHC40WSWSB0YSMKIHXTQPSWXWECZS54IGOOYSUSTWDCUTJHDGVWICSXKO30POHCWSROMKXSQPUXPOSSSSRO54SWUSDCROFCNOXW41KKWW04DHHG",
+      "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFNemt3TTE4M056QTFOVFUyWHpreE1URTNMbkJrWmc9PQ==&fname=WW54RPOKRK44VXHHVS04FCWTZSB4TSYWSSB0UWMPNPQLWSB5ROB4A0LLDGOKJGWXZTPOHD00A404MOWSXSMOICWSYSROXSGCHDYTLOB5WSROWXTWFHPOXSFCUS00HH25HCA0EGXWZSHC40WSWSB0YSMKIHXTQPSWXWECZS54IGOOYSUSTWDCUTJHDGVWICSXKO30POHCWSROMKXSQPUXPOSSSSRO54SWUSDCROFCNOXW41KKWW04DHHG",
+      "path": "/app/index.php",
+      "query": "Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFNemt3TTE4M056QTFOVFUyWHpreE1URTNMbkJrWmc9PQ==&fname=WW54RPOKRK44VXHHVS04FCWTZSB4TSYWSSB0UWMPNPQLWSB5ROB4A0LLDGOKJGWXZTPOHD00A404MOWSXSMOICWSYSROXSGCHDYTLOB5WSROWXTWFHPOXSFCUS00HH25HCA0EGXWZSHC40WSWSB0YSMKIHXTQPSWXWECZS54IGOOYSUSTWDCUTJHDGVWICSXKO30POHCWSROMKXSQPUXPOSSSSRO54SWUSDCROFCNOXW41KKWW04DHHG",
+      "destination": "/legacy/files/54f427b02a-111042061.pdf"
+    },
+    {
+      "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFNemt3TkY4NE9ERXhNakl4WHpreE1URTRMbkJrWmc9PQ==&fname=WW54RPOKRK44VXHHVS04TSWTKKMOGG35ECFGCCMKLPIDGGB5FC30A0SW34OKB0SSICCCWWIHDGVW30LO14FGA0YSDGRK04LKA1YTB5RONKNKPOSWECGCWXXXLOLKCCXXTSJC41WTXSNKHGXSKLEG04MKUTRLGGSSUSUSUSUW00A4HHHH",
+      "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFNemt3TkY4NE9ERXhNakl4WHpreE1URTRMbkJrWmc9PQ==&fname=WW54RPOKRK44VXHHVS04TSWTKKMOGG35ECFGCCMKLPIDGGB5FC30A0SW34OKB0SSICCCWWIHDGVW30LO14FGA0YSDGRK04LKA1YTB5RONKNKPOSWECGCWXXXLOLKCCXXTSJC41WTXSNKHGXSKLEG04MKUTRLGGSSUSUSUSUW00A4HHHH",
+      "path": "/app/index.php",
+      "query": "Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFNemt3TkY4NE9ERXhNakl4WHpreE1URTRMbkJrWmc9PQ==&fname=WW54RPOKRK44VXHHVS04TSWTKKMOGG35ECFGCCMKLPIDGGB5FC30A0SW34OKB0SSICCCWWIHDGVW30LO14FGA0YSDGRK04LKA1YTB5RONKNKPOSWECGCWXXXLOLKCCXXTSJC41WTXSNKHGXSKLEG04MKUTRLGGSSUSUSUSUW00A4HHHH",
+      "destination": "/legacy/files/e684e56db2-1110704.pdf"
+    },
+    {
+      "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFNemt3TlY4Mk9UQXpPREZmT1RFeE1UZ3VjR1Jt&fname=QO54GHTSYW1045LL50EGJGWTZSB4TSWWOPQKYSGCIHGDDCTSWSJCFC5400KKTTPKVWPOGD15JCZS54WSMOXSA0HCUSB0MPWS00RLB5TWUWUSWXUWSSHG20FCRK40WW2500JCUWJGVWTWWS25WSFG4035UTGDVSA0A0B4ZSFGFGCCRKQKRKPOB505HC04MOLOQOB4A0KKWSA040MKIHMP304014B0JG45SSPOROFCYWKK41IHWW04DHHG",
+      "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFNemt3TlY4Mk9UQXpPREZmT1RFeE1UZ3VjR1Jt&fname=QO54GHTSYW1045LL50EGJGWTZSB4TSWWOPQKYSGCIHGDDCTSWSJCFC5400KKTTPKVWPOGD15JCZS54WSMOXSA0HCUSB0MPWS00RLB5TWUWUSWXUWSSHG20FCRK40WW2500JCUWJGVWTWWS25WSFG4035UTGDVSA0A0B4ZSFGFGCCRKQKRKPOB505HC04MOLOQOB4A0KKWSA040MKIHMP304014B0JG45SSPOROFCYWKK41IHWW04DHHG",
+      "path": "/app/index.php",
+      "query": "Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFNemt3TlY4Mk9UQXpPREZmT1RFeE1UZ3VjR1Jt&fname=QO54GHTSYW1045LL50EGJGWTZSB4TSWWOPQKYSGCIHGDDCTSWSJCFC5400KKTTPKVWPOGD15JCZS54WSMOXSA0HCUSB0MPWS00RLB5TWUWUSWXUWSSHG20FCRK40WW2500JCUWJGVWTWWS25WSFG4035UTGDVSA0A0B4ZSFGFGCCRKQKRKPOB505HC04MOLOQOB4A0KKWSA040MKIHMP304014B0JG45SSPOROFCYWKK41IHWW04DHHG",
+      "destination": "/legacy/files/dcfe5f436f-emrd112.pdf"
+    },
+    {
+      "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFOREkwTTE4eE56YzVNVEl3WHpjek56TTFMbkJrWmc9PQ==&fname=WW54RPOKRK44VXHHVS04TSWTKKMOTSYW20QKTSHCUT05XWTSZWUSA001GGECB0SSSSTSWWMPA40441JGYWJGMO25KL34WTWSA1YTA4FCWSMKPODGCCLKWXXX44XWXXKKA4NO41WTXSTWA1MO50JCYSWS44UXKKB0WS303054WSA4JG54A4US211524LKNOWTPK30WTRL20A040NPZTZT30SS14YWXWA4DGDCRPUSNOKKQLXXLOHG30MOFC30NP25WSJCXSGCIHRLIGB5ROB4PPUWCCOKB4QK44POXT15FG04TXXTVWXSOKLKUSFGRLHG",
+      "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFOREkwTTE4eE56YzVNVEl3WHpjek56TTFMbkJrWmc9PQ==&fname=WW54RPOKRK44VXHHVS04TSWTKKMOTSYW20QKTSHCUT05XWTSZWUSA001GGECB0SSSSTSWWMPA40441JGYWJGMO25KL34WTWSA1YTA4FCWSMKPODGCCLKWXXX44XWXXKKA4NO41WTXSTWA1MO50JCYSWS44UXKKB0WS303054WSA4JG54A4US211524LKNOWTPK30WTRL20A040NPZTZT30SS14YWXWA4DGDCRPUSNOKKQLXXLOHG30MOFC30NP25WSJCXSGCIHRLIGB5ROB4PPUWCCOKB4QK44POXT15FG04TXXTVWXSOKLKUSFGRLHG",
+      "path": "/app/index.php",
+      "query": "Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFOREkwTTE4eE56YzVNVEl3WHpjek56TTFMbkJrWmc9PQ==&fname=WW54RPOKRK44VXHHVS04TSWTKKMOTSYW20QKTSHCUT05XWTSZWUSA001GGECB0SSSSTSWWMPA40441JGYWJGMO25KL34WTWSA1YTA4FCWSMKPODGCCLKWXXX44XWXXKKA4NO41WTXSTWA1MO50JCYSWS44UXKKB0WS303054WSA4JG54A4US211524LKNOWTPK30WTRL20A040NPZTZT30SS14YWXWA4DGDCRPUSNOKKQLXXLOHG30MOFC30NP25WSJCXSGCIHRLIGB5ROB4PPUWCCOKB4QK44POXT15FG04TXXTVWXSOKLKUSFGRLHG",
+      "destination": "/legacy/files/aee4e251b1-1110723-112.pdf"
+    },
+    {
+      "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODBNamd3TjE4eE1qRTFNREF3WHpVek1qazFMbkJrWmc9PQ==&fname=WSGGKLQKUSWWA100HCLKROZWOPMOWTLOFGB0XSKKVX25004034YWYW54LOLKB0OKPOCCYXKKVS0410WWMOHCTSLO34B0NOYSVXVXDCTSROB0CDUWFHA4YWFC2040HHKKDGA0DGWTTWMOPO35WX24ZWYS44UXSSTSFC3030US20GCHHHH",
+      "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODBNamd3TjE4eE1qRTFNREF3WHpVek1qazFMbkJrWmc9PQ==&fname=WSGGKLQKUSWWA100HCLKROZWOPMOWTLOFGB0XSKKVX25004034YWYW54LOLKB0OKPOCCYXKKVS0410WWMOHCTSLO34B0NOYSVXVXDCTSROB0CDUWFHA4YWFC2040HHKKDGA0DGWTTWMOPO35WX24ZWYS44UXSSTSFC3030US20GCHHHH",
+      "path": "/app/index.php",
+      "query": "Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODBNamd3TjE4eE1qRTFNREF3WHpVek1qazFMbkJrWmc9PQ==&fname=WSGGKLQKUSWWA100HCLKROZWOPMOWTLOFGB0XSKKVX25004034YWYW54LOLKB0OKPOCCYXKKVS0410WWMOHCTSLO34B0NOYSVXVXDCTSROB0CDUWFHA4YWFC2040HHKKDGA0DGWTTWMOPO35WX24ZWYS44UXSSTSFC3030US20GCHHHH",
+      "destination": "/legacy/files/a63095fd05-file.pdf"
+    },
+    {
+      "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODFNelE0T1Y4NU1Ua3dPRFEwWHpnd05qazVMbkJrWmc9PQ==&fname=LOGGYSOKWW10OO00HCLKUSJGMOMO25WW203440NKQPXTLK40OKROFCPOWWOOKLOKWWTSZXHHVS0410WWMOHC40HCYSRKMKGCVXVXXWB0UWUS01UWECOKUSOKWWPOGGZXA4LKRKGDXSMOWTB1KLEGCGNK2135A5A4",
+      "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODFNelE0T1Y4NU1Ua3dPRFEwWHpnd05qazVMbkJrWmc9PQ==&fname=LOGGYSOKWW10OO00HCLKUSJGMOMO25WW203440NKQPXTLK40OKROFCPOWWOOKLOKWWTSZXHHVS0410WWMOHC40HCYSRKMKGCVXVXXWB0UWUS01UWECOKUSOKWWPOGGZXA4LKRKGDXSMOWTB1KLEGCGNK2135A5A4",
+      "path": "/app/index.php",
+      "query": "Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODFNelE0T1Y4NU1Ua3dPRFEwWHpnd05qazVMbkJrWmc9PQ==&fname=LOGGYSOKWW10OO00HCLKUSJGMOMO25WW203440NKQPXTLK40OKROFCPOWWOOKLOKWWTSZXHHVS0410WWMOHC40HCYSRKMKGCVXVXXWB0UWUS01UWECOKUSOKWWPOGGZXA4LKRKGDXSMOWTB1KLEGCGNK2135A5A4",
+      "destination": "/legacy/files/10652d365e-q-a.pdf"
+    },
+    {
+      "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODFOREEyTTE4M05UZzFOekE1WHpVd056QTFMbkJrWmc9PQ==&fname=WW54RPOKRK44A1HHHCLKRKZWQOTWWT14QO3435HGTX25LK40FCNKA0540054JGEGWW54UX05A404LK14RKPKTSMO34B0NOYSVXVXXWTSPOA401SWUSKK45FCMKPO5115DGA0NOXTVWNK3535DG34YSNKUTXTQPOOYSDCFCDGGGTSSTUSNO44UT054410NPYWVWXSLO25WSRO50XSA1NP04VSYSB4MKA434DC01QKYWLKXX11EDEGNKMOMKPKNPMKDGJCXS20QPA1IGPKROB4YW54WS10FCROLOPOTTIHTSEGROWW14JGA0ICOPRKWTGCUTMPCGRO14B045KLDGGGYWDCUSPOA1YXVSNOFC14MKMOJG35KLQKQK10TX51UTA0POB4EG0120GCXXOKPO04POMP",
+      "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODFOREEyTTE4M05UZzFOekE1WHpVd056QTFMbkJrWmc9PQ==&fname=WW54RPOKRK44A1HHHCLKRKZWQOTWWT14QO3435HGTX25LK40FCNKA0540054JGEGWW54UX05A404LK14RKPKTSMO34B0NOYSVXVXXWTSPOA401SWUSKK45FCMKPO5115DGA0NOXTVWNK3535DG34YSNKUTXTQPOOYSDCFCDGGGTSSTUSNO44UT054410NPYWVWXSLO25WSRO50XSA1NP04VSYSB4MKA434DC01QKYWLKXX11EDEGNKMOMKPKNPMKDGJCXS20QPA1IGPKROB4YW54WS10FCROLOPOTTIHTSEGROWW14JGA0ICOPRKWTGCUTMPCGRO14B045KLDGGGYWDCUSPOA1YXVSNOFC14MKMOJG35KLQKQK10TX51UTA0POB4EG0120GCXXOKPO04POMP",
+      "path": "/app/index.php",
+      "query": "Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODFOREEyTTE4M05UZzFOekE1WHpVd056QTFMbkJrWmc9PQ==&fname=WW54RPOKRK44A1HHHCLKRKZWQOTWWT14QO3435HGTX25LK40FCNKA0540054JGEGWW54UX05A404LK14RKPKTSMO34B0NOYSVXVXXWTSPOA401SWUSKK45FCMKPO5115DGA0NOXTVWNK3535DG34YSNKUTXTQPOOYSDCFCDGGGTSSTUSNO44UT054410NPYWVWXSLO25WSRO50XSA1NP04VSYSB4MKA434DC01QKYWLKXX11EDEGNKMOMKPKNPMKDGJCXS20QPA1IGPKROB4YW54WS10FCROLOPOTTIHTSEGROWW14JGA0ICOPRKWTGCUTMPCGRO14B045KLDGGGYWDCUSPOA1YXVSNOFC14MKMOJG35KLQKQK10TX51UTA0POB4EG0120GCXXOKPO04POMP",
+      "destination": "/legacy/files/a19fe16105-111.pdf"
+    },
+    {
+      "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF2Y0hSaFh6TTJPVFkxWHpNMk1qYzRNREZmT1Rrd056RXVjR1Jt&fname=WW54RPOKNPSSTXKK00VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHA450OOCDPKIC40TTZXHCNO5020VWB4WSICWSNO4035CCGDMLA0WSEC45B4YSOKYSB0YW54PL15EDXWPK10&cg=7718",
+      "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF2Y0hSaFh6TTJPVFkxWHpNMk1qYzRNREZmT1Rrd056RXVjR1Jt&fname=WW54RPOKNPSSTXKK00VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHA450OOCDPKIC40TTZXHCNO5020VWB4WSICWSNO4035CCGDMLA0WSEC45B4YSOKYSB0YW54PL15EDXWPK10&cg=7718",
+      "path": "/app/index.php",
+      "query": "Action=downloadfile&file=WVhSMFlXTm9MelF2Y0hSaFh6TTJPVFkxWHpNMk1qYzRNREZmT1Rrd056RXVjR1Jt&fname=WW54RPOKNPSSTXKK00VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHA450OOCDPKIC40TTZXHCNO5020VWB4WSICWSNO4035CCGDMLA0WSEC45B4YSOKYSB0YW54PL15EDXWPK10&cg=7718",
+      "destination": "/legacy/files/43b26c2c70-109.pdf"
+    },
+    {
+      "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF6TDNCMFlWODBOalUzTlY4ek5UTTJOakl5WHpVME5UTTFMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWUSWTZSB4KKMKDGFGQLIG41NP34SSFCB4YSFG00OOKLSSPOCCVXXXDG04FCXTVWXSTSLO50B01035IH35XWA0WSECWXPOUS5445FCRKPOOOYXDGA0EGGDVWSWGD24WX24ZWYS44UXSSTSFC3030US20GCHHHH",
+      "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF6TDNCMFlWODBOalUzTlY4ek5UTTJOakl5WHpVME5UTTFMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWUSWTZSB4KKMKDGFGQLIG41NP34SSFCB4YSFG00OOKLSSPOCCVXXXDG04FCXTVWXSTSLO50B01035IH35XWA0WSECWXPOUS5445FCRKPOOOYXDGA0EGGDVWSWGD24WX24ZWYS44UXSSTSFC3030US20GCHHHH",
+      "path": "/app/index.php",
+      "query": "Action=downloadfile&file=WVhSMFlXTm9MelF6TDNCMFlWODBOalUzTlY4ek5UTTJOakl5WHpVME5UTTFMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWUSWTZSB4KKMKDGFGQLIG41NP34SSFCB4YSFG00OOKLSSPOCCVXXXDG04FCXTVWXSTSLO50B01035IH35XWA0WSECWXPOUS5445FCRKPOOOYXDGA0EGGDVWSWGD24WX24ZWYS44UXSSTSFC3030US20GCHHHH",
+      "destination": "/legacy/files/14a42c92dc-110-02-semi.pdf"
+    },
+    {
+      "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MemM0TDNCMFlWODBNelV4TVY4ME16RTBOell5WHpRek5EZ3dMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1100VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHPODGSSKLECRKPOFDYXJCNO41HGXSKOHGICSTMO24NK44UXUTB0LKB4KOPKYSA4LKQKKKCGA500IG04GD34VWJGGDB1B430A1A1&cg=7718",
+      "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MemM0TDNCMFlWODBNelV4TVY4ME16RTBOell5WHpRek5EZ3dMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1100VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHPODGSSKLECRKPOFDYXJCNO41HGXSKOHGICSTMO24NK44UXUTB0LKB4KOPKYSA4LKQKKKCGA500IG04GD34VWJGGDB1B430A1A1&cg=7718",
+      "path": "/app/index.php",
+      "query": "Action=downloadfile&file=WVhSMFlXTm9MemM0TDNCMFlWODBNelV4TVY4ME16RTBOell5WHpRek5EZ3dMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1100VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHPODGSSKLECRKPOFDYXJCNO41HGXSKOHGICSTMO24NK44UXUTB0LKB4KOPKYSA4LKQKKKCGA500IG04GD34VWJGGDB1B430A1A1&cg=7718",
+      "destination": "/legacy/files/56c0b27d16-110.pdf"
+    }
+  ],
+  "redirectSourcesNeedingEscape": [
+    "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9Mek15TDNCMFlWODBNek00TUY4MU5UTTJPVGcwWHpjMU5UazRMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWJGWTKK303035IGJCUSGC41VXQPOOOKZWPP5400HG45PKPKCCTXLPA404ROJGKOSWTSLODGB035LKZTJDDCA034B0B4FCUSSS45FCXSLKMPKKDGA0EGGDZSTWCG35OP24SWXSUTRLGGSSUSUSUSUW00A4HHHH",
+    "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFNemt3TTE4M056QTFOVFUyWHpreE1URTNMbkJrWmc9PQ==&fname=WW54RPOKRK44VXHHVS04FCWTZSB4TSYWSSB0UWMPNPQLWSB5ROB4A0LLDGOKJGWXZTPOHD00A404MOWSXSMOICWSYSROXSGCHDYTLOB5WSROWXTWFHPOXSFCUS00HH25HCA0EGXWZSHC40WSWSB0YSMKIHXTQPSWXWECZS54IGOOYSUSTWDCUTJHDGVWICSXKO30POHCWSROMKXSQPUXPOSSSSRO54SWUSDCROFCNOXW41KKWW04DHHG",
+    "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFNemt3TkY4NE9ERXhNakl4WHpreE1URTRMbkJrWmc9PQ==&fname=WW54RPOKRK44VXHHVS04TSWTKKMOGG35ECFGCCMKLPIDGGB5FC30A0SW34OKB0SSICCCWWIHDGVW30LO14FGA0YSDGRK04LKA1YTB5RONKNKPOSWECGCWXXXLOLKCCXXTSJC41WTXSNKHGXSKLEG04MKUTRLGGSSUSUSUSUW00A4HHHH",
+    "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFNemt3TlY4Mk9UQXpPREZmT1RFeE1UZ3VjR1Jt&fname=QO54GHTSYW1045LL50EGJGWTZSB4TSWWOPQKYSGCIHGDDCTSWSJCFC5400KKTTPKVWPOGD15JCZS54WSMOXSA0HCUSB0MPWS00RLB5TWUWUSWXUWSSHG20FCRK40WW2500JCUWJGVWTWWS25WSFG4035UTGDVSA0A0B4ZSFGFGCCRKQKRKPOB505HC04MOLOQOB4A0KKWSA040MKIHMP304014B0JG45SSPOROFCYWKK41IHWW04DHHG",
+    "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFOREkwTTE4eE56YzVNVEl3WHpjek56TTFMbkJrWmc9PQ==&fname=WW54RPOKRK44VXHHVS04TSWTKKMOTSYW20QKTSHCUT05XWTSZWUSA001GGECB0SSSSTSWWMPA40441JGYWJGMO25KL34WTWSA1YTA4FCWSMKPODGCCLKWXXX44XWXXKKA4NO41WTXSTWA1MO50JCYSWS44UXKKB0WS303054WSA4JG54A4US211524LKNOWTPK30WTRL20A040NPZTZT30SS14YWXWA4DGDCRPUSNOKKQLXXLOHG30MOFC30NP25WSJCXSGCIHRLIGB5ROB4PPUWCCOKB4QK44POXT15FG04TXXTVWXSOKLKUSFGRLHG",
+    "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODBNamd3TjE4eE1qRTFNREF3WHpVek1qazFMbkJrWmc9PQ==&fname=WSGGKLQKUSWWA100HCLKROZWOPMOWTLOFGB0XSKKVX25004034YWYW54LOLKB0OKPOCCYXKKVS0410WWMOHCTSLO34B0NOYSVXVXDCTSROB0CDUWFHA4YWFC2040HHKKDGA0DGWTTWMOPO35WX24ZWYS44UXSSTSFC3030US20GCHHHH",
+    "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODFNelE0T1Y4NU1Ua3dPRFEwWHpnd05qazVMbkJrWmc9PQ==&fname=LOGGYSOKWW10OO00HCLKUSJGMOMO25WW203440NKQPXTLK40OKROFCPOWWOOKLOKWWTSZXHHVS0410WWMOHC40HCYSRKMKGCVXVXXWB0UWUS01UWECOKUSOKWWPOGGZXA4LKRKGDXSMOWTB1KLEGCGNK2135A5A4",
+    "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODFOREEyTTE4M05UZzFOekE1WHpVd056QTFMbkJrWmc9PQ==&fname=WW54RPOKRK44A1HHHCLKRKZWQOTWWT14QO3435HGTX25LK40FCNKA0540054JGEGWW54UX05A404LK14RKPKTSMO34B0NOYSVXVXXWTSPOA401SWUSKK45FCMKPO5115DGA0NOXTVWNK3535DG34YSNKUTXTQPOOYSDCFCDGGGTSSTUSNO44UT054410NPYWVWXSLO25WSRO50XSA1NP04VSYSB4MKA434DC01QKYWLKXX11EDEGNKMOMKPKNPMKDGJCXS20QPA1IGPKROB4YW54WS10FCROLOPOTTIHTSEGROWW14JGA0ICOPRKWTGCUTMPCGRO14B045KLDGGGYWDCUSPOA1YXVSNOFC14MKMOJG35KLQKQK10TX51UTA0POB4EG0120GCXXOKPO04POMP",
+    "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF2Y0hSaFh6TTJPVFkxWHpNMk1qYzRNREZmT1Rrd056RXVjR1Jt&fname=WW54RPOKNPSSTXKK00VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHA450OOCDPKIC40TTZXHCNO5020VWB4WSICWSNO4035CCGDMLA0WSEC45B4YSOKYSB0YW54PL15EDXWPK10&cg=7718",
+    "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF6TDNCMFlWODBOalUzTlY4ek5UTTJOakl5WHpVME5UTTFMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWUSWTZSB4KKMKDGFGQLIG41NP34SSFCB4YSFG00OOKLSSPOCCVXXXDG04FCXTVWXSTSLO50B01035IH35XWA0WSECWXPOUS5445FCRKPOOOYXDGA0EGGDVWSWGD24WX24ZWYS44UXSSTSFC3030US20GCHHHH",
+    "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MemM0TDNCMFlWODBNelV4TVY4ME16RTBOell5WHpRek5EZ3dMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1100VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHPODGSSKLECRKPOFDYXJCNO41HGXSKOHGICSTMO24NK44UXUTB0LKB4KOPKYSA4LKQKKKCGA500IG04GD34VWJGGDB1B430A1A1&cg=7718",
+    "/var/file/39/1039/img/2784/20170624(51).png",
+    "/var/file/39/1039/img/3216/1_1(s).jpg",
+    "/var/file/39/1039/img/3216/3_1(s).jpg",
+    "/var/file/39/1039/img/3216/4_1(s).jpg",
+    "/var/file/39/1039/img/3216/6_1(s).jpg",
+    "/var/file/39/1039/img/3216/8_1(s).jpg"
+  ],
+  "labelMismatches": [
+    {
+      "slug": "about/milestone-video",
+      "legacyTitle": "EMRD學程里程碑影片",
+      "iaLabel": "學程里程碑紀念影片"
+    },
+    {
+      "slug": "study/tuition",
+      "legacyTitle": "國立臺灣科技大學工程學院高階科技研發碩士學位學程學分費調整專區",
+      "iaLabel": "學分費調整專區"
+    },
+    {
+      "slug": "admissions/news",
+      "legacyTitle": "招生資訊",
+      "iaLabel": "招生公告"
+    }
+  ],
+  "unknownLegacyPages": [
+    {
+      "code": "412-1039-7708",
+      "url": "https://emrd.ntust.edu.tw/p/412-1039-7708.php?Lang=zh-tw",
+      "status": 302,
+      "title": "",
+      "alive": false,
+      "foundIn": [
+        "450:83957",
+        "post:76692",
+        "post:76790",
+        "post:83957"
+      ]
+    }
+  ],
+  "linkItems404": [],
+  "linkPosts": [
+    {
+      "id": "83957",
+      "title": "[招生公告] EMRD碩士在職專班 111學年度招生開跑",
+      "kind": "printView",
+      "href": "/admissions/info",
+      "external": false,
+      "collections": [
+        "admissions/news",
+        "news"
+      ],
+      "legacyTarget": "https://emrd.ntust.edu.tw/p/412-1039-7708.php?Lang=zh-tw"
+    },
+    {
+      "id": "87508",
+      "title": "[招生] EMRD-110招生初試成績與合於口試名單公告!",
+      "kind": "link",
+      "href": "https://www.admission.ntust.edu.tw/var/file/52/1052/img/2675/118417770.html#32690",
+      "external": true,
+      "collections": [
+        "news"
+      ],
+      "legacyTarget": "https://www.admission.ntust.edu.tw/var/file/52/1052/img/2675/118417770.html#32690"
+    },
+    {
+      "id": "92371",
+      "title": "[學分班招生] 110-01 半導體產業學分班 SEMI-EMRD 招生中! (報名截止：08/31)",
+      "kind": "link",
+      "href": "/posts/92100",
+      "external": false,
+      "collections": [
+        "admissions/news",
+        "news"
+      ],
+      "legacyTarget": "https://emrd.ntust.edu.tw/p/405-1039-92100,c10033.php?Lang=zh-tw"
+    },
+    {
+      "id": "115147",
+      "title": "EMRD 第七屆 110 級畢業典禮",
+      "kind": "listBody",
+      "href": "/posts/114828",
+      "external": false,
+      "collections": [
+        "news/videos"
+      ],
+      "legacyTarget": "https://emrd.ntust.edu.tw/p/406-1039-114828,r1293.php?Lang=zh-tw"
+    },
+    {
+      "id": "119535",
+      "title": "112 新生破冰營",
+      "kind": "listBody",
+      "href": "/posts/115923",
+      "external": false,
+      "collections": [
+        "news/videos"
+      ],
+      "legacyTarget": "https://emrd.ntust.edu.tw/p/406-1039-115923,r1293.php?Lang=zh-tw"
+    },
+    {
+      "id": "119540",
+      "title": "112 迎新送舊烤肉會",
+      "kind": "listBody",
+      "href": "/posts/118561",
+      "external": false,
+      "collections": [
+        "news/videos"
+      ],
+      "legacyTarget": "https://emrd.ntust.edu.tw/p/406-1039-118561,r1293.php?Lang=zh-tw"
+    },
+    {
+      "id": "120115",
+      "title": "EMRD 校友會 112 年末聚餐",
+      "kind": "listBody",
+      "href": "/posts/120113",
+      "external": false,
+      "collections": [
+        "news/videos"
+      ],
+      "legacyTarget": "https://emrd.ntust.edu.tw/p/406-1039-120113,r1293.php?Lang=zh-tw"
+    },
+    {
+      "id": "123358",
+      "title": "113 年臺灣科技大學 49 週年校慶",
+      "kind": "listBody",
+      "href": "/posts/123330",
+      "external": false,
+      "collections": [
+        "news/videos"
+      ],
+      "legacyTarget": "https://emrd.ntust.edu.tw/p/404-1039-123330-preview.php?Lang=zh-tw"
+    },
+    {
+      "id": "123695",
+      "title": "[公告] 113/04/18 學位考試視訊口試連結",
+      "kind": "link",
+      "href": "https://drive.google.com/file/d/1qxrewc5WS7cnOrAsZFScDxWXEjFFSYW6/view?usp=drive_link",
+      "external": true,
+      "collections": [
+        "news"
+      ],
+      "legacyTarget": "https://drive.google.com/file/d/1qxrewc5WS7cnOrAsZFScDxWXEjFFSYW6/view?usp=drive_link"
+    },
+    {
+      "id": "126569",
+      "title": "EMRD 第八屆 111 級畢業典禮 (照片)",
+      "kind": "listBody",
+      "href": "/posts/126561",
+      "external": false,
+      "collections": [
+        "news/videos"
+      ],
+      "legacyTarget": "https://emrd.ntust.edu.tw/p/404-1039-126561-preview.php?Lang=zh-tw"
+    },
+    {
+      "id": "127017",
+      "title": "EMRD 第八屆 111 級畢業典禮 (影片)",
+      "kind": "listBody",
+      "href": "/posts/126561",
+      "external": false,
+      "collections": [
+        "news/videos"
+      ],
+      "legacyTarget": "https://emrd.ntust.edu.tw/p/404-1039-126561-preview.php?Lang=zh-tw"
+    },
+    {
+      "id": "128880",
+      "title": "113 新生破冰營",
+      "kind": "listBody",
+      "href": "/posts/128866",
+      "external": false,
+      "collections": [
+        "news/videos"
+      ],
+      "legacyTarget": "https://emrd.ntust.edu.tw/p/406-1039-128866,r1293.php?Lang=zh-tw"
+    },
+    {
+      "id": "130379",
+      "title": "113 迎新送舊烤肉會",
+      "kind": "listBody",
+      "href": "/posts/130320",
+      "external": false,
+      "collections": [
+        "news/videos"
+      ],
+      "legacyTarget": "https://emrd.ntust.edu.tw/p/406-1039-130320,r1293.php?Lang=zh-tw"
+    }
+  ],
+  "printViews": [
+    {
+      "id": "83957",
+      "url": "https://emrd.ntust.edu.tw/p/16-1039-83957.php?Lang=zh-tw",
+      "status": 200,
+      "reason": "連結紀錄的目標已下架",
+      "title": "[招生公告] EMRD碩士在職專班 111學年度招生開跑",
+      "hasContent": true
+    }
+  ],
+  "anchors": [
+    {
+      "where": "page:curriculum/theses",
+      "ids": [
+        "legacy-curriculum-theses-top",
+        "legacy-curriculum-theses-105",
+        "legacy-curriculum-theses-106",
+        "legacy-curriculum-theses-107",
+        "legacy-curriculum-theses-108",
+        "legacy-curriculum-theses-109"
+      ]
+    },
+    {
+      "where": "page:faculty/speakers",
+      "ids": [
+        "legacy-faculty-speakers-4",
+        "legacy-faculty-speakers-1",
+        "legacy-faculty-speakers-2",
+        "legacy-faculty-speakers-3"
+      ]
+    }
+  ],
+  "hiddenElementsDropped": [
+    {
+      "where": "post:92909",
+      "elements": 195,
+      "text": [
+        "劉Ｏ祥"
+      ]
+    }
+  ],
+  "galleries": [
+    {
+      "where": "page:about/features",
+      "images": 2,
+      "captions": 0
+    },
+    {
+      "where": "page:study/alumni-update",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:119159",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:140800",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:76687",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:76692",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:76911",
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "where": "post:76912",
+      "images": 2,
+      "captions": 0
+    },
+    {
+      "where": "post:76913",
+      "images": 2,
+      "captions": 0
+    },
+    {
+      "where": "post:78440",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:78818",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:81752",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:81907",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:82386",
+      "images": 4,
+      "captions": 0
+    },
+    {
+      "where": "post:82717",
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "where": "post:82901",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:83877",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:83957",
+      "images": 3,
+      "captions": 0
+    },
+    {
+      "where": "post:84500",
+      "images": 5,
+      "captions": 0
+    },
+    {
+      "where": "post:84502",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:84504",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:84879",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:85066",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:85981",
+      "images": 6,
+      "captions": 0
+    },
+    {
+      "where": "post:87499",
+      "images": 5,
+      "captions": 0
+    },
+    {
+      "where": "post:87511",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:89202",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:89204",
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "where": "post:89891",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:89892",
+      "images": 4,
+      "captions": 0
+    },
+    {
+      "where": "post:92100",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:92768",
+      "images": 1,
+      "captions": 0
+    },
+    {
+      "where": "post:95831",
+      "images": 4,
+      "captions": 0
+    },
+    {
+      "where": "post:98650",
+      "images": 1,
+      "captions": 0
+    }
+  ],
+  "deadLinksRewritten": [
+    {
+      "url": "https://emrd.ntust.edu.tw/p/406-1039-76665,r1368.php?Lang=zh-tw",
+      "rewrittenTo": "/",
+      "reason": "原站文章已下架（原站轉址至首頁）",
+      "foundIn": [
+        "post:130704"
+      ]
+    },
+    {
+      "url": "https://emrd.ntust.edu.tw/p/406-1039-76666,r1368.php?Lang=zh-tw",
+      "rewrittenTo": "/",
+      "reason": "原站文章已下架（原站轉址至首頁）",
+      "foundIn": [
+        "post:130704"
+      ]
+    },
+    {
+      "url": "https://emrd.ntust.edu.tw/p/412-1039-7708.php?Lang=zh-tw",
+      "rewrittenTo": "/admissions/info",
+      "reason": "原站頁面已下架（轉址至首頁），改連到後繼頁面",
+      "foundIn": [
+        "collection:admissions/news",
+        "collection:news",
+        "post:76692",
+        "post:76790",
+        "post:83957"
+      ]
+    }
+  ],
+  "mergedAliasPages": [
+    {
+      "code": "412-1039-7707",
+      "title": "EMRD 校友會",
+      "legacyUrl": "https://emrd.ntust.edu.tw/p/412-1039-7707.php?Lang=zh-tw",
+      "into": "/study/alumni-update",
+      "htmlMerged": true,
+      "itemsAdded": [
+        "/posts/90217",
+        "/posts/83877",
+        "/posts/76479",
+        "/alumni-hall"
+      ],
+      "attachmentsAdded": 0
+    }
+  ],
+  "redirects450": [
+    {
+      "id": "11972",
+      "source": "/p/450-1039-11972,c1.php",
+      "destination": "/curriculum/theses",
+      "basis": "原站 302 的站內目標"
+    },
+    {
+      "id": "76477",
+      "source": "/p/450-1039-76477,c0.php",
+      "destination": "/alumni-hall",
+      "basis": "原站 302 的站內目標"
+    },
+    {
+      "id": "76658",
+      "source": "/p/450-1039-76658,c0.php",
+      "destination": "https://drive.google.com/open?id=1aMGiSp__hxsakkx8UxNDyczRrNfxwvak",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "76743",
+      "source": "/p/450-1039-76743,c0.php",
+      "destination": "https://querycourse.ntust.edu.tw/querycourse/",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "76744",
+      "source": "/p/450-1039-76744,c0.php",
+      "destination": "https://i.ntust.edu.tw/student",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "76746",
+      "source": "/p/450-1039-76746,c0.php",
+      "destination": "https://moodle2.ntust.edu.tw/",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "76748",
+      "source": "/p/450-1039-76748,c0.php",
+      "destination": "https://www.ntust.edu.tw/p/404-1000-316.php",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "76749",
+      "source": "/p/450-1039-76749,c0.php",
+      "destination": "https://www.ce.ntust.edu.tw/",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "83957",
+      "source": "/p/450-1039-83957,c0.php",
+      "destination": "/posts/83957",
+      "basis": "連結型文章"
+    },
+    {
+      "id": "87508",
+      "source": "/p/450-1039-87508,c0.php",
+      "destination": "/posts/87508",
+      "basis": "連結型文章"
+    },
+    {
+      "id": "89230",
+      "source": "/p/450-1039-89230,c0.php",
+      "destination": "https://library.ntust.edu.tw/",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "92371",
+      "source": "/p/450-1039-92371,c0.php",
+      "destination": "/posts/92100",
+      "basis": "原站 302 的站內目標"
+    },
+    {
+      "id": "93599",
+      "source": "/p/450-1039-93599,c0.php",
+      "destination": "https://ae.cge.ntust.edu.tw/",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "107721",
+      "source": "/p/450-1039-107721,c0.php",
+      "destination": "/",
+      "basis": "原站 302 的站內目標"
+    },
+    {
+      "id": "107722",
+      "source": "/p/450-1039-107722,c0.php",
+      "destination": "/",
+      "basis": "原站 302 的站內目標"
+    },
+    {
+      "id": "115147",
+      "source": "/p/450-1039-115147,c0.php",
+      "destination": "/posts/114828",
+      "basis": "原站 302 的站內目標"
+    },
+    {
+      "id": "118931",
+      "source": "/p/450-1039-118931,c0.php",
+      "destination": "/",
+      "basis": "原站 302 的站內目標"
+    },
+    {
+      "id": "119535",
+      "source": "/p/450-1039-119535,c0.php",
+      "destination": "/posts/115923",
+      "basis": "原站 302 的站內目標"
+    },
+    {
+      "id": "119540",
+      "source": "/p/450-1039-119540,c0.php",
+      "destination": "/posts/118561",
+      "basis": "原站 302 的站內目標"
+    },
+    {
+      "id": "120115",
+      "source": "/p/450-1039-120115,c0.php",
+      "destination": "/posts/120113",
+      "basis": "原站 302 的站內目標"
+    },
+    {
+      "id": "120894",
+      "source": "/p/450-1039-120894,c0.php",
+      "destination": "https://drive.google.com/file/d/1SSdNyx6L3sbWRdH6iPpG2H5WPMNR0G8h/view?usp=drive_link",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "120898",
+      "source": "/p/450-1039-120898,c0.php",
+      "destination": "https://drive.google.com/file/d/10w66F49IYR5FR__zyLdBoTyPm7ojWXuJ/view?usp=sharing",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "120903",
+      "source": "/p/450-1039-120903,c0.php",
+      "destination": "https://www.academic.ntust.edu.tw/var/file/48/1048/img/2554/606876185.pdf",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "120905",
+      "source": "/p/450-1039-120905,c0.php",
+      "destination": "https://www.academic.ntust.edu.tw/var/file/48/1048/img/2554/816681960.pdf",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "120907",
+      "source": "/p/450-1039-120907,c0.php",
+      "destination": "https://drive.google.com/file/d/1TeMhy7TLK-Q4jO7TiPaR1yEV2FyPfZl7/view?usp=sharing",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "120909",
+      "source": "/p/450-1039-120909,c0.php",
+      "destination": "https://drive.google.com/file/d/1pw5oQzsB8-4CZYmP6LMJYEvugNoUBoPU/view?usp=sharing",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "120911",
+      "source": "/p/450-1039-120911,c0.php",
+      "destination": "https://drive.google.com/file/d/1KFsdu6CSnqLFBwGBORJyAoV6p87njveN/view?usp=sharing",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "120913",
+      "source": "/p/450-1039-120913,c0.php",
+      "destination": "https://drive.google.com/file/d/1OtZzLCgiDPycXRKoB1oZuwBE4NxA7xsi/view?usp=sharing",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "120915",
+      "source": "/p/450-1039-120915,c0.php",
+      "destination": "https://drive.google.com/file/d/1nLfpNDEAo4nHatwsRT54lrbqcLR9df13/view?usp=sharing",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "120916",
+      "source": "/p/450-1039-120916,c0.php",
+      "destination": "https://drive.google.com/file/d/1Yae6rKwi6VQVD_gh5WmUOLY90nu8XQ-Z/view?usp=sharing",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "120976",
+      "source": "/p/450-1039-120976,c0.php",
+      "destination": "https://www.academic.ntust.edu.tw/var/file/48/1048/img/2559/382556701.odt",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "120978",
+      "source": "/p/450-1039-120978,c0.php",
+      "destination": "https://www.academic.ntust.edu.tw/var/file/48/1048/img/2559/831060889.pdf",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "120986",
+      "source": "/p/450-1039-120986,c0.php",
+      "destination": "https://etheses.lib.ntust.edu.tw/zh-hant/help/aboutedit/#%E7%B4%99%E6%9C%AC%E8%AB%96%E6%96%87%E7%89%B9%E5%88%A5%E7%94%B3%E8%AB%8B%E5%BB%B6%E5%BE%8C%E5%85%AC%E9%96%8B",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "120994",
+      "source": "/p/450-1039-120994,c0.php",
+      "destination": "https://www.academic.ntust.edu.tw/p/412-1048-8241.php?Lang=zh-tw",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "120995",
+      "source": "/p/450-1039-120995,c0.php",
+      "destination": "https://student.ntust.edu.tw/p/404-1053-96546.php?Lang=zh-tw",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "120997",
+      "source": "/p/450-1039-120997,c0.php",
+      "destination": "https://www.general.ntust.edu.tw/p/403-1054-7-1.php?Lang=zh-tw",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "120998",
+      "source": "/p/450-1039-120998,c0.php",
+      "destination": "https://www.academic.ntust.edu.tw/p/412-1048-8196.php?Lang=zh-tw",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "121002",
+      "source": "/p/450-1039-121002,c0.php",
+      "destination": "https://www.academic.ntust.edu.tw/p/412-1048-8231.php?Lang=zh-tw",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "121006",
+      "source": "/p/450-1039-121006,c0.php",
+      "destination": "https://academic.ntust.edu.tw/p/404-1048-78753.php?Lang=zh-tw",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "121514",
+      "source": "/p/450-1039-121514,c0.php",
+      "destination": "https://docs.google.com/document/d/1bqj5TDY8Imgl0lrYxAfTPPNRdlWofbSI/edit?usp=sharing&ouid=114287001932454276657&rtpof=true&sd=true",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "123358",
+      "source": "/p/450-1039-123358,c0.php",
+      "destination": "/posts/123330",
+      "basis": "原站 302 的站內目標"
+    },
+    {
+      "id": "123695",
+      "source": "/p/450-1039-123695,c0.php",
+      "destination": "/posts/123695",
+      "basis": "連結型文章"
+    },
+    {
+      "id": "125063",
+      "source": "/p/450-1039-125063,c0.php",
+      "destination": "https://drive.google.com/file/d/1mg0UchmgG4nHE49FgpMvNVscdyOnQLpp/view",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "125223",
+      "source": "/p/450-1039-125223,c0.php",
+      "destination": "https://drive.google.com/file/d/1FKMpuJGvObj6lvut3j-gtS2yE1Vm47zA/view",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "126569",
+      "source": "/p/450-1039-126569,c0.php",
+      "destination": "/posts/126561",
+      "basis": "原站 302 的站內目標"
+    },
+    {
+      "id": "127017",
+      "source": "/p/450-1039-127017,c0.php",
+      "destination": "/posts/126561",
+      "basis": "原站 302 的站內目標"
+    },
+    {
+      "id": "128880",
+      "source": "/p/450-1039-128880,c0.php",
+      "destination": "/posts/128866",
+      "basis": "原站 302 的站內目標"
+    },
+    {
+      "id": "130379",
+      "source": "/p/450-1039-130379,c0.php",
+      "destination": "/posts/130320",
+      "basis": "原站 302 的站內目標"
+    },
+    {
+      "id": "130701",
+      "source": "/p/450-1039-130701,c0.php",
+      "destination": "https://drive.google.com/file/d/1QTu2rHoCwld-N8Anb-VYdbvD6AqTTzjo/view?usp=drive_link",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "130703",
+      "source": "/p/450-1039-130703,c0.php",
+      "destination": "https://drive.google.com/file/d/1M8ptX7UhnAiRPU7UjdRjbrrqE5mCxV0H/view?usp=drive_link",
+      "basis": "原站 302 的站外目標（絕對網址）"
+    },
+    {
+      "id": "130723",
+      "source": "/p/450-1039-130723,c0.php",
+      "destination": "/",
+      "basis": "原站 302 的站內目標"
+    }
+  ],
+  "duplicateContentAssets": [
+    {
+      "url": "https://emrd.ntust.edu.tw/var/file/39/1039/img/2872/428379185.pdf",
+      "duplicateOf": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODFNelE0T1Y4NU1Ua3dPRFEwWHpnd05qazVMbkJrWmc9PQ==&fname=LOGGYSOKWW10OO00HCLKUSJGMOMO25WW203440NKQPXTLK40OKROFCPOWWOOKLOKWWTSZXHHVS0410WWMOHC40HCYSRKMKGCVXVXXWB0UWUS01UWECOKUSOKWWPOGGZXA4LKRKGDXSMOWTB1KLEGCGNK2135A5A4",
+      "path": "/legacy/files/10652d365e-q-a.pdf",
+      "droppedPath": "/legacy/files/1edb6264e1-428379185.pdf"
+    },
+    {
+      "url": "https://emrd.ntust.edu.tw/var/file/39/1039/img/2872/456384782.pdf",
+      "duplicateOf": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODBNamd3TjE4eE1qRTFNREF3WHpVek1qazFMbkJrWmc9PQ==&fname=WSGGKLQKUSWWA100HCLKROZWOPMOWTLOFGB0XSKKVX25004034YWYW54LOLKB0OKPOCCYXKKVS0410WWMOHCTSLO34B0NOYSVXVXDCTSROB0CDUWFHA4YWFC2040HHKKDGA0DGWTTWMOPO35WX24ZWYS44UXSSTSFC3030US20GCHHHH",
+      "path": "/legacy/files/a63095fd05-file.pdf",
+      "droppedPath": "/legacy/files/9de1f7295b-456384782.pdf"
+    },
+    {
+      "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0040_orig.jpg",
+      "duplicateOf": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0040.jpg",
+      "path": "/legacy/img/799d026c85-emrd-190603-0040.jpg",
+      "droppedPath": "/legacy/img/5bce623024-emrd-190603-0040-orig.jpg"
+    }
+  ],
+  "collectionDuplicatesDropped": [],
+  "deadPosts": [
+    {
+      "id": "76665",
+      "url": "https://emrd.ntust.edu.tw/p/406-1039-76665,r1368.php?Lang=zh-tw",
+      "status": 302,
+      "location": "https://emrd.ntust.edu.tw/",
+      "foundIn": [
+        "post:130704"
+      ]
+    },
+    {
+      "id": "76666",
+      "url": "https://emrd.ntust.edu.tw/p/406-1039-76666,r1368.php?Lang=zh-tw",
+      "status": 302,
+      "location": "https://emrd.ntust.edu.tw/",
+      "foundIn": [
+        "post:130704"
+      ]
+    }
+  ],
+  "orphanPosts": [],
+  "unmappedUnits": [],
+  "skippedUnits": [
+    {
+      "unit": "1278",
+      "title": "Headbanner",
+      "legacyUrl": "https://emrd.ntust.edu.tw/p/403-1039-1278.php?Lang=zh-tw",
+      "entries": 4,
+      "note": "首頁輪播（banner）單元，不屬於內容頁，未搬移；其 450 連結紀錄已加入轉址（見 redirects450）"
+    }
+  ],
+  "auxPages": [
+    {
+      "code": "412-1039-7691",
+      "title": "系所介紹",
+      "redirectTo": "/about/features",
+      "hasEditorContent": false,
+      "items": 4
+    },
+    {
+      "code": "412-1039-7692",
+      "title": "系所成員",
+      "redirectTo": "/faculty/executives",
+      "hasEditorContent": false,
+      "items": 7
+    },
+    {
+      "code": "412-1039-7693",
+      "title": "招生與研究",
+      "redirectTo": "/admissions/info",
+      "hasEditorContent": false,
+      "items": 3
+    },
+    {
+      "code": "412-1039-7694",
+      "title": "修業與法規",
+      "redirectTo": "/study/regulations",
+      "hasEditorContent": false,
+      "items": 6
+    },
+    {
+      "code": "412-1039-7695",
+      "title": "表單與連結",
+      "redirectTo": "/study/forms",
+      "hasEditorContent": false,
+      "items": 2
+    },
+    {
+      "code": "412-1039-7696",
+      "title": "最新消息",
+      "redirectTo": "/news",
+      "hasEditorContent": false,
+      "items": 40
+    },
+    {
+      "code": "412-1039-7707",
+      "title": "EMRD 校友會",
+      "redirectTo": "/study/alumni-update",
+      "hasEditorContent": true,
+      "items": 4
+    },
+    {
+      "code": "412-1039-7721",
+      "title": "公告欄",
+      "redirectTo": "/news",
+      "hasEditorContent": false,
+      "items": 23
+    },
+    {
+      "code": "412-1039-7723",
+      "title": "榮譽榜",
+      "redirectTo": "/news/honors",
+      "hasEditorContent": false,
+      "items": 2
+    },
+    {
+      "code": "412-1039-7724",
+      "title": "媒體報導",
+      "redirectTo": "/news/media",
+      "hasEditorContent": false,
+      "items": 1
+    }
+  ],
+  "iframesConvertedToLinks": [],
+  "fetchFailures": [],
+  "accessibility": {
+    "note": "搬遷時的無障礙調整（規則見 migrate_legacy.py；重跑結果相同）：textVersion＝圖片後加上逐字轉寫的「文字版」（IMAGE_TEXT_OVERRIDES）；altOverride＝依路徑指定的 alt；junkAltCleared＝無意義的原站 alt改為空字串；singleImageAlt＝文章唯一的大圖以文章標題為 alt（圖片內容仍待人工轉寫為文字）；externalToText＝外站表情／LINE 按鈕改為文字；droppedExternal＝已失效的外站圖片移除；tableHeaders＝資料表格的標題列／caption；langEn＝英文區塊 lang=\"en\"；headingPromoted／headingDemoted／headingLevelsShifted＝標題層級；videoTitle＝YouTube 嵌入的標題。",
+    "altOverride": [
+      {
+        "where": "page:faculty/executives",
+        "src": "/legacy/img/5abc0cf4a1-838765448.png",
+        "detail": "游進陽執行長 → 蔡孟霖副執行長"
+      },
+      {
+        "where": "page:contact",
+        "src": "/legacy/img/5abc0cf4a1-838765448.png",
+        "detail": "游進陽執行長 → 蔡孟霖副執行長"
+      },
+      {
+        "where": "post:76693",
+        "src": "/legacy/img/e67e489937-youtube.png",
+        "detail": "圖片 → YouTube"
+      },
+      {
+        "where": "post:76693",
+        "src": "/legacy/img/0e197770de-emrd-fb.jpg",
+        "detail": "圖片 → Facebook 臺科大高階科技研發碩士在職專班 -EMRD CTO 技術長學程"
+      },
+      {
+        "where": "post:76726",
+        "src": "/legacy/img/1c715014e9-qr-orig.png",
+        "detail": "圖片 → 報名 QRcode"
+      },
+      {
+        "where": "post:76790",
+        "src": "/legacy/img/21acf6deaa-916001535.png",
+        "detail": "4 → 高階科技研發碩士在職專班 109現正招生中 研發人員的專屬EMBA 報考時間：11.27 – 12.05 立即報名"
+      },
+      {
+        "where": "post:80421",
+        "src": "/legacy/img/fc549a2c24-0815-01.png",
+        "detail": "EVENT → 臺科大高階科技研發碩士在職專班 110學年度 線上迎新會 Online Welcome Party 2021.08.15 (Sun) 週日 09:00 ~12:00"
+      }
+    ],
+    "droppedExternal": [
+      {
+        "where": "page:contact",
+        "src": "https://www.ce.ntust.edu.tw/var/file/24/1024/img/2850/457250288.jpg",
+        "detail": "原圖已失效（HTTP 302 轉回 ce.ntust.edu.tw 首頁，瀏覽器顯示破圖）；移除圖片、保留旁邊的姓名與聯絡資訊"
+      }
+    ],
+    "externalToText": [
+      {
+        "where": "post:85066",
+        "src": "https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png",
+        "detail": "加入好友"
+      },
+      {
+        "where": "post:85493",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/t81/1.5/16/1f3eb.png",
+        "detail": "🏫"
+      },
+      {
+        "where": "post:85493",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/t43/1.5/16/1f970.png",
+        "detail": "🥰"
+      },
+      {
+        "where": "post:85493",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/tdc/1.5/16/1f60e.png",
+        "detail": "😎"
+      },
+      {
+        "where": "post:85493",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/t13/1.5/16/1f4e3.png",
+        "detail": "📣"
+      },
+      {
+        "where": "post:85493",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/t9/1.5/16/1f3af.png",
+        "detail": "🎯"
+      },
+      {
+        "where": "post:85493",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/t84/1.5/16/1f4cb.png",
+        "detail": "📋"
+      },
+      {
+        "where": "post:85493",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/tc3/1.5/16/1f530.png",
+        "detail": "🔰"
+      },
+      {
+        "where": "post:85981",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/t82/1.5/16/263a.png",
+        "detail": "☺️"
+      },
+      {
+        "where": "post:85981",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/te5/1.5/16/1f389.png",
+        "detail": "🎉"
+      },
+      {
+        "where": "post:89891",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/td/1.5/16/1f38a.png",
+        "detail": "🎊"
+      },
+      {
+        "where": "post:89891",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/t5e/1.5/16/1f382.png",
+        "detail": "🎂"
+      },
+      {
+        "where": "post:91087",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/tf3/1/16/1f539.png",
+        "detail": "🔹"
+      },
+      {
+        "where": "post:91087",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/te0/1/16/1f31f.png",
+        "detail": "🌟"
+      },
+      {
+        "where": "post:91087",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/tf4/1/16/2728.png",
+        "detail": "✨"
+      },
+      {
+        "where": "post:92768",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/t39/1.5/16/1f31f.png",
+        "detail": "🌟"
+      },
+      {
+        "where": "post:92768",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/tc6/1.5/16/1f973.png",
+        "detail": "🥳"
+      },
+      {
+        "where": "post:93842",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/t7b/1.5/16/2728.png",
+        "detail": "✨"
+      },
+      {
+        "where": "post:93842",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/tc6/1.5/16/1f973.png",
+        "detail": "🥳"
+      },
+      {
+        "where": "post:93842",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/tdc/1.5/16/1f60e.png",
+        "detail": "😎"
+      },
+      {
+        "where": "post:95831",
+        "src": "https://www.facebook.com/images/emoji.php/v9/taa/1.5/16/1f449.png",
+        "detail": "👉"
+      },
+      {
+        "where": "post:95831",
+        "src": "https://www.facebook.com/images/emoji.php/v9/tc/1.5/16/1f913.png",
+        "detail": "🤓"
+      },
+      {
+        "where": "post:95831",
+        "src": "https://www.facebook.com/images/emoji.php/v9/ta9/1.5/16/1f525.png",
+        "detail": "🔥"
+      },
+      {
+        "where": "post:95831",
+        "src": "https://www.facebook.com/images/emoji.php/v9/t9/1.5/16/1f3af.png",
+        "detail": "🎯"
+      },
+      {
+        "where": "post:95831",
+        "src": "https://www.facebook.com/images/emoji.php/v9/tc3/1.5/16/1f530.png",
+        "detail": "🔰"
+      },
+      {
+        "where": "post:98650",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/te7/1.5/16/1f9da.png",
+        "detail": "🧚"
+      },
+      {
+        "where": "post:98650",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/tc6/1.5/16/1f973.png",
+        "detail": "🥳"
+      },
+      {
+        "where": "post:101735",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/t7e/1.5/16/1f393.png",
+        "detail": "🎓"
+      },
+      {
+        "where": "post:101735",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/te5/1.5/16/1f389.png",
+        "detail": "🎉"
+      },
+      {
+        "where": "post:101735",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/t55/1.5/16/1f44d.png",
+        "detail": "👍"
+      },
+      {
+        "where": "post:101735",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/ted/1.5/16/3297.png",
+        "detail": "㊗️"
+      },
+      {
+        "where": "post:101735",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/tc6/1.5/16/1f973.png",
+        "detail": "🥳"
+      },
+      {
+        "where": "post:131588",
+        "src": "https://static.xx.fbcdn.net/images/emoji.php/v9/t33/1/16/2705.png",
+        "detail": "✅"
+      }
+    ],
+    "headingDemoted": [
+      {
+        "where": "page:faculty/speakers",
+        "text": "何春盛 董事 研華科技",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "馬堅勇 董事長 台灣精材",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "卓欽銘 董事長 和友紡織",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "陳鴻儀 總經理 連展科技",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "吳天勝 研發長 漢翔航空",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "皮托科技",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "徐文暉 技術長 台灣 IBM 公司",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "劉俊賢 部長 台灣日電產公司",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "連監棠 技術長 台達電子",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "莊永順 董事長 研揚科技",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "莊國欽 董事長 邏輯電子公司",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "柯拔希 理事長 機械公會",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "廖瑞芬 總經理 亞東創新發展",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "歐耿良 總經理 三鼎生技",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "蕭裕耀 總經理 新加坡商蘭科化學",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "許書揚 總經理 保聖那Pasona",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "黃欽勇 社長 Digitimes",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "石曉茜 製作人 愛爾達電視台",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "詹婷怡 前主委 國家通訊傳播委員會",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "徐紹中 執行長 工研院南分院",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "林啟萬 所長 工研院生醫所",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "黃博雄 主任 紡研所產品部",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "羅仁權 特聘教授 台大 電機工程系",
+        "from": "h2",
+        "to": "h3"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "text": "許冬陽 主任 工研院資通所 新世代通訊技術推進辦公室",
+        "from": "h2",
+        "to": "h3"
+      }
+    ],
+    "headingLevelsShifted": [
+      {
+        "where": "page:faculty/executives",
+        "by": 1
+      },
+      {
+        "where": "page:contact",
+        "by": 1
+      }
+    ],
+    "headingPromoted": [
+      {
+        "where": "page:curriculum/theses",
+        "id": "legacy-curriculum-theses-108",
+        "text": "108學年度畢業 (27位)",
+        "to": "h2"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "id": "legacy-curriculum-theses-109",
+        "text": "109學年度畢業 (30位)",
+        "to": "h2"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "id": "legacy-faculty-speakers-1",
+        "text": "產業界 I",
+        "to": "h2"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "id": "legacy-faculty-speakers-2",
+        "text": "產業界 II",
+        "to": "h2"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "id": "legacy-faculty-speakers-3",
+        "text": "政府機關、學界、法人",
+        "to": "h2"
+      },
+      {
+        "where": "page:contact",
+        "text": "執行長",
+        "to": "h3"
+      }
+    ],
+    "junkAltCleared": [
+      {
+        "where": "post:76664",
+        "src": "/legacy/img/4d0dd7e2d1-10801-orig.png",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76667",
+        "src": "/legacy/img/c566847e16-904531660.jpg",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76668",
+        "src": "/legacy/img/68987e8ffc-760261387.png",
+        "detail": "report"
+      },
+      {
+        "where": "post:76672",
+        "src": "/legacy/img/ad642c666c-0910mail-page-0001.jpg",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76685",
+        "src": "/legacy/img/b01688353c-1386402255-orig.png",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76686",
+        "src": "/legacy/img/14d3da8d9c-834338154.png",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76689",
+        "src": "/legacy/img/65a71d54cf-31395956-1970071213306470-6923211569970329872-n-orig.jpg",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76690",
+        "src": "/legacy/img/b06c5da990-join.jpg",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76691",
+        "src": "/legacy/img/4160ae034d-10701.png",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76692",
+        "src": "/legacy/img/inline-9e153bc463-shiny.png",
+        "detail": "(shiny)"
+      },
+      {
+        "where": "post:76693",
+        "src": "/legacy/img/8e3eef7a13-555-orig.png",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76694",
+        "src": "/legacy/img/290a524478-695378813.jpg",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76695",
+        "src": "/legacy/img/06516ecce5-02.jpg",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76696",
+        "src": "/legacy/img/8232a6fe43-0630.jpg",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76697",
+        "src": "/legacy/img/0b628c1edb-fb-info.png",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76698",
+        "src": "/legacy/img/529d508964-emrd-web-orig.jpg",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76699",
+        "src": "/legacy/img/1cf6dc42d4-invitation0601-orig.png",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76700",
+        "src": "/legacy/img/23027eb30e-292921290.jpg",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76701",
+        "src": "/legacy/img/97e536500e-25660250-1905897706390488-687665445234880803-n-orig.jpg",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76704",
+        "src": "/legacy/img/6618e42aca-729270686.png",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76705",
+        "src": "/legacy/img/e5646c9a6b-img-2115.jpg",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76706",
+        "src": "/legacy/img/2c1eaedb5b-001-1-orig.jpg",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76707",
+        "src": "/legacy/img/b8d09f008f-img-68371.png",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76709",
+        "src": "/legacy/img/8824cdf08e-20171224-family-day-171228-0020-1-orig.jpg",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76710",
+        "src": "/legacy/img/04d654e17c-180312-0029-orig.jpg",
+        "detail": "P"
+      },
+      {
+        "where": "post:76710",
+        "src": "/legacy/img/57a9d43327-img-4079-orig.jpg",
+        "detail": "P"
+      },
+      {
+        "where": "post:76710",
+        "src": "/legacy/img/6a747a3bf9-img-4036-orig.jpg",
+        "detail": "P"
+      },
+      {
+        "where": "post:76723",
+        "src": "/legacy/img/42c314ad0b-img-1343-orig.jpg",
+        "detail": "1"
+      },
+      {
+        "where": "post:76723",
+        "src": "/legacy/img/dac0a8b02d-img-1348-orig.jpg",
+        "detail": "2"
+      },
+      {
+        "where": "post:76723",
+        "src": "/legacy/img/23d1709038-img-1355-orig.jpg",
+        "detail": "2"
+      },
+      {
+        "where": "post:76724",
+        "src": "/legacy/img/e865225450-1070526-meitu-1-orig.jpg",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76725",
+        "src": "/legacy/img/973b1cdf8b-dscf7532-orig.jpg",
+        "detail": "1"
+      },
+      {
+        "where": "post:76725",
+        "src": "/legacy/img/73d97e9063-dscf7918-orig.jpg",
+        "detail": "5"
+      },
+      {
+        "where": "post:76725",
+        "src": "/legacy/img/c70aa90593-dscf7458-orig.jpg",
+        "detail": "2"
+      },
+      {
+        "where": "post:76725",
+        "src": "/legacy/img/9931f62bd1-dscf7823-orig.jpg",
+        "detail": "2"
+      },
+      {
+        "where": "post:76726",
+        "src": "/legacy/img/186c08bbf3-1943968127.png",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76728",
+        "src": "/legacy/img/4ce6cd2bff-dsc-96-orig.jpg",
+        "detail": "1"
+      },
+      {
+        "where": "post:76728",
+        "src": "/legacy/img/1ebe6b123c-dsc-100-orig.jpg",
+        "detail": "5"
+      },
+      {
+        "where": "post:76728",
+        "src": "/legacy/img/cd3930b68d-dsc-106-orig.jpg",
+        "detail": "2"
+      },
+      {
+        "where": "post:76734",
+        "src": "/legacy/img/d597029ccf-img-2185.jpg",
+        "detail": "1"
+      },
+      {
+        "where": "post:76737",
+        "src": "/legacy/img/9349d18372-img-0370-1.jpg",
+        "detail": "4"
+      },
+      {
+        "where": "post:76739",
+        "src": "/legacy/img/753ef02774-img-6190-orig.jpg",
+        "detail": "4"
+      },
+      {
+        "where": "post:76740",
+        "src": "/legacy/img/710c4dc113-0919.png",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:76740",
+        "src": "/legacy/img/b7e33cb110-img-7225-orig.jpg",
+        "detail": "1"
+      },
+      {
+        "where": "post:76741",
+        "src": "/legacy/img/ba39284bd8-71837978-2350476835265904-4173037684182220800-n-orig.jpg",
+        "detail": "4"
+      },
+      {
+        "where": "post:76741",
+        "src": "/legacy/img/e3c36c6490-72192561-2350477718599149-3818217739936333824-n-orig.jpg",
+        "detail": "3"
+      },
+      {
+        "where": "post:76741",
+        "src": "/legacy/img/b51d0427f3-72334260-2350476345265953-8960327456300990464-n-orig.jpg",
+        "detail": "2"
+      },
+      {
+        "where": "post:76741",
+        "src": "/legacy/img/e97d5ed722-72549335-2350477608599160-6172738894870609920-n-orig.jpg",
+        "detail": "4"
+      },
+      {
+        "where": "post:77121",
+        "src": "/legacy/img/765806112c-680657080.png",
+        "detail": "p"
+      },
+      {
+        "where": "post:77122",
+        "src": "/legacy/img/777ccd1170-641469119.jpg",
+        "detail": "p"
+      },
+      {
+        "where": "post:77410",
+        "src": "/legacy/img/a3001d79d7-849059908.jpg",
+        "detail": "y"
+      },
+      {
+        "where": "post:78149",
+        "src": "/legacy/img/d61b3af05d-03.png",
+        "detail": "1"
+      },
+      {
+        "where": "post:78374",
+        "src": "/legacy/img/2512d387de-919797624.png",
+        "detail": "PIC"
+      },
+      {
+        "where": "post:79643",
+        "src": "/legacy/img/2210a193b8-666228978.png",
+        "detail": "pic"
+      },
+      {
+        "where": "post:79852",
+        "src": "/legacy/img/ba7f14db21-531467836.png",
+        "detail": "P"
+      },
+      {
+        "where": "post:79852",
+        "src": "/legacy/img/4ddd567585-620933520.png",
+        "detail": "p"
+      },
+      {
+        "where": "post:80143",
+        "src": "/legacy/img/17a87c414a-s-4939837.png",
+        "detail": "1"
+      },
+      {
+        "where": "post:80424",
+        "src": "/legacy/img/fcd5def992-100994767-2556597457987173-8812453179703689216-o.jpg",
+        "detail": "pic"
+      },
+      {
+        "where": "post:85124",
+        "src": "/legacy/img/08ce5f5ceb-dsc-105-meitu-1.jpg",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:85124",
+        "src": "/legacy/img/4ea3618e7a-dsc-109-meitu-9-meitu-1-orig.jpg",
+        "detail": "圖片"
+      },
+      {
+        "where": "post:85493",
+        "src": "/legacy/img/7b6c91c0be-451304.jpg",
+        "detail": "P"
+      },
+      {
+        "where": "post:85493",
+        "src": "/legacy/img/852cb40eb8-451299.jpg",
+        "detail": "p"
+      },
+      {
+        "where": "post:86720",
+        "src": "/legacy/img/27d2a8d3f8-292098962.png",
+        "detail": "list"
+      },
+      {
+        "where": "post:89120",
+        "src": "/legacy/img/d61b3af05d-03.png",
+        "detail": "1"
+      },
+      {
+        "where": "post:90871",
+        "src": "/legacy/img/ac9ffb1898-0520.png",
+        "detail": "pic"
+      },
+      {
+        "where": "post:91087",
+        "src": "/legacy/img/9c98e162ef-web.png",
+        "detail": "web"
+      },
+      {
+        "where": "post:93152",
+        "src": "/legacy/img/a8891a7588-328745126.png",
+        "detail": "PIC"
+      },
+      {
+        "where": "post:93842",
+        "src": "/legacy/img/0bfe4a9476-501873670.png",
+        "detail": "pic"
+      },
+      {
+        "where": "post:97528",
+        "src": "/legacy/img/a192f8ec36-441869805.png",
+        "detail": "PIC"
+      },
+      {
+        "where": "post:130704",
+        "src": "/legacy/img/4c820a4ac2-1524457627-orig.jpg",
+        "detail": "1"
+      },
+      {
+        "where": "post:130704",
+        "src": "/legacy/img/a4e7ab0c77-2363-orig.jpg",
+        "detail": "1"
+      },
+      {
+        "where": "post:83957",
+        "src": "/legacy/img/7e164a3df5-110.png",
+        "detail": "banner"
+      }
+    ],
+    "langEn": [
+      {
+        "where": "page:about/features",
+        "tag": "td",
+        "text": "ABOUT EMRD"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Technology Development and Product Strategy of Small-Size Niche Silicon Wafer Ma"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Personal Customized Mass Production Technology Roadmap: A Case Study of Personal"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Departmental Strategies Of R&D And Management In Video Game Company"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Research and Development technology foresight Strategy--A Case Study on I corpor"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "A study on the head-mounted display technology development of virtual reality-wi"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "The Application and Development of Deep Learning with Patent Analysis"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Patent Analysis For Autonomous Vehicle Industry"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Product and Technique Development of Memory Module Manufacturer in Smart City Ap"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Patent analysis and study for Usage-based insurance (UBI) of FinTech"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Applying Open Source Software-Linux to Enterprise IoT Gateway"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "The Strategy Analysis of Taiwan Assembly and Test Enterprise in Semi-conductor C"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "The Development Strategy study of Intelligent Battery Sensor in An Engine Power "
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Heterogeneous Computing hardware acceleration techniques o"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Application and Development Strategy of Board-To-Board Connectors"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Data Center Manufacturer Green Energy’s R&D Technical Strategy for Enhancing Pow"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "The Product Development Strategy of Intelligent Video Surveillance in Rolling St"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Glass Case R&D Management, Strategies and Challenges of Smart Phone - The Case o"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Research and development policy of wisdom health physiology surveillance instrum"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "New Product Strategy Of Radio Front End Module In The 5th Generation Wireless Co"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Type-C Interface Control Chips Development & Research"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Fingerprint identification smart card application development strategy"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Application of Retrofitting concept to the R&D strategy of Internet of Machines "
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Wearable device for health management of mental patients"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "E-commerce and accurate recommendation application case studies"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Integrating digital twin and advanced process control on laser drilling process "
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Status and Strategic Planning for the Technology Development of Taiwan's Gaming "
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Now and Future of the Robot Vacuum Cleaner Technology - An analysis from the Pat"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Product Development Strategy for Active Optical Cable applied in Data Center-A C"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Research on Application of Digital Twin to Activity-Based Costing System - A Cas"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Research on Application of Digital Twin to The Design Communication of Virtual C"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "A case study of Industrial IoT gateways development strategy"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Case study research: Flash storage Module manufacturer’s development and applica"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Can Team Characteristic Influence Organization Performance?–A Case Study of High"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Product Development Strategy for High Voltage Direct Current (HVDC) Power System"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Business Strategy of Gaming Games - A Case Study of I Company’s Research and Dev"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Bussiness Strategy fir Industrial Automation Equipment Hardware R&D - A Case Stu"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Product Development Strategy of Home Appliance Switches – A Case Study of R & D "
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "The Strategic Technology Plan for Network and Communication Semiconductor Distri"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Product Application and Development of NB-IoT IC Design Company–A Case Study of "
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Fifth generation mobile networks is applied to the mobile health product plannin"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Strategy and market planning of security surveillance camera products: A case st"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "The Development Strategy to Brushless Motor Driver in Medical Aid Industry-The C"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Intelligent Technology of Health Management Application Strategy-Combining Artif"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Developing Strategies in Immersive Projection System ─A case study of projector "
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Research on the establishment of patent-paper pair based on government funding i"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Development strategy planning of intelligent manufacturing production system - T"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Service Management Strategies for Lithography Machine Manufactures in Semiconduc"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "5G Product Development and Marketing Strategy- The Case Study of A Company"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Developing Strategies for 3D Printing Equipment Agents - Taking Case Company S a"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "The Study of Unicorn's Business Model- taking Airbnb and Uber as Case Study"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Optical Optimization Study of Cut off Line for Bike Lighting Base on German Stan"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "A Study of Venture Capital's Investment Strategies for Startups with The Lean St"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Business Strategy for IoT Product Development Unit- A Case Study on an Electroni"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Business-Level Strategy of Power Semiconductor Discrete Components - A Case Stud"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "The Research and Development Strategy of Android TV-A Case Study of A Corporatio"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Server development strategy in the 5G era"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Technology Foresight Strategy for the Software Services Industry - Case Study of"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Development strategy of time-sensitive network products for Ethernet switches"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Application of IoT Technology for Optimize Lighting Energy Consumption on Intell"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Field Programmable Logic Gate Array (FPGA) Development Strategy in Internet of T"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Product Development Strategy of Power Over Ethernet Components Appliance – A Cas"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "The Feasibility Study of Multimedia Applications Applied to In-Car Entertainment"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "The application and trend of high-speed transmission chips in the PC industry"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Industrial SD-WAN product strategic plan in L company as a case analysis"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Smart Security IoT Planning"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Build development technology plan from the trend of industrial network As an exa"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Smart Toothbrushes Product Strategy And Adoption Intention Investigation With TA"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Research on Application of Digital Twin to the R&D strategy of the industrial co"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Research on the Development Trend and Strategy of Automotive Ethernet Switch-Tak"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Product Development Strategy of 5G Base Station Power Management System - Compan"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "The Development of Chatbot Technology – An Analysis from the Patent Database"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Graphics card product development strategy - Take T company as the case study su"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "A Case Study of Research and Development Strategy of Digital Learning Device"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "A case study on the development strategy of virtual reality products"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Mobile Quick Charger R&D Business Strategy-A Company"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "The product strategy for niche type PCB. - A cast study of A Corp."
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Business Strategy for Industrial Automation Product and Hardware R&D Development"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Discuss the Acceptance Factors of Health Apps that use Large-Sizes LCD TVs and A"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "An Empirical Study of Lean Production Promotion Framework-Taking Transformer Fac"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Application of TPB : The Impacts of Unmanned Aerial Vehicle for Medicines Delive"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "The product development strategy of PCB drying equipment manufacturer takes comp"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Behavior Intention to Adoption of Pet Health Detection Products with AI Enabled "
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "The Value-added Strategy on The Transformation from Electronic Devices Distribut"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Applying the Technology Acceptance Model to Investigate Consumer’s Attitudes Tow"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "R&D and management strategy of automobile air-conditioning company T"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "The development strategy of smart home"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Development Strategy of Telecom Power Products – Take D Company as the Case Stud"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Research on PC industry related technology strategies in response to 5G applicat"
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Strategic planning of ERP software developer's product management: a case study "
+      },
+      {
+        "where": "page:curriculum/theses",
+        "tag": "td",
+        "text": "Heat Pipe Technology Development Trend for Computers Products"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "tag": "p",
+        "text": "Speakers and Topics"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "tag": "td",
+        "text": "Li-ion batteries: brief and new challenges in electric vehicles and other new ap"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "tag": "td",
+        "text": "Change Management    (2018)"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "tag": "td",
+        "text": "Collaborations that catalyze possibilities   (2018)"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "tag": "td",
+        "text": "1. A step to CTO from global business experience   (2019) 2.  The Myth of Predic"
+      },
+      {
+        "where": "page:faculty/speakers",
+        "tag": "td",
+        "text": "Advancing Digital and Intelligent Transformation for Industry Competitiveness. ("
+      },
+      {
+        "where": "page:faculty/speakers",
+        "tag": "td",
+        "text": "One day in the office…   (2015)"
+      },
+      {
+        "where": "post:107232",
+        "tag": "p",
+        "text": "PDF Version: https://www.mdpi.com/2079-9292/11/5/678/pdf"
+      }
+    ],
+    "singleImageAlt": [
+      {
+        "where": "post:76664",
+        "src": "/legacy/img/4d0dd7e2d1-10801-orig.png",
+        "detail": "108-01學期 隨班附讀通過名單公告"
+      },
+      {
+        "where": "post:76672",
+        "src": "/legacy/img/ad642c666c-0910mail-page-0001.jpg",
+        "detail": "108學年度學分抵免申請結果"
+      },
+      {
+        "where": "post:76685",
+        "src": "/legacy/img/b01688353c-1386402255-orig.png",
+        "detail": "107-02學期 隨班附讀通過名單"
+      },
+      {
+        "where": "post:76687",
+        "src": "/legacy/img/27b0cb6a54-mczh-tw1920x700-large4183-894035321337.png",
+        "detail": "2021年3月20日EMRD校友回娘家之財金講座 (歡迎報名參加)"
+      },
+      {
+        "where": "post:76689",
+        "src": "/legacy/img/65a71d54cf-31395956-1970071213306470-6923211569970329872-n-orig.jpg",
+        "detail": "107-01學期 EMRD 隨班附讀報名資訊"
+      },
+      {
+        "where": "post:76691",
+        "src": "/legacy/img/4160ae034d-10701.png",
+        "detail": "107-01學期 隨班附讀通過名單"
+      },
+      {
+        "where": "post:76694",
+        "src": "/legacy/img/290a524478-695378813.jpg",
+        "detail": "107學年度招生說明會訂於106/11/25(六)舉行! 歡迎報名參加!!"
+      },
+      {
+        "where": "post:76695",
+        "src": "/legacy/img/06516ecce5-02.jpg",
+        "detail": "1061201 EMRD在職專班校外參訪-研華科技智慧物聯網園區"
+      },
+      {
+        "where": "post:76697",
+        "src": "/legacy/img/0b628c1edb-fb-info.png",
+        "detail": "107學年度開學典禮 09/15(六) 上午9點舉行!"
+      },
+      {
+        "where": "post:76698",
+        "src": "/legacy/img/529d508964-emrd-web-orig.jpg",
+        "detail": "107-02學期 EMRD隨班附讀招生中！ 108/01/07(一)截止"
+      },
+      {
+        "where": "post:76699",
+        "src": "/legacy/img/1cf6dc42d4-invitation0601-orig.png",
+        "detail": "EMRD第三屆畢業典禮 06/01(六)，歡迎蒞臨參加！"
+      },
+      {
+        "where": "post:76701",
+        "src": "/legacy/img/97e536500e-25660250-1905897706390488-687665445234880803-n-orig.jpg",
+        "detail": "賀! 科技法規(一)、(二)主持教師-陳曉慧教授，榮獲台科大106學年度教學優良獎"
+      },
+      {
+        "where": "post:76705",
+        "src": "/legacy/img/e5646c9a6b-img-2115.jpg",
+        "detail": "106/03/25 EMRD新生座談會"
+      },
+      {
+        "where": "post:76706",
+        "src": "/legacy/img/2c1eaedb5b-001-1-orig.jpg",
+        "detail": "1060624 第一屆EMRD畢業典禮暨授證儀式"
+      },
+      {
+        "where": "post:76707",
+        "src": "/legacy/img/b8d09f008f-img-68371.png",
+        "detail": "106/09/16 高階科技研發碩士在職專班106學年度開學典禮"
+      },
+      {
+        "where": "post:76709",
+        "src": "/legacy/img/8824cdf08e-20171224-family-day-171228-0020-1-orig.jpg",
+        "detail": "106.12.24 聖誕家庭日同樂活動"
+      },
+      {
+        "where": "post:76724",
+        "src": "/legacy/img/e865225450-1070526-meitu-1-orig.jpg",
+        "detail": "107/05/25 智慧財產法院參訪活動"
+      },
+      {
+        "where": "post:76734",
+        "src": "/legacy/img/d597029ccf-img-2185.jpg",
+        "detail": "2019/01/06 執行長交接歡送暨校友會尾牙餐聚㊗️"
+      },
+      {
+        "where": "post:76739",
+        "src": "/legacy/img/753ef02774-img-6190-orig.jpg",
+        "detail": "108.09.11 EMRD第一次海外參訪紀錄"
+      },
+      {
+        "where": "post:77121",
+        "src": "/legacy/img/765806112c-680657080.png",
+        "detail": "EMRD 108-02學期隨班附讀通過名單"
+      },
+      {
+        "where": "post:77122",
+        "src": "/legacy/img/777ccd1170-641469119.jpg",
+        "detail": "108.12.13 裕隆車之道體驗中心參訪"
+      },
+      {
+        "where": "post:77410",
+        "src": "/legacy/img/a3001d79d7-849059908.jpg",
+        "detail": "農曆新春誌喜及EMRD辦公室年節期間停止辦公 (01/28-02/08)"
+      },
+      {
+        "where": "post:78149",
+        "src": "/legacy/img/d61b3af05d-03.png",
+        "detail": "EMRD 109學年度招生結果放榜! (報到與可備取名單)"
+      },
+      {
+        "where": "post:78374",
+        "src": "/legacy/img/2512d387de-919797624.png",
+        "detail": "109.03.27 研華智慧園區參訪"
+      },
+      {
+        "where": "post:78440",
+        "src": "/legacy/img/80055551d2-mczh-tw1920x700-large2604-662482325273.jpg",
+        "detail": "上課期間請配戴口罩，落實勤洗手!"
+      },
+      {
+        "where": "post:78818",
+        "src": "/legacy/img/9e6a3b2c06-mczh-tw1920x700-large5005-750790537562.png",
+        "detail": "109學年度第五屆EMRD畢業典禮暨授證儀式，12/05(日)歡迎蒞臨參加!"
+      },
+      {
+        "where": "post:80143",
+        "src": "/legacy/img/17a87c414a-s-4939837.png",
+        "detail": "109.06.20廣明案對台灣公司營運之啟示"
+      },
+      {
+        "where": "post:80424",
+        "src": "/legacy/img/fcd5def992-100994767-2556597457987173-8812453179703689216-o.jpg",
+        "detail": "109.05.22 108級學長參訪 3M台灣"
+      },
+      {
+        "where": "post:81752",
+        "src": "/legacy/img/dfce1760c0-mczh-tw1920x700-large3329-528929260391.png",
+        "detail": "109.07.29 院外籍生參訪EMRD學長任職企業－亞旭Askey"
+      },
+      {
+        "where": "post:81907",
+        "src": "/legacy/img/55085abafd-mczh-tw1920x700-large4766-561351980199.png",
+        "detail": "110-01學期 隨班附讀通過名單"
+      },
+      {
+        "where": "post:82901",
+        "src": "/legacy/img/b99f84a23d-mczh-tw1920x700-large3457-30068620496.jpg",
+        "detail": "109.08.23 EMRD迎新送舊烤肉會精彩剪影!"
+      },
+      {
+        "where": "post:83877",
+        "src": "/legacy/img/8b8183caeb-mczh-tw1920x700-large3551-122094662770.png",
+        "detail": "中華民國國立臺灣科技大學EMRD校友會招募會員!"
+      },
+      {
+        "where": "post:84502",
+        "src": "/legacy/img/1dca361f18-mczh-tw1920x700-large3618-672355450683.jpg",
+        "detail": "109.09.19 EMRD 109學年度 開學典禮"
+      },
+      {
+        "where": "post:84504",
+        "src": "/legacy/img/b3dfcd60c1-mczh-tw1920x700-large3619-664423950867.jpg",
+        "detail": "109.09.03 108級學長參訪 中科院-軍民通用中心"
+      },
+      {
+        "where": "post:85066",
+        "src": "/legacy/img/da5f7b059f-mczh-tw1920x700-large3705-458852444008.png",
+        "detail": "EMRD在職專班 LINE好友募集中!"
+      },
+      {
+        "where": "post:86720",
+        "src": "/legacy/img/27d2a8d3f8-292098962.png",
+        "detail": "109-02學期 隨班附讀通過名單公告"
+      },
+      {
+        "where": "post:87511",
+        "src": "/legacy/img/7efe09c8ba-mczh-tw1920x700-large4111-90369723682.jpg",
+        "detail": "110.01.16 109級期末師生交流餐敘"
+      },
+      {
+        "where": "post:89120",
+        "src": "/legacy/img/d61b3af05d-03.png",
+        "detail": "EMRD 110學年度招生結果放榜! (報到與備取名單)"
+      },
+      {
+        "where": "post:89202",
+        "src": "/legacy/img/5ae6c1af3a-mczh-tw1920x700-large4223-732654679566.png",
+        "detail": "110.03.20 EMRD校友會第一屆會員(成立)大會暨理監事會"
+      },
+      {
+        "where": "post:89891",
+        "src": "/legacy/img/3a511b1b77-mczh-tw1920x700-large4574-580869465387.jpg",
+        "detail": "EMRD109級01~04月第一季慶生會"
+      },
+      {
+        "where": "post:90871",
+        "src": "/legacy/img/ac9ffb1898-0520.png",
+        "detail": "05/17起至學期末課程全面遠距及06/19畢典延期舉行！"
+      },
+      {
+        "where": "post:91087",
+        "src": "/legacy/img/9c98e162ef-web.png",
+        "detail": "臺科大EMRD校友會之專屬網站上線囉!"
+      },
+      {
+        "where": "post:92100",
+        "src": "/legacy/img/1ea273d592-mczh-tw1920x700-large5482-644064049363.png",
+        "detail": "先修學分班-111-01學期半導體產業學分班SEMI-EMRD招生中!"
+      },
+      {
+        "where": "post:93152",
+        "src": "/legacy/img/a8891a7588-328745126.png",
+        "detail": "110-01學期半導體產業學分班通過名單!"
+      },
+      {
+        "where": "post:93842",
+        "src": "/legacy/img/0bfe4a9476-501873670.png",
+        "detail": "110.09.18 110級新生及半導體產業學分班線上開學典禮!"
+      },
+      {
+        "where": "post:97528",
+        "src": "/legacy/img/a192f8ec36-441869805.png",
+        "detail": "110-02學期半導體產業學分班通過名單!"
+      },
+      {
+        "where": "post:98650",
+        "src": "/legacy/img/e6f538e21f-mczh-tw1920x700-large5171-832391393340.jpg",
+        "detail": "敬邀參加111/03/19 校慶校友回娘家之餐敘與論文分享交流會"
+      },
+      {
+        "where": "post:114873",
+        "src": "/legacy/img/7f236c7dae-303979353.jpg",
+        "detail": "112/08/13 第一屆 112 新生破冰營強勢登場囉！"
+      },
+      {
+        "where": "post:118239",
+        "src": "/legacy/img/82bd647c7e-575270401.jpg",
+        "detail": "112/11/25 EMRD 113 學年度招生說明會 (僅此一場)"
+      },
+      {
+        "where": "post:119159",
+        "src": "/legacy/img/a05d37e924-mczh-tw1920x700-large6828-416435835215.jpg",
+        "detail": "建立技術脈、產業脈、人脈 臺科大 EMRD 培養臺灣科技未來 CTO (DIGITIMES報導)"
+      },
+      {
+        "where": "post:120113",
+        "src": "/legacy/img/683aafff43-409528370-212564981893201-5349719354806163286-n.jpg",
+        "detail": "112/12/10 EMRD 校友會 112 年末會員聚餐成功！"
+      },
+      {
+        "where": "post:122855",
+        "src": "/legacy/img/d8a520b8e0-173525025.jpg",
+        "detail": "113/03/23 第 49 週年校慶活動 - EMRD 校慶講座"
+      },
+      {
+        "where": "post:125008",
+        "src": "/legacy/img/210dc8a291-337405380.jpg",
+        "detail": "113 年度 EMRD 斐陶斐榮譽會員"
+      },
+      {
+        "where": "post:131958",
+        "src": "/legacy/img/97510c6435-645621860.jpg",
+        "detail": "恭喜 EMRD 111 級郭永聰學長榮獲「2024 台灣創新技術博覽會發明競賽」銀牌獎"
+      }
+    ],
+    "tableHeaders": [
+      {
+        "where": "page:faculty/speakers",
+        "changes": [
+          "header-row"
+        ],
+        "firstRow": [
+          "演講嘉賓",
+          "任職單位",
+          "演講講題"
+        ]
+      },
+      {
+        "where": "post:76659",
+        "changes": [
+          "header-row"
+        ],
+        "firstRow": [
+          "課程代碼",
+          "班別",
+          "課程名稱",
+          "上課時間",
+          "學分數",
+          "授課老師"
+        ]
+      },
+      {
+        "where": "post:76821",
+        "changes": [
+          "header-row"
+        ],
+        "firstRow": [
+          "課程代碼",
+          "班別",
+          "課程名稱",
+          "上課時間",
+          "學分數",
+          "授課老師"
+        ]
+      },
+      {
+        "where": "post:92308",
+        "changes": [
+          "caption",
+          "row-headers"
+        ],
+        "firstRow": [
+          "主持人課程介紹",
+          "30 分鐘"
+        ]
+      },
+      {
+        "where": "post:92909",
+        "changes": [
+          "rowgroups×2"
+        ],
+        "firstRow": [
+          "工程學院"
+        ]
+      },
+      {
+        "where": "post:104028",
+        "changes": [
+          "header-row"
+        ],
+        "firstRow": [
+          "審核",
+          "編號",
+          "姓名"
+        ]
+      },
+      {
+        "where": "post:121858",
+        "changes": [
+          "caption",
+          "header-row"
+        ],
+        "firstRow": [
+          "序號",
+          "學號",
+          "姓名"
+        ]
+      },
+      {
+        "where": "post:122855",
+        "changes": [
+          "header-row"
+        ],
+        "firstRow": [
+          "時  間",
+          "活  動  內  容",
+          "地  點"
+        ]
+      }
+    ],
+    "textVersion": [
+      {
+        "where": "page:about/features",
+        "src": "/legacy/img/1802c66573-mczh-tw1000x800-large5678-937536864001.png",
+        "detail": "為什麼要加入EMRD?（圖一，文字版見下方）"
+      },
+      {
+        "where": "page:about/features",
+        "src": "/legacy/img/c9eedbbfa5-mczh-tw1920x700-large5679-537394664001.png",
+        "detail": "為什麼要加入EMRD?（圖二，文字版見下方）"
+      },
+      {
+        "where": "page:curriculum/courses",
+        "src": "/legacy/img/56dacd12b2-654609268.jpg",
+        "detail": "課程地圖：EMRD 畢業學分數 45 學分，必修 24 學分、選修 21 學分（文字版見下方）"
+      },
+      {
+        "where": "page:curriculum/courses",
+        "src": "/legacy/img/8d015cb9f0-115634911.jpg",
+        "detail": "課程規劃：一上、一下、一暑、二上、二下各學期的必修與選修課程（文字版見下方）"
+      },
+      {
+        "where": "page:study/tuition",
+        "src": "/legacy/img/9f1c5db663-509717809.png",
+        "detail": "圖1 流程圖：辦理學年度學雜費調整作業流程（文字版見下方）"
+      },
+      {
+        "where": "page:study/tuition",
+        "src": "/legacy/img/a71a21d6b2-105650883.png",
+        "detail": "計算方式：學分費調整前後的學雜費比較表（文字版見下方）"
+      }
+    ],
+    "videoTitle": [
+      {
+        "where": "page:about/milestone-video",
+        "video": "AgcYvKQ77SQ",
+        "from": "YouTube video player",
+        "to": "EMRD學程里程碑影片"
+      },
+      {
+        "where": "post:92100",
+        "video": "i9lJVmqMwEM",
+        "from": "YouTube video player",
+        "to": "影片：先修學分班-111-01學期半導體產業學分班SEMI-EMRD招生中!"
+      },
+      {
+        "where": "post:114828",
+        "video": "VseaQQEypuc",
+        "from": "影片 MV",
+        "to": "EMRD 第七屆 110 級畢業典禮 (片MV)"
+      },
+      {
+        "where": "post:118561",
+        "video": "2XLKfWAItSM",
+        "from": "112/08/13 第一屆 112 新生破冰營",
+        "to": "EMRD 112 學年度迎新送舊烤肉會"
+      },
+      {
+        "where": "post:126561",
+        "video": "MroPEZlQZ0U",
+        "from": "影片 MV",
+        "to": "EMRD 第八屆 111 級畢業典禮 (影片)"
+      },
+      {
+        "where": "post:126561",
+        "video": "MgBrC9TYFIY",
+        "from": "影片 MV",
+        "to": "EMRD 第八屆 111 級畢業典禮 (照片)"
+      },
+      {
+        "where": "post:130320",
+        "video": "V6PJfKnoXHI",
+        "from": "112/08/13 第一屆 112 新生破冰營",
+        "to": "EMRD 113 學年度迎新送舊烤肉會"
+      },
+      {
+        "where": "post:130704",
+        "video": "wwDag6-E6ZI",
+        "from": "",
+        "to": "影片：學長姐大哉問"
+      },
+      {
+        "where": "post:127017",
+        "video": "MroPEZlQZ0U",
+        "from": "EMRD 第八屆 111 級畢業典禮 (照片MV)",
+        "to": "EMRD 第八屆 111 級畢業典禮 (影片)"
+      },
+      {
+        "where": "post:126569",
+        "video": "MgBrC9TYFIY",
+        "from": "EMRD 第八屆 111 級畢業典禮 (照片MV)",
+        "to": "EMRD 第八屆 111 級畢業典禮 (照片)"
+      }
+    ],
+    "needsTranscription": [
+      {
+        "where": "post:76664",
+        "src": "/legacy/img/4d0dd7e2d1-10801-orig.png",
+        "alt": "108-01學期 隨班附讀通過名單公告"
+      },
+      {
+        "where": "post:76672",
+        "src": "/legacy/img/ad642c666c-0910mail-page-0001.jpg",
+        "alt": "108學年度學分抵免申請結果"
+      },
+      {
+        "where": "post:76685",
+        "src": "/legacy/img/b01688353c-1386402255-orig.png",
+        "alt": "107-02學期 隨班附讀通過名單"
+      },
+      {
+        "where": "post:76687",
+        "src": "/legacy/img/27b0cb6a54-mczh-tw1920x700-large4183-894035321337.png",
+        "alt": "2021年3月20日EMRD校友回娘家之財金講座 (歡迎報名參加)"
+      },
+      {
+        "where": "post:76689",
+        "src": "/legacy/img/65a71d54cf-31395956-1970071213306470-6923211569970329872-n-orig.jpg",
+        "alt": "107-01學期 EMRD 隨班附讀報名資訊"
+      },
+      {
+        "where": "post:76691",
+        "src": "/legacy/img/4160ae034d-10701.png",
+        "alt": "107-01學期 隨班附讀通過名單"
+      },
+      {
+        "where": "post:76694",
+        "src": "/legacy/img/290a524478-695378813.jpg",
+        "alt": "107學年度招生說明會訂於106/11/25(六)舉行! 歡迎報名參加!!"
+      },
+      {
+        "where": "post:76695",
+        "src": "/legacy/img/06516ecce5-02.jpg",
+        "alt": "1061201 EMRD在職專班校外參訪-研華科技智慧物聯網園區"
+      },
+      {
+        "where": "post:76697",
+        "src": "/legacy/img/0b628c1edb-fb-info.png",
+        "alt": "107學年度開學典禮 09/15(六) 上午9點舉行!"
+      },
+      {
+        "where": "post:76698",
+        "src": "/legacy/img/529d508964-emrd-web-orig.jpg",
+        "alt": "107-02學期 EMRD隨班附讀招生中！ 108/01/07(一)截止"
+      },
+      {
+        "where": "post:76699",
+        "src": "/legacy/img/1cf6dc42d4-invitation0601-orig.png",
+        "alt": "EMRD第三屆畢業典禮 06/01(六)，歡迎蒞臨參加！"
+      },
+      {
+        "where": "post:76701",
+        "src": "/legacy/img/97e536500e-25660250-1905897706390488-687665445234880803-n-orig.jpg",
+        "alt": "賀! 科技法規(一)、(二)主持教師-陳曉慧教授，榮獲台科大106學年度教學優良獎"
+      },
+      {
+        "where": "post:76705",
+        "src": "/legacy/img/e5646c9a6b-img-2115.jpg",
+        "alt": "106/03/25 EMRD新生座談會"
+      },
+      {
+        "where": "post:76706",
+        "src": "/legacy/img/2c1eaedb5b-001-1-orig.jpg",
+        "alt": "1060624 第一屆EMRD畢業典禮暨授證儀式"
+      },
+      {
+        "where": "post:76707",
+        "src": "/legacy/img/b8d09f008f-img-68371.png",
+        "alt": "106/09/16 高階科技研發碩士在職專班106學年度開學典禮"
+      },
+      {
+        "where": "post:76709",
+        "src": "/legacy/img/8824cdf08e-20171224-family-day-171228-0020-1-orig.jpg",
+        "alt": "106.12.24 聖誕家庭日同樂活動"
+      },
+      {
+        "where": "post:76724",
+        "src": "/legacy/img/e865225450-1070526-meitu-1-orig.jpg",
+        "alt": "107/05/25 智慧財產法院參訪活動"
+      },
+      {
+        "where": "post:76734",
+        "src": "/legacy/img/d597029ccf-img-2185.jpg",
+        "alt": "2019/01/06 執行長交接歡送暨校友會尾牙餐聚㊗️"
+      },
+      {
+        "where": "post:76739",
+        "src": "/legacy/img/753ef02774-img-6190-orig.jpg",
+        "alt": "108.09.11 EMRD第一次海外參訪紀錄"
+      },
+      {
+        "where": "post:77121",
+        "src": "/legacy/img/765806112c-680657080.png",
+        "alt": "EMRD 108-02學期隨班附讀通過名單"
+      },
+      {
+        "where": "post:77122",
+        "src": "/legacy/img/777ccd1170-641469119.jpg",
+        "alt": "108.12.13 裕隆車之道體驗中心參訪"
+      },
+      {
+        "where": "post:77410",
+        "src": "/legacy/img/a3001d79d7-849059908.jpg",
+        "alt": "農曆新春誌喜及EMRD辦公室年節期間停止辦公 (01/28-02/08)"
+      },
+      {
+        "where": "post:78149",
+        "src": "/legacy/img/d61b3af05d-03.png",
+        "alt": "EMRD 109學年度招生結果放榜! (報到與可備取名單)"
+      },
+      {
+        "where": "post:78374",
+        "src": "/legacy/img/2512d387de-919797624.png",
+        "alt": "109.03.27 研華智慧園區參訪"
+      },
+      {
+        "where": "post:78440",
+        "src": "/legacy/img/80055551d2-mczh-tw1920x700-large2604-662482325273.jpg",
+        "alt": "上課期間請配戴口罩，落實勤洗手!"
+      },
+      {
+        "where": "post:78818",
+        "src": "/legacy/img/9e6a3b2c06-mczh-tw1920x700-large5005-750790537562.png",
+        "alt": "109學年度第五屆EMRD畢業典禮暨授證儀式，12/05(日)歡迎蒞臨參加!"
+      },
+      {
+        "where": "post:80143",
+        "src": "/legacy/img/17a87c414a-s-4939837.png",
+        "alt": "109.06.20廣明案對台灣公司營運之啟示"
+      },
+      {
+        "where": "post:80424",
+        "src": "/legacy/img/fcd5def992-100994767-2556597457987173-8812453179703689216-o.jpg",
+        "alt": "109.05.22 108級學長參訪 3M台灣"
+      },
+      {
+        "where": "post:81752",
+        "src": "/legacy/img/dfce1760c0-mczh-tw1920x700-large3329-528929260391.png",
+        "alt": "109.07.29 院外籍生參訪EMRD學長任職企業－亞旭Askey"
+      },
+      {
+        "where": "post:81907",
+        "src": "/legacy/img/55085abafd-mczh-tw1920x700-large4766-561351980199.png",
+        "alt": "110-01學期 隨班附讀通過名單"
+      },
+      {
+        "where": "post:82901",
+        "src": "/legacy/img/b99f84a23d-mczh-tw1920x700-large3457-30068620496.jpg",
+        "alt": "109.08.23 EMRD迎新送舊烤肉會精彩剪影!"
+      },
+      {
+        "where": "post:83877",
+        "src": "/legacy/img/8b8183caeb-mczh-tw1920x700-large3551-122094662770.png",
+        "alt": "中華民國國立臺灣科技大學EMRD校友會招募會員!"
+      },
+      {
+        "where": "post:84502",
+        "src": "/legacy/img/1dca361f18-mczh-tw1920x700-large3618-672355450683.jpg",
+        "alt": "109.09.19 EMRD 109學年度 開學典禮"
+      },
+      {
+        "where": "post:84504",
+        "src": "/legacy/img/b3dfcd60c1-mczh-tw1920x700-large3619-664423950867.jpg",
+        "alt": "109.09.03 108級學長參訪 中科院-軍民通用中心"
+      },
+      {
+        "where": "post:85066",
+        "src": "/legacy/img/da5f7b059f-mczh-tw1920x700-large3705-458852444008.png",
+        "alt": "EMRD在職專班 LINE好友募集中!"
+      },
+      {
+        "where": "post:86720",
+        "src": "/legacy/img/27d2a8d3f8-292098962.png",
+        "alt": "109-02學期 隨班附讀通過名單公告"
+      },
+      {
+        "where": "post:87511",
+        "src": "/legacy/img/7efe09c8ba-mczh-tw1920x700-large4111-90369723682.jpg",
+        "alt": "110.01.16 109級期末師生交流餐敘"
+      },
+      {
+        "where": "post:89120",
+        "src": "/legacy/img/d61b3af05d-03.png",
+        "alt": "EMRD 110學年度招生結果放榜! (報到與備取名單)"
+      },
+      {
+        "where": "post:89202",
+        "src": "/legacy/img/5ae6c1af3a-mczh-tw1920x700-large4223-732654679566.png",
+        "alt": "110.03.20 EMRD校友會第一屆會員(成立)大會暨理監事會"
+      },
+      {
+        "where": "post:89891",
+        "src": "/legacy/img/3a511b1b77-mczh-tw1920x700-large4574-580869465387.jpg",
+        "alt": "EMRD109級01~04月第一季慶生會"
+      },
+      {
+        "where": "post:90871",
+        "src": "/legacy/img/ac9ffb1898-0520.png",
+        "alt": "05/17起至學期末課程全面遠距及06/19畢典延期舉行！"
+      },
+      {
+        "where": "post:91087",
+        "src": "/legacy/img/9c98e162ef-web.png",
+        "alt": "臺科大EMRD校友會之專屬網站上線囉!"
+      },
+      {
+        "where": "post:92100",
+        "src": "/legacy/img/1ea273d592-mczh-tw1920x700-large5482-644064049363.png",
+        "alt": "先修學分班-111-01學期半導體產業學分班SEMI-EMRD招生中!"
+      },
+      {
+        "where": "post:93152",
+        "src": "/legacy/img/a8891a7588-328745126.png",
+        "alt": "110-01學期半導體產業學分班通過名單!"
+      },
+      {
+        "where": "post:93842",
+        "src": "/legacy/img/0bfe4a9476-501873670.png",
+        "alt": "110.09.18 110級新生及半導體產業學分班線上開學典禮!"
+      },
+      {
+        "where": "post:97528",
+        "src": "/legacy/img/a192f8ec36-441869805.png",
+        "alt": "110-02學期半導體產業學分班通過名單!"
+      },
+      {
+        "where": "post:98650",
+        "src": "/legacy/img/e6f538e21f-mczh-tw1920x700-large5171-832391393340.jpg",
+        "alt": "敬邀參加111/03/19 校慶校友回娘家之餐敘與論文分享交流會"
+      },
+      {
+        "where": "post:114873",
+        "src": "/legacy/img/7f236c7dae-303979353.jpg",
+        "alt": "112/08/13 第一屆 112 新生破冰營強勢登場囉！"
+      },
+      {
+        "where": "post:118239",
+        "src": "/legacy/img/82bd647c7e-575270401.jpg",
+        "alt": "112/11/25 EMRD 113 學年度招生說明會 (僅此一場)"
+      },
+      {
+        "where": "post:119159",
+        "src": "/legacy/img/a05d37e924-mczh-tw1920x700-large6828-416435835215.jpg",
+        "alt": "建立技術脈、產業脈、人脈 臺科大 EMRD 培養臺灣科技未來 CTO (DIGITIMES報導)"
+      },
+      {
+        "where": "post:120113",
+        "src": "/legacy/img/683aafff43-409528370-212564981893201-5349719354806163286-n.jpg",
+        "alt": "112/12/10 EMRD 校友會 112 年末會員聚餐成功！"
+      },
+      {
+        "where": "post:122855",
+        "src": "/legacy/img/d8a520b8e0-173525025.jpg",
+        "alt": "113/03/23 第 49 週年校慶活動 - EMRD 校慶講座"
+      },
+      {
+        "where": "post:125008",
+        "src": "/legacy/img/210dc8a291-337405380.jpg",
+        "alt": "113 年度 EMRD 斐陶斐榮譽會員"
+      },
+      {
+        "where": "post:131958",
+        "src": "/legacy/img/97510c6435-645621860.jpg",
+        "alt": "恭喜 EMRD 111 級郭永聰學長榮獲「2024 台灣創新技術博覽會發明競賽」銀牌獎"
+      }
+    ]
+  },
+  "droppedElements": {
+    "colgroup": 6,
+    "hidden(display:none)": 195,
+    "noscript": 1,
+    "script": 1
+  },
+  "fragmentLinksUnwrapped": 2,
+  "notes": [
+    "原站列表與文章頁均未顯示發布日期，依規則不從標題推測，date 欄位因此省略（影音專區條目內文中的民國日期行保留為內文文字）。",
+    "450 連結紀錄只讀取原站 302 的 Location，不連線到外站（Google Drive 等），因此外站目標是否失效無法由本腳本驗證。",
+    "頁內目錄／回到頂端：同頁 \"#...\" 連結的目標保留為 id=\"legacy-<文件代號>-<名稱>\"（文件代號＝頁面 slug〔/ 改 -〕或文章編號，避免 React Activity 同時保留多個頁面時 id 衝突；見 anchors），連結改為對應的 href=\"#legacy-…\"；找不到目標或沒有文字的頁內連結改為純文字或移除（fragmentLinksUnwrapped）。",
+    "www.emrd.tw 為 EMRD 舊 Weebly 網站（客戶自有、要求 1:1 搬移）：網域已失效，其 /uploads/ 圖片與檔案由同一Weebly 網站（站台 115637951）的預覽主機下載到 public/legacy/（見 ownedImages.downloaded）；仍無法取得者保留原網址並列在 ownedImages.unrecoverable。",
+    "外站圖片不熱連結：Facebook 表情圖示（fbcdn、facebook.com/images/emoji.php）與 LINE「加入好友」按鈕改為其 alt 文字（accessibility.externalToText），已失效的 ce.ntust.edu.tw 照片移除（accessibility.droppedExternal）。其餘外站圖片只檢查能否存取、不下載（見 externalImageChecks、deadExternalImages；結果快取於 .legacy-cache/probes.json，--refresh 重新檢查）。",
+    "連結只允許 http(s)、mailto、tel 與站內相對網址（先移除控制字元再判斷 scheme，java\\tscript: 等寫法也會被擋下）；其他 scheme 的連結改為純文字（droppedElements 的 link(不允許的 scheme …)）。屬性值一律以雙引號輸出、值中的 \" 寫成 &quot;。",
+    "列表中的 450 連結紀錄：目標為站內文章、標題相同且未重複時直接使用該文章；否則以文章保留條目（編號＝450 代碼、標題＝原站列表標題，見 linkPosts）。kind＝link：html 只有一個連結；listBody：影音專區條目本身的內文（YouTube 播放器＋日期）＋相關文章連結；printView：目標已下架，改用友善列印版本 16-1039-<id>.php 的完整內文（見 printViews）。",
+    "影音專區條目在原站列表沒有縮圖，因此這些文章不設 cover（不自行產生縮圖）。",
+    "以行內樣式 display:none 隱藏的元素不搬移（見 hiddenElementsDropped）。",
+    "相片輯（.mcarousel figure）位於 .mpgdetail 之外，已依原站 DOM 順序輸出為 <figure><img><figcaption>（見 galleries）；隱藏的手機版副本（display:none）依 src 去重。原站列表縮圖取自相片輯第一張，因此有相片輯的文章以其第一張為 cover。",
+    "attachments 只來自原站附件區塊（.module-ptattach）；內文中的檔案連結保留在內文。",
+    "圖片（客戶同意）：寬度超過 2000 px 者縮成 2000 px 寬（先依 EXIF 轉正、LANCZOS、JPEG 品質 85 漸進式、PNG optimize、格式不變），BMP 無損轉成 PNG；其餘圖片保留原始檔（位元組相同、保留 EXIF）。被修改的原始檔逐位元組備份在 legacy-originals/img/（不部署；對照表 legacy-originals/manifest.json，見 imageProcessing）。還原：python -X utf8 scripts/migrate_legacy.py --original-images。附件（/legacy/files/）一律保留原檔。",
+    "html 中每個本地 <img> 都有 width／height：比例取自實際檔案（縮圖後、已依 EXIF 方向）；原站有設定顯示寬（或只設高）時沿用為顯示尺寸、另一邊依實際比例換算，沒有設定時為實際檔案的像素尺寸。前端不需讀檔取得尺寸。cover 欄位的型別（types.ts）沒有尺寸欄位，因此 cover 不另附尺寸。",
+    "不同原站網址但內容完全相同的檔案共用一個本地檔（見 duplicateContentAssets）。",
+    "已下架的原站網址（302 回首頁）在內文中改寫為首頁或明確的後繼頁面，並加入轉址（見 deadLinksRewritten）。",
+    "redirects.json 的 destination 可能是站外絕對網址（450 連結紀錄的原站 302 目標，例如 Google Drive）。",
+    "redirects.json 也包含已搬移檔案的原站路徑（/var/file/... → /legacy/...）；source 含 ( ) 等 path-to-regexp 特殊字元者列在 redirectSourcesNeedingEscape，寫入 next.config 的 redirects 時須在字元前加反斜線跳脫。",
+    "依賴查詢字串的 downloadfile 網址（/app/index.php?Action=downloadfile&file=…&fname=…）已寫入 redirects.json（source 為完整的原站路徑＋查詢字串，next.config 轉成 has 查詢條件；queryRedirects 僅供對照）。redirectChecks 列出轉址完整性檢查（/var/file/ 檔案、隱藏分類鏡像頁的文章網址、列表單元分頁）。",
+    "collections/*.json 的 title 保留原站列表標題（例：admissions/news 原站為「招生資訊」，與 IA 標籤「招生公告」不同，見 labelMismatches）；前端顯示列表名稱一律使用 ia.json 的 label（src/lib/legacy.ts collectionsForPost 先取 IA 標籤、列表頁標題用 page.label），因此資料不改。",
+    "ia.json 中有自己內容的 412 別名頁已併入別名目標頁（原站標題為小節標題，見 mergedAliasPages）；隱藏的分類鏡像頁（412-1039-7696／7721／7723／7724）只轉址，其中的文章網址（,c7696 等）都已加入轉址。"
+  ]
+}

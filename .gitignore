@@ -1,0 +1,54 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# 舊站搬遷腳本（scripts/migrate_legacy.py）的 HTTP 快取 .legacy-cache/ 刻意納入版控：
+# 它是原網站的唯一快照，網域切換後無法重新抓取，重跑搬遷與還原原圖都需要它。
+
+# Python
+__pycache__/
+*.pyc
+
+# 影片腳本的預覽輸出（--preview 預設資料夾）
+/video-preview/
+
+# Claude Code 本機設定（launch.json 保留）
+/.claude/settings.local.json

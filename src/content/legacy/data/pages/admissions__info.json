@@ -1,0 +1,29 @@
+{
+  "slug": "admissions/info",
+  "title": "招生資訊",
+  "legacyUrl": "https://emrd.ntust.edu.tw/p/412-1039-11971.php?Lang=zh-tw",
+  "html": "",
+  "items": [
+    {
+      "title": "[招生] 115學年度招生簡章已公告 (報名:114/11/28至114/12/11)",
+      "href": "/posts/141774",
+      "external": false
+    },
+    {
+      "title": "招生資訊",
+      "href": "https://drive.google.com/file/d/1QTu2rHoCwld-N8Anb-VYdbvD6AqTTzjo/view?usp=drive_link",
+      "external": true
+    },
+    {
+      "title": "報考常見 Q&A",
+      "href": "https://drive.google.com/file/d/1M8ptX7UhnAiRPU7UjdRjbrrqE5mCxV0H/view?usp=drive_link",
+      "external": true
+    },
+    {
+      "title": "媒體報導與學員推薦",
+      "href": "/posts/130704",
+      "external": false
+    }
+  ],
+  "attachments": []
+}

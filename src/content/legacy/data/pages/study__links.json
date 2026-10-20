@@ -1,0 +1,89 @@
+{
+  "slug": "study/links",
+  "title": "常用網站",
+  "legacyUrl": "https://emrd.ntust.edu.tw/p/412-1039-7720.php?Lang=zh-tw",
+  "html": "",
+  "items": [
+    {
+      "title": "學生資訊系統",
+      "href": "https://i.ntust.edu.tw/student",
+      "external": true
+    },
+    {
+      "title": "學術研究倫理課程報名系統",
+      "href": "https://ae.cge.ntust.edu.tw/",
+      "external": true
+    },
+    {
+      "title": "選課須知與教學",
+      "href": "/posts/121001",
+      "external": false
+    },
+    {
+      "title": "課程授權碼加選課程教學",
+      "href": "https://www.academic.ntust.edu.tw/p/412-1048-8231.php?Lang=zh-tw",
+      "external": true
+    },
+    {
+      "title": "課程查詢系統",
+      "href": "https://querycourse.ntust.edu.tw/querycourse/",
+      "external": true
+    },
+    {
+      "title": "Moodle 數位學習平台",
+      "href": "https://moodle2.ntust.edu.tw/",
+      "external": true
+    },
+    {
+      "title": "博碩士論文系統",
+      "href": "https://etheses.lib.ntust.edu.tw/zh-hant/help/aboutedit/#%E7%B4%99%E6%9C%AC%E8%AB%96%E6%96%87%E7%89%B9%E5%88%A5%E7%94%B3%E8%AB%8B%E5%BB%B6%E5%BE%8C%E5%85%AC%E9%96%8B",
+      "external": true
+    },
+    {
+      "title": "圖書館 (論文比對. 論文上傳)",
+      "href": "https://library.ntust.edu.tw/",
+      "external": true
+    },
+    {
+      "title": "學雜費專區",
+      "href": "https://www.ntust.edu.tw/p/404-1000-316.php",
+      "external": true
+    },
+    {
+      "title": "研究所表單 (教務處)",
+      "href": "https://www.academic.ntust.edu.tw/p/412-1048-8241.php?Lang=zh-tw",
+      "external": true
+    },
+    {
+      "title": "常見問題 (教務處研教組)",
+      "href": "https://academic.ntust.edu.tw/p/404-1048-78753.php?Lang=zh-tw",
+      "external": true
+    },
+    {
+      "title": "臺科大研究所相關法規 (教務處)",
+      "href": "https://www.academic.ntust.edu.tw/p/412-1048-8196.php?Lang=zh-tw",
+      "external": true
+    },
+    {
+      "title": "新生體檢資訊 (學務處)",
+      "href": "https://student.ntust.edu.tw/p/404-1053-96546.php?Lang=zh-tw",
+      "external": true
+    },
+    {
+      "title": "總務處公告 (停車位租用規範與抽籤)",
+      "href": "https://www.general.ntust.edu.tw/p/403-1054-7-1.php?Lang=zh-tw",
+      "external": true
+    },
+    {
+      "title": "工程學院網站",
+      "href": "https://www.ce.ntust.edu.tw/",
+      "external": true
+    },
+    {
+      "title": "EMRD 校友薈萃堂",
+      "href": "/alumni-hall",
+      "external": false
+    }
+  ],
+  "attachments": []
+}
