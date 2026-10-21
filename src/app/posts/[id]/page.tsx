@@ -4,6 +4,10 @@ import { notFound } from "next/navigation";
 import { ArrowRight, ArrowUpRight, Info, Link2 } from "lucide-react";
 import type { LegacyPost } from "@/content/legacy/types";
 import { AttachmentList } from "@/components/site/AttachmentList";
+import {
+  HistoricalAdmissionNotice,
+  isHistoricalAdmission,
+} from "@/components/site/HistoricalAdmissionNotice";
 import { ContentLayout, InteriorFrame } from "@/components/site/InteriorFrame";
 import { LegacyContent } from "@/components/site/LegacyContent";
 import { interiorOpenGraph } from "@/components/site/metadata";
@@ -147,6 +151,17 @@ function PostContent({ post }: { post: LegacyPost }) {
   const target = linkPostTarget(post);
   const hasHtml = post.html.trim().length > 0;
 
+  const body = target ? (
+    <LinkPostCallout href={target.href} label={target.label || text} />
+  ) : hasHtml ? (
+    <LegacyContent html={post.html} />
+  ) : post.attachments.length === 0 ? (
+    <p role="note" className="flex gap-3 rounded-md border border-stroke bg-surface p-5 text-sm text-slate-700">
+      <Info aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-brand-700" />
+      本則消息僅有標題，原網站未提供內文。
+    </p>
+  ) : null;
+
   return (
     <>
       <PageHeader
@@ -157,16 +172,15 @@ function PostContent({ post }: { post: LegacyPost }) {
       />
       <ContentLayout aside={group ? <SideNav group={group} activeSlug={context.slug} currentType="true" /> : undefined}>
         <article aria-label={text} className="grid grid-cols-1 gap-12">
-          {target ? (
-            <LinkPostCallout href={target.href} label={target.label || text} />
-          ) : hasHtml ? (
-            <LegacyContent html={post.html} />
-          ) : post.attachments.length === 0 ? (
-            <p role="note" className="flex gap-3 rounded-md border border-stroke bg-surface p-5 text-sm text-slate-700">
-              <Info aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-brand-700" />
-              本則消息僅有標題，原網站未提供內文。
-            </p>
-          ) : null}
+          {/* 往年的招生公告：於原站內文之前提示日期與連結可能失效（內文不變） */}
+          {isHistoricalAdmission(post) ? (
+            <div className="grid grid-cols-1 gap-8">
+              <HistoricalAdmissionNotice />
+              {body}
+            </div>
+          ) : (
+            body
+          )}
 
           <AttachmentList attachments={post.attachments} />
 

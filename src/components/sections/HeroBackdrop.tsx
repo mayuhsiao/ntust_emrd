@@ -14,6 +14,8 @@ import { cn } from "@/lib/cn";
 type HeroBackdropProps = {
   /** public/ 內的影片網址（不含 basePath，於此加上）；檔案不存在時為 undefined，改顯示幾何點陣動態 */
   videoSrc?: string;
+  /** 視窗寬度低於 lg（64rem）時改用的 480p 行動版影片（同上，不含 basePath）；未提供時一律使用 videoSrc */
+  compactVideoSrc?: string;
   /** 影片的 object-position，需與靜態畫面一致，淡入時校徽才不會跳位 */
   objectPosition: string;
   /** 由伺服器端渲染的靜態畫面（校徽成形的影格），作為影片載入前與不播放時的品牌畫面 */
@@ -21,11 +23,15 @@ type HeroBackdropProps = {
 };
 
 /* ------------------------------------------------------------------ */
-/* 環境偵測（SSR 一律回傳 false，確保 hydration 標記一致）                 */
+/* 環境偵測（SSR 一律回傳 false／null，確保 hydration 標記一致）            */
 /* ------------------------------------------------------------------ */
 
 /** 各種螢幕尺寸皆自動播放；使用者偏好減少動態時不播放（另於 getAutoplay 排除節省數據模式） */
 const AUTOPLAY_QUERY = "(prefers-reduced-motion: no-preference)";
+/** Tailwind lg 斷點：以上播放 1080p 原檔，以下改用 480p 行動版影片 */
+const WIDE_QUERY = "(min-width: 64rem)";
+/** 媒體區距離視窗約 200px 內才播放，離開即暫停（行動版媒體區位於文字下方，未捲到附近前不下載影片） */
+const IN_VIEW_ROOT_MARGIN = "200px 0px";
 
 type NetworkInformationLike = Partial<EventTarget> & { saveData?: boolean };
 
@@ -57,8 +63,20 @@ function getServerFalse() {
   return false;
 }
 
-const subscribeNothing = () => () => {};
-const getClientTrue = () => true;
+function subscribeWide(onChange: () => void) {
+  const mediaQuery = window.matchMedia(WIDE_QUERY);
+  mediaQuery.addEventListener("change", onChange);
+  return () => mediaQuery.removeEventListener("change", onChange);
+}
+
+function getWide() {
+  return window.matchMedia(WIDE_QUERY).matches;
+}
+
+/** 伺服器端與 hydration 期間尚不知視窗寬度 */
+function getServerNull() {
+  return null;
+}
 
 /** 以靜音方式播放影片；被瀏覽器自動播放政策拒絕時呼叫 onBlocked */
 function playMuted(video: HTMLVideoElement, onBlocked: () => void) {
@@ -138,10 +156,12 @@ type PlaybackChoice = "auto" | "play" | "pause";
 
 function HeroVideo({
   src,
+  compactSrc,
   objectPosition,
   still,
 }: {
   src: string;
+  compactSrc?: string;
   objectPosition: string;
   still: ReactNode;
 }) {
@@ -149,29 +169,46 @@ function HeroVideo({
   const [choice, setChoice] = useState<PlaybackChoice>("auto");
   const [visible, setVisible] = useState(false);
   const [failed, setFailed] = useState(false);
+  /** 媒體區是否在視窗附近（IN_VIEW_ROOT_MARGIN 內）；離開時暫停不改變使用者意圖 */
+  const [inView, setInView] = useState(false);
   const autoplay = useSyncExternalStore(
     subscribeAutoplay,
     getAutoplay,
     getServerFalse,
   );
-  const hydrated = useSyncExternalStore(
-    subscribeNothing,
-    getClientTrue,
-    getServerFalse,
-  );
+  const wide = useSyncExternalStore(subscribeWide, getWide, getServerNull);
+
+  // 視窗寬度於 hydration 後才得知：在此之前不設定 src，選定檔案前不會下載任何影片
+  const hydrated = wide !== null;
+  // src 屬性改變會重跑資源選擇（改動 <source> 子元素則不會），平板旋轉跨越 lg 時即換成對應檔案
+  const currentSrc = hydrated
+    ? withBasePath(wide || !compactSrc ? src : compactSrc)
+    : undefined;
 
   const active = choice === "play" || (choice === "auto" && autoplay);
 
-  // 自動播放：環境改變（視窗縮放、切換減少動態、省流量）時同步播放或暫停
   useEffect(() => {
     const video = videoRef.current;
-    if (!video || choice !== "auto") return;
-    if (autoplay) {
+    if (!video || typeof IntersectionObserver === "undefined") return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { rootMargin: IN_VIEW_ROOT_MARGIN },
+    );
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
+  // 依使用者意圖、環境（減少動態、省流量）與是否在視窗附近同步播放或暫停；
+  // 換檔後（currentSrc 改變）重新播放。不支援 IntersectionObserver 的舊瀏覽器視為一直在畫面中
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || !currentSrc) return;
+    if (active && (inView || typeof IntersectionObserver === "undefined")) {
       playMuted(video, () => setChoice("pause"));
     } else {
       video.pause();
     }
-  }, [autoplay, choice]);
+  }, [active, inView, currentSrc]);
 
   const togglePlayback = () => {
     const video = videoRef.current;
@@ -193,8 +230,10 @@ function HeroVideo({
       <div aria-hidden="true" className="absolute inset-0">
         {still}
         {failed ? null : (
+          // 原生 src 不會自動加上 basePath（子路徑部署時為 /ntust_emrd），currentSrc 已經過 withBasePath()
           <video
             ref={videoRef}
+            src={currentSrc}
             muted
             loop
             playsInline
@@ -204,16 +243,15 @@ function HeroVideo({
             disablePictureInPicture
             disableRemotePlayback
             onPlaying={() => setVisible(true)}
+            // 換檔時清空目前畫面：先退回靜態畫面，新檔開始播放後再淡入
+            onEmptied={() => setVisible(false)}
             onError={markFailed}
             className={cn(
               "absolute inset-0 size-full object-cover transition-opacity duration-700 ease-out",
               visible ? "opacity-100" : "opacity-0",
             )}
             style={{ objectPosition }}
-          >
-            {/* 原生 <source> 不會自動加上 basePath（子路徑部署時為 /ntust_emrd） */}
-            <source src={withBasePath(src)} type="video/mp4" onError={markFailed} />
-          </video>
+          />
         )}
         <BlendSeams />
       </div>
@@ -345,16 +383,23 @@ function HeroFallback() {
 
 /**
  * Hero 右側（行動版為下方）媒體區：
- * 有影片時以校徽靜態畫面墊底，環境允許時（未要求減少動態、未開啟節省數據）自動淡入影片，其他情況提供「播放影片」鈕；
+ * 有影片時以校徽靜態畫面墊底，環境允許時（未要求減少動態、未開啟節省數據）且媒體區接近視窗時自動淡入影片，
+ * 其他情況提供「播放影片」鈕；lg 以下改播 480p 行動版影片。
  * 無影片時改顯示幾何點陣微動態。皆附暫停控制以符合 WCAG 2.2.2。
  */
 export function HeroBackdrop({
   videoSrc,
+  compactVideoSrc,
   objectPosition,
   children,
 }: HeroBackdropProps) {
   return videoSrc ? (
-    <HeroVideo src={videoSrc} objectPosition={objectPosition} still={children} />
+    <HeroVideo
+      src={videoSrc}
+      compactSrc={compactVideoSrc}
+      objectPosition={objectPosition}
+      still={children}
+    />
   ) : (
     <HeroFallback />
   );

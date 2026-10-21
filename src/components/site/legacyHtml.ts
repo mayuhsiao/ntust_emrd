@@ -3,10 +3,11 @@
  *
  * 搬遷腳本已以白名單清洗標籤與屬性，本檔只做版面與無障礙層面的調整：
  *  1. 過長的 h2–h4（原站常把整段內文設成標題）降為段落，維持標題大綱可讀
- *  2. 連續 3 張以上的 <figure> 包成 .legacy-gallery 相簿格線
+ *  2. 連續 3 張以上的 <figure> 包成 .legacy-gallery 相簿格線；同一段落並排的照片、下一段以連續空白
+ *     推開對齊的說明（活動花絮常見），改寫為每張照片各自帶 <figcaption> 的格線
  *  3. 表格分類：資料表包進可左右捲動、可聚焦的 region（名稱取自 <caption> 或前方的段落標題；
  *     實際無須捲動時由 LegacyTableRegions 於瀏覽器端移除 region 與 tabindex）；
- *     排版用表格標為 role="presentation"
+ *     排版用表格標為 role="presentation"；資料表儲存格去除頭尾空白，短儲存格標記為不在詞中斷行
  *  4. 站內點陣圖改用 next/image 的最佳化網址（srcset／sizes）；寬高取自 HTML 的 width／height 屬性
  *     （搬遷腳本寫入），渲染時不讀取 public/ 內的檔案
  *  5. 外部連結另開新視窗並提示；只有圖片的連結補上可辨識的替代文字；非 http(s)／mailto／tel
@@ -151,6 +152,130 @@ function wrapGalleries(html: string) {
     const marked = figures.replace(/<img\b/gi, `<img ${GALLERY_MARK}`);
     return `<div class="legacy-gallery">${marked.trim()}</div>`;
   });
+}
+
+/*
+ * 照片列＋以空白對齊的說明：原站把 2–3 張照片放在同一段，下一段再用一長串 &nbsp; 把各張的說明
+ * 推到照片下方。新版欄寬不同（手機改為上下排列），說明便對不上照片，甚至在詞中斷行。
+ * 說明段依「兩個以上連續空白」切分：段數與照片數相同時，每張照片連同自己的說明包成 <figure>；
+ * 段數不同時只把照片排成格線，說明段落原樣保留在後。除了切分處的空白，文字內容不變。
+ * 說明段之後、下一列照片之前若還有一個沒有連續空白的短段落，是原站第一欄較窄而折到下一段的
+ * 說明續行（如「SEMI-EMRD」＋「周碩康班代致詞」），以空白接在第一張照片的說明後面。
+ */
+const PHOTO_SPACE = String.raw`(?:\s|&nbsp;|&#160;|&#xa0;)`;
+/** 單張照片：<img> 或只包一張圖片的連結 */
+const PHOTO = String.raw`(?:<a\b[^>]*>\s*<img\b[^>]*>\s*<\/a>|<img\b[^>]*>)`;
+const PHOTO_ROW = new RegExp(
+  String.raw`<p\b([^>]*)>(${PHOTO_SPACE}*${PHOTO}(?:${PHOTO_SPACE}*${PHOTO})+${PHOTO_SPACE}*)<\/p>` +
+    String.raw`(\s*)<p\b([^>]*)>((?:(?!<\/?p\b|<(?:img|iframe|video|table)\b)[\s\S])*)<\/p>` +
+    // 說明續行：沒有屬性、沒有換行與媒體的段落，且緊接著下一列照片（不吃掉下一列，留給下一次比對）
+    String.raw`(?:(\s*)<p>((?:(?!<\/?p\b|<(?:img|iframe|video|table|br)\b)[\s\S])*)<\/p>` +
+    String.raw`(?=\s*<p\b[^>]*>(?:(?!<\/p>)[\s\S])*?<img\b))?`,
+  "gi",
+);
+/** 說明續行的長度上限（字元）：再長就視為一般內文，原樣保留 */
+const CAPTION_CONTINUATION_MAX = 20;
+/** 說明之間的分隔：兩個以上的空白字元（&nbsp; 與一般空白交錯） */
+const CAPTION_GAP = /(?:&nbsp;|&#160;|&#xa0;|\u00a0|[ \t\r\n]){2,}/i;
+const EDGE_SPACE = /^(?:&nbsp;|&#160;|&#xa0;|\s)+|(?:&nbsp;|&#160;|&#xa0;|\s)+$/gi;
+const VOID_TAGS = new Set(["br", "img", "wbr", "hr"]);
+
+/** 片段內的行內標籤是否自成對（切分後的每段都必須是完整的 HTML） */
+function isBalanced(fragment: string) {
+  const stack: string[] = [];
+  for (const match of fragment.matchAll(/<(\/?)([a-z][\w-]*)\b[^>]*>/gi)) {
+    const tag = match[2].toLowerCase();
+    if (VOID_TAGS.has(tag)) continue;
+    if (!match[1]) stack.push(tag);
+    else if (stack.pop() !== tag) return false;
+  }
+  return stack.length === 0;
+}
+
+/** 依連續空白切分說明段；只在標籤之外切分，有換行或切分後標籤不成對時回傳 undefined */
+function splitCaptions(inner: string) {
+  if (/<br\b/i.test(inner)) return undefined;
+  const parts: string[] = [];
+  let current = "";
+  for (const token of inner.split(/(<[^>]*>)/)) {
+    if (token.startsWith("<")) {
+      current += token;
+      continue;
+    }
+    const pieces = token.split(CAPTION_GAP);
+    current += pieces[0];
+    for (const piece of pieces.slice(1)) {
+      parts.push(current);
+      current = piece;
+    }
+  }
+  parts.push(current);
+  const captions = parts
+    .map((part) => part.replace(EDGE_SPACE, ""))
+    .filter((part) => plainText(part).length > 0);
+  return captions.every(isBalanced) ? captions : undefined;
+}
+
+function alignPhotoCaptions(html: string) {
+  return html.replace(
+    PHOTO_ROW,
+    (
+      whole,
+      photoAttrs: string,
+      photoHtml: string,
+      between: string,
+      captionAttrs: string,
+      captionHtml: string,
+      continuationGap: string | undefined,
+      continuationHtml: string | undefined,
+    ) => {
+      const captions = splitCaptions(captionHtml);
+      // 只有一段說明（整列共用）或無法安全切分：不是「以空白對齊」的說明，維持原樣
+      if (!captions || captions.length < 2) return whole;
+
+      const photos = Array.from(photoHtml.matchAll(new RegExp(PHOTO, "gi")), (match) =>
+        match[0].replace(/<img\b/i, `<img ${GALLERY_MARK}`),
+      );
+      // 說明段帶有 id／lang 等屬性時不拆開，以免遺失錨點或語言標示
+      const paired = captions.length === photos.length && !captionAttrs.trim();
+      // 續行本身只能是一段（沒有連續空白），且夠短；否則原樣保留在格線之後
+      const continuation =
+        continuationHtml === undefined ? undefined : splitCaptions(continuationHtml);
+      const continued =
+        paired &&
+        continuation?.length === 1 &&
+        Array.from(plainText(continuation[0])).length <= CAPTION_CONTINUATION_MAX;
+      if (continued) captions[0] = `${captions[0]} ${continuation[0]}`;
+      const figures = photos
+        .map(
+          (photo, index) =>
+            `<figure>${photo}${paired ? `<figcaption>${captions[index]}</figcaption>` : ""}</figure>`,
+        )
+        .join("");
+      const attrs: Array<Attr & { raw?: boolean }> = parseAttrs(photoAttrs).filter(
+        (attr) => attr.name !== "class" && attr.name !== "style",
+      );
+      attrs.unshift({ name: "class", value: "legacy-gallery legacy-gallery--grid", raw: false });
+      // 各欄寬度依照片寬高比分配，同一列的照片等高（同原站並排的效果），說明也就落在同一水平線
+      const ratios = photos.map((photo) => {
+        const image = parseAttrs(/<img\b([^>]*)>/i.exec(photo)?.[1] ?? "");
+        const width = toInt(getAttr(image, "width"));
+        const height = toInt(getAttr(image, "height"));
+        return width && height ? Math.round((width / height) * 1000) / 1000 : undefined;
+      });
+      if (ratios.every((ratio) => ratio !== undefined)) {
+        const columns = ratios.map((ratio) => `minmax(0, ${ratio}fr)`).join(" ");
+        attrs.push({ name: "style", value: `--legacy-photo-cols: ${columns}`, raw: false });
+      }
+      const gallery = `<div${serializeAttrs(attrs)}>${figures}</div>`;
+      const caption = paired ? "" : `${between}<p${captionAttrs}>${captionHtml}</p>`;
+      const rest =
+        continuationHtml === undefined || continued
+          ? ""
+          : `${continuationGap ?? ""}<p>${continuationHtml}</p>`;
+      return `${gallery}${caption}${rest}`;
+    },
+  );
 }
 
 /* ------------------------------------------------------------------ */
@@ -363,6 +488,73 @@ function rewriteTables(html: string) {
     output = output.slice(0, edit.start) + edit.text + output.slice(edit.end);
   }
   return output;
+}
+
+/*
+ * 資料表儲存格：中文每個字之間都可斷行，自動表格版面在窄欄會把「廖承威」「碩士班」這類短詞
+ * 擠成兩行（欄寬只剩欄標題的寬度）。以空白（含 &nbsp;）分隔的每個詞，估算字寬都不超過
+ * SHORT_CELL_EM 的儲存格標上 .legacy-cell-short，由 CSS 以 word-break: keep-all 保持整詞。
+ * 原站以 &nbsp; 隔開的詞（「謝詠芬&nbsp;董事長」「Innovation&nbsp;(2015)」）不能在該處換行，窄欄時
+ * 只能整塊撐寬表格或在詞中斷開；每段連續 &nbsp; 的最後一個改為一般空白：寬度不變，但可在此換行。
+ * 原站儲存格常以 &nbsp; 開頭或結尾（同一欄有的縮排、有的沒有），一併去除；只動空白，文字不變。
+ */
+/** rewriteTables 包上外框的資料表；資料表不含巢狀表格，第一個 </table> 即為結尾 */
+const DATA_TABLE = /(<div class="legacy-table"[^>]*>\s*<table\b[^>]*>)([\s\S]*?)(<\/table>)/g;
+const DATA_CELL = /<(td|th)\b([^>]*)>([\s\S]*?)<\/\1>/gi;
+/** 儲存格開頭、結尾，以及段落與換行前後的空白 */
+const CELL_EDGE_SPACE =
+  /(^|<p\b[^>]*>|<br\b[^>]*>)(?:&nbsp;|&#160;|&#xa0;|\s)+|(?:&nbsp;|&#160;|&#xa0;|\s)+($|<\/p>|<br\b[^>]*>)/gi;
+const CELL_LINE_BREAK = /<br\b[^>]*>|<\/?(?:p|div|ul|ol|li|h[1-6])\b[^>]*>/i;
+/** 前後都不是空白的一段連續 &nbsp;（旁邊已有一般空白者本來就可換行） */
+const NBSP_RUN =
+  /(?<!\s|&nbsp;|&#160;|&#xa0;)(?:&nbsp;|&#160;|&#xa0;|\u00a0)+(?!\s|&nbsp;|&#160;|&#xa0;)/gi;
+const NBSP_LAST = /(?:&nbsp;|&#160;|&#xa0;|\u00a0)$/i;
+/** 短詞的估算寬度上限（em）：約 6 個中文字，涵蓋人名、職稱、短的單位與課名 */
+const SHORT_CELL_EM = 6;
+/** 全形字（中日韓文字、全形標點）算 1 em，其餘以 0.55 em 估算 */
+const WIDE_CHAR =
+  /[\u2e80-\u9fff\uac00-\ud7af\uf900-\ufaff\ufe30-\ufe4f\uff00-\uff60\uffe0-\uffe6\u{20000}-\u{3ffff}]/u;
+
+function textWidthEm(text: string) {
+  let width = 0;
+  for (const char of text) width += WIDE_CHAR.test(char) ? 1 : 0.55;
+  return width;
+}
+
+/** 只改寫標籤之外的文字，標籤與屬性值維持原樣 */
+function mapText(html: string, transform: (text: string) => string) {
+  return html
+    .split(/(<[^>]*>)/)
+    .map((token) => (token.startsWith("<") ? token : transform(token)))
+    .join("");
+}
+
+function tidyDataCells(html: string) {
+  return html.replace(DATA_TABLE, (_whole, open: string, body: string, close: string) => {
+    const cells = body.replace(
+      DATA_CELL,
+      (cell, tag: string, attrSource: string, inner: string) => {
+        // 只有空白的儲存格維持原樣（不改變列高）
+        if (!plainText(inner)) return cell;
+        const content = mapText(inner.replace(CELL_EDGE_SPACE, "$1$2"), (text) =>
+          text.replace(NBSP_RUN, (run) => run.replace(NBSP_LAST, " ")),
+        );
+        // plainText 已把 &nbsp; 與全形空白收成一般空白，依空白切成詞
+        const words = content
+          .split(CELL_LINE_BREAK)
+          .flatMap((line) => plainText(line).split(" "))
+          .filter(Boolean);
+        if (!words.every((word) => textWidthEm(word) <= SHORT_CELL_EM)) {
+          return `<${tag}${attrSource}>${content}</${tag}>`;
+        }
+        const attrs: Array<Attr & { raw?: boolean }> = parseAttrs(attrSource);
+        const className = getAttr(attrs, "class");
+        setAttr(attrs, "class", className ? `${className} legacy-cell-short` : "legacy-cell-short");
+        return `<${tag}${serializeAttrs(attrs)}>${content}</${tag}>`;
+      },
+    );
+    return `${open}${cells}${close}`;
+  });
 }
 
 /* ------------------------------------------------------------------ */
@@ -633,8 +825,11 @@ const memo = new Map<string, string>();
 export function transformLegacyHtml(html: string) {
   const cached = memo.get(html);
   if (cached !== undefined) return cached;
+  // 照片列在相簿之後處理：其輸出的 <figure> 已在格線內，不會再被 wrapGalleries 合併
   const output = rewriteInline(
-    nameImageLinks(rewriteTables(wrapGalleries(demoteLongHeadings(html)))),
+    nameImageLinks(
+      tidyDataCells(rewriteTables(alignPhotoCaptions(wrapGalleries(demoteLongHeadings(html))))),
+    ),
   );
   memo.set(html, output);
   return output;

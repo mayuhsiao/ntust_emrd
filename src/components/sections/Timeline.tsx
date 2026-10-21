@@ -20,6 +20,14 @@ const admissionLinks = [
   { label: "隨班附讀", href: site.routes.audit },
 ] as const;
 
+/** 報名資格自我檢視底部的學程辦公室聯絡方式（首頁與「招生資訊」頁共用；只傳入元件需要的欄位） */
+export const eligibilityContact = {
+  phone: site.contact.phone,
+  phoneHref: site.contact.phoneHref,
+  email: site.contact.email,
+  emailHref: site.contact.emailHref,
+};
+
 export function Timeline() {
   return (
     <Section id="admissions" aria-labelledby="admissions-title">
@@ -59,12 +67,7 @@ export function Timeline() {
 
         <EligibilityChecklist
           {...admissions.eligibility}
-          contact={{
-            phone: site.contact.phone,
-            phoneHref: site.contact.phoneHref,
-            email: site.contact.email,
-            emailHref: site.contact.emailHref,
-          }}
+          contact={eligibilityContact}
           className="mt-14 lg:mt-20"
         />
 
@@ -94,10 +97,27 @@ export function Timeline() {
   );
 }
 
+/**
+ * 入學流程的預計時程（首頁 Roadmap 與「招生資訊」頁共用）。
+ * 「公告｜報名」等複合時程拆成獨立行，寬度不足時不會從日期中間斷開；螢幕閱讀器以「，」分隔。
+ */
+export function StepPeriod({ period }: { period: string }) {
+  const periods = period.split("｜");
+  return (
+    <span className="min-w-0">
+      <span className="sr-only">預計時程：</span>
+      {periods.map((part, index) => (
+        <Fragment key={part}>
+          {index > 0 ? <span className="sr-only">，</span> : null}
+          <span className="block text-balance">{keepDateTogether(part)}</span>
+        </Fragment>
+      ))}
+    </span>
+  );
+}
+
 function RoadmapStep({ step, isLast }: { step: TimelineStep; isLast: boolean }) {
   const label = String(step.step).padStart(2, "0");
-  // 「公告｜報名」等複合時程拆成獨立行，寬度不足時不會從日期中間斷開
-  const periods = step.period.split("｜");
 
   return (
     <li className="relative flex gap-5 lg:flex-col lg:gap-6">
@@ -132,17 +152,7 @@ function RoadmapStep({ step, isLast }: { step: TimelineStep; isLast: boolean }) 
         </h3>
         <p className="mt-3 flex items-start gap-2 text-sm leading-relaxed font-medium text-brand-700">
           <CalendarDays aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
-          <span className="min-w-0">
-            <span className="sr-only">預計時程：</span>
-            {periods.map((period, index) => (
-              <Fragment key={period}>
-                {index > 0 ? <span className="sr-only">，</span> : null}
-                <span className="block text-balance">
-                  {keepDateTogether(period)}
-                </span>
-              </Fragment>
-            ))}
-          </span>
+          <StepPeriod period={step.period} />
         </p>
         <p className="mt-3 text-sm leading-relaxed text-pretty text-slate-700">
           {step.description}

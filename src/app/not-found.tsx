@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Footer } from "@/components/layout/Footer";
+import { MobileActionBar } from "@/components/layout/MobileActionBar";
 import { Navbar } from "@/components/layout/Navbar";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
@@ -139,6 +140,7 @@ export default function NotFound() {
           </Container>
         </Section>
       </main>
+      <MobileActionBar pathname={null} />
       <Footer />
     </>
   );

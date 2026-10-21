@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, ChevronDown, Info } from "lucide-react";
 import type { LegacyPage } from "@/content/legacy/types";
+import { AdmissionsHub, admissionsHubLead } from "@/components/site/AdmissionsHub";
 import { AttachmentList } from "@/components/site/AttachmentList";
 import { CollectionFilter, type CollectionEntry } from "@/components/site/CollectionFilter";
 import { ContentLayout, InteriorFrame } from "@/components/site/InteriorFrame";
@@ -140,6 +141,9 @@ const collectionLeads: Record<string, string> = {
 /** 歷屆畢業論文：以 src/content/theses.json 的篩選清單為主內容，原站清單收合於後 */
 const THESES_SLUG = "curriculum/theses";
 
+/** 招生資訊：本學年度招生日程等版型區塊在前，原站條目（往年公告）列於「歷年招生資訊（原網站）」之下 */
+const ADMISSIONS_INFO_SLUG = "admissions/info";
+
 /** 獨立頁的英文小標 */
 const standaloneEyebrows: Record<string, string> = {
   contact: "Contact Us",
@@ -254,10 +258,7 @@ function OverviewView({ slug, group }: { slug: string; group: IaGroup }) {
         meta: count > 0 ? `共 ${count} 則` : undefined,
       };
     }
-    // 歷屆畢業論文頁以 theses.json 的清單為主，摘要改用頁首導言（原站內容只剩學年度錨點與舊說明）
-    const excerpt =
-      page.slug === THESES_SLUG ? thesesLead() : pageExcerpt(getPage(page.slug), 80);
-    return { href: hrefFor(page.slug), label: page.label, excerpt };
+    return { href: hrefFor(page.slug), label: page.label, excerpt: tileExcerpt(page.slug) };
   });
 
   return (
@@ -288,6 +289,15 @@ function OverviewView({ slug, group }: { slug: string; group: IaGroup }) {
       </ContentLayout>
     </>
   );
+}
+
+/**
+ * 總覽卡片摘要：有專屬版型的頁面改用頁首導言（見 pageLead）——
+ * 歷屆畢業論文以 theses.json 的清單為主（原站內容只剩學年度錨點與舊說明）；
+ * 招生資訊的原站條目以已過期的往年公告開頭，避免總覽卡片把往年公告呈現為本期招生。
+ */
+function tileExcerpt(slug: string) {
+  return pageLead(slug) ?? pageExcerpt(getPage(slug), 80);
 }
 
 function collectionEntries(slug: string): CollectionEntry[] {
@@ -366,20 +376,33 @@ function PageView({
   page: IaPage;
   data: LegacyPage;
 }) {
-  const isTheses = slug === THESES_SLUG;
   return (
     <>
       <PageHeader
         crumbs={breadcrumbs(slug)}
         eyebrow={group.englishLabel}
         title={page.label}
-        lead={isTheses ? thesesLead() : undefined}
+        lead={pageLead(slug)}
       />
       <ContentLayout aside={<SideNav group={group} activeSlug={slug} />}>
-        {isTheses ? <ThesesBody data={data} /> : <PageBody data={data} />}
+        {pageContent(slug, data)}
       </ContentLayout>
     </>
   );
+}
+
+/** 有專屬版型的頁面導言；其餘頁面不顯示導言 */
+function pageLead(slug: string) {
+  if (slug === THESES_SLUG) return thesesLead();
+  if (slug === ADMISSIONS_INFO_SLUG) return admissionsHubLead;
+  return undefined;
+}
+
+/** 頁面主體：專屬版型（歷屆論文、招生資訊）或原站內容 */
+function pageContent(slug: string, data: LegacyPage) {
+  if (slug === THESES_SLUG) return <ThesesBody data={data} />;
+  if (slug === ADMISSIONS_INFO_SLUG) return <AdmissionsHub legacy={<PageBody data={data} />} />;
+  return <PageBody data={data} />;
 }
 
 /** 原站內容的標題降一級：本頁的 h2 為各學年度，原站清單收在「原網站資料」h2 之下 */

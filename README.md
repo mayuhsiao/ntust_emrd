@@ -100,12 +100,45 @@ Next.js 只會從 `public/` 提供靜態檔，因此影片請放在：
 
 ```
 public/videos/hero-bg.mp4       背景影片（必要，建議 H.264、1920×1080、10–20 秒無縫循環、< 8 MB）
+public/videos/hero-bg-480p.mp4  行動版背景影片（選用，854×480，約 1.8 MB；產生方式見下方）
 media/videos/hero-poster.jpg    首格封面（選用，不部署）
 ```
 
 建置時若偵測不到影片，Hero 會自動改用「科技幾何點陣微動態背景」，不會發出 404 請求；
+偵測不到行動版檔案時，各種螢幕尺寸一律播放原檔。
 瀏覽器載入失敗、使用者開啟「減少動態效果」或「節省數據」時也會退回同一背景。
+影片只在媒體區接近視窗（約 200px 內）時播放、離開即暫停；行動版媒體區位於文字下方，未捲到附近前不會下載影片。
 新增或替換影片後需重新 `npm run build`。
+
+### 行動版影片（480p）
+
+視窗寬度低於 Tailwind `lg`（64rem）時，Hero 背景與首頁「社群與校友」短片改播 854×480 的 `-480p` 檔，
+短片封面改用 960px 寬的 `emrd-alumni-poster-960.jpg`；`lg` 以上仍播放 1080p 原檔。
+伺服器端一律輸出原檔（Hero 背景在 hydration 前不設定 `src`），載入 JavaScript 後才依視窗寬度設定 `<video src>`；
+兩者皆為 `preload="none"`，選定檔案前不會下載影片。
+
+| 檔案 | 用途 | 大小 |
+| --- | --- | --- |
+| `hero-bg.mp4` ／ `hero-bg-480p.mp4` | Hero 背景（桌機／行動版） | 6.7 MB ／ 1.8 MB |
+| `emrd-alumni-15s.mp4` ／ `emrd-alumni-15s-480p.mp4` | 校友短片（桌機／行動版） | 6.5 MB ／ 1.3 MB |
+| `emrd-alumni-poster.jpg` ／ `emrd-alumni-poster-960.jpg` | 校友短片封面（桌機／行動版） | 283 KB ／ 59 KB |
+
+替換原檔後，請以 ffmpeg 重新產生行動版（去除音軌、Lanczos 縮至 854 寬、H.264 High、CRF 26、最高 1 Mbps、faststart）：
+
+```bash
+for name in hero-bg emrd-alumni-15s; do
+  ffmpeg -v error -y -i public/videos/$name.mp4 -an -vf "scale=854:-2:flags=lanczos" \
+    -c:v libx264 -profile:v high -pix_fmt yuv420p -preset slow -crf 26 \
+    -maxrate 1000k -bufsize 2000k -movflags +faststart public/videos/$name-480p.mp4
+done
+```
+
+`hero-bg-480p.mp4` 需確認循環接縫：比較最後一格與第一格（例如以 `-vf "select=eq(n\,0)"` 與 `select=eq(n\,449)` 各輸出一格對照），
+差異應與相鄰兩格相當，不應出現跳格。短片封面以專案內的 sharp（Next.js 相依套件）產生：
+
+```bash
+node -e "require('sharp')('public/videos/emrd-alumni-poster.jpg').resize({ width: 960, kernel: 'lanczos3' }).jpeg({ quality: 78, mozjpeg: true, progressive: true }).toFile('public/videos/emrd-alumni-poster-960.jpg')"
+```
 
 ## 品牌素材來源
 
@@ -129,5 +162,7 @@ python scripts/render_hero_video.py --variant loop --width 960 --height 540 --pr
 python -X utf8 scripts/render_alumni_film.py --workers 4   # → public/videos/emrd-alumni-15s.mp4 ＋ emrd-alumni-poster.jpg（15 秒校友與同儕連結片，照片取自 reference_形象素材/；首頁「社群與校友」區塊播放，隨網站部署）
 python -X utf8 scripts/render_logo_wall.py                 # → media/videos/emrd-logo-wall-10s.mp4 ＋ emrd-logo-wall-poster.jpg（10 秒校友企業字標牆；不部署，說明見 scripts/logos/README.md）
 ```
+
+重新輸出 `hero-bg.mp4` 或 `emrd-alumni-15s.mp4` 後，請依「行動版影片（480p）」一併重做 `-480p` 檔與 960px 封面。
 
 需求：Python 3.10+、numpy、opencv-python、Pillow、ffmpeg。

@@ -149,7 +149,8 @@
     :where(p, ul, ol, blockquote, figure, video, .legacy-table, .legacy-layout, .legacy-gallery, .legacy-lead) {
     margin-top: 1em;
   }
-  .legacy-prose :where(figure, video, .legacy-table, .legacy-layout, .legacy-gallery) {
+  /* .legacy-table-hint：表格上方的捲動提示，出現時取代表格承接上方留白 */
+  .legacy-prose :where(figure, video, .legacy-table, .legacy-table-hint, .legacy-layout, .legacy-gallery) {
     margin-top: 1.5em;
   }
   .legacy-prose :where(h2, h3, h4) + :where(*) {
@@ -158,6 +159,19 @@
   .legacy-prose > :first-child,
   .legacy-prose :where(td, th, li, blockquote, figure) > :first-child {
     margin-top: 0;
+  }
+
+  /* 行長：內容欄在桌機約 900px（每行約 56 個中文字），文字區塊限制在約 42 字；
+     含圖片或嵌入的段落、figure、相簿、資料表與排版表格維持整欄寬。
+     排版表格儲存格內的文字同樣限制（單欄的排版表格如 /about/features 的內文；多欄時儲存格本來就較窄） */
+  .legacy-prose > :where(p:not(:has(img, iframe, video)), ul, ol, h2, h3, h4, blockquote),
+  .legacy-prose
+    .legacy-layout
+    > :where(thead, tbody, tfoot)
+    > tr
+    > :where(td, th)
+    > :where(p:not(:has(img, iframe, video)), ul, ol, h2, h3, h4, blockquote) {
+    max-width: 42rem;
   }
 
   .legacy-prose :where(h2, h3, h4) {
@@ -294,6 +308,27 @@
     }
   }
 
+  /* 照片列：同一段並排的照片各自帶說明（legacyHtml.ts 的 alignPhotoCaptions）。
+     欄寬依照片寬高比分配（--legacy-photo-cols），同列照片等高；窄螢幕改為單欄，說明緊接在各自的照片下方 */
+  .legacy-prose .legacy-gallery--grid {
+    display: grid;
+    grid-template-columns: var(--legacy-photo-cols, repeat(2, minmax(0, 1fr)));
+    gap: 1.25rem 1rem;
+    align-items: start;
+    column-count: auto;
+  }
+  .legacy-prose .legacy-gallery--grid > figure {
+    margin: 0;
+  }
+  .legacy-prose .legacy-gallery--grid > figure > a {
+    display: block;
+  }
+  @media (max-width: 30rem) {
+    .legacy-prose .legacy-gallery--grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
   /* 嵌入影片與日曆：等比例縮放 */
   .legacy-prose iframe {
     display: block;
@@ -324,7 +359,39 @@
     overscroll-behavior-x: contain;
     border: 1px solid var(--color-stroke);
     border-radius: var(--radius-md);
-    background-color: #ffffff;
+    /* 依外框實際寬度（而非視窗寬度）調整儲存格內距，見下方 @container；外框寬度一律來自父層，不受內容影響 */
+    container-type: inline-size;
+    /* 捲動陰影：兩端的白色遮罩（local）隨內容捲動，陰影（scroll）固定在外框左右緣；
+       捲到底的一側遮罩蓋住陰影，因此只有「還有內容」的一側看得到陰影，不需要捲動時兩側都看不到。
+       儲存格底色改為半透明（見下方 th／偶數列），陰影才不會被蓋住 */
+    background:
+      linear-gradient(to right, #ffffff 40%, rgb(255 255 255 / 0)) left center / 2.5rem 100%
+        no-repeat local,
+      linear-gradient(to left, #ffffff 40%, rgb(255 255 255 / 0)) right center / 2.5rem 100%
+        no-repeat local,
+      linear-gradient(to right, rgb(15 23 42 / 0.16), rgb(15 23 42 / 0)) left center / 0.875rem
+        100% no-repeat scroll,
+      linear-gradient(to left, rgb(15 23 42 / 0.16), rgb(15 23 42 / 0)) right center / 0.875rem
+        100% no-repeat scroll,
+      #ffffff;
+  }
+  /* 表格需要左右捲動時，由 LegacyTableRegions 在外框上方插入的提示（aria-hidden；region 名稱已含「可左右捲動」） */
+  .legacy-prose .legacy-table-hint {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.375rem;
+    color: var(--color-slate-600);
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+  }
+  .legacy-prose .legacy-table-hint svg {
+    width: 1rem;
+    height: 1rem;
+    flex: none;
+  }
+  .legacy-prose .legacy-table-hint + .legacy-table {
+    margin-top: 0.375rem;
   }
   .legacy-prose .legacy-table:focus-visible {
     outline: 2px solid var(--color-brand-600);
@@ -336,10 +403,10 @@
     font-size: 0.9375rem;
     line-height: 1.65;
   }
-  /* 欄數多的表格保留最小寬度，窄螢幕改為左右捲動，而非把文字擠成一字一行 */
-  .legacy-prose .legacy-table table[data-size="m"] {
-    min-width: 36rem;
-  }
+  /* 5 欄以上的表格保留最小寬度，窄螢幕改為左右捲動，而非把文字擠成一字一行。
+     3–4 欄的表格（data-size="m"）不設最小寬度，一律縮進外框，手機與桌機並排的排版儲存格（如講座嘉賓表）皆同，
+     如課程表的「學分」、師資表的「教授科目」不再被推出畫面；短儲存格由下方 .legacy-cell-short 保持整詞，
+     內容仍放不下時（長數字、長英文字）才左右捲動，並顯示陰影與提示 */
   .legacy-prose .legacy-table table[data-size="l"] {
     min-width: 54rem;
   }
@@ -359,14 +426,15 @@
   .legacy-prose .legacy-table thead tr:last-child > :where(th, td) {
     border-bottom: 1px solid var(--color-stroke);
   }
+  /* 底色以半透明的 brand-900 調出（白底上約等於 surface 與其 55% 淡色），讓外框的捲動陰影透得過來 */
   .legacy-prose .legacy-table th {
-    background-color: var(--color-surface);
+    background-color: color-mix(in srgb, var(--color-brand-900) 4.3%, transparent);
     color: var(--color-brand-950);
     font-weight: 600;
     white-space: nowrap;
   }
   .legacy-prose .legacy-table tbody tr:nth-child(even) > td {
-    background-color: color-mix(in srgb, var(--color-surface) 55%, #ffffff);
+    background-color: color-mix(in srgb, var(--color-brand-900) 2.4%, transparent);
   }
   .legacy-prose .legacy-table :where(td, th) p + p {
     margin-top: 0.375em;
@@ -375,10 +443,22 @@
   .legacy-prose .legacy-table caption {
     padding: 0.625rem 0.875rem;
     border-bottom: 1px solid var(--color-stroke);
-    background-color: var(--color-surface);
+    background-color: color-mix(in srgb, var(--color-brand-900) 4.3%, transparent);
     color: var(--color-brand-950);
     font-weight: 600;
     text-align: left;
+  }
+  /* 短儲存格（人名、單位、課名；legacyHtml.ts 的 tidyDataCells 標記）：中文不在詞中斷行，
+     欄寬至少容得下整個詞，不會被擠成「廖承／威」；仍可在空白與標點處換行 */
+  .legacy-prose .legacy-table .legacy-cell-short {
+    word-break: keep-all;
+  }
+  /* 外框窄於 40rem（手機，或桌機並排的排版儲存格內）：儲存格內距縮為 0.5rem，把寬度留給文字 */
+  @container (max-width: 40rem) {
+    .legacy-prose .legacy-table :where(th, td),
+    .legacy-prose .legacy-table caption {
+      padding: 0.5rem;
+    }
   }
 
   /* ---------- 排版用表格（role="presentation"）：桌機並排、手機堆疊 ---------- */

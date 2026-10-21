@@ -19,6 +19,11 @@ import { site } from "@/lib/site";
 const film = {
   src: withBasePath("/videos/emrd-alumni-15s.mp4"),
   poster: withBasePath("/videos/emrd-alumni-poster.jpg"),
+  /** lg 以下改用 854×480 影片（約 1.3 MB）與 960px 寬封面（約 60 KB），產生方式見 README */
+  compact: {
+    src: withBasePath("/videos/emrd-alumni-15s-480p.mp4"),
+    poster: withBasePath("/videos/emrd-alumni-poster-960.jpg"),
+  },
   width: 1920,
   height: 1080,
   size: "6.5 MB",
@@ -164,42 +169,15 @@ export function Community() {
 /**
  * 精選短片：捲到畫面中自動以靜音循環播放、離開畫面即暫停（DeferredPosterVideo 的 autoPlayInView），
  * 偏好減少動態或開啟節省數據時不自動播放；保留原生控制列供暫停（WCAG 2.2.2）。
- * 封面（約 280 KB）在捲近影片時才載入，不與首屏圖片搶頻寬；外框以 aspect-video 預留 16:9 空間，避免版面位移。
+ * 封面在捲近影片時才載入（桌機約 280 KB；lg 以下改用 480p 影片與約 60 KB 的 960px 封面），不與首屏圖片搶頻寬；
+ * 外框以 aspect-video 預留 16:9 空間，避免版面位移。
+ * 小標與標題置於影片上方、與區塊標題左緣對齊，影片放寬至 max-w-5xl（1440 時約 1024px）。
  * 影片無音軌，畫面說明僅提供給輔助科技（sr-only，WCAG 1.2.1）。
  */
 function CommunityFilm() {
   return (
-    <figure
-      aria-labelledby={film.titleId}
-      className="mt-12 grid items-center gap-6 lg:mt-16 lg:grid-cols-12 lg:gap-x-10"
-    >
-      <div className="relative aspect-video overflow-hidden rounded-md bg-brand-950 lg:col-span-7">
-        <DeferredPosterVideo
-          autoPlayInView
-          controls
-          muted
-          loop
-          playsInline
-          preload="none"
-          width={film.width}
-          height={film.height}
-          poster={film.poster}
-          src={film.src}
-          aria-labelledby={film.titleId}
-          aria-describedby={film.noteId}
-          className="absolute inset-0 size-full object-cover"
-        >
-          <p className="p-4 text-sm text-white">
-            您的瀏覽器無法播放此影片，請
-            <a href={film.src} className="underline underline-offset-4">
-              下載影片（MP4，{film.size}）
-            </a>
-            。
-          </p>
-        </DeferredPosterVideo>
-      </div>
-
-      <figcaption className="min-w-0 lg:col-span-5">
+    <figure aria-labelledby={film.titleId} className="mt-12 lg:mt-16">
+      <figcaption>
         <p
           lang="en"
           className="flex items-center gap-3 text-xs font-semibold tracking-[0.2em] text-champagne-700 uppercase"
@@ -225,6 +203,35 @@ function CommunityFilm() {
           </ol>
         </div>
       </figcaption>
+
+      {/* overflow-hidden 會裁掉影片自身的 :focus-visible 外框，鍵盤焦點框改畫在外框上（與全站同色、同偏移） */}
+      <div className="relative mt-5 aspect-video max-w-5xl overflow-hidden rounded-md bg-brand-950 has-[video:focus-visible]:outline-2 has-[video:focus-visible]:outline-offset-3 has-[video:focus-visible]:outline-brand-600 lg:mt-6">
+        <DeferredPosterVideo
+          autoPlayInView
+          controls
+          muted
+          loop
+          playsInline
+          preload="none"
+          width={film.width}
+          height={film.height}
+          poster={film.poster}
+          src={film.src}
+          compact={film.compact}
+          aria-labelledby={film.titleId}
+          aria-describedby={film.noteId}
+          className="absolute inset-0 size-full object-cover"
+        >
+          {/* 備援下載連結提供原始 1080p 檔 */}
+          <p className="p-4 text-sm text-white">
+            您的瀏覽器無法播放此影片，請
+            <a href={film.src} className="underline underline-offset-4">
+              下載影片（MP4，{film.size}）
+            </a>
+            。
+          </p>
+        </DeferredPosterVideo>
+      </div>
     </figure>
   );
 }

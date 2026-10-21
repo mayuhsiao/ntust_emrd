@@ -10,14 +10,18 @@ import { hero } from "@/content/home";
 import { photos } from "@/content/photos";
 
 /*
- * Next.js 只提供 public/ 內的靜態檔，影片請放在 public/videos/hero-bg.mp4。
- * 於模組載入（建置）時檢查；檔案不存在就改用幾何點陣動態，避免多一次 404 請求。
+ * Next.js 只提供 public/ 內的靜態檔，影片請放在 public/videos/hero-bg.mp4，
+ * lg 以下播放的 480p 行動版放在 public/videos/hero-bg-480p.mp4（產生方式見 README）。
+ * 於模組載入（建置）時檢查；原檔不存在就改用幾何點陣動態、行動版不存在就沿用原檔，避免多一次 404 請求。
  */
-const videoSrc = existsSync(
-  path.join(process.cwd(), "public", "videos", "hero-bg.mp4"),
-)
-  ? "/videos/hero-bg.mp4"
-  : undefined;
+function publicVideo(fileName: string) {
+  return existsSync(path.join(process.cwd(), "public", "videos", fileName))
+    ? `/videos/${fileName}`
+    : undefined;
+}
+
+const videoSrc = publicVideo("hero-bg.mp4");
+const compactVideoSrc = videoSrc && publicVideo("hero-bg-480p.mp4");
 
 const INTAKE_TITLE_ID = "hero-intake-title";
 
@@ -117,7 +121,11 @@ export function Hero() {
       <div
         className={`relative aspect-[4/3] w-full overflow-hidden bg-brand-950 sm:aspect-video ${MEDIA_PANE_DESKTOP}`}
       >
-        <HeroBackdrop videoSrc={videoSrc} objectPosition={heroStill.position}>
+        <HeroBackdrop
+          videoSrc={videoSrc}
+          compactVideoSrc={compactVideoSrc}
+          objectPosition={heroStill.position}
+        >
           {/* 桌機版媒體區高約 46rem，16:9 畫面以 cover 裁切後實際寬約 1300–1500px */}
           <Image
             src={heroStill.src}

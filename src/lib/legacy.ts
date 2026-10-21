@@ -278,6 +278,98 @@ export function prevNext(
 }
 
 /* ------------------------------------------------------------------ */
+/* 招生公告                                                            */
+/* ------------------------------------------------------------------ */
+
+/** 招生公告列表單元：其中的文章一律視為招生相關 */
+const ADMISSIONS_COLLECTION = "admissions/news";
+
+/** 未列於招生公告者，標題含這些字詞即視為招生相關（招生說明會、隨班附讀、學分班、放榜與錄取名單等） */
+const ADMISSION_TITLE = /招生|隨班附讀|學分班|說明會|放榜|錄取|甄試/;
+
+/**
+ * 標題雖含上列字詞、內容卻不是招生公告者（逐篇檢視 data/posts 後排除）：
+ * 「新生說明會」為錄取後的新生座談（76737），「開學典禮」為入學後的活動（93842，標題含「學分班」）。
+ */
+const ADMISSION_TITLE_EXCLUDE = /新生說明會|開學典禮/;
+
+/** 招生相關文章：屬於「招生公告」列表，或標題為招生、隨班附讀、學分班等公告 */
+export function isAdmissionPost(post: LegacyPost) {
+  if (post.collections.includes(ADMISSIONS_COLLECTION)) return true;
+  return ADMISSION_TITLE.test(post.title) && !ADMISSION_TITLE_EXCLUDE.test(post.title);
+}
+
+/**
+ * 明確標示的學年度（offset 為換算成招生年度時加上的年數）：
+ * - 「115學年度」與第一學期代碼「110-01」「110-1」：即該學年度（隨班附讀、學分班於前一年 7–8 月報名，
+ *   早於該年度簡章公告，屬當年的招生年度）。
+ * - 第二學期代碼「111-02」「112-2」、暑期「110暑期」「109-暑期」、「115學年度第2學期／下學期／暑期」：
+ *   報名於次一民國年的 1 月或 6 月（例：111-02 學期 112/01/06 截止、110暑期 111/06/02 截止），
+ *   正值下一學年度的招生期間，故加 1；否則下一學年度招生期間仍在報名的公告會被誤標為歷史公告。
+ */
+const EXPLICIT_YEARS: ReadonlyArray<{ pattern: RegExp; offset: number }> = [
+  { pattern: /(?<!\d)(1\d{2})\s*學年/g, offset: 0 },
+  { pattern: /(?<!\d)(1\d{2})\s*學年度?\s*(?:第\s*[2二]\s*學期|下學期|暑期)/g, offset: 1 },
+  { pattern: /(?<!\d)(1\d{2})\s*[-－]\s*0?1(?!\d)/g, offset: 0 },
+  { pattern: /(?<!\d)(1\d{2})\s*[-－]\s*0?2(?!\d)/g, offset: 1 },
+  { pattern: /(?<!\d)(1\d{2})\s*[-－]?\s*暑期/g, offset: 1 },
+];
+
+/**
+ * 日期：民國「114/11/08」「110.11.20」「113 年 12 月 3 日」，西元「2018/03/10」「2019年3月23日」。
+ * 第 1 組為年、第 3 或第 4 組為月；斜線與點號須成對出現（排除「110.5」等小數）。
+ */
+const DATES = /(?<!\d)(1\d{2}|20\d{2})\s*(?:([/.])\s*(\d{1,2})\s*\2\s*\d{1,2}(?!\d)|年\s*(\d{1,2})\s*月)/g;
+
+function maxYear(years: number[]) {
+  return years.length > 0 ? Math.max(...years) : undefined;
+}
+
+function explicitYear(text: string) {
+  return maxYear(
+    EXPLICIT_YEARS.flatMap(({ pattern, offset }) =>
+      [...text.matchAll(pattern)].map((m) => Number(m[1]) + offset),
+    ),
+  );
+}
+
+/** 由日期推算招生學年度：8 月以後的日期屬下一學年度的招生（例：114/11/08 → 115），西元年先換算為民國年 */
+function yearFromDates(text: string) {
+  return maxYear(
+    [...text.matchAll(DATES)].map((m) => {
+      const year = Number(m[1]) > 1911 ? Number(m[1]) - 1911 : Number(m[1]);
+      const month = Number(m[3] ?? m[4]);
+      return month >= 8 ? year + 1 : year;
+    }),
+  );
+}
+
+/**
+ * 招生相關文章所屬的招生年度（入學學年度；學期代碼依上方 EXPLICIT_YEARS 換算）。依序取：標題中明確標示的學年度 → 標題日期推算 →
+ * 內文明確標示的學年度 → 內文日期推算；同一層有多個時取最大值。皆無法判讀時回傳 undefined。
+ * 僅供判斷用，不改動文章內容。
+ */
+export function admissionYearOf(post: LegacyPost): number | undefined {
+  const body = plainText(post.html);
+  return (
+    explicitYear(post.title) ??
+    yearFromDates(post.title) ??
+    explicitYear(body) ??
+    yearFromDates(body)
+  );
+}
+
+/**
+ * 歷史招生公告：招生相關、且入學學年度早於 currentYear 的文章；無法判讀學年度者亦視為歷史公告。
+ * @param currentYear 目前招生的入學學年度（src/content/home.ts 的 currentIntakeYear）
+ */
+export function isHistoricalAdmissionPost(post: LegacyPost, currentYear: number) {
+  if (!isAdmissionPost(post)) return false;
+  const year = admissionYearOf(post);
+  return year === undefined || year < currentYear;
+}
+
+/* ------------------------------------------------------------------ */
 /* Meta description                                                    */
 /* ------------------------------------------------------------------ */
 

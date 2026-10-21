@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Footer } from "@/components/layout/Footer";
+import { MobileActionBar } from "@/components/layout/MobileActionBar";
 import { Navbar } from "@/components/layout/Navbar";
 import { AdmissionsCta } from "@/components/sections/AdmissionsCta";
 import { BentoGrid } from "@/components/sections/BentoGrid";
@@ -35,6 +36,8 @@ export default function HomePage() {
         <Timeline />
         <AdmissionsCta />
       </main>
+      {/* 捲過主視覺後出現；招生時程、招生行動帶與頁尾進入視窗時隱藏 */}
+      <MobileActionBar pathname="/" />
       <Footer showCta={false} />
     </>
   );

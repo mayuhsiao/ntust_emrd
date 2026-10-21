@@ -32,6 +32,8 @@ type EligibilityChecklistProps = {
   pendingMessage: string;
   disclaimer: string;
   contact: EligibilityContact;
+  /** 收合按鈕外層的標題層級：首頁位於 h2 區塊之下為 h3（預設）；「招生資訊」頁直接列為 h2 */
+  headingLevel?: 2 | 3;
   className?: string;
 };
 
@@ -50,8 +52,10 @@ export function EligibilityChecklist({
   pendingMessage,
   disclaimer,
   contact,
+  headingLevel = 3,
   className,
 }: EligibilityChecklistProps) {
+  const Heading = headingLevel === 2 ? "h2" : "h3";
   const [open, setOpen] = useState(false);
   const [checked, setChecked] = useState<ReadonlySet<string>>(
     () => new Set(),
@@ -86,7 +90,7 @@ export function EligibilityChecklist({
     <div
       className={cn("rounded-md border border-stroke bg-surface", className)}
     >
-      <h3>
+      <Heading>
         <button
           type="button"
           id={triggerId}
@@ -131,7 +135,7 @@ export function EligibilityChecklist({
             />
           </span>
         </button>
-      </h3>
+      </Heading>
 
       <div
         id={panelId}
