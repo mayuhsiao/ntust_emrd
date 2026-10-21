@@ -10,16 +10,16 @@
     "orphanPosts": 0,
     "redirects": 919,
     "assetRedirects": 352,
-    "queryRedirects": 11,
-    "images": 426,
-    "files": 22,
+    "queryRedirects": 9,
+    "images": 425,
+    "files": 20,
     "resizedImages": 49,
     "convertedImages": 5,
-    "localImgTags": 419,
-    "localImgTagsWithSize": 419,
+    "localImgTags": 418,
+    "localImgTagsWithSize": 418,
     "imgAspectAdjusted": 4,
     "externalImages": 0,
-    "ownedImagesDownloaded": 83,
+    "ownedImagesDownloaded": 82,
     "ownedFilesDownloaded": 4,
     "ownedImagesDead": 0,
     "ownedUnrecoverable": 2,
@@ -37,7 +37,7 @@
     "deadLinksRewritten": 3,
     "mergedAliasPages": 1,
     "duplicateContentAssets": 3,
-    "attachments": 11,
+    "attachments": 9,
     "hiddenElementsDropped": 195,
     "anchors": 10,
     "fragmentLinksKept": 12,
@@ -56,20 +56,23 @@
       "headingDemoted": 24,
       "headingLevelsShifted": 2,
       "headingPromoted": 6,
-      "junkAltCleared": 73,
+      "junkAltCleared": 72,
       "langEn": 100,
-      "singleImageAlt": 54,
+      "singleImageAlt": 53,
       "tableHeaders": 10,
       "textVersion": 6,
       "videoTitle": 10
-    }
+    },
+    "privacyRemovedAssets": 3,
+    "privacyPdfRedacted": 1,
+    "privacyStudentIdHits": 0
   },
   "assetBytes": {
-    "total": 214894762,
-    "images": 197308310,
-    "files": 17586452,
-    "originalTotal": 303174548,
-    "originalImages": 285588096
+    "total": 213668686,
+    "images": 197247116,
+    "files": 16421570,
+    "originalTotal": 302668584,
+    "originalImages": 285526902
   },
   "imageProcessing": {
     "mode": "default",
@@ -1254,11 +1257,6 @@
         "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/0630.jpg?1526953502"
       },
       {
-        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/0910mail-page-0001.jpg?1568790002",
-        "path": "/legacy/img/ad642c666c-0910mail-page-0001.jpg",
-        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/0910mail-page-0001.jpg?1568790002"
-      },
-      {
         "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/0919.png?1568951546",
         "path": "/legacy/img/710c4dc113-0919.png",
         "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/0919.png?1568951546"
@@ -1437,25 +1435,11 @@
       "destination": "/legacy/files/a19fe16105-111.pdf"
     },
     {
-      "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF2Y0hSaFh6TTJPVFkxWHpNMk1qYzRNREZmT1Rrd056RXVjR1Jt&fname=WW54RPOKNPSSTXKK00VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHA450OOCDPKIC40TTZXHCNO5020VWB4WSICWSNO4035CCGDMLA0WSEC45B4YSOKYSB0YW54PL15EDXWPK10&cg=7718",
-      "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF2Y0hSaFh6TTJPVFkxWHpNMk1qYzRNREZmT1Rrd056RXVjR1Jt&fname=WW54RPOKNPSSTXKK00VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHA450OOCDPKIC40TTZXHCNO5020VWB4WSICWSNO4035CCGDMLA0WSEC45B4YSOKYSB0YW54PL15EDXWPK10&cg=7718",
-      "path": "/app/index.php",
-      "query": "Action=downloadfile&file=WVhSMFlXTm9MelF2Y0hSaFh6TTJPVFkxWHpNMk1qYzRNREZmT1Rrd056RXVjR1Jt&fname=WW54RPOKNPSSTXKK00VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHA450OOCDPKIC40TTZXHCNO5020VWB4WSICWSNO4035CCGDMLA0WSEC45B4YSOKYSB0YW54PL15EDXWPK10&cg=7718",
-      "destination": "/legacy/files/43b26c2c70-109.pdf"
-    },
-    {
       "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF6TDNCMFlWODBOalUzTlY4ek5UTTJOakl5WHpVME5UTTFMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWUSWTZSB4KKMKDGFGQLIG41NP34SSFCB4YSFG00OOKLSSPOCCVXXXDG04FCXTVWXSTSLO50B01035IH35XWA0WSECWXPOUS5445FCRKPOOOYXDGA0EGGDVWSWGD24WX24ZWYS44UXSSTSFC3030US20GCHHHH",
       "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF6TDNCMFlWODBOalUzTlY4ek5UTTJOakl5WHpVME5UTTFMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWUSWTZSB4KKMKDGFGQLIG41NP34SSFCB4YSFG00OOKLSSPOCCVXXXDG04FCXTVWXSTSLO50B01035IH35XWA0WSECWXPOUS5445FCRKPOOOYXDGA0EGGDVWSWGD24WX24ZWYS44UXSSTSFC3030US20GCHHHH",
       "path": "/app/index.php",
       "query": "Action=downloadfile&file=WVhSMFlXTm9MelF6TDNCMFlWODBOalUzTlY4ek5UTTJOakl5WHpVME5UTTFMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWUSWTZSB4KKMKDGFGQLIG41NP34SSFCB4YSFG00OOKLSSPOCCVXXXDG04FCXTVWXSTSLO50B01035IH35XWA0WSECWXPOUS5445FCRKPOOOYXDGA0EGGDVWSWGD24WX24ZWYS44UXSSTSFC3030US20GCHHHH",
       "destination": "/legacy/files/14a42c92dc-110-02-semi.pdf"
-    },
-    {
-      "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MemM0TDNCMFlWODBNelV4TVY4ME16RTBOell5WHpRek5EZ3dMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1100VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHPODGSSKLECRKPOFDYXJCNO41HGXSKOHGICSTMO24NK44UXUTB0LKB4KOPKYSA4LKQKKKCGA500IG04GD34VWJGGDB1B430A1A1&cg=7718",
-      "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MemM0TDNCMFlWODBNelV4TVY4ME16RTBOell5WHpRek5EZ3dMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1100VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHPODGSSKLECRKPOFDYXJCNO41HGXSKOHGICSTMO24NK44UXUTB0LKB4KOPKYSA4LKQKKKCGA500IG04GD34VWJGGDB1B430A1A1&cg=7718",
-      "path": "/app/index.php",
-      "query": "Action=downloadfile&file=WVhSMFlXTm9MemM0TDNCMFlWODBNelV4TVY4ME16RTBOell5WHpRek5EZ3dMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1100VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHPODGSSKLECRKPOFDYXJCNO41HGXSKOHGICSTMO24NK44UXUTB0LKB4KOPKYSA4LKQKKKCGA500IG04GD34VWJGGDB1B430A1A1&cg=7718",
-      "destination": "/legacy/files/56c0b27d16-110.pdf"
     }
   ],
   "redirectSourcesNeedingEscape": [
@@ -2773,11 +2757,6 @@
         "detail": "report"
       },
       {
-        "where": "post:76672",
-        "src": "/legacy/img/ad642c666c-0910mail-page-0001.jpg",
-        "detail": "圖片"
-      },
-      {
         "where": "post:76685",
         "src": "/legacy/img/b01688353c-1386402255-orig.png",
         "detail": "圖片"
@@ -3622,11 +3601,6 @@
         "detail": "108-01學期 隨班附讀通過名單公告"
       },
       {
-        "where": "post:76672",
-        "src": "/legacy/img/ad642c666c-0910mail-page-0001.jpg",
-        "detail": "108學年度學分抵免申請結果"
-      },
-      {
         "where": "post:76685",
         "src": "/legacy/img/b01688353c-1386402255-orig.png",
         "detail": "107-02學期 隨班附讀通過名單"
@@ -4083,11 +4057,6 @@
         "alt": "108-01學期 隨班附讀通過名單公告"
       },
       {
-        "where": "post:76672",
-        "src": "/legacy/img/ad642c666c-0910mail-page-0001.jpg",
-        "alt": "108學年度學分抵免申請結果"
-      },
-      {
         "where": "post:76685",
         "src": "/legacy/img/b01688353c-1386402255-orig.png",
         "alt": "107-02學期 隨班附讀通過名單"
@@ -4349,6 +4318,99 @@
       }
     ]
   },
+  "privacy": {
+    "note": "個資保護（scripts/migrate_legacy.py 的 PRIVACY_REDACTIONS）：removedAssets＝不搬移的檔案（原處改為說明文字、原站網址轉址到 post 文章）；pdfPages＝只保留部分頁面的 PDF；changes＝各文件中的處理紀錄（removedImage／removedAttachment／removedLink／noteAdded／tableColumnRemoved）；studentIdPatternHits＝輸出中仍符合學號樣式者（應為空）。移除或修改前的原始檔只留在本機 .private-originals/（不進版控、不部署）。",
+    "removedAssets": [
+      {
+        "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF2Y0hSaFh6TTJPVFkxWHpNMk1qYzRNREZmT1Rrd056RXVjR1Jt&fname=WW54RPOKNPSSTXKK00VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHA450OOCDPKIC40TTZXHCNO5020VWB4WSICWSNO4035CCGDMLA0WSEC45B4YSOKYSB0YW54PL15EDXWPK10&cg=7718",
+        "what": "109 學年度學分抵免申請審核清單（附件「109-抵免學分申請結果公告.pdf」：全名、學號、課程成績）",
+        "post": "82939",
+        "foundIn": [
+          "post:82939"
+        ],
+        "redirect": "/posts/82939"
+      },
+      {
+        "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MemM0TDNCMFlWODBNelV4TVY4ME16RTBOell5WHpRek5EZ3dMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1100VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHPODGSSKLECRKPOFDYXJCNO41HGXSKOHGICSTMO24NK44UXUTB0LKB4KOPKYSA4LKQKKKCGA500IG04GD34VWJGGDB1B430A1A1&cg=7718",
+        "what": "110 學年度學分抵免申請審核清單（附件「110-抵免學分申請清單(公告).pdf」：全名、學號、課程成績）",
+        "post": "93392",
+        "foundIn": [
+          "post:93392"
+        ],
+        "redirect": "/posts/93392"
+      },
+      {
+        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/0910mail-page-0001.jpg?1568790002",
+        "what": "108 學年度學分抵免申請審核清單（內文圖片，亦為文章封面：全名、學號、課程成績）",
+        "post": "76672",
+        "foundIn": [
+          "post:76672"
+        ],
+        "redirect": null
+      }
+    ],
+    "pdfPages": [
+      {
+        "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFOREkwTTE4eE56YzVNVEl3WHpjek56TTFMbkJrWmc9PQ==&fname=WW54RPOKRK44VXHHVS04TSWTKKMOTSYW20QKTSHCUT05XWTSZWUSA001GGECB0SSSSTSWWMPA40441JGYWJGMO25KL34WTWSA1YTA4FCWSMKPODGCCLKWXXX44XWXXKKA4NO41WTXSTWA1MO50JCYSWS44UXKKB0WS303054WSA4JG54A4US211524LKNOWTPK30WTRL20A040NPZTZT30SS14YWXWA4DGDCRPUSNOKKQLXXLOHG30MOFC30NP25WSJCXSGCIHRLIGB5ROB4PPUWCCOKB4QK44POXT15FG04TXXTVWXSOKLKUSFGRLHG",
+        "path": "/legacy/files/aee4e251b1-1110723-112.pdf",
+        "what": "112 學年度調整學分費公聽會會議紀錄（/study/tuition 附件）：保留第 1–3 頁會議紀錄，移除第 4–8 頁（現場照片與 Webex 參與者名單截圖、手寫簽到單、Webex 出席紀錄〔約 40 人的姓名與加入／離開時間〕）",
+        "rule": "pdf_pages",
+        "keptPages": [
+          1,
+          2,
+          3
+        ],
+        "pagesBefore": 8,
+        "bytesBefore": 1159450,
+        "bytesAfter": 439338
+      }
+    ],
+    "changes": {
+      "noteAdded": [
+        {
+          "where": "post:76672",
+          "note": "審核結果已個別通知申請人。為保護個人資料，本站不公開含姓名、學號與成績的審核清單。"
+        },
+        {
+          "where": "post:82939",
+          "note": "審核結果已個別通知申請人。為保護個人資料，本站不公開含姓名、學號與成績的審核清單。"
+        },
+        {
+          "where": "post:93392",
+          "note": "審核結果已個別通知申請人。為保護個人資料，本站不公開含姓名、學號與成績的審核清單。"
+        }
+      ],
+      "removedAttachment": [
+        {
+          "where": "post:82939",
+          "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF2Y0hSaFh6TTJPVFkxWHpNMk1qYzRNREZmT1Rrd056RXVjR1Jt&fname=WW54RPOKNPSSTXKK00VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHA450OOCDPKIC40TTZXHCNO5020VWB4WSICWSNO4035CCGDMLA0WSEC45B4YSOKYSB0YW54PL15EDXWPK10&cg=7718",
+          "label": "109-抵免學分申請結果公告.pdf"
+        },
+        {
+          "where": "post:93392",
+          "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MemM0TDNCMFlWODBNelV4TVY4ME16RTBOell5WHpRek5EZ3dMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1100VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHPODGSSKLECRKPOFDYXJCNO41HGXSKOHGICSTMO24NK44UXUTB0LKB4KOPKYSA4LKQKKKCGA500IG04GD34VWJGGDB1B430A1A1&cg=7718",
+          "label": "110-抵免學分申請清單(公告).pdf"
+        }
+      ],
+      "removedImage": [
+        {
+          "where": "post:76672",
+          "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/0910mail-page-0001.jpg?1568790002"
+        }
+      ],
+      "tableColumnRemoved": [
+        {
+          "where": "post:121858",
+          "headers": [
+            "學號"
+          ],
+          "cellsRemoved": 11
+        }
+      ]
+    },
+    "studentIdPatternHits": [],
+    "errors": []
+  },
   "droppedElements": {
     "colgroup": 6,
     "hidden(display:none)": 195,
@@ -4368,7 +4430,7 @@
     "以行內樣式 display:none 隱藏的元素不搬移（見 hiddenElementsDropped）。",
     "相片輯（.mcarousel figure）位於 .mpgdetail 之外，已依原站 DOM 順序輸出為 <figure><img><figcaption>（見 galleries）；隱藏的手機版副本（display:none）依 src 去重。原站列表縮圖取自相片輯第一張，因此有相片輯的文章以其第一張為 cover。",
     "attachments 只來自原站附件區塊（.module-ptattach）；內文中的檔案連結保留在內文。",
-    "圖片（客戶同意）：寬度超過 2000 px 者縮成 2000 px 寬（先依 EXIF 轉正、LANCZOS、JPEG 品質 85 漸進式、PNG optimize、格式不變），BMP 無損轉成 PNG；其餘圖片保留原始檔（位元組相同、保留 EXIF）。被修改的原始檔逐位元組備份在 legacy-originals/img/（不部署；對照表 legacy-originals/manifest.json，見 imageProcessing）。還原：python -X utf8 scripts/migrate_legacy.py --original-images。附件（/legacy/files/）一律保留原檔。",
+    "圖片（客戶同意）：寬度超過 2000 px 者縮成 2000 px 寬（先依 EXIF 轉正、LANCZOS、JPEG 品質 85 漸進式、PNG optimize、格式不變），BMP 無損轉成 PNG；其餘圖片保留原始檔（位元組相同、保留 EXIF）。被修改的原始檔逐位元組備份在 legacy-originals/img/（不部署；對照表 legacy-originals/manifest.json，見 imageProcessing）。還原：python -X utf8 scripts/migrate_legacy.py --original-images。附件（/legacy/files/）保留原檔（個資保護的例外見 privacy）。",
     "html 中每個本地 <img> 都有 width／height：比例取自實際檔案（縮圖後、已依 EXIF 方向）；原站有設定顯示寬（或只設高）時沿用為顯示尺寸、另一邊依實際比例換算，沒有設定時為實際檔案的像素尺寸。前端不需讀檔取得尺寸。cover 欄位的型別（types.ts）沒有尺寸欄位，因此 cover 不另附尺寸。",
     "不同原站網址但內容完全相同的檔案共用一個本地檔（見 duplicateContentAssets）。",
     "已下架的原站網址（302 回首頁）在內文中改寫為首頁或明確的後繼頁面，並加入轉址（見 deadLinksRewritten）。",

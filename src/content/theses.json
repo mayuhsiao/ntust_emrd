@@ -1,0 +1,2741 @@
+{
+  "$comment": "歷屆畢業論文（由學程整理，題名、研究生與指導教授以臺科大博碩士論文系統為準；資料日期見 updated）。topics 為依題名關鍵字自動分類，僅供參考。",
+  "updated": "2026-10-04",
+  "sources": {
+    "dept": "https://emrd.ntust.edu.tw/p/412-1039-7710.php?Lang=zh-tw",
+    "lib": "https://etheses.lib.ntust.edu.tw/"
+  },
+  "theses": [
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "劉嘉容",
+      "title": "企業動態專利策略診斷與建議改善方案：以TSMC公司為例",
+      "advisor": "鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/22001368eed9877952fcb7c987862e1e/",
+      "topics": [
+        "專利/智財"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "劉德姍",
+      "title": "高齡化趨勢下台灣企業對於智慧照護服務輔具之發展策略研究",
+      "advisor": "蔡孟涵、葉穎蓉",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/7172ca78f067561011599a80029757fe/",
+      "topics": [
+        "醫療/健康"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "吳欣穎",
+      "title": "使用熱電材料回收AI伺服器廢熱策略之分析",
+      "advisor": "游進陽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/23072b9ed04db1b9ffd87a959cd748d7/",
+      "topics": [
+        "AI",
+        "伺服器"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "周乃宏",
+      "title": "利用生成式人工智慧技術最大化遊戲規格書價值的策略",
+      "advisor": "鄭正元、戴文凱",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/b7edb0bf1aa86d89df03291814f59891/",
+      "topics": [
+        "AI",
+        "遊戲/電競"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "周庭羽",
+      "title": "金融軟體服務商業模式之可行性分析-以保險核心系統為例",
+      "advisor": "蔡孟霖、袁建中",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/63ae0fc459b23311605d57d4d3da42a5/",
+      "topics": [
+        "軟體/服務",
+        "研究方法"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "廖堅凱",
+      "title": "家電通路商基於企業資源規劃系統整合導入客戶關係管理系統之歷程與挑戰研究—以個案公司為例",
+      "advisor": "游進陽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/2c0434df626b7c7eb3fcfaad18929c2b/",
+      "topics": [
+        "消費電子",
+        "軟體/服務"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "廖椿弘",
+      "title": "光通訊收發模組架構演進：CPO與LPO技術規格比較與應用情境分析",
+      "advisor": "黃中人、溫振廷",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/96c5960584d80cbd0072144cef5b2307/",
+      "topics": [
+        "網通/5G",
+        "零組件"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "徐立興",
+      "title": "半導體製程智慧化轉型之策略研究—以檢索增強生成技術應對微影良率挑戰為例",
+      "advisor": "蔡孟涵",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/9ba74503da47125150633abe01239a6d/",
+      "topics": [
+        "AI",
+        "半導體"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "朱泰鑫",
+      "title": "AI筆記型電腦研發策略-以個案公司為例",
+      "advisor": "施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/31f90483a02d74860262758c5effbbcf/",
+      "topics": [
+        "AI",
+        "消費電子"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "李洪賢",
+      "title": "高階電競顯示器面板之技術成熟度評估與發展規劃研究",
+      "advisor": "邱昱誠",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/b7e1f20afd147c65f4cf73403f3c8b67/",
+      "topics": [
+        "遊戲/電競",
+        "顯示/光電"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "李致緯",
+      "title": "光學感測器封測服務之價值創新與競爭策略 以個案公司為例",
+      "advisor": "施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/b055beb82743dfa9aa0874bb27199645/",
+      "topics": [
+        "半導體",
+        "顯示/光電"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "林昆宏",
+      "title": "輸入裝置技術創新驅動筆記型電腦設計變革之策略研究",
+      "advisor": "游進陽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/090f3a3090d3a4af09251fd192a3358d/",
+      "topics": [
+        "消費電子"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "梁仲偉",
+      "title": "外骨骼機器人之產品發展策略-以個案公司為例",
+      "advisor": "蔡孟霖、袁建中",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/877713b4bc14ff30bbfbe6212467d03d/",
+      "topics": [
+        "機器人"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "潘志威",
+      "title": "高階擴充底座產品之連接傳輸技術發展趨勢與策略分析—以個案公司為例",
+      "advisor": "黃中人、袁建中",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/d117641bd3a3b039e9abf6cf045d2e72/",
+      "topics": [
+        "消費電子"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "秦宥林",
+      "title": "AI 自主代理驅動企業轉型之行動研究——精兵團隊的高產能實踐",
+      "advisor": "徐慶琪、梁瓊如",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/4b753a06d6af66f0d88eacbd7072caa1/",
+      "topics": [
+        "AI",
+        "研究方法"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "莊家旺",
+      "title": "服務機器人之關鍵模組技術整合與產業策略趨勢探討 —— 以專利佈局與市場動態為依據",
+      "advisor": "游進陽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/10e1200813933ef516f0ffeb7f438295/",
+      "topics": [
+        "專利/智財",
+        "機器人"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "葉國美",
+      "title": "開放式音訊以及抗噪系統整合於AI眼鏡之個案研究",
+      "advisor": "徐慶琪、梁瓊如",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/e72b56e6d40b307091485f2d3ae00e7f/",
+      "topics": [
+        "AI",
+        "消費電子"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "賴宏能",
+      "title": "台灣晶粒挑揀設備產業之發展策略研究—以個案公司為例",
+      "advisor": "施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/a321c7ce7281cf8c9a098caa6cf118a2/",
+      "topics": [
+        "半導體",
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "邱嘉政",
+      "title": "人工智慧於電子設計自動化Layout軟體之應用與未來發展—以Cadence Allegro軟體為例",
+      "advisor": "蔡孟涵",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/44f542143c2bb311f0689732731f9a78/",
+      "topics": [
+        "AI",
+        "半導體"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "邱錦裕",
+      "title": "自駕系統演進與技術發展策略-以個案Y公司為例",
+      "advisor": "蔡孟霖、袁建中",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/3f537560fb37bb41d614fc3aaaf06eed/",
+      "topics": [
+        "車用"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "鄭三寶",
+      "title": "以研發技術來源觀點建構促進企業成長策略成功之實務模型 - 以A公司為例",
+      "advisor": "蔡孟涵、葉穎蓉",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/a290f4034510f7327485656f762455ee/",
+      "topics": [
+        "其他"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "陳子祥",
+      "title": "AI雲端伺服器生態系建立策略─以NVIDIA公司為研究對象",
+      "advisor": "徐慶琪、梁瓊如",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/bf09646755af2ec533a5de070cdb8331/",
+      "topics": [
+        "AI",
+        "伺服器"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "陳柏璁",
+      "title": "光譜分析技術於智慧製造之產業發展策略研究：近紅外光與拉曼光譜之跨產業應用",
+      "advisor": "黃中人",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/04d348bb6322a600321c7b3c732f8588/",
+      "topics": [
+        "顯示/光電",
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "陳滄智",
+      "title": "儲能系統智慧電網發展策略分析",
+      "advisor": "黃中人、袁建中",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/627ac5e716c23e659b73c6d37ecd0499/",
+      "topics": [
+        "能源/電力"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "陳雙龍",
+      "title": "家用遊戲產品發展策略之研究-以Valve公司為例",
+      "advisor": "高崑銘、蔡孟涵",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/1d3bbdb4662cfc1d7babfc79db37b92a/",
+      "topics": [
+        "遊戲/電競"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "黃偉智",
+      "title": "IC 設計產業晶圓製造決策關鍵因素之研究-自建垂直整合與 委外代工的關鍵因素",
+      "advisor": "鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/cf9e5aa5a1551fabf2759aacef34d6b8/",
+      "topics": [
+        "半導體",
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "黃建豪",
+      "title": "人工智慧物聯網企業之發展策略研究—以個案公司為例",
+      "advisor": "蔡孟霖、袁建中",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/92217802dbe5c5e6dad2f0ea85eeff46/",
+      "topics": [
+        "AI",
+        "物聯網"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "EMRD",
+      "name": "黃正宇",
+      "title": "Micro-LED微發光二極體於電子電腦週邊設備之顯示器產業的發展策略-以Q公司為例",
+      "advisor": "蔡孟霖",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/3f082ba5e1cb93190f598dce62558168/",
+      "topics": [
+        "半導體",
+        "顯示/光電"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "SEMI-EMRD",
+      "name": "呂函蒲",
+      "title": "扇出型晶圓級封裝與扇出型面板級封裝之競爭權衡與策略研究",
+      "advisor": "黃中人、蔡孟霖",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/960c5cbd2deac458249d7aab3c5fa660/",
+      "topics": [
+        "半導體",
+        "顯示/光電"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "SEMI-EMRD",
+      "name": "張堂興",
+      "title": "Nand Flash 次級記憶體在消費性電子產品商業模式個案研究- 以個案X公司為例",
+      "advisor": "袁建中、蔡孟霖",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/0e84d2c090a3862581ec3a36af7a080e/",
+      "topics": [
+        "記憶體",
+        "研究方法"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "SEMI-EMRD",
+      "name": "李怡音",
+      "title": "人形機器人關鍵晶片之跨國競爭策略分析",
+      "advisor": "黃中人、溫振廷",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/278cdc0afce13983a00d0b270f8f39f2/",
+      "topics": [
+        "半導體",
+        "機器人"
+      ]
+    },
+    {
+      "year": 114,
+      "program": "SEMI-EMRD",
+      "name": "鍾少庸",
+      "title": "先進封裝銅－銅鍵結技術之技術路線與發展趨勢探討",
+      "advisor": "黃中人",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/af20acac45be0dc1a0e14898c47dd689/",
+      "topics": [
+        "半導體"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "余智豪",
+      "title": "消費性記憶體發展策略-以S個案公司為例",
+      "advisor": "羅承慈",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/3dc1aa53ec17362f321318756448d6f5/",
+      "topics": [
+        "記憶體"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "呂松霖",
+      "title": "俄羅斯車用安全系統產品發展趨勢分析-以W與S公司為例",
+      "advisor": "游進陽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/a7970045206d64d4a3a559a32102d169/",
+      "topics": [
+        "車用"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "周松霖",
+      "title": "智慧家居搭載Wi-Fi 7技術的產品研發策略-以個案公司為例",
+      "advisor": "施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/e4c7f2a776f640a7557c6fe6e015bd50/",
+      "topics": [
+        "網通/5G",
+        "物聯網"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "曾士哲",
+      "title": "半導體通路商於光通訊市場之發展策略-以個案企業為例",
+      "advisor": "施劭儒、周碩彥",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/afc952d03180586173da1ca8f285b389/",
+      "topics": [
+        "半導體",
+        "網通/5G"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "林定國",
+      "title": "顯示卡產品研發策略-以T公司為例",
+      "advisor": "袁建中、蔡孟霖",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/f3cc49bfb2b8bbf17c14031746de5aa7/",
+      "topics": [
+        "顯示/光電"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "柯信呈",
+      "title": "預測性維護產品發展策略-以T公司為例",
+      "advisor": "郭俞麟",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/0057ca2142d8f0e94ea4be69c7a0d7a1/",
+      "topics": [
+        "其他"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "楊鈞元",
+      "title": "低功率廣域物聯網發展策略-以個案U公司為例",
+      "advisor": "施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/a747375601359a8fc7eb7c96a09ce7c1/",
+      "topics": [
+        "物聯網"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "王建智",
+      "title": "以DevSecOps應用於軟體開發之發展策略-以臺灣I公司為例",
+      "advisor": "戴文凱、蔡孟涵",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/29e413872bf74e8c7c75d272e0d92a32/",
+      "topics": [
+        "軟體/服務"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "王煥權",
+      "title": "銷售點系統（POS）的發展策略研究 -以個案公司為例",
+      "advisor": "袁建中、蔡孟霖",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/201f3828631d9d665fa8c01c569e67bb/",
+      "topics": [
+        "軟體/服務"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "盧冠勳",
+      "title": "AI 伺服器整櫃出貨發展策略研究-以M公司為例",
+      "advisor": "游進陽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/5b40db130fa215e9a04bdb34c699de7b/",
+      "topics": [
+        "AI",
+        "伺服器"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "羅健榮",
+      "title": "數位用戶線路專用積體電路研發策略-以A公司為例",
+      "advisor": "游進陽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/c78645dbd10b98ad02985e026f1635ff/",
+      "topics": [
+        "半導體",
+        "網通/5G"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "胡玉茹",
+      "title": "智慧聯網產業之邊緣AI應用發展策略-以A公司為例",
+      "advisor": "施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/2c4b40d44e3ceb39847fae18593b7c39/",
+      "topics": [
+        "AI"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "薛博文",
+      "title": "伺服器電源供應器節能研發策略-以A公司為例",
+      "advisor": "鄭逸琳",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/98a7ba9d63505f37224e57be3da610bd/",
+      "topics": [
+        "伺服器",
+        "能源/電力"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "賴建臣",
+      "title": "社交博弈手機遊戲的經營策略-以I公司S部門之個案研究",
+      "advisor": "袁建中、蔡孟霖",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/cb14e413d8c12890582b27e056e5d7ef/",
+      "topics": [
+        "遊戲/電競",
+        "消費電子"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "邱仁智",
+      "title": "廣播系統產品發展策略-以T公司為例",
+      "advisor": "袁建中、蔡孟霖",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/2f942b2f556d7c0128266f18612bea72/",
+      "topics": [
+        "其他"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "鄭績舜",
+      "title": "AI手機晶片發展與挑戰-以個案公司為例",
+      "advisor": "袁建中、蔡孟霖",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/0dcc1861a904c3d61dd38eb334d81b99/",
+      "topics": [
+        "AI",
+        "半導體"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "鍾正一",
+      "title": "評估SpaceX的Starlink對全球通訊產業的影響: 以台灣新興電腦周邊產業公司為案例",
+      "advisor": "郭俞麟",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/d953e8715ccb6ac30d0672423126e5c4/",
+      "topics": [
+        "網通/5G"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "陳建任",
+      "title": "應用在氫燃料電池領域的電源轉換器之技術發展策略— 以D公司為例",
+      "advisor": "袁建中、蔡孟霖",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/edeb1c2a9ac7829ad55d12fd953e9e5c/",
+      "topics": [
+        "能源/電力"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "陸皇成",
+      "title": "高速連接器產業在AI伺服器的發展策略－以個案J公司為例",
+      "advisor": "羅承慈",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/3fe9a1372054e2e7483e3c785206353d/",
+      "topics": [
+        "AI",
+        "伺服器"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "黃偉銘",
+      "title": "AI 伺服器散熱方案策略研究-以I公司為例",
+      "advisor": "鄭逸琳",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/70f4a61289884230e4633eb298bc0fbf/",
+      "topics": [
+        "AI",
+        "伺服器"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "EMRD",
+      "name": "黃元甫",
+      "title": "從3C產品科技公司跨界進入電動車市場的策略分析-以小米公司為例",
+      "advisor": "鄭逸琳",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/2b7fc1af96be749d7a8580a6f1107455/",
+      "topics": [
+        "車用"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "SEMI-EMRD",
+      "name": "彭建万",
+      "title": "HPC技術演進與AI晶片製造策略佈局-以個案N公司為例",
+      "advisor": "黃中人、游進陽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/ae8a4994c1b9a4440a97e6de56b1d9b2/",
+      "topics": [
+        "AI",
+        "半導體"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "SEMI-EMRD",
+      "name": "李民泓",
+      "title": "高頻寬記憶體(HBM)市場策略佈局 - 以個案M公司為例",
+      "advisor": "袁建中、蔡孟霖",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/b7d68cbdf90c81821758315a5a473223/",
+      "topics": [
+        "記憶體"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "SEMI-EMRD",
+      "name": "柯舜枌",
+      "title": "無晶圓廠電源管理積體電路及功率元件設計公司產品行銷策略- 以U公司為例",
+      "advisor": "邱昱誠、楊朝龍",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/9695bf39267bf26ae689a7e8c348a209/",
+      "topics": [
+        "半導體",
+        "能源/電力"
+      ]
+    },
+    {
+      "year": 113,
+      "program": "SEMI-EMRD",
+      "name": "蕭妤倢",
+      "title": "第三類半導體 SiC 代工研發策略- 以個案X公司為例",
+      "advisor": "邱昱誠、袁建中",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/f45fccd14347151f50c6e20287148810/",
+      "topics": [
+        "半導體"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "何基俊",
+      "title": "商用顯示器台灣銷售策略以個案S公司為例",
+      "advisor": "周碩彥、楊亦東",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/efae616210cd535a5b4cad68a3ec1039/",
+      "topics": [
+        "顯示/光電"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "吳焉培",
+      "title": "NAND Flash記憶體策略規劃個案研究-以個案X公司為例",
+      "advisor": "邱昱誠",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/ad74a5f11ba2327089928e4127d4e606/",
+      "topics": [
+        "記憶體"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "呂文翔",
+      "title": "電子零組件代理商跨界轉型產品開發公司 - 以個案 Ｍ 公司為例",
+      "advisor": "袁建中、鄭逸琳",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/1925fa56c4e1d385bf1dfc33a0519fb7/",
+      "topics": [
+        "研究方法"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "周俊煌",
+      "title": "伺服器散熱模組產業研發策略-以T公司為例",
+      "advisor": "游進陽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/8d4a8ce6bd7fc061b8e2265a2ea88466/",
+      "topics": [
+        "伺服器",
+        "零組件"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "廖柏淵",
+      "title": "工業物聯網系統整合之發展策略-以A公司為例",
+      "advisor": "周碩彥、楊亦東",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/f7931263f15008e38d08188c04d7ef48/",
+      "topics": [
+        "物聯網",
+        "軟體/服務"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "張志瑋",
+      "title": "輕觸開關產品發展策略-以D公司為例",
+      "advisor": "袁建中、鄭正元、鄭逸琳",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/598960134db57e28c0c6a9ba6d5dbd3f/",
+      "topics": [
+        "零組件"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "曾永富",
+      "title": "單晶碳化矽基板台灣製造商經營策略之研究—以W公司為例",
+      "advisor": "邱昱誠、楊朝龍",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/1c444e7cbf4d31c97e5128ede2607398/",
+      "topics": [
+        "半導體",
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "李文德",
+      "title": "邊緣運算伺服器ORAN架構發展策略-焦點個案為例",
+      "advisor": "陳俊男、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/35ca013473dd8b9e6eba6a13cb5a952c/",
+      "topics": [
+        "伺服器",
+        "網通/5G"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "李金武",
+      "title": "元宇宙趨勢分析與研發佈局策略-以法人文化科技中心為例",
+      "advisor": "施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/304fa29363e220bf5db541d002e0c8ab/",
+      "topics": [
+        "其他"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "林健銘",
+      "title": "存儲記憶體控制IC設計產業經營策略分析-以群聯電子為例",
+      "advisor": "鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/2e16f2a5fe4b17e6ec38ca1c33d33cef/",
+      "topics": [
+        "半導體",
+        "記憶體"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "林胤廷",
+      "title": "美國線上博奕法規市場發展經營策略以I公司開發部門為個案研究",
+      "advisor": "施劭儒、陳阿見",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/e015eb1def239dcf3aa251b62fe751d7/",
+      "topics": [
+        "遊戲/電競"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "梁家豪",
+      "title": "超接面功率MOSFET研發策略-以個案S公司為例",
+      "advisor": "袁建中、鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/f6f79859bf3af7784dd286ec95130098/",
+      "topics": [
+        "半導體"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "梁進",
+      "title": "伺服器代工產業的韌體與軟體研發策略-以J公司為例",
+      "advisor": "游進陽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/be473904236bacd101df130ad0017c76/",
+      "topics": [
+        "伺服器",
+        "軟體/服務"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "王正皇",
+      "title": "開放運算計畫（OCP）實踐探究：J公司在伺服器代工研發策略的新轉向",
+      "advisor": "周碩彥、楊亦東",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/1b0a4c88a9f5910022c9654aaa9cfc0b/",
+      "topics": [
+        "伺服器"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "練永賢",
+      "title": "台灣半導體二手設備商的發展與展望-以S公司為例",
+      "advisor": "鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/c9bdf079e63afdce392df42de154a393/",
+      "topics": [
+        "半導體",
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "莊恭彰",
+      "title": "筆電與伺服器業者轉型自駕車載電腦市場之策略個案分析",
+      "advisor": "陳亮光、王孔政",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/f29f763386655fd90cebd8af240d2e44/",
+      "topics": [
+        "伺服器",
+        "車用"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "蔡宛臻",
+      "title": "電子製造業售後服務的價值創新 - 以 U 公司為例",
+      "advisor": "游進陽、陳俊男",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/a8518e2ba59fb9a164f730557e1fa45f/",
+      "topics": [
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "蔣安東",
+      "title": "研究晶圓廠基礎點系統建置策略",
+      "advisor": "游進陽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/055e5e88940fb26d6a8f8265ba001066/",
+      "topics": [
+        "半導體"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "蘇育賢",
+      "title": "臺灣半導體薄膜設備商的發展策略 - 以個案公司為例",
+      "advisor": "袁建中、鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/92b335020547f293afcc83035bda6b19/",
+      "topics": [
+        "半導體",
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "許春輝",
+      "title": "網通產業在LED電視牆產品的因應策略:公司個案研究",
+      "advisor": "蔡孟霖",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/2ed5391566c560457924c0cf9cd4a9f1/",
+      "topics": [
+        "網通/5G",
+        "顯示/光電"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "許議文",
+      "title": "利基型軟性印刷電路板技術發展策略-以個案公司為例",
+      "advisor": "施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/804cad8046f4d65dbf96955c85bfe995/",
+      "topics": [
+        "零組件"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "譚博超",
+      "title": "電力分析紀錄裝置之產品規劃與研發策略-以B公司為研究個案",
+      "advisor": "王丞浩、郭政謙",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/2eeed684a509f912013585407b023060/",
+      "topics": [
+        "能源/電力"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "譚壽生",
+      "title": "智慧型手機之鉸鏈研發管理、策略與挑戰-以個案G公司為例",
+      "advisor": "施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/247c33cf9ac1ebd17fddc0d3e421b1bc/",
+      "topics": [
+        "消費電子",
+        "零組件"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "郭承翔",
+      "title": "企業即時通訊協作平台進行數位轉型-導入平台的成效與關鍵成功因素之研究",
+      "advisor": "周子銓、劉志成",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/8279fed8c87474ca8ef5d283488ab24a/",
+      "topics": [
+        "網通/5G",
+        "軟體/服務"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "郭香宜",
+      "title": "生成式AI如何協助中小企業強化競爭力",
+      "advisor": "周碩彥、楊亦東",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/1c3eae44f0edcb56732830c7e83977e3/",
+      "topics": [
+        "AI"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "鄭凌杰",
+      "title": "伺服器產業在AI時代的策略發展與市場佈局–以個案S公司為例",
+      "advisor": "袁建中、鄭正元、張隆昌",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/3104b5fe9b888b188d55632e64182695/",
+      "topics": [
+        "AI",
+        "伺服器"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "陳偉業",
+      "title": "新世代鋰離子電池正極材料開發-磷酸錳鐵鋰LMFP",
+      "advisor": "黃炳照",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/d77b2d4a465abf12d70f5358f93b15a8/",
+      "topics": [
+        "能源/電力"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "陳冠伶",
+      "title": "電競耳機產品研發策略-以個案公司F為例",
+      "advisor": "蔡孟涵",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/65fdea7c54cef6abd811c673792f069f/",
+      "topics": [
+        "遊戲/電競",
+        "消費電子"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "陳明龍",
+      "title": "半導體真空吸嘴產品發展策略-以G公司為例",
+      "advisor": "袁建中、鄭逸琳",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/9b9992946d44933732836ca570d7871e/",
+      "topics": [
+        "半導體",
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "陳昭全",
+      "title": "先進駕駛輔助系統之車用攝影機發展趨勢與研發策略 - 以R公司為例",
+      "advisor": "蔡孟涵",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/67d5fd375c763346b0593c9d4e9b58eb/",
+      "topics": [
+        "車用"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "陳泰良",
+      "title": "數位科技優化餐飲營運流程之策略分析 - 以個案W公司為例",
+      "advisor": "蔡孟涵",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/2293ac01bfee33f34f918827048ef694/",
+      "topics": [
+        "其他"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "黃國桂",
+      "title": "黃光設備機台客製化、員工專業能力、客戶服務品質與客戶滿意度影響關係之研究-以E公司為例",
+      "advisor": "李雨青",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/346bc1ed6c59f9134c26c328e8209d36/",
+      "topics": [
+        "半導體",
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 112,
+      "program": "EMRD",
+      "name": "黃長裕",
+      "title": "大型噴墨印表機之研發策略: R公司個案之研究",
+      "advisor": "蔡孟霖",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/734d5e7236c42851f1087fadbff8bbe7/",
+      "topics": [
+        "消費電子"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "劉瑞祥",
+      "title": "產品開發策略規劃個案研究 - 以Ｔ公司研發智慧顯示器為例",
+      "advisor": "袁建中、蔡孟涵",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/795826dacd1ef36ce97af00f2639976b/",
+      "topics": [
+        "顯示/光電"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "劉豐銘",
+      "title": "物聯網產品發展策略-以個案N公司為例",
+      "advisor": "蔡孟涵",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/9da4af87f148de9c1fcc9d846b63f934/",
+      "topics": [
+        "物聯網"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "吳欽文",
+      "title": "電競筆記型電腦研發策略-以個案Q公司為例",
+      "advisor": "袁建中、鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/3298798390e5a329968a75c03070eaaf/",
+      "topics": [
+        "遊戲/電競",
+        "消費電子"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "呂三明",
+      "title": "車用整流二極體之研發策略,以個案公司研發為例",
+      "advisor": "袁建中、鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/7e5cbc2ea3e102c0601bd7aa49bc2c8d/",
+      "topics": [
+        "車用",
+        "能源/電力"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "呂郁銳",
+      "title": "白牌伺服器在5G產業的軟體發展策略",
+      "advisor": "陳俊男、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/5a3aa571447613e89f0c715462be333e/",
+      "topics": [
+        "伺服器",
+        "網通/5G"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "張兆明",
+      "title": "品牌伺服器在5G 智慧化互連網產品研發策略 - 以個案H公司為例",
+      "advisor": "袁建中、鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/8510531ea0721765987e4722b299ba14/",
+      "topics": [
+        "伺服器",
+        "網通/5G"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "張惠華",
+      "title": "影像感測器封裝服務之發展策略 -以個案公司為例",
+      "advisor": "袁建中、鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/f2f9e1da35fd5bf640425c46d8e26c2c/",
+      "topics": [
+        "半導體",
+        "零組件"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "張達明",
+      "title": "集合式住宅雲端門禁之發展策略: 以H 個案公司為例",
+      "advisor": "盧之偉",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/86b10b0cc904d5906cc88e8663960b20/",
+      "topics": [
+        "伺服器",
+        "物聯網"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "朱子政",
+      "title": "電動車發展趨勢下的汽車開閉鎖產品研發策略–以HCMF公司為例",
+      "advisor": "邱昱誠",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/136b498fdba97e0e691c615669fe3a08/",
+      "topics": [
+        "車用"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "李青峻",
+      "title": "硬銲型板式熱交換器研發策略之個案研究-以K公司為例",
+      "advisor": "蔡孟涵",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/212b7d61b1aa661dc3847509465edff3/",
+      "topics": [
+        "零組件"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "林偉信",
+      "title": "智慧醫療研發策略-以個案公司為例",
+      "advisor": "施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/a1aaeb4c8d4de725093c3e980a2fb332/",
+      "topics": [
+        "醫療/健康"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "林尚賢",
+      "title": "伺服器產業發展策略 - 以個案H公司為例",
+      "advisor": "陳明志",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/a05e864126f73b519404ee966b47dd04/",
+      "topics": [
+        "伺服器"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "簡素華",
+      "title": "智慧物流平台對後疫情時代供應鏈整合的重要性",
+      "advisor": "邱昱誠、葉瑞徽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/31d0aee2c7c9f3beb116eb0072913211/",
+      "topics": [
+        "物聯網",
+        "軟體/服務"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "葉百勝",
+      "title": "開機韌體研發策略-以個案公司為例",
+      "advisor": "袁建中、鄭正元、劉肇文",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/e358985ae889682d813c5291bc840468/",
+      "topics": [
+        "軟體/服務"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "陳俊立",
+      "title": "儲能系統研發策略探討- 以C 個案公司為例",
+      "advisor": "陳俊男、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/fb70b6d0646573455af3bb947ff149ff/",
+      "topics": [
+        "能源/電力"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "陳欣楠",
+      "title": "車載資訊娛樂系統發展策略-以個案公司為例",
+      "advisor": "施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/cd8d5ad51ed775c80b427dcf3addd909/",
+      "topics": [
+        "車用"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "顏仁傑",
+      "title": "電競手機產品研發策略-以個案公司為例",
+      "advisor": "施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/e71049e4949ccfb358a185b74e921156/",
+      "topics": [
+        "遊戲/電競",
+        "消費電子"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "高炳榮",
+      "title": "少量多樣製造自働化個案研究 - 以案例K公司為例",
+      "advisor": "林其禹",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/16d44715a440ba55d764b14f98e81ffe/",
+      "topics": [
+        "機器人",
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 111,
+      "program": "EMRD",
+      "name": "黃忠彬",
+      "title": "高壓直流電源主機板研發設計在伺服器產業的發展策略-以M公司為例",
+      "advisor": "施劭儒、陳俊男",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/a5e9898862af0b9288636d1363f66a9c/",
+      "topics": [
+        "伺服器",
+        "能源/電力"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "仲成義",
+      "title": "筆記型電腦在後疫情時代的趨勢研究 -以感測元件智慧應用為例",
+      "advisor": "施劭儒、潘正豪",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/1f765cd2a82164da909352b94fcc8ad0/",
+      "topics": [
+        "消費電子",
+        "零組件"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "周念穎",
+      "title": "MEC在車聯網之應用與研發策略 -以個案A公司為例",
+      "advisor": "盧之偉",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/526e7d0c7093091924ff85d928148802/",
+      "topics": [
+        "物聯網",
+        "車用"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "張豐麒",
+      "title": "開放性無線接入網路電信伺服器設備研發經營策略之個案研究",
+      "advisor": "周碩彥、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/5a28e0f866b11228897f851de136f6b7/",
+      "topics": [
+        "伺服器",
+        "網通/5G"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "曾華盛",
+      "title": "中小型貨車之技術發展與策略規劃",
+      "advisor": "陳俊男、鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/b10d0b93ce4408b4e6787dd8ff85bb74/",
+      "topics": [
+        "車用"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "李定為",
+      "title": "產品研發策略之個案研究 -以聲學元件事業部為例",
+      "advisor": "施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/022b6aab5ba6636f7fdd7f2040c4ed89/",
+      "topics": [
+        "零組件"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "李日新",
+      "title": "臺灣動力電池後段生產設備之產業分析",
+      "advisor": "王孔政、鄧福宸",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/e344870c51a4ca0c70c8b9b716b4134f/",
+      "topics": [
+        "能源/電力",
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "李長龍",
+      "title": "自動測試系統智慧整合之研究 - 以交換式電源供應器電氣特性測試為例",
+      "advisor": "王孔政、鄧福宸",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/468629ea90e60ad6da93d7687f1e31b5/",
+      "topics": [
+        "能源/電力",
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "林垣百",
+      "title": "5G專用網路應用與發展策略-T公司個案研究",
+      "advisor": "楊亦東",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/fbac9825a91554f457df48b2ff31ae03/",
+      "topics": [
+        "網通/5G"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "林志強",
+      "title": "品牌耳機的發展策略 以M公司為例",
+      "advisor": "盧之偉",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/330b01424b46cc509777e8cccf26a69f/",
+      "topics": [
+        "消費電子"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "楊岳霖",
+      "title": "高速連接器產品應用與發展策略 以S公司為例",
+      "advisor": "李維楨、包中南",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/4ed769d45821d1cb717f6ef3b5519072/",
+      "topics": [
+        "零組件"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "洪甯恩",
+      "title": "流程機器人自動化企業導入之研究_以D公司個案企業為例",
+      "advisor": "盧之偉",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/2856ad7a1bbc57aca77d636699d1445c/",
+      "topics": [
+        "機器人"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "溫文福",
+      "title": "行動微型投影系統之發展策略個案研究 -以C公司為例",
+      "advisor": "袁建中、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/1107c019ac3f9c51d6721ae672e7ee80/",
+      "topics": [
+        "顯示/光電"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "王志翔",
+      "title": "從台灣專利申請現況探討中小型專利事務所經營策略",
+      "advisor": "袁建中、陳正誠",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/7059a5308c98c8ef90685ffa9f6f40c9/",
+      "topics": [
+        "專利/智財"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "王育",
+      "title": "利用模流分析發展膠芯製造策略",
+      "advisor": "施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/8df5c1480896e132be78214cbc598c37/",
+      "topics": [
+        "智慧製造",
+        "零組件"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "蘇福龍",
+      "title": "軟性印刷電路板應用於5G智慧手機之技術發展策略-以個案公司為例",
+      "advisor": "袁建中、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/6158bf6a1e401663de2f8c1aca5d3190/",
+      "topics": [
+        "網通/5G",
+        "消費電子"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "謝建鑫",
+      "title": "健身器材的未來發展策略個案研究 –以派樂騰為例",
+      "advisor": "蔡孟涵",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/af2a679197f1ac9b01520b011599e94e/",
+      "topics": [
+        "消費電子"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "謝東榮",
+      "title": "電競顯示器產業之研發策略-以個案公司為例",
+      "advisor": "袁建中、盧之偉",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/540de0a3580d4329d8eb60297b1fa60c/",
+      "topics": [
+        "遊戲/電競",
+        "顯示/光電"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "邵崇璋",
+      "title": "數位內容於社會陪伴應用的沉浸效果分析",
+      "advisor": "曾盛恕、鄧福宸",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/a635f3f1f06adf421bdeed96cf508187/",
+      "topics": [
+        "其他"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "郭永漢",
+      "title": "機構設計之價值創新 –以CRPS伺服器電源供應器為例",
+      "advisor": "王孔政、鄧福宸",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/ae988f8034525bf0b120c66e87f0f8ce/",
+      "topics": [
+        "伺服器",
+        "能源/電力"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "鄭明宗",
+      "title": "視訊會議系統研發策略之研究 -以W公司視訊產品事業部為例",
+      "advisor": "詹文男、鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/fe1402ccc4f525d7a94e27f6ae0605ac/",
+      "topics": [
+        "顯示/光電"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "陳一達",
+      "title": "5G時代伺服器產業的發展策略 -以個案A公司為例",
+      "advisor": "袁建中、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/da6a1ed3ef9903b6e63ce6fedb44ba97/",
+      "topics": [
+        "伺服器",
+        "網通/5G"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "陳宏盛",
+      "title": "5G O-RAN企業專網應用策略分析 - 以個案公司為例",
+      "advisor": "袁建中、劉志成",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/a37ec25b74a7a5239e9264fc44c713ab/",
+      "topics": [
+        "網通/5G"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "陳振淵",
+      "title": "高可用性醫療決策支援視覺系统",
+      "advisor": "蔡孟涵",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/29e596cbe631284653b920f07b39de16/",
+      "topics": [
+        "醫療/健康"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "黃朝裕",
+      "title": "隨著無線通訊的技術發展建立戶外遠距離設備的研發策略_以個案企業為例",
+      "advisor": "盧之偉",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/36cefa9aedee501a698d92298723035c/",
+      "topics": [
+        "網通/5G",
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 110,
+      "program": "EMRD",
+      "name": "黃賴熙",
+      "title": "認知價值估算方法__以感覺閾限為例",
+      "advisor": "施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/9b98f9b8398c5ee700fd17c49c780fca/",
+      "topics": [
+        "研究方法"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "丁俊壬",
+      "title": "熱管技術於電腦產業應用之發展趨勢",
+      "titleEn": "Heat Pipe Technology Development Trend for Computers Products",
+      "advisor": "劉顯仲、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/5473691f4f94c1c92c6cf221f1b0a1dc/",
+      "topics": [
+        "零組件"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "余四從",
+      "title": "PCB乾燥設備商的產品發展策略 以A公司為例",
+      "titleEn": "The product development strategy of PCB drying equipment manufacturer takes company A as an example",
+      "advisor": "謝宏麟、袁建中",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/8015a03c151f7231f19b6433ca9f0606/",
+      "topics": [
+        "智慧製造",
+        "零組件"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "呂基清",
+      "title": "聊天機器人技術發展趨勢–以專利資料庫分析為例",
+      "titleEn": "The Development of Chatbot Technology – An Analysis from the Patent Database",
+      "advisor": "袁建中、蔡孟涵",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/e2830a85a98e60c0ad25cafc9e781ace/",
+      "topics": [
+        "AI",
+        "專利/智財"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "呂秉澄",
+      "title": "精實生產推動架構之實證研究 - 以變壓器工廠為例",
+      "titleEn": "An Empirical Study of Lean Production Promotion Framework-Taking Transformer Factory as an Example",
+      "advisor": "王孔政、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/9d9eacd8d7b0fb189ebb54b7906138f9/",
+      "topics": [
+        "能源/電力",
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "廖俊超",
+      "title": "5G基地台電源管理系統之產品研發策略-以C公司為個案研究",
+      "titleEn": "Product Development Strategy of 5G Base Station Power Management System - Company C as a Case Study",
+      "advisor": "王孔政、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/a33ddcf867347c8b8672ffc910bcda1a/",
+      "topics": [
+        "網通/5G",
+        "能源/電力"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "張家煌",
+      "title": "從工業網路發展趨勢架建研發技術藍圖 以精準乙太網路技術為例",
+      "titleEn": "Build development technology plan from the trend of industrial network As an example of precision Ethernet technology",
+      "advisor": "王孔政、陳炤彰",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/5a21c6d05a114ac9c0aa6a28eec0a279/",
+      "topics": [
+        "網通/5G"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "張有賀",
+      "title": "以科技接受模式探討消費者 對寵物犬情緒偵測AI產品之接受因素",
+      "titleEn": "Applying the Technology Acceptance Model to Investigate Consumer's Attitudes Toward AI Product with Canine Emotion Recognition",
+      "advisor": "曾盛恕、林舜天",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/16a3c7b31814eee4b3d564a10965db04/",
+      "topics": [
+        "AI",
+        "醫療/健康"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "張秉豐",
+      "title": "以科技接受模式探討多媒體影音APP應用於車用平台的可行性評估 – 以YouTube Music為例",
+      "titleEn": "The Feasibility Study of Multimedia Applications Applied to In-Car Entertainment System by the TAM - YouTube Music as an Example",
+      "advisor": "曾盛恕、林舜天",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/c9c1ae9e557068dea6a2a21ed784dc48/",
+      "topics": [
+        "車用"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "徐仲勳",
+      "title": "以科技接受模式探討使用大型液晶電視整合AI智能技術的健康APP的接受因素",
+      "titleEn": "Discuss the Acceptance Factors of Health Apps that use Large-Sizes LCD TVs and AI Technology in a Technology Acceptance Model",
+      "advisor": "曾盛恕、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/5c77c2b29440523ef8ba38d119e289cb/",
+      "topics": [
+        "AI",
+        "醫療/健康"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "李政賢",
+      "title": "車載乙太網路交換器之發展趨勢及策略研究-以A公司為個案",
+      "titleEn": "Research on the Development Trend and Strategy of Automotive Ethernet Switch-Take A company as A case study",
+      "advisor": "周碩彥、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/e14629ebb84c7e047b7f51b6745ec152/",
+      "topics": [
+        "網通/5G",
+        "車用"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "李麗娥",
+      "title": "乙太網路通訊電源零件發展策略 -以C公司研發部為例",
+      "titleEn": "Product Development Strategy of Power Over Ethernet Components Appliance – A Case Study of R & D Department in C Company",
+      "advisor": "施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/8c934ba513e1c169e18bac8c3a7ee9c7/",
+      "topics": [
+        "網通/5G",
+        "能源/電力"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "林巖",
+      "title": "因應5G應用市場需求探討PC產業相關技術策略研究",
+      "titleEn": "Research on PC industry related technology strategies in response to 5G application market demand",
+      "advisor": "鄭正元、劉一宇、黃政嘉",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/387d3e51495f46cda3f70b73788dcea3/",
+      "topics": [
+        "網通/5G",
+        "消費電子"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "林思翰",
+      "title": "以計畫行為理論探討無人機對藥物配送行為的影響因素",
+      "titleEn": "Application of TPB : The Impacts of Unmanned Aerial Vehicle for Medicines Delivery",
+      "advisor": "曾盛恕、林舜天",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/93813965c7dee65c8cd46ddcd7852579/",
+      "topics": [
+        "醫療/健康",
+        "機器人"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "林資凱",
+      "title": "通訊電源產品發展策略 – 以D公司為個案研究",
+      "titleEn": "Development Strategy of Telecom Power Products – Take D Company as the Case Study Subject",
+      "advisor": "周碩彥、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/1223ace391b612caa2546676b4895a2e/",
+      "topics": [
+        "網通/5G",
+        "能源/電力"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "王國綸",
+      "title": "以科技接受模式探討AI技術產品於寵物健康偵測的接受因素",
+      "titleEn": "Behavior Intention to Adoption of Pet Health Detection Products with AI Enabled Functions in Technology Acceptance Model",
+      "advisor": "曾盛恕、林舜天",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/6d72ed5f91edc6c5f40150fd4172217a/",
+      "topics": [
+        "AI",
+        "醫療/健康"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "王烱佳",
+      "title": "智慧保全物聯網規劃",
+      "titleEn": "Smart Security IoT Planning",
+      "advisor": "游進陽、郭啟賢、陸敬互",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/7db89a345fa03799dccc1177feb1ec95/",
+      "topics": [
+        "物聯網"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "簡萬獅",
+      "title": "工業自動控制研發經營策略 - 以A公司為個案研究",
+      "titleEn": "Business Strategy for Industrial Automation Product and Hardware R&D Development - A Case Study on an Electronic Manufacturer",
+      "advisor": "王孔政、陳炤彰",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/59d08b028538d7b46e972f6cbe97176c/",
+      "topics": [
+        "其他"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "莊柏峰",
+      "title": "數位學習載具研發策略之個案研究",
+      "titleEn": "A Case Study of Research and Development Strategy of Digital Learning Device",
+      "advisor": "周碩彥、鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/262d438233f9f788b9654476e7226047/",
+      "topics": [
+        "其他"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "葉桐林",
+      "title": "虛擬實境產品發展策略之個案研究",
+      "titleEn": "A case study on the development strategy of virtual reality products",
+      "advisor": "周碩彥、游進陽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/6b0254fcb03257fb9959e992381c0bc9/",
+      "topics": [
+        "其他"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "蕭進發",
+      "title": "高速傳輸晶片在PC產業的應用與趨勢",
+      "titleEn": "The application and trend of high-speed transmission chips in the PC industry",
+      "advisor": "曾盛恕、鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/ceff5e2838e4c364cb2ca39379a00b26/",
+      "topics": [
+        "半導體",
+        "消費電子"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "蘇彥豪",
+      "title": "電子晶片通路商轉型附加價值之規劃策略",
+      "titleEn": "The Value-added Strategy on The Transformation from Electronic Devices Distributors",
+      "advisor": "周碩彥、施劭儒、吳偉國",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/3452b89b9012d8004b2a66b3206ecdf2/",
+      "topics": [
+        "半導體",
+        "軟體/服務"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "賴秉鉞",
+      "title": "利基型印刷電路板產品策略-以A公司為例",
+      "titleEn": "The product strategy for niche type PCB. - A cast study of A Corp.",
+      "advisor": "施劭儒、洪輝龍",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/939405e88e05eee34e3fd98f1dad9621/",
+      "topics": [
+        "零組件"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "錢志豪",
+      "title": "數位分身應用於工業通訊產業部門研發策略",
+      "titleEn": "Research on Application of Digital Twin to the R&D strategy of the industrial communication industry department",
+      "advisor": "王孔政、陳炤彰",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/e77eae60aa895185a38fedd21398aeae/",
+      "topics": [
+        "網通/5G",
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "陳偉凱",
+      "title": "顯示卡產品研發策略 - 以T公司為個案研究對象",
+      "titleEn": "Graphics card product development strategy - Take T company as the case study subject",
+      "advisor": "周碩彥、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/cbf366a0a0f64011ff132398795382dc/",
+      "topics": [
+        "顯示/光電"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "陳國華",
+      "title": "工業軟體定義廣域網路產品策略規劃個案研究",
+      "titleEn": "Industrial SD-WAN product strategic plan in L company as a case analysis",
+      "advisor": "施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/e46bf994c5c66ecd3dc45284c6545ea5/",
+      "topics": [
+        "軟體/服務"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "陳志忠",
+      "title": "智慧家居的發展策略",
+      "titleEn": "The development strategy of smart home",
+      "advisor": "游進陽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/bea29611447c8ebc1267c758f9886e6e/",
+      "topics": [
+        "物聯網"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "陳文山",
+      "title": "以科技接受模式探討智慧型牙刷使用意願與產品開發策略研究",
+      "titleEn": "Smart Toothbrushes Product Strategy And Adoption Intention Investigation With TAM",
+      "advisor": "鄭正元、曾盛恕",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/2baef1530f63305d63f4ac66e09280a2/",
+      "topics": [
+        "醫療/健康",
+        "研究方法"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "陳文彬",
+      "title": "企業資源規劃軟體開發商產品經營之策略規劃-以F公司為例",
+      "titleEn": "Strategic planning of ERP software developer's product management: a case study of F Company",
+      "advisor": "謝宏麟、袁建中",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/82acc2c4783f7d55eb538c68fa40ef67/",
+      "topics": [
+        "軟體/服務"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "魚秦傑",
+      "title": "汽車空調T公司研發經營策略",
+      "titleEn": "R&D and management strategy of automobile air-conditioning company T",
+      "advisor": "游進陽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/a26303c45f385c098244aa0635ecbb18/",
+      "topics": [
+        "車用"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "鮮榮孝",
+      "title": "高演色性LED提升遠距皮膚科診察影像辨識研究",
+      "advisor": "陳炤彰",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/b63a81056966f04cd0272120761a9409/",
+      "topics": [
+        "醫療/健康",
+        "顯示/光電"
+      ]
+    },
+    {
+      "year": 109,
+      "program": "EMRD",
+      "name": "黃志雄",
+      "title": "手持式快速充電器研發經營策略-以A公司為例",
+      "titleEn": "Mobile Quick Charger R&D Business Strategy-A Company",
+      "advisor": "周碩彥",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/d69ea68440ffd661aa3c1402b5126e88/",
+      "topics": [
+        "能源/電力"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "何憲宗",
+      "title": "5G終端產品發展與市場經營策略- A公司個案研究",
+      "titleEn": "5G Product Development and Marketing Strategy- The Case Study of A Company",
+      "advisor": "施劭儒、邱泰光",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/63565179bb7dbb77c2c6fecfd719f649/",
+      "topics": [
+        "網通/5G"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "吳德隆",
+      "title": "無刷馬達驅動器於醫療輔具產業的發展策略",
+      "titleEn": "The Development Strategy to Brushless Motor Driver in Medical Aid Industry-The Case Study of W Company",
+      "advisor": "曾修暘、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/c00e1965700d854db9d736e507e4b485/",
+      "topics": [
+        "醫療/健康",
+        "零組件"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "呂宗翰",
+      "title": "電子博彩遊戲的經營策略 以I公司開發部門為個案研究",
+      "titleEn": "Business Strategy of Gaming Games - A Case Study of I Company's Research and Development Department",
+      "advisor": "施劭儒、周碩彥、陳阿見",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/3866050fbd84e42d1e6482414c3bfe93/",
+      "topics": [
+        "遊戲/電競"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "呂政哲",
+      "title": "物聯網技術應用於智慧綠建築照明能源設計高效化之研究-以C公司新事業發展為例",
+      "titleEn": "Application of IoT Technology for Optimize Lighting Energy Consumption on Intelligent Green Building",
+      "advisor": "林柏廷",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/fe1668fec3332368ef3c09c3ff3caedd/",
+      "topics": [
+        "物聯網"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "安百合",
+      "title": "依據政府贊助資訊建立專利論文配對之研究",
+      "titleEn": "Research on the establishment of patent-paper pair based on government funding information",
+      "advisor": "管中徽、游進陽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/65928d9597cb14325515a58bcafbab1a/",
+      "topics": [
+        "專利/智財"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "廖偉宏",
+      "title": "符合德規截止線的自行車燈之光學優化研究",
+      "titleEn": "Optical Optimization Study of Cut off Line for Bike Lighting Base on German Standard (K-mark)",
+      "advisor": "陳怡永、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/e8bc56f013ba5150ceb472f08e1acc19/",
+      "topics": [
+        "車用",
+        "顯示/光電"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "徐愷駿",
+      "title": "創投對採用精實創業方法經營之新創企業投資策略之研究",
+      "titleEn": "A Study of Venture Capital's Investment Strategies for Startups with The Lean Startup Approach",
+      "advisor": "詹文男、鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/d1d915c54c96d42326cc215097c98781/",
+      "topics": [
+        "智慧製造",
+        "研究方法"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "朱自賢",
+      "title": "智慧科技的健康管理應用策略-以人工智慧、大數據、雲端運算、第五代行動通訊技術5G、物聯網、穿戴裝置和手機APP軟體來結合建構出健康管理商業平台",
+      "titleEn": "Intelligent Technology of Health Management Application Strategy-Combining Artificial Intelligence, Big Data, Cloud Computing, 5G Mobile Communication Technology, Internet of Things, Wearable Devices and Mobile APP Software to build a health management business platform",
+      "advisor": "周碩彥、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/f0ff425b4c964db031ab20b0a502a516/",
+      "topics": [
+        "AI",
+        "伺服器"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "李政憲",
+      "title": "Android TV研發策略與發展- 以個案公司為例",
+      "titleEn": "The Research and Development Strategy of Android TV-A Case Study of A Corporation",
+      "advisor": "周碩彥、劉志成",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/e3b2bad1472756bab61f288d1c15f5ed/",
+      "topics": [
+        "其他"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "林伊城",
+      "title": "第五代移動通訊技術應用於移動醫療產品規劃個案研究",
+      "titleEn": "Fifth generation mobile networks is applied to the mobile health product planning case study.",
+      "advisor": "周碩彥、鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/ec367df2d453fb4d9ce23f1409caf5e6/",
+      "topics": [
+        "網通/5G",
+        "醫療/健康"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "柯仁昌",
+      "title": "乙太網路交換器的時間敏感性網路產品發展策略 -以個案公司為案例",
+      "titleEn": "Development strategy of time-sensitive network products for Ethernet switches",
+      "advisor": "周碩彥",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/46fdcc35b0441cd53028b056b163e9a2/",
+      "topics": [
+        "網通/5G"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "楊崴翔",
+      "title": "工業物聯網解決方案研發經營策略 - 以電子製造業個案公司之物聯網事業部發展研究",
+      "titleEn": "Business Strategy for IoT Product Development Unit- A Case Study on an Electronics Manufacturer",
+      "advisor": "施劭儒、戴文凱",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/e3b5f31f538e2ec9efd5c808014f4e55/",
+      "topics": [
+        "物聯網",
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "江宗栩",
+      "title": "軟體服務業技術前瞻策略-以個案公司部門為例",
+      "titleEn": "Technology Foresight Strategy for the Software Services Industry - Case Study of the Company Section",
+      "advisor": "周碩彥、林清安、宋錦承",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/a19d8770f3a5ce061dae47cd3976cc0b/",
+      "topics": [
+        "軟體/服務"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "王智生",
+      "title": "安全監控攝影機產品市場策略與規劃 以個案Ｂ公司為例",
+      "titleEn": "Strategy and market planning of security surveillance camera products: A case study of B company",
+      "advisor": "施劭儒、周碩彥",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/b6d381ce4ce8aa3d1dc1ae8296bdc75d/",
+      "topics": [
+        "其他"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "紀弘俊",
+      "title": "智能製造生產系統發展策略規劃 - 以X公司為例",
+      "titleEn": "Development strategy planning of intelligent manufacturing production system - Take the case company as an example",
+      "advisor": "施劭儒、周碩彥",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/9808c5dca9e1385ee1de85b45779eef7/",
+      "topics": [
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "胡嘉展",
+      "title": "沉浸式投影系統發展策略之個案研究-以投影機製造商為例",
+      "titleEn": "Developing Strategies in Immersive Projection System ─ A case study of projector manufacturers",
+      "advisor": "蔡明忠、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/cdeaaa0e831f8d9158f2685215bce0a6/",
+      "topics": [
+        "顯示/光電",
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "許富淞",
+      "title": "半導體曝光機設備商服務管理策略之研究",
+      "titleEn": "Service Management Strategies for Lithography Machine Manufactures in Semiconductor Industry",
+      "advisor": "鄭正元、王孔政",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/9676648c523022057af383612f6b4070/",
+      "topics": [
+        "半導體",
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "許筆超",
+      "title": "3D列印設備代理商的發展策略 -以個案S公司為例",
+      "titleEn": "Developing Strategies for 3D Printing Equipment Agents - Taking Case Company S as an Example",
+      "advisor": "鄭正元、王孔政",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/22d66ac7db0090fc8e1b5d8f3df1241b/",
+      "topics": [
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "賴彥霖",
+      "title": "獨角獸企業商業模式之研究-以共享平台Airbnb與Uber為案例",
+      "titleEn": "The Study of Unicorn's Business Model- taking Airbnb and Uber as Case Study",
+      "advisor": "詹文男、鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/a72493dfe49a5ebd174af86a3acb7b88/",
+      "topics": [
+        "軟體/服務"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "賴晉輝",
+      "title": "工業自動化設備硬體研發經營策略-以人機介面個案公司部門之研究",
+      "titleEn": "Business Strategy for Industrial Automation Equipment Hardware R&D - A Case Study on HMI Manufacturer",
+      "advisor": "施劭儒、周碩彥、陳國任",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/a598d70898408fbf5a1f88315cf0e00c/",
+      "topics": [
+        "機器人",
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "鄭吉峰",
+      "title": "現場可程式化邏輯閘陣列(FPGA)在物聯網產品發展策略─以T公司為個案研究對象",
+      "titleEn": "Field Programmable Logic Gate Array (FPGA) Development Strategy in Internet of Things Products ─ T Company as a case study object",
+      "advisor": "周碩彥、林柏廷",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/6b51845e985b9f30f5ab835cb56ebd36/",
+      "topics": [
+        "半導體",
+        "物聯網"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "陳建滿",
+      "title": "家電開關產品發展策略-以S公司研發部門為例",
+      "titleEn": "Product Development Strategy of Home Appliance Switches – A Case Study of R & D Department in S Company",
+      "advisor": "施劭儒、周碩彥",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/67d0753300a2af267d7e38b35ca5bbd5/",
+      "topics": [
+        "消費電子",
+        "零組件"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "陳淑珍",
+      "title": "Responsive Strategy to the Mergers and Acquisitions of Automotive Semiconductor Suppliers - A Case Study of the Semiconductor Distributor, SAC/WPG",
+      "advisor": "陳俊男、施劭儒",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/ced28c94b10b55f0243f79fc6592d3b7/",
+      "topics": [
+        "半導體"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "陳逸瓏",
+      "title": "網路通訊半導體通路商於智慧物聯網的技術佈局策略－以個案公司技術研發部門為例",
+      "titleEn": "The Strategic Technology Plan for Network and Communication Semiconductor Distributors in the Intelligent Internet of Things Industry-A Case Study for the Technology Research Department of a Distributor",
+      "advisor": "施劭儒、周碩彥",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/3d634c58ad27f293a99daa62e3dffad6/",
+      "topics": [
+        "半導體",
+        "網通/5G"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "黃偉倫",
+      "title": "NB-IoT晶片廠之產品應用與發展 - 以個案公司為例",
+      "titleEn": "Product Application and Development of NB-IoT IC Design Company–A Case Study of M Company",
+      "advisor": "施劭儒、周碩彥",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/c542dfdb60f2598a98d2e22aa5b3c334/",
+      "topics": [
+        "半導體",
+        "物聯網"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "黃志堅",
+      "title": "功率半導體分離式元件事業層級策略 -以P公司為例",
+      "titleEn": "Business-Level Strategy of Power Semiconductor Discrete Components - A Case Study of P Company",
+      "advisor": "施劭儒、陳俊男",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/53b001d9bad6dce77af0aa320b65fce4/",
+      "topics": [
+        "半導體",
+        "零組件"
+      ]
+    },
+    {
+      "year": 108,
+      "program": "EMRD",
+      "name": "黃鍵民",
+      "title": "伺服器在5G時代的發展策略",
+      "titleEn": "Server development strategy in the 5G era",
+      "advisor": "陳俊男",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/8f015c5de146ab8e870cea5b354cd326/",
+      "topics": [
+        "伺服器",
+        "網通/5G"
+      ]
+    },
+    {
+      "year": 107,
+      "program": "EMRD",
+      "name": "何孝倫",
+      "title": "記憶體儲存裝置模組廠在車聯網的產品應用與發展的個案研究",
+      "titleEn": "Case study research: Flash storage Module manufacturer's development and application in internet of vehicles segment.",
+      "advisor": "周碩彥、謝宏麟",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/6191a842b8b9f6e4444c2279c8385b52/",
+      "topics": [
+        "記憶體",
+        "車用"
+      ]
+    },
+    {
+      "year": 107,
+      "program": "EMRD",
+      "name": "吳友眾",
+      "title": "從專利資料分析掃地機器人技術發展現況與趨勢",
+      "titleEn": "Now and Future of the Robot Vacuum Cleaner Technology - An analysis from the Patent Database",
+      "advisor": "林柏廷",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/c4390975441ffeabaf16dc35566d64a2/",
+      "topics": [
+        "專利/智財",
+        "機器人"
+      ]
+    },
+    {
+      "year": 107,
+      "program": "EMRD",
+      "name": "呂顯宗",
+      "title": "台灣電競產品之技術發展現況與策略規劃",
+      "titleEn": "Status and Strategic Planning for the Technology Development of Taiwan's Gaming Products",
+      "advisor": "林柏廷",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/9fef39f0ca24b2daac733e32965c4e16/",
+      "topics": [
+        "遊戲/電競"
+      ]
+    },
+    {
+      "year": 107,
+      "program": "EMRD",
+      "name": "周毓祺",
+      "title": "以數位分身改善虛擬協同團隊溝通模式 - 以手機代工設計開發個案為例",
+      "titleEn": "Research on Application of Digital Twin to The Design Communication of Virtual Collaborative Team - A Case Study of Cell phone Design Issues",
+      "advisor": "王孔政、陳炤彰",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/4e1e144d8b7825b7848b09436b6c47b8/",
+      "topics": [
+        "智慧製造",
+        "消費電子"
+      ]
+    },
+    {
+      "year": 107,
+      "program": "EMRD",
+      "name": "張水文",
+      "title": "整合數位分身與先進製程控制技術於電路板雷射鑽孔製程控制",
+      "titleEn": "Integrating digital twin and advanced process control on laser drilling process control in PCB manufacturing",
+      "advisor": "王孔政、陳炤彰",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/95b0c6b5e1258a336eb039737a99534b/",
+      "topics": [
+        "智慧製造",
+        "零組件"
+      ]
+    },
+    {
+      "year": 107,
+      "program": "EMRD",
+      "name": "洪啟智",
+      "title": "工業物聯網閘道器發展策略之個案研究",
+      "titleEn": "A case study of Industrial IoT gateways development strategy",
+      "advisor": "周碩彥、張仁杰、謝宏麟",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/8cbf73993a843b69cb59009bc0ee896c/",
+      "topics": [
+        "物聯網"
+      ]
+    },
+    {
+      "year": 107,
+      "program": "EMRD",
+      "name": "游長霖",
+      "title": "團隊特色對於組織績效的影響 -以高科技產業為例",
+      "titleEn": "Can Team Characteristic Influence Organization Performance? – A Case Study of High-tech Industry",
+      "advisor": "何秀青、謝宏麟",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/bc280d6a12745136ec1c5d2a39fc5bd6/",
+      "topics": [
+        "研究方法"
+      ]
+    },
+    {
+      "year": 107,
+      "program": "EMRD",
+      "name": "胡宜廷",
+      "title": "跨產業多角化部門之影響因素分析",
+      "advisor": "何秀青",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/b2a6562882b904e9f679c841491b5836/",
+      "topics": [
+        "研究方法"
+      ]
+    },
+    {
+      "year": 107,
+      "program": "EMRD",
+      "name": "詹明霖",
+      "title": "應用於高速資料中心之主動光纜研發技術前瞻策略-以日商H公司為例",
+      "titleEn": "Product Development Strategy for Active Optical Cable applied in Data Center-A Case Study of H Company",
+      "advisor": "林柏廷",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/255dd9b0770bef0c1e8219c612bdd8f6/",
+      "topics": [
+        "伺服器",
+        "網通/5G"
+      ]
+    },
+    {
+      "year": 107,
+      "program": "EMRD",
+      "name": "趙顏熙",
+      "title": "應用於精神病患之情緒及健康管理的穿戴裝置",
+      "titleEn": "Wearable device for health management of mental patients",
+      "advisor": "鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/fc2d6e1a9f919899dbfa8a979b9a5c80/",
+      "topics": [
+        "醫療/健康",
+        "消費電子"
+      ]
+    },
+    {
+      "year": 107,
+      "program": "EMRD",
+      "name": "陳俊安",
+      "title": "數位分身應用於作業基礎成本制之研究 -以個案公司銷售單位為例",
+      "titleEn": "Research on Application of Digital Twin to Activity-Based Costing System - A Case Study of Company Sale's Development",
+      "advisor": "王孔政、陳炤彰",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/39372fc6834f293bbaab8a4e85fd0fed/",
+      "topics": [
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 107,
+      "program": "EMRD",
+      "name": "黃啟榮",
+      "title": "物業管理產業面臨智慧化的轉型及應用發展之個案研究",
+      "advisor": "周碩彥、謝宏麟",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/17a5e48743a3c7445cfdb6e23a08d6f7/",
+      "topics": [
+        "軟體/服務",
+        "研究方法"
+      ]
+    },
+    {
+      "year": 107,
+      "program": "EMRD",
+      "name": "黃士榮",
+      "title": "高壓直流式資料中心電源系統之產品研發策略 - 以M公司為個案研究",
+      "titleEn": "Product Development Strategy for High Voltage Direct Current (HVDC) Power System of Data Center - A Case Study of M Company",
+      "advisor": "林柏廷、王毓實",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/e4cdc6fab6ebd7029c048eba881a423a/",
+      "topics": [
+        "伺服器",
+        "能源/電力"
+      ]
+    },
+    {
+      "year": 107,
+      "program": "EMRD",
+      "name": "龔文傑",
+      "title": "電子商務與精準推薦應用發展之個案研究",
+      "titleEn": "E-commerce and accurate recommendation application case studies",
+      "advisor": "周碩彥、謝宏麟",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/2a64c5fcb31e8b6d70737fc5b96566ad/",
+      "topics": [
+        "軟體/服務"
+      ]
+    },
+    {
+      "year": 106,
+      "program": "EMRD",
+      "name": "何慶宏",
+      "title": "智慧影像監控系統於軌道車輛市場之產品開發策略 以M公司工業影像網路事業處為例",
+      "titleEn": "The Product Development Strategy of Intelligent Video Surveillance in Rolling Stock Market - A study on the basis of M company Industrial Video Networking Business Unit",
+      "advisor": "戴文凱、游進陽、翁立賢",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/201b7a5b53f7199bd700456a3c3d405d/",
+      "topics": [
+        "其他"
+      ]
+    },
+    {
+      "year": 106,
+      "program": "EMRD",
+      "name": "余孟修",
+      "title": "射頻前端模組於第五代無線通訊之產品策略規劃 - 以M公司為例",
+      "titleEn": "New Product Strategy Of Radio Front End Module In The 5th Generation Wireless Communication Technology: M Company",
+      "advisor": "袁建中、郭進星",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/907a213a9fcb1bcf755a2ba2e500f09d/",
+      "topics": [
+        "網通/5G",
+        "零組件"
+      ]
+    },
+    {
+      "year": 106,
+      "program": "EMRD",
+      "name": "孫旭輝",
+      "title": "智慧型手機之玻璃機殼研發管理、策略與挑戰 -以H公司為例",
+      "titleEn": "Glass Case R&D Management, Strategies and Challenges of Smart Phone - The Case of H Company",
+      "advisor": "游進陽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/69eb31e4c373a2e7a5a52048bd3c9cf8/",
+      "topics": [
+        "消費電子"
+      ]
+    },
+    {
+      "year": 106,
+      "program": "EMRD",
+      "name": "張仁程",
+      "title": "資料中心廠商綠能在電力效能提高之產品研發技術策略-以V公司為例",
+      "titleEn": "Data Center Manufacturer Green Energy's R&D Technical Strategy for Enhancing Power Efficiency - Taking V Company as an Example",
+      "advisor": "邱煌仁、游進陽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/a0a4429a489565bea717caf5b8de5a78/",
+      "topics": [
+        "伺服器",
+        "能源/電力"
+      ]
+    },
+    {
+      "year": 106,
+      "program": "EMRD",
+      "name": "朱茂維",
+      "title": "Type-C介面控制晶片發展在智慧型手持裝置之研究",
+      "titleEn": "Type-C Interface Control Chips Development & Research",
+      "advisor": "袁建中、郭進星",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/b65ec5e7ee9ed8593698db0fd2fbe57d/",
+      "topics": [
+        "半導體"
+      ]
+    },
+    {
+      "year": 106,
+      "program": "EMRD",
+      "name": "王敏益",
+      "title": "智慧健康生理監控產品研發經營策略-以公司無線通訊部門為例",
+      "titleEn": "Research and development policy of wisdom health physiology surveillance instruments, to the wireless communication department of A company as an example",
+      "advisor": "周碩彥、郭進星",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/80ee69d953a14120fbd4b8c8af086723/",
+      "topics": [
+        "網通/5G",
+        "醫療/健康"
+      ]
+    },
+    {
+      "year": 106,
+      "program": "EMRD",
+      "name": "簡敏隆",
+      "title": "連結終端裝置I/O開發策略 -以A公司為例",
+      "titleEn": "Connected I/O Development Strategy of Terminal Devices - A Case Study of Company A",
+      "advisor": "李維楨、陳鴻儀",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/ea33860022921104feb95e7515d45038/",
+      "topics": [
+        "其他"
+      ]
+    },
+    {
+      "year": 106,
+      "program": "EMRD",
+      "name": "董銘仁",
+      "title": "指紋辨識智能卡應用發展策略",
+      "titleEn": "Fingerprint identification smart card application development strategy",
+      "advisor": "郭景明、郭進星",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/3ed0c10b4a35df70958c73fe6065f341/",
+      "topics": [
+        "其他"
+      ]
+    },
+    {
+      "year": 106,
+      "program": "EMRD",
+      "name": "蒙大德",
+      "title": "板對板連接器應用與發展策略",
+      "titleEn": "Application and Development Strategy of Board-To-Board Connectors",
+      "advisor": "李維楨、陳鴻儀",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/255c5deffc696b3decd754d4cbbcada7/",
+      "topics": [
+        "零組件"
+      ]
+    },
+    {
+      "year": 106,
+      "program": "EMRD",
+      "name": "鄧憶中",
+      "title": "機器翻新概念應用於機器聯網之研發策略 -以關鍵零組件製造廠F公司為例",
+      "titleEn": "Application of Retrofitting concept to the R&D strategy of Internet of Machines - A case study on key component manufacturing company F",
+      "advisor": "周碩彥、游進陽",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/e89874552ea19e0d1c9b4ed377fd54ef/",
+      "topics": [
+        "智慧製造"
+      ]
+    },
+    {
+      "year": 106,
+      "program": "EMRD",
+      "name": "陳本何",
+      "title": "搭配引擎動力啟動與停止系統之智能電池感測器研發技術策略-以E公司為例",
+      "titleEn": "The Development Strategy study of Intelligent Battery Sensor in An Engine Power Start and Stop System - A Case Study of E Company",
+      "advisor": "袁建中、郭進星",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/284c2f2d5c9a147a1333d5fc1c166e65/",
+      "topics": [
+        "能源/電力",
+        "零組件"
+      ]
+    },
+    {
+      "year": 106,
+      "program": "EMRD",
+      "name": "黃則霖",
+      "title": "異構運算之主要硬體加速技術之探討與伺服器硬體廠商的機會",
+      "titleEn": "Heterogeneous Computing hardware acceleration techniques",
+      "advisor": "陳維美",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/dd804b7b34935dfec6793a97f26976a6/",
+      "topics": [
+        "AI",
+        "伺服器"
+      ]
+    },
+    {
+      "year": 105,
+      "program": "EMRD",
+      "name": "何承家",
+      "title": "電子遊戲I公司部門研發經營策略",
+      "titleEn": "Departmental Strategies Of R&D And Management In Video Game Company",
+      "advisor": "李柯柱、鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/41149623b44f81ba39a36ab946b8c15c/",
+      "topics": [
+        "遊戲/電競"
+      ]
+    },
+    {
+      "year": 105,
+      "program": "EMRD",
+      "name": "劉福祥",
+      "title": "以專利分析探討深度學習之應用與發展趨勢",
+      "titleEn": "The Application and Development of Deep Learning with Patent Analysis",
+      "advisor": "袁建中",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/30f30f2161bd7a6b8599e5c323f51cc2/",
+      "topics": [
+        "AI",
+        "專利/智財"
+      ]
+    },
+    {
+      "year": 105,
+      "program": "EMRD",
+      "name": "吳啟豪",
+      "title": "研發技術前瞻策略--以I公司部門為例",
+      "titleEn": "Research and Development technology foresight Strategy--A Case Study on I corporation department",
+      "advisor": "鄭正元、陳阿見",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/f2c6fefd99c245fb2048973a816afd38/",
+      "topics": [
+        "其他"
+      ]
+    },
+    {
+      "year": 105,
+      "program": "EMRD",
+      "name": "張寓順",
+      "title": "以專利分析法探討自動駕駛汽車產業的發展",
+      "titleEn": "Patent Analysis For Autonomous Vehicle Industry",
+      "advisor": "袁建中",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/b3251b83c4e25827721379bac3fda228/",
+      "topics": [
+        "車用",
+        "專利/智財"
+      ]
+    },
+    {
+      "year": 105,
+      "program": "EMRD",
+      "name": "李奇澤",
+      "title": "小尺寸利基型矽晶圓廠技術發展與產品策略研究-以G公司為例",
+      "titleEn": "Technology Development and Product Strategy of Small-Size Niche Silicon Wafer Makers – the Case of Company G",
+      "advisor": "鄭正元、徐文慶",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/7c87894ab7a495106db1b58e3f83aa91/",
+      "topics": [
+        "半導體"
+      ]
+    },
+    {
+      "year": 105,
+      "program": "EMRD",
+      "name": "楊鎮銨",
+      "title": "台灣半導體封測公司之策略分析及研究 -以中小型封測公司為例",
+      "titleEn": "The Strategy Analysis of Taiwan Assembly and Test Enterprise in Semi-conductor Chain of Taiwan-As examples of Small & Medium Assembly and Test Enterprise",
+      "advisor": "邱智瑋、鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/f485a35172cb49a194660c602efccfca/",
+      "topics": [
+        "半導體"
+      ]
+    },
+    {
+      "year": 105,
+      "program": "EMRD",
+      "name": "汪桂玲",
+      "title": "金融科技之車用保險 (UBI) 產業專利分析與探討",
+      "titleEn": "Patent analysis and study for Usage-based insurance (UBI) of FinTech",
+      "advisor": "袁建中、鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/a3d99966f483320783802719cf6fb394/",
+      "topics": [
+        "車用",
+        "專利/智財"
+      ]
+    },
+    {
+      "year": 105,
+      "program": "EMRD",
+      "name": "王子豪",
+      "title": "開源軟體Linux於企業物聯網Gateway之應用",
+      "titleEn": "Applying Open Source Software-Linux to Enterprise IoT Gateway",
+      "advisor": "周碩彥、鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/3ec0e489f7d1c03b5d454dfa62f1e74f/",
+      "topics": [
+        "物聯網",
+        "軟體/服務"
+      ]
+    },
+    {
+      "year": 105,
+      "program": "EMRD",
+      "name": "鄭慶福",
+      "title": "虛擬實境頭戴式顯示器技術發展之研究-搭配個人電腦與智慧型手機之A公司為例",
+      "titleEn": "A study on the head-mounted display technology development of virtual reality-with personal computers and smart phones as an example",
+      "advisor": "戴文凱、鄭正元",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/80951cf32bcaf9660adb7bb8e68141c8/",
+      "topics": [
+        "顯示/光電",
+        "消費電子"
+      ]
+    },
+    {
+      "year": 105,
+      "program": "EMRD",
+      "name": "陳維偉",
+      "title": "大量個人化客製之技術策略藍圖: 以個人電腦產業為例",
+      "titleEn": "Personal Customized Mass Production Technology Roadmap: A Case Study of Personal Computer",
+      "advisor": "鄭正元、梁瓊如",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/194dbc14c2e6d3afa2b94d0c8b15253b/",
+      "topics": [
+        "消費電子"
+      ]
+    },
+    {
+      "year": 105,
+      "program": "EMRD",
+      "name": "陳繼勻",
+      "title": "記憶體模組廠在智慧城市應用中的產品與技術發展之個案研究",
+      "titleEn": "Product and Technique Development of Memory Module Manufacturer in Smart City Applications",
+      "advisor": "鄭正元、周碩彥",
+      "url": "https://etheses.lib.ntust.edu.tw/detail/9d0dfa53b3d2e34dfb10d8277411e208/",
+      "topics": [
+        "記憶體",
+        "物聯網"
+      ]
+    }
+  ]
+}

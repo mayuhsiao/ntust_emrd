@@ -146,14 +146,24 @@
   "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFOREkwTTE4eE56YzVNVEl3WHpjek56TTFMbkJrWmc9PQ==&fname=WW54RPOKRK44VXHHVS04TSWTKKMOTSYW20QKTSHCUT05XWTSZWUSA001GGECB0SSSSTSWWMPA40441JGYWJGMO25KL34WTWSA1YTA4FCWSMKPODGCCLKWXXX44XWXXKKA4NO41WTXSTWA1MO50JCYSWS44UXKKB0WS303054WSA4JG54A4US211524LKNOWTPK30WTRL20A040NPZTZT30SS14YWXWA4DGDCRPUSNOKKQLXXLOHG30MOFC30NP25WSJCXSGCIHRLIGB5ROB4PPUWCCOKB4QK44POXT15FG04TXXTVWXSOKLKUSFGRLHG": {
     "path": "/legacy/files/aee4e251b1-1110723-112.pdf",
     "kind": "file",
-    "bytes": 1159450,
+    "bytes": 439338,
     "originalBytes": 1159450,
     "contentType": "application/octet-stream",
     "filename": "1110723-112學年調整學分費公聽會會議紀錄(公告).pdf",
     "resized": false,
-    "sha1": "722b7bb436c70953c8cdf91af74e091a80b1279c",
+    "sha1": "58721f56c2d986a1a39aec4238c74acc68b1cfbe",
     "originalPath": "/legacy/files/aee4e251b1-1110723-112.pdf",
-    "originalSha1": "722b7bb436c70953c8cdf91af74e091a80b1279c"
+    "originalSha1": "722b7bb436c70953c8cdf91af74e091a80b1279c",
+    "privacySpec": "v1;pages1,2,3",
+    "privacy": {
+      "rule": "pdf_pages",
+      "keptPages": [
+        1,
+        2,
+        3
+      ],
+      "pagesBefore": 8
+    }
   },
   "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODBNamd3TjE4eE1qRTFNREF3WHpVek1qazFMbkJrWmc9PQ==&fname=WSGGKLQKUSWWA100HCLKROZWOPMOWTLOFGB0XSKKVX25004034YWYW54LOLKB0OKPOCCYXKKVS0410WWMOHCTSLO34B0NOYSVXVXDCTSROB0CDUWFHA4YWFC2040HHKKDGA0DGWTTWMOPO35WX24ZWYS44UXSSTSFC3030US20GCHHHH": {
     "path": "/legacy/files/a63095fd05-file.pdf",
@@ -191,18 +201,6 @@
     "originalPath": "/legacy/files/a19fe16105-111.pdf",
     "originalSha1": "4cb89badce28e9262654c358ada2aecf9e23e6bb"
   },
-  "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF2Y0hSaFh6TTJPVFkxWHpNMk1qYzRNREZmT1Rrd056RXVjR1Jt&fname=WW54RPOKNPSSTXKK00VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHA450OOCDPKIC40TTZXHCNO5020VWB4WSICWSNO4035CCGDMLA0WSEC45B4YSOKYSB0YW54PL15EDXWPK10&cg=7718": {
-    "path": "/legacy/files/43b26c2c70-109.pdf",
-    "kind": "file",
-    "bytes": 157274,
-    "originalBytes": 157274,
-    "contentType": "application/octet-stream",
-    "filename": "109-抵免學分申請結果公告.pdf",
-    "resized": false,
-    "sha1": "4263a905e8e20dd28092594ea9f28b9215b50091",
-    "originalPath": "/legacy/files/43b26c2c70-109.pdf",
-    "originalSha1": "4263a905e8e20dd28092594ea9f28b9215b50091"
-  },
   "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF6TDNCMFlWODBOalUzTlY4ek5UTTJOakl5WHpVME5UTTFMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWUSWTZSB4KKMKDGFGQLIG41NP34SSFCB4YSFG00OOKLSSPOCCVXXXDG04FCXTVWXSTSLO50B01035IH35XWA0WSECWXPOUS5445FCRKPOOOYXDGA0EGGDVWSWGD24WX24ZWYS44UXSSTSFC3030US20GCHHHH": {
     "path": "/legacy/files/14a42c92dc-110-02-semi.pdf",
     "kind": "file",
@@ -214,18 +212,6 @@
     "sha1": "cd26bd02434e89409ef3d5dd493778955960c914",
     "originalPath": "/legacy/files/14a42c92dc-110-02-semi.pdf",
     "originalSha1": "cd26bd02434e89409ef3d5dd493778955960c914"
-  },
-  "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MemM0TDNCMFlWODBNelV4TVY4ME16RTBOell5WHpRek5EZ3dMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1100VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHPODGSSKLECRKPOFDYXJCNO41HGXSKOHGICSTMO24NK44UXUTB0LKB4KOPKYSA4LKQKKKCGA500IG04GD34VWJGGDB1B430A1A1&cg=7718": {
-    "path": "/legacy/files/56c0b27d16-110.pdf",
-    "kind": "file",
-    "bytes": 287496,
-    "originalBytes": 287496,
-    "contentType": "application/octet-stream",
-    "filename": "110-抵免學分申請清單(公告).pdf",
-    "resized": false,
-    "sha1": "7d218f198a0885ac596bde6ef8ee368a0edf2e53",
-    "originalPath": "/legacy/files/56c0b27d16-110.pdf",
-    "originalSha1": "7d218f198a0885ac596bde6ef8ee368a0edf2e53"
   },
   "https://emrd.ntust.edu.tw/var/file/24/1024/img/1001/944315992.bmp": {
     "path": "/legacy/img/1674cfcccc-944315992.png",
@@ -7093,23 +7079,6 @@
     "height": 420,
     "originalWidth": 299,
     "originalHeight": 420
-  },
-  "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/0910mail-page-0001.jpg?1568790002": {
-    "path": "/legacy/img/ad642c666c-0910mail-page-0001.jpg",
-    "kind": "img",
-    "bytes": 61194,
-    "contentType": "image/jpeg",
-    "filename": "0910mail-page-0001.jpg",
-    "resized": false,
-    "sha1": "fc2e825e1899dbe3e15a5c9abcc757bc0795e23e",
-    "originalPath": "/legacy/img/ad642c666c-0910mail-page-0001.jpg",
-    "originalSha1": "fc2e825e1899dbe3e15a5c9abcc757bc0795e23e",
-    "originalBytes": 61194,
-    "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/0910mail-page-0001.jpg?1568790002",
-    "width": 1070,
-    "height": 375,
-    "originalWidth": 1070,
-    "originalHeight": 375
   },
   "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/0919.png?1568951546": {
     "path": "/legacy/img/710c4dc113-0919.png",

@@ -1,5 +1,6 @@
 import { Download, FileText } from "lucide-react";
 import type { LegacyAttachment } from "@/content/legacy/types";
+import { withBasePath } from "@/lib/basePath";
 
 type AttachmentListProps = {
   attachments: readonly LegacyAttachment[];
@@ -24,7 +25,7 @@ export function AttachmentList({ attachments, className }: AttachmentListProps) 
         {attachments.map((file) => (
           <li key={file.href}>
             <a
-              href={file.href}
+              href={withBasePath(file.href)}
               className="group flex min-h-16 items-center gap-4 rounded-md border border-stroke bg-white px-4 py-3 transition-colors duration-200 hover:border-brand-200 hover:bg-brand-50/60"
             >
               <span

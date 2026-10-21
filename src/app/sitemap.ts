@@ -12,6 +12,15 @@ import { site } from "@/lib/site";
 
 type Entry = MetadataRoute.Sitemap[number];
 
+/**
+ * 靜態匯出（GitHub Pages 預覽版）要求 Route Handler 明確宣告為靜態；cacheComponents 不允許
+ * dynamic／revalidate，改以 generateStaticParams 宣告（說明見 app/robots.ts）。正式建置行為不變。
+ * 預覽版仍輸出正式網域的網址（本檔只供正式網站使用；預覽版的 HTML 頁面以 noindex 排除索引，robots.txt 不引用本檔）。
+ */
+export function generateStaticParams() {
+  return [{}];
+}
+
 /** 列表單元一律可瀏覽（資料檔尚未產生時顯示空清單）；其餘頁面需有搬遷資料 */
 function pageExists(page: IaPage) {
   return Boolean(page.collection || getPage(page.slug));

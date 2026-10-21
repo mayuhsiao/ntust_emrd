@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, FileText } from "lucide-react";
 import type { LegacyListItem } from "@/content/legacy/types";
+import { withBasePath } from "@/lib/basePath";
 import { titleTag } from "@/lib/legacy";
 import { PostTag } from "./PostTag";
 
@@ -69,7 +70,7 @@ export function ItemList({ items, title, className }: ItemListProps) {
                   {body}
                 </a>
               ) : isFile || item.href.startsWith("/legacy/") ? (
-                <a href={item.href} className={rowClass}>
+                <a href={withBasePath(item.href)} className={rowClass}>
                   {body}
                 </a>
               ) : (

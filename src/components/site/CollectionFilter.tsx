@@ -4,6 +4,7 @@ import { useId, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Newspaper, PlayCircle, Search, X } from "lucide-react";
+import { withBasePath } from "@/lib/basePath";
 import { cn } from "@/lib/cn";
 import { PostTag } from "./PostTag";
 
@@ -245,8 +246,9 @@ function Thumbnail({ cover, placeholder }: { cover?: string; placeholder: "news"
     >
       {cover ? (
         cover.startsWith("/") ? (
+          // next/image 不會替字串 src 加上 basePath（basePath.md「Images」）
           <Image
-            src={cover}
+            src={withBasePath(cover)}
             alt=""
             fill
             sizes="(min-width: 640px) 160px, 96px"

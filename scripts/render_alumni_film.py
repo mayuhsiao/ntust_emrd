@@ -30,8 +30,8 @@ EMRD 校友形象片（第二款，15 秒）——「校友與同儕的連結」
   python -X utf8 scripts/render_alumni_film.py --width 960 --height 540 \\
       --preview 0,1.5,2.9,4,4.55,6.3,7.2,8.8,9.8,11.6,13,14.5 --preview-dir <暫存資料夾>
 
-輸出：media/videos/emrd-alumni-15s.mp4 與封面 media/videos/emrd-alumni-poster.jpg
-      （網站未使用的成品，放在 public/ 之外，不隨網站部署）
+輸出：public/videos/emrd-alumni-15s.mp4 與封面 public/videos/emrd-alumni-poster.jpg
+      （首頁「社群與校友」區塊播放此片，隨網站部署；重新渲染後首頁即使用新版）
 需求：Python 3.10+、numpy、opencv-python、Pillow，以及 PATH 上的 ffmpeg。
 """
 
@@ -78,8 +78,8 @@ from render_hero_video import (  # noqa: E402
 
 ROOT = hero.ROOT
 PHOTO_DIR = ROOT / "reference_形象素材"
-# 網站未使用的影片成品：放在 public/ 之外，不會被部署或公開存取
-VIDEO_DIR = ROOT / "media" / "videos"
+# 首頁「社群與校友」區塊（src/components/sections/Community.tsx）使用的影片：放在 public/ 隨網站部署
+VIDEO_DIR = ROOT / "public" / "videos"
 OUT_VIDEO = VIDEO_DIR / "emrd-alumni-15s.mp4"
 OUT_POSTER = VIDEO_DIR / "emrd-alumni-poster.jpg"
 

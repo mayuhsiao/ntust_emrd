@@ -11,6 +11,7 @@ import { PageHeader } from "@/components/site/PageHeader";
 import { PostPager } from "@/components/site/PostPager";
 import { PostTag } from "@/components/site/PostTag";
 import { SideNav } from "@/components/site/SideNav";
+import { withBasePath } from "@/lib/basePath";
 import { breadcrumbs, findPage, hrefFor, type Crumb } from "@/lib/ia";
 import {
   allPostIds,
@@ -233,7 +234,7 @@ function LinkPostCallout({ href, label }: { href: string; label: string }) {
           <span className="sr-only">（另開新視窗）</span>
         </a>
       ) : href.startsWith("/legacy/") ? (
-        <a href={href} className={className}>
+        <a href={withBasePath(href)} className={className}>
           開啟檔案
           <ArrowRight aria-hidden="true" className="size-4.5" />
         </a>

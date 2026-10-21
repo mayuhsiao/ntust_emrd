@@ -1,0 +1,100 @@
+# GitHub Pages 預覽版：將網站靜態匯出後部署到 https://mayuhsiao.github.io/ntust_emrd/ ，供同仁瀏覽。
+#
+# 這是「預覽」而非正式網站：
+#  - 正式網站（emrd.ntust.edu.tw）以 `npm run build` 建置完整 Next 伺服器（舊站轉址、安全標頭、圖片最佳化），
+#    與本工作流程無關，也不受影響。
+#  - 匯出模式由 next.config.ts 依 NEXT_OUTPUT=export 切換：output: "export"、圖片不最佳化、
+#    每頁輸出 <路徑>/index.html、關閉 cacheComponents（Next 16.4 的匯出不支援），
+#    並在頁首顯示預覽提示列、全站 HTML 以 noindex 排除索引（子路徑下的 robots.txt 不會被搜尋引擎讀取，
+#    PDF／圖片等檔案無法以 noindex 排除；說明見 README「預覽網站」）。
+#  - 子路徑 /ntust_emrd 取自 configure-pages 的 base_path（日後改用自訂網域時自動變為空字串）；
+#    站內原始字串網址皆經 src/lib/basePath.ts 的 withBasePath() 加上前綴。
+#
+# 一次性設定：GitHub 儲存庫 Settings → Pages → Build and deployment → Source 選「GitHub Actions」。
+# 本儲存庫為公開儲存庫，免費方案即可使用 GitHub Pages。
+
+name: Deploy preview to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同一時間只部署一次；進行中的部署不取消，避免網站停在半套狀態
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Install dependencies
+        run: npm ci
+
+      # 以下兩項只修改 CI 工作目錄中的檔案，不會提交回儲存庫
+      - name: Prepare sources for static export
+        run: |
+          # 1. src/proxy.ts（舊站網址轉址）需要 Next 伺服器，靜態匯出不支援 Proxy（保留時 Next 只會警告
+          #    並略過它），建置前明確移除。預覽版因此沒有舊網址轉址；舊網址請以正式網站測試。
+          rm -f src/proxy.ts
+          # 2. ensureStatic／instant／unstable_paramMatching 只在 cacheComponents 下有效（否則建置失敗），
+          #    匯出模式關閉 cacheComponents，故刪除這三行單行宣告。它們只決定伺服器如何對未知網址回應 404，
+          #    靜態主機一律回應 404.html，效果相同。
+          grep -rlZE '^export const (ensureStatic|unstable_paramMatching|instant) = ' src/app \
+            | xargs -0 -r sed -i -E '/^export const (ensureStatic|unstable_paramMatching|instant) = /d'
+
+      - name: Build static export
+        run: npm run build
+        env:
+          NEXT_OUTPUT: export
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          NEXT_PUBLIC_SITE_URL: ${{ steps.pages.outputs.base_url }}
+          NEXT_TELEMETRY_DISABLED: 1
+
+      # 檔案慣例的分享圖（app/opengraph-image.jpg）網址已含 basePath，Next 又接上含子路徑的
+      # metadataBase，首頁與 404 頁的 og:image／twitter:image 因此變成 /ntust_emrd/ntust_emrd/…；
+      # 在 HTML 與 RSC 酬載（.txt）中把重複的子路徑還原為一層（正常網址不會出現連續兩次子路徑）。
+      - name: Fix duplicated base path in share image URLs
+        if: steps.pages.outputs.base_path != ''
+        env:
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: find out \( -name '*.html' -o -name '*.txt' \) -exec sed -i "s#${BASE_PATH}${BASE_PATH}/#${BASE_PATH}/#g" {} +
+
+      # GitHub Pages 的 Jekyll 會略過底線開頭的資料夾（_next/），加上 .nojekyll 確保原樣發布
+      - name: Disable Jekyll
+        run: touch out/.nojekyll
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

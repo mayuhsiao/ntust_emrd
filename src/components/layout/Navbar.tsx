@@ -11,7 +11,7 @@ import {
   type FocusEvent,
 } from "react";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, CalendarCheck, Download, Menu, X } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CalendarCheck, Download, Menu, Search, X } from "lucide-react";
 import {
   DESKTOP_QUERY,
   DesktopMegaNav,
@@ -19,11 +19,15 @@ import {
   groupKeyForPath,
   homeSectionGroups,
 } from "@/components/layout/MegaMenu";
+import { openSearch } from "@/components/search/openSearch";
+import { SearchButton } from "@/components/search/SearchButton";
+import { SearchDialog } from "@/components/site/SearchDialog";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
 import { utilityBar } from "@/content/home";
 import { cn } from "@/lib/cn";
+import { lockScroll } from "@/lib/scrollLock";
 import { site } from "@/lib/site";
 
 /** 工具列高度 h-10（2.5rem）；讀不到元素時的後備值 */
@@ -113,14 +117,16 @@ export function Navbar({ pathname }: { pathname: string | null }) {
   const [menuOpen, setMenuOpen] = useState(false);
   // Activity 保留的隱藏路由也有一份頁首，故以 useId 產生唯一 id，不與其他頁首衝突
   const utilityBarId = useId();
-  const getIsScrolled = useCallback(
-    // 捲過工具列（主導覽列已貼齊頂端）才切換為白色磨砂玻璃；以實際高度判斷，文字縮放時亦準確
-    () =>
-      window.scrollY >=
-      (document.getElementById(utilityBarId)?.offsetHeight ||
-        UTILITY_BAR_FALLBACK_HEIGHT),
-    [utilityBarId],
-  );
+  const getIsScrolled = useCallback(() => {
+    // 捲過工具列（主導覽列已貼齊頂端）才切換為白色磨砂玻璃。以頁首的實際位置與工具列高度判斷：
+    // 頁首上方另有內容（預覽版提示列）時捲動距離不等於工具列高度，文字縮放時亦準確
+    const bar = document.getElementById(utilityBarId);
+    const header = bar?.parentElement;
+    if (!bar || !header || bar.offsetHeight === 0) {
+      return window.scrollY >= UTILITY_BAR_FALLBACK_HEIGHT;
+    }
+    return header.getBoundingClientRect().top <= 0.5 - bar.offsetHeight;
+  }, [utilityBarId]);
   const isScrolled = useSyncExternalStore(
     subscribeToScroll,
     getIsScrolled,
@@ -132,6 +138,7 @@ export function Navbar({ pathname }: { pathname: string | null }) {
     ? (activeSectionId && homeSectionGroups.get(activeSectionId)) || null
     : groupKeyForPath(pathname);
   const toggleRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
   const menuId = useId();
 
   /** 白底狀態：已捲動（磨砂玻璃）或行動選單展開（不透明白） */
@@ -142,17 +149,27 @@ export function Navbar({ pathname }: { pathname: string | null }) {
   // Cache Components 以 <Activity> 保留離開的路由；隱藏時收合選單，避免返回後仍鎖定捲動
   useLayoutEffect(() => () => setMenuOpen(false), []);
 
+  // 選單面板高度：自頁首底緣到視窗底部（開啟期間頁面不能捲動，最後一項須在視窗內）。
+  // 以實際位置計算：尚未捲過工具列、或頁首上方另有預覽版提示列時，頁首底緣低於固定的 4rem／6.5rem
+  useLayoutEffect(() => {
+    const panel = menuRef.current;
+    const header = panel?.parentElement;
+    if (!menuOpen || !panel || !header) return;
+    const fit = () => {
+      const top = Math.max(0, header.getBoundingClientRect().bottom);
+      panel.style.maxHeight = `calc(100dvh - ${top}px)`;
+    };
+    fit();
+    window.addEventListener("resize", fit);
+    return () => window.removeEventListener("resize", fit);
+  }, [menuOpen]);
+
   // 選單開啟期間：鎖定頁面捲動、Esc 關閉並歸還焦點、放大至桌機斷點時自動收合
   useEffect(() => {
     if (!menuOpen) return;
 
-    const root = document.documentElement;
-    const previous = {
-      overflow: root.style.overflow,
-      scrollbarGutter: root.style.scrollbarGutter,
-    };
-    root.style.overflow = "hidden";
-    root.style.scrollbarGutter = "stable";
+    // 與搜尋視窗共用計數：在選單內開啟搜尋時，選單收合與視窗開啟發生在同一次更新
+    const releaseScroll = lockScroll();
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key !== "Escape") return;
@@ -168,8 +185,7 @@ export function Navbar({ pathname }: { pathname: string | null }) {
     desktop.addEventListener("change", handleBreakpoint);
 
     return () => {
-      root.style.overflow = previous.overflow;
-      root.style.scrollbarGutter = previous.scrollbarGutter;
+      releaseScroll();
       document.removeEventListener("keydown", handleKeyDown);
       desktop.removeEventListener("change", handleBreakpoint);
     };
@@ -277,7 +293,8 @@ export function Navbar({ pathname }: { pathname: string | null }) {
                 : "border-white/10 bg-brand-900",
           )}
         >
-          <Container className="flex h-full items-center justify-between gap-4">
+          {/* lg–xl 之間寬度最緊（1024px 僅餘約 20px），間距略縮以容納搜尋鈕 */}
+          <Container className="flex h-full items-center justify-between gap-4 lg:max-xl:gap-3">
             <Link
               href={isHome ? "/#top" : "/"}
               aria-label={`${site.name}（${isHome ? "回到頁首" : "回到首頁"}）`}
@@ -316,55 +333,71 @@ export function Navbar({ pathname }: { pathname: string | null }) {
             />
 
             {/*
-              六個單元＋完整標準字已用滿 1280px 容器，主導覽列只留一個 CTA；
+              六個單元＋完整標準字已用滿 1280px 容器，主導覽列只留搜尋鈕與一個 CTA；
               簡章下載改列於工具列與「招生專區」面板（行動版選單底部亦有）。
+              CTA 圖示於 82rem（1312px）以下隱藏、lg–xl 左右內距縮為 px-4，騰出搜尋鈕（44px）的寬度。
             */}
-            <div className="hidden shrink-0 lg:flex">
-              <ButtonLink
-                href={site.links.consultation}
-                variant={onLight ? "primary" : "accent"}
-                title={consultationTitle}
-              >
-                <CalendarCheck aria-hidden="true" className="size-4" />
-                線上預約諮詢
-              </ButtonLink>
-            </div>
+            <div className="flex shrink-0 items-center gap-1">
+              <SearchButton onLight={onLight} />
 
-            <button
-              ref={toggleRef}
-              type="button"
-              aria-expanded={menuOpen}
-              aria-controls={menuId}
-              aria-label={menuOpen ? "關閉主選單" : "開啟主選單"}
-              onClick={() => setMenuOpen((open) => !open)}
-              className={cn(
-                "-mr-2 inline-flex size-11 shrink-0 items-center justify-center rounded-md transition-colors duration-300 lg:hidden",
-                onLight
-                  ? "text-brand-950 hover:bg-brand-50"
-                  : "text-white hover:bg-white/10 focus-visible:outline-champagne-200",
-              )}
-            >
-              {menuOpen ? (
-                <X aria-hidden="true" className="size-6" strokeWidth={1.75} />
-              ) : (
-                <Menu aria-hidden="true" className="size-6" strokeWidth={1.75} />
-              )}
-            </button>
+              <div className="hidden shrink-0 lg:flex">
+                <ButtonLink
+                  href={site.links.consultation}
+                  variant={onLight ? "primary" : "accent"}
+                  title={consultationTitle}
+                  className="lg:max-xl:px-4"
+                >
+                  <CalendarCheck aria-hidden="true" className="size-4 max-[82rem]:hidden" />
+                  線上預約諮詢
+                </ButtonLink>
+              </div>
+
+              <button
+                ref={toggleRef}
+                type="button"
+                aria-expanded={menuOpen}
+                aria-controls={menuId}
+                aria-label={menuOpen ? "關閉主選單" : "開啟主選單"}
+                onClick={() => setMenuOpen((open) => !open)}
+                className={cn(
+                  "-mr-2 inline-flex size-11 shrink-0 items-center justify-center rounded-md transition-colors duration-300 lg:hidden",
+                  onLight
+                    ? "text-brand-950 hover:bg-brand-50"
+                    : "text-white hover:bg-white/10 focus-visible:outline-champagne-200",
+                )}
+              >
+                {menuOpen ? (
+                  <X aria-hidden="true" className="size-6" strokeWidth={1.75} />
+                ) : (
+                  <Menu aria-hidden="true" className="size-6" strokeWidth={1.75} />
+                )}
+              </button>
+            </div>
           </Container>
         </div>
 
+        {/* max-height 於開啟時依頁首實際位置設定（見上方 layout effect）；class 為量測前的後備值 */}
         <div
+          ref={menuRef}
           id={menuId}
           hidden={!menuOpen}
-          className={cn(
-            "absolute inset-x-0 top-full overflow-y-auto overscroll-contain border-b border-stroke bg-white shadow-sm transition-[opacity,translate] duration-200 ease-out starting:-translate-y-2 starting:opacity-0 lg:hidden",
-            // 尚未捲過工具列時，選單上緣多了工具列的高度
-            isScrolled
-              ? "max-h-[calc(100dvh-4rem)]"
-              : "max-h-[calc(100dvh-6.5rem)]",
-          )}
+          className="absolute inset-x-0 top-full max-h-[calc(100dvh-6.5rem)] overflow-y-auto overscroll-contain border-b border-stroke bg-white shadow-sm transition-[opacity,translate] duration-200 ease-out starting:-translate-y-2 starting:opacity-0 lg:hidden"
         >
           <Container className="py-4 sm:py-6">
+            {/* 全站搜尋：先收合選單再開啟搜尋視窗，關閉後焦點回到頁首的搜尋鈕 */}
+            <button
+              type="button"
+              aria-haspopup="dialog"
+              onClick={() => {
+                closeMenu();
+                openSearch();
+              }}
+              className="mb-3 flex min-h-12 w-full items-center gap-3 rounded-md border border-stroke bg-surface px-4 text-left text-base text-slate-600 transition-colors duration-200 hover:border-brand-200 hover:bg-brand-50 hover:text-brand-900"
+            >
+              <Search aria-hidden="true" className="size-5 shrink-0 text-brand-700" strokeWidth={1.9} />
+              搜尋網站
+            </button>
+
             {/* 換頁時重設手風琴，改為展開新頁面所屬的單元 */}
             <MobileNavGroups
               key={pathname ?? ""}
@@ -463,6 +496,8 @@ export function Navbar({ pathname }: { pathname: string | null }) {
           className="fixed inset-0 z-40 bg-brand-950/30 transition-opacity duration-200 starting:opacity-0 lg:hidden"
         />
       ) : null}
+
+      <SearchDialog />
     </>
   );
 }

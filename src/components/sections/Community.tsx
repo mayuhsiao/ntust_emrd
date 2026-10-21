@@ -1,13 +1,65 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
+import type { ReactNode } from "react";
+import { DeferredPosterVideo } from "@/components/site/DeferredPosterVideo";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { community, type CommunityItem } from "@/content/home";
 import { photos, type PhotoKey } from "@/content/photos";
+import { withBasePath } from "@/lib/basePath";
 import { cn } from "@/lib/cn";
 import { site } from "@/lib/site";
+
+/**
+ * 校友與同儕網絡短片（15 秒，無音軌）：由 scripts/render_alumni_film.py 輸出至 public/videos/。
+ * 子路徑部署（GitHub Pages 預覽）時 <video> 的原始字串網址不會自動加上 basePath，須經 withBasePath()。
+ */
+const film = {
+  src: withBasePath("/videos/emrd-alumni-15s.mp4"),
+  poster: withBasePath("/videos/emrd-alumni-poster.jpg"),
+  width: 1920,
+  height: 1080,
+  size: "6.5 MB",
+  titleId: "community-film-title",
+  noteId: "community-film-note",
+} as const;
+
+/** 影片文字說明（WCAG 1.2.1 無聲預錄影片的文字替代）；畫面文字與 render_alumni_film.py 一致 */
+const filmScenes: ReadonlyArray<{ time: string; label: string; body: ReactNode }> = [
+  {
+    time: "0–3 秒",
+    label: "同窗",
+    body: "一張戶外合照中，數十位身穿藍色上衣的校友在草地上同時跳起、高舉雙手。鏡頭緩緩推近，色調由暖色轉為臺科大藍，一道香檳金光痕沿著人群上方的樹梢線劃過。",
+  },
+  {
+    time: "3–8 秒",
+    label: "連結",
+    body: "鏡頭拉遠，合照成為深藍星空中漂浮的相片卡之一；金色連線逐一點亮其他活動照片，照片由藍色單色轉為全彩，串成同儕網絡。八張相片卡的標籤為「戶外活動」「校友聚餐」「校友路跑」「臺科大 50 週年」「課堂學習」「家庭日」「EMRD 10 週年」「運動大會」。",
+  },
+  {
+    time: "8–12 秒",
+    label: "匯聚",
+    body: (
+      <>
+        八張相片卡環繞成星座，中央光核凝聚為臺科大校徽，下方浮現標語「一屆同窗，一生夥伴」與英文副標「
+        <span lang="en">ONE COHORT · PARTNERS FOR LIFE</span>」。
+      </>
+    ),
+  },
+  {
+    time: "12–15 秒",
+    label: "片尾",
+    body: (
+      <>
+        光芒擴散為白底片尾卡：臺科大校徽與「國立臺灣科技大學」標準字（
+        <span lang="en">NATIONAL TAIWAN UNIVERSITY OF SCIENCE AND TECHNOLOGY</span>
+        ）、「<span lang="en">NTUST EMRD</span>」、一道香檳金細線、標語「研發之路，同行致遠」，以及「高階科技研發碩士在職專班　校友與同儕網絡」。
+      </>
+    ),
+  },
+];
 
 type Tier = "feature" | "prominent" | "base";
 
@@ -75,7 +127,9 @@ export function Community() {
           description={community.description}
         />
 
-        <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-6 lg:mt-16 lg:gap-6">
+        <CommunityFilm />
+
+        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-6 lg:mt-14 lg:gap-6">
           {mosaic.map(({ item, tier }) => (
             <MosaicCard key={item.photo} item={item} tier={tier} />
           ))}
@@ -104,6 +158,89 @@ export function Community() {
         </ul>
       </Container>
     </Section>
+  );
+}
+
+/**
+ * 精選短片：不自動播放（使用者按下播放才下載影片），preload="none"；
+ * 封面（約 280 KB）由 DeferredPosterVideo 在捲近影片時才載入，不與首屏圖片搶頻寬；
+ * 外框以 aspect-video 預留 16:9 空間，避免版面位移。影片無音軌，以下方 <details> 提供文字說明。
+ */
+function CommunityFilm() {
+  return (
+    <figure
+      aria-labelledby={film.titleId}
+      className="mt-12 grid items-start gap-6 lg:mt-16 lg:grid-cols-12 lg:gap-x-10"
+    >
+      <div className="relative aspect-video overflow-hidden rounded-md bg-brand-950 lg:col-span-7">
+        <DeferredPosterVideo
+          controls
+          playsInline
+          preload="none"
+          width={film.width}
+          height={film.height}
+          poster={film.poster}
+          src={film.src}
+          aria-labelledby={film.titleId}
+          aria-describedby={film.noteId}
+          className="absolute inset-0 size-full object-cover"
+        >
+          <p className="p-4 text-sm text-white">
+            您的瀏覽器無法播放此影片，請
+            <a href={film.src} className="underline underline-offset-4">
+              下載影片（MP4，{film.size}）
+            </a>
+            。
+          </p>
+        </DeferredPosterVideo>
+      </div>
+
+      <figcaption className="min-w-0 lg:col-span-5 lg:pt-1">
+        <p
+          lang="en"
+          className="flex items-center gap-3 text-xs font-semibold tracking-[0.2em] text-champagne-700 uppercase"
+        >
+          <span aria-hidden="true" className="h-px w-8 bg-champagne-500/70" />
+          Alumni Film
+        </p>
+        <h3
+          id={film.titleId}
+          className="mt-3 text-2xl leading-snug font-semibold tracking-[0.01em] text-balance text-brand-950 lg:text-[1.75rem]"
+        >
+          一屆同窗，一生夥伴
+          <span className="sr-only">｜</span>
+          <span className="mt-1.5 block text-base font-medium tracking-normal text-slate-600 lg:text-lg">
+            EMRD 校友與同儕網絡（15 秒）
+          </span>
+        </h3>
+        <p id={film.noteId} className="mt-4 text-base leading-relaxed text-pretty text-slate-600">
+          從一張戶外合照出發，八場活動的照片彼此相連，匯聚成畢業後依然同行的校友網絡。影片無聲音與旁白，畫面內容請見下方「影片文字說明」。
+        </p>
+
+        <details className="group/details mt-6 rounded-md border border-stroke bg-white">
+          <summary className="flex min-h-11 cursor-pointer list-none items-center gap-3 rounded-md px-4 py-2 text-[0.9375rem] font-medium text-brand-950 [&::-webkit-details-marker]:hidden">
+            <span className="flex-1">影片文字說明</span>
+            <ChevronDown
+              aria-hidden="true"
+              className="size-5 shrink-0 text-brand-600 transition-transform duration-200 group-open/details:rotate-180"
+            />
+          </summary>
+          <div className="border-t border-stroke px-4 py-4 text-sm leading-relaxed text-slate-700">
+            <ol className="space-y-3">
+              {filmScenes.map((scene) => (
+                <li key={scene.time}>
+                  <span className="font-semibold text-brand-950">
+                    {scene.time}｜{scene.label}：
+                  </span>
+                  {scene.body}
+                </li>
+              ))}
+            </ol>
+            <p className="mt-3 text-slate-600">全片無聲音、無旁白；畫面不出現任何個人姓名。</p>
+          </div>
+        </details>
+      </figcaption>
+    </figure>
   );
 }
 

@@ -1,5 +1,6 @@
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
 import Link from "next/link";
+import { withBasePath } from "@/lib/basePath";
 import { cn } from "@/lib/cn";
 
 type Variant =
@@ -89,7 +90,8 @@ export function ButtonLink({
 
   return (
     <a
-      href={href}
+      // 站內檔案（/legacy/files/…）不經 next/link，子路徑部署時需自行加上 basePath
+      href={withBasePath(href)}
       className={classes}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       {...props}

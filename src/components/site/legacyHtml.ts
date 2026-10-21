@@ -12,8 +12,11 @@
  *  5. 外部連結另開新視窗並提示；只有圖片的連結補上可辨識的替代文字；非 http(s)／mailto／tel
  *     或相對網址的 href 一律移除；iframe 補 title 與延遲載入；YouTube 嵌入改為點擊後才載入播放器；
  *     本機 mp4 改為原生 <video>
+ *  6. 子路徑部署（GitHub Pages 預覽版，src/lib/basePath.ts）：站內根路徑的 href／src／srcset
+ *     一律加上 basePath；正式網域部署時 basePath 為空字串，輸出與原本完全相同
  */
 import { getImageProps } from "next/image";
+import { basePath, withBasePath } from "@/lib/basePath";
 import { decodeEntities, plainText } from "@/lib/legacy";
 import { site } from "@/lib/site";
 import { TABLE_REGION_ATTR } from "./legacyTableRegion";
@@ -77,6 +80,40 @@ function setAttr(attrs: Array<Attr & { raw?: boolean }>, name: string, value: st
   } else {
     attrs.push({ name, value, raw: false });
   }
+}
+
+/** 站內根路徑（/legacy/…、/posts/…）：以單一「/」開頭，排除 protocol-relative 的「//」 */
+function isRootRelative(url: string) {
+  return url.startsWith("/") && !url.startsWith("//");
+}
+
+/**
+ * 為原始屬性值中的站內根路徑加上 basePath（6.）。只在開頭加上前綴，既有的字元參照維持原樣
+ * （raw 旗標不變，不會重複跳脫 &amp;）；srcset 逐一處理每個候選網址。basePath 為空時不改動。
+ */
+function prefixUrlAttrs(attrs: Array<Attr & { raw?: boolean }>, names: readonly string[]) {
+  if (!basePath) return false;
+  let changed = false;
+  for (const attr of attrs) {
+    if (attr.value === undefined || !names.includes(attr.name)) continue;
+    const value =
+      attr.name === "srcset"
+        ? attr.value
+            .split(",")
+            .map((candidate) => {
+              const trimmed = candidate.trim();
+              return isRootRelative(trimmed) ? candidate.replace(trimmed, withBasePath(trimmed)) : candidate;
+            })
+            .join(",")
+        : isRootRelative(attr.value.trim())
+          ? withBasePath(attr.value.trim())
+          : attr.value;
+    if (value !== attr.value) {
+      attr.value = value;
+      changed = true;
+    }
+  }
+  return changed;
 }
 
 /* ------------------------------------------------------------------ */
@@ -380,8 +417,9 @@ function rewriteImage(attrSource: string, eager: boolean) {
         : undefined;
 
     // srcset 只取決於寬度；缺高度時以寬度暫代以通過檢查，輸出時不寫入 height
+    // next/image 不會替字串 src 加上 basePath（basePath.md「Images」），需自行加上
     const { props } = getImageProps({
-      src,
+      src: withBasePath(src),
       alt,
       width,
       height: height ?? width,
@@ -403,6 +441,7 @@ function rewriteImage(attrSource: string, eager: boolean) {
   }
 
   // 外部圖片、非點陣格式或 HTML 未提供寬度：保留原始屬性（原圖直接輸出），補上延遲載入
+  prefixUrlAttrs(rest, ["src", "srcset"]);
   if (loading) setAttr(rest, "loading", loading);
   setAttr(rest, "decoding", "async");
   return `<img${serializeAttrs(rest)}>`;
@@ -417,12 +456,12 @@ function rewriteIframe(attrSource: string): { open: string; videoSrc?: string } 
     const output: Array<Attr & { raw?: boolean }> = [
       { name: "class", value: "legacy-video", raw: false },
       // #t=0.1：僅預載中繼資料時仍顯示第一個畫格作為封面
-      { name: "src", value: `${src}#t=0.1`, raw: false },
+      { name: "src", value: `${withBasePath(src)}#t=0.1`, raw: false },
       { name: "controls" },
       { name: "playsinline" },
       { name: "preload", value: "metadata", raw: false },
     ];
-    return { open: `<video${serializeAttrs(output)}>`, videoSrc: src };
+    return { open: `<video${serializeAttrs(output)}>`, videoSrc: withBasePath(src) };
   }
 
   const isCalendar = /^https:\/\/calendar\.google\.com\//i.test(src);
@@ -572,7 +611,9 @@ function rewriteInline(html: string) {
       return `<a${serializeAttrs(attrs.filter((attr) => attr.name !== "href"))}>`;
     }
     const href = decodeEntities(rawHref);
-    if (!isExternalHref(href)) return whole;
+    if (!isExternalHref(href)) {
+      return prefixUrlAttrs(attrs, ["href"]) ? `<a${serializeAttrs(attrs)}>` : whole;
+    }
     externalAnchorOpen = true;
     setAttr(attrs, "target", "_blank");
     setAttr(attrs, "rel", "noopener noreferrer");

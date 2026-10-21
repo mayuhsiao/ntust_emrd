@@ -43,6 +43,9 @@ next-env.d.ts
 # 舊站搬遷腳本（scripts/migrate_legacy.py）的 HTTP 快取 .legacy-cache/ 刻意納入版控：
 # 它是原網站的唯一快照，網域切換後無法重新抓取，重跑搬遷與還原原圖都需要它。
 
+# 個資保護：自網站移除或遮蔽前的原始檔（scripts/migrate_legacy.py 的 PRIVACY_REDACTIONS），只留本機、不進版控
+/.private-originals/
+
 # Python
 __pycache__/
 *.pyc

@@ -267,8 +267,8 @@ export const bento = {
       photo: "packagingSeminar",
       icon: "cpu",
       span: 2,
-      eyebrow: "Frontier Technology × CIM",
-      title: "跨域前瞻技術 × 智慧製造 CIM",
+      eyebrow: "Frontier Technology × Smart Manufacturing",
+      title: "跨域前瞻技術 × 智慧製造",
       description: "結合半導體、AI 落地與先進製程策略。",
       points: [
         "材料、機械、化工、電子、資工、醫工等 8 個系所教授輪授「科技總論」",

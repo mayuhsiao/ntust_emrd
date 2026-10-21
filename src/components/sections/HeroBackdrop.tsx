@@ -8,10 +8,11 @@ import {
   useSyncExternalStore,
   type ReactNode,
 } from "react";
+import { withBasePath } from "@/lib/basePath";
 import { cn } from "@/lib/cn";
 
 type HeroBackdropProps = {
-  /** public/ 內的影片網址；檔案不存在時為 undefined，改顯示幾何點陣動態 */
+  /** public/ 內的影片網址（不含 basePath，於此加上）；檔案不存在時為 undefined，改顯示幾何點陣動態 */
   videoSrc?: string;
   /** 影片的 object-position，需與靜態畫面一致，淡入時校徽才不會跳位 */
   objectPosition: string;
@@ -211,7 +212,8 @@ function HeroVideo({
             )}
             style={{ objectPosition }}
           >
-            <source src={src} type="video/mp4" onError={markFailed} />
+            {/* 原生 <source> 不會自動加上 basePath（子路徑部署時為 /ntust_emrd） */}
+            <source src={withBasePath(src)} type="video/mp4" onError={markFailed} />
           </video>
         )}
         <BlendSeams />

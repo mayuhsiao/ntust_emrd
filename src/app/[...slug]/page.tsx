@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, Info } from "lucide-react";
+import { ArrowRight, ChevronDown, Info } from "lucide-react";
 import type { LegacyPage } from "@/content/legacy/types";
 import { AttachmentList } from "@/components/site/AttachmentList";
 import { CollectionFilter, type CollectionEntry } from "@/components/site/CollectionFilter";
@@ -13,6 +13,12 @@ import { OverviewTiles, type OverviewTile } from "@/components/site/OverviewTile
 import { PageHeader } from "@/components/site/PageHeader";
 import { ContactCard, RelatedLinks, type RelatedLink } from "@/components/site/RelatedLinks";
 import { SideNav } from "@/components/site/SideNav";
+import {
+  ThesesExplorer,
+  ThesesIntro,
+  thesesDescription,
+  thesesLead,
+} from "@/components/site/ThesesExplorer";
 import {
   breadcrumbs,
   findGroup,
@@ -131,6 +137,9 @@ const collectionLeads: Record<string, string> = {
   "admissions/news": "招生簡章、招生說明會與錄取名單等招生公告。",
 };
 
+/** 歷屆畢業論文：以 src/content/theses.json 的篩選清單為主內容，原站清單收合於後 */
+const THESES_SLUG = "curriculum/theses";
+
 /** 獨立頁的英文小標 */
 const standaloneEyebrows: Record<string, string> = {
   contact: "Contact Us",
@@ -171,6 +180,8 @@ function describe(resolved: Resolved) {
         `${resolved.page.label}｜${site.officialName}`
       );
     default:
+      // 篇數與學年度範圍依資料檔計算（ia.json 的同一段描述供選單等處使用，更新資料時請一併修改）
+      if (resolved.page.slug === THESES_SLUG) return thesesDescription();
       return (
         pageDescription(resolved.page.slug) ??
         (pageExcerpt(resolved.data, 110) || `${resolved.page.label}｜${site.officialName}`)
@@ -243,7 +254,10 @@ function OverviewView({ slug, group }: { slug: string; group: IaGroup }) {
         meta: count > 0 ? `共 ${count} 則` : undefined,
       };
     }
-    return { href: hrefFor(page.slug), label: page.label, excerpt: pageExcerpt(getPage(page.slug), 80) };
+    // 歷屆畢業論文頁以 theses.json 的清單為主，摘要改用頁首導言（原站內容只剩學年度錨點與舊說明）
+    const excerpt =
+      page.slug === THESES_SLUG ? thesesLead() : pageExcerpt(getPage(page.slug), 80);
+    return { href: hrefFor(page.slug), label: page.label, excerpt };
   });
 
   return (
@@ -352,13 +366,65 @@ function PageView({
   page: IaPage;
   data: LegacyPage;
 }) {
+  const isTheses = slug === THESES_SLUG;
   return (
     <>
-      <PageHeader crumbs={breadcrumbs(slug)} eyebrow={group.englishLabel} title={page.label} />
+      <PageHeader
+        crumbs={breadcrumbs(slug)}
+        eyebrow={group.englishLabel}
+        title={page.label}
+        lead={isTheses ? thesesLead() : undefined}
+      />
       <ContentLayout aside={<SideNav group={group} activeSlug={slug} />}>
-        <PageBody data={data} />
+        {isTheses ? <ThesesBody data={data} /> : <PageBody data={data} />}
       </ContentLayout>
     </>
+  );
+}
+
+/** 原站內容的標題降一級：本頁的 h2 為各學年度，原站清單收在「原網站資料」h2 之下 */
+function demoteHeadings(html: string) {
+  return html.replace(
+    /<(\/?)h([2-5])(?=[\s>])/gi,
+    (_, slash: string, level: string) => `<${slash}h${Number(level) + 1}`,
+  );
+}
+
+function ThesesBody({ data }: { data: LegacyPage }) {
+  const legacyHtml = demoteHeadings(data.html);
+  return (
+    <div className="grid grid-cols-1 gap-14">
+      <div className="grid grid-cols-1 gap-8">
+        <ThesesIntro />
+        <ThesesExplorer />
+      </div>
+
+      {legacyHtml.trim() ? (
+        <section aria-labelledby="legacy-theses-heading" className="border-t border-stroke pt-10">
+          <h2 id="legacy-theses-heading" className="text-xl font-semibold text-brand-950 sm:text-2xl">
+            原網站資料
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-slate-600">
+            保留原網站的論文清單，含 105–109 學年度英文論文名稱，以及院內與非本院指導教授（含業界高階主管）資訊。
+          </p>
+          <details className="group/legacy mt-5 rounded-md border border-stroke bg-white">
+            <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-3 rounded-md px-4 py-3 text-base font-semibold text-brand-900 transition-colors duration-200 hover:bg-brand-50 sm:px-5 [&::-webkit-details-marker]:hidden">
+              原網站論文清單（105–109 學年度）
+              <ChevronDown
+                aria-hidden="true"
+                className="size-5 shrink-0 text-brand-700 transition-transform duration-200 group-open/legacy:rotate-180"
+              />
+            </summary>
+            <div className="border-t border-stroke px-4 py-6 sm:px-5">
+              <LegacyContent html={legacyHtml} />
+            </div>
+          </details>
+        </section>
+      ) : null}
+
+      <ItemList items={data.items} title="相關連結" />
+      <AttachmentList attachments={data.attachments} />
+    </div>
   );
 }
 
