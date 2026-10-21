@@ -4,6 +4,7 @@ import ntustLogoWhite from "@/assets/ntust-logo-white.png";
 import ntustSymbol from "@/assets/ntust-symbol.png";
 import ntustSymbolWhite from "@/assets/ntust-symbol-white.png";
 import { cn } from "@/lib/cn";
+import { site } from "@/lib/site";
 
 type LogoProps = {
   className?: string;
@@ -18,7 +19,10 @@ type LogoProps = {
   eager?: boolean;
 };
 
-const PROGRAM_NAME = "研發碩士在職專班";
+const PROGRAM_NAME = site.programName;
+const PROGRAM_ABBR = site.programAbbr;
+/** 單行顯示（頁尾） */
+const PROGRAM_FULL_NAME = `${PROGRAM_NAME}（${PROGRAM_ABBR}）`;
 
 /*
  * 圖片尺寸：width／height 沿用靜態匯入的原始尺寸（僅提供比例，避免版面位移），
@@ -50,7 +54,7 @@ export function Logo({
           loading={loading}
         />
         <span className="text-base font-semibold tracking-[0.08em] text-white">
-          {PROGRAM_NAME}
+          {PROGRAM_FULL_NAME}
         </span>
       </span>
     );
@@ -62,26 +66,34 @@ export function Logo({
         校徽符號＋兩行字：< sm 避免與選單鈕擠壓；lg–xl 之間導覽列置中、
         右側有 CTA，左欄僅約 256px，放不下完整標準字。
       */}
-      <span className="flex items-center gap-2.5 sm:hidden lg:flex xl:hidden">
+      <span className="flex items-center gap-2.5 sm:hidden lg:flex lg:gap-2 xl:hidden">
         <Image
           src={inverted ? ntustSymbolWhite : ntustSymbol}
           alt=""
           sizes="36px"
-          className="h-9 w-auto shrink-0"
+          className="h-9 w-auto shrink-0 lg:h-8"
           loading={loading}
         />
-        <span className="flex flex-col leading-tight">
+        {/*
+          EMRD 併入第一行：第二行放全名「（EMRD）」會在 375px 折成三行、在 lg 使導覽列超寬。
+          lg–xl 導覽列最緊（1024px），校徽、字距與第二行字級略縮，總寬約 180px。
+        */}
+        <span className="flex flex-col leading-tight whitespace-nowrap">
           <span
             className={cn(
-              "text-[0.6875rem] font-medium tracking-[0.12em]",
+              "text-[0.6875rem] font-medium tracking-[0.12em] lg:tracking-[0.04em]",
               inverted ? "text-champagne-300" : "text-champagne-700",
             )}
           >
             國立臺灣科技大學
+            <span aria-hidden="true" className="mx-1 lg:mx-0.5">·</span>
+            <span lang="en" className="font-semibold tracking-[0.16em] lg:tracking-[0.08em]">
+              {PROGRAM_ABBR}
+            </span>
           </span>
           <span
             className={cn(
-              "text-sm font-semibold",
+              "text-sm font-semibold lg:text-[0.8125rem]",
               inverted ? "text-white" : "text-slate-900",
             )}
           >
@@ -90,7 +102,10 @@ export function Logo({
         </span>
       </span>
 
-      {/* sm–lg 與 xl 以上：完整標準字｜專班名稱 */}
+      {/*
+        sm–lg 與 xl 以上：完整標準字｜學程名稱。名稱分兩行（中文名稱＋EMRD），
+        單行「高階研發碩士學位學程（EMRD）」會讓 xl 以上的導覽列超出內容寬度（1216px）。
+      */}
       <span className="hidden items-center gap-3.5 sm:flex lg:hidden xl:flex">
         <Image
           src={inverted ? ntustLogoWhite : ntustLogo}
@@ -103,13 +118,24 @@ export function Logo({
           aria-hidden="true"
           className={cn("h-7 w-px", inverted ? "bg-white/30" : "bg-slate-300")}
         />
-        <span
-          className={cn(
-            "text-[0.9375rem] font-semibold tracking-[0.06em] whitespace-nowrap",
-            inverted ? "text-white" : "text-slate-900",
-          )}
-        >
-          {PROGRAM_NAME}
+        <span className="flex flex-col leading-tight whitespace-nowrap">
+          <span
+            className={cn(
+              "text-[0.9375rem] font-semibold tracking-[0.06em]",
+              inverted ? "text-white" : "text-slate-900",
+            )}
+          >
+            {PROGRAM_NAME}
+          </span>
+          <span
+            lang="en"
+            className={cn(
+              "text-[0.6875rem] font-semibold tracking-[0.28em]",
+              inverted ? "text-champagne-300" : "text-champagne-700",
+            )}
+          >
+            {PROGRAM_ABBR}
+          </span>
         </span>
       </span>
     </span>

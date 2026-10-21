@@ -86,6 +86,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     add(hrefFor(page.slug), { changeFrequency: "monthly", priority: 0.6 });
   }
 
+  add("/campus", { changeFrequency: "yearly", priority: 0.5 });
   add("/sitemap", { changeFrequency: "monthly", priority: 0.3 });
   add("/privacy", { changeFrequency: "yearly", priority: 0.2 });
 

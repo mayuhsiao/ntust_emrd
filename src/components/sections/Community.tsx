@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { DeferredPosterVideo } from "@/components/site/DeferredPosterVideo";
 import { Container } from "@/components/ui/Container";
@@ -26,7 +26,7 @@ const film = {
   noteId: "community-film-note",
 } as const;
 
-/** 影片文字說明（WCAG 1.2.1 無聲預錄影片的文字替代）；畫面文字與 render_alumni_film.py 一致 */
+/** 影片畫面說明（WCAG 1.2.1 無聲預錄影片的文字替代，僅供輔助科技）；畫面文字與 render_alumni_film.py 一致 */
 const filmScenes: ReadonlyArray<{ time: string; label: string; body: ReactNode }> = [
   {
     time: "0–3 秒",
@@ -162,19 +162,23 @@ export function Community() {
 }
 
 /**
- * 精選短片：不自動播放（使用者按下播放才下載影片），preload="none"；
- * 封面（約 280 KB）由 DeferredPosterVideo 在捲近影片時才載入，不與首屏圖片搶頻寬；
- * 外框以 aspect-video 預留 16:9 空間，避免版面位移。影片無音軌，以下方 <details> 提供文字說明。
+ * 精選短片：捲到畫面中自動以靜音循環播放、離開畫面即暫停（DeferredPosterVideo 的 autoPlayInView），
+ * 偏好減少動態或開啟節省數據時不自動播放；保留原生控制列供暫停（WCAG 2.2.2）。
+ * 封面（約 280 KB）在捲近影片時才載入，不與首屏圖片搶頻寬；外框以 aspect-video 預留 16:9 空間，避免版面位移。
+ * 影片無音軌，畫面說明僅提供給輔助科技（sr-only，WCAG 1.2.1）。
  */
 function CommunityFilm() {
   return (
     <figure
       aria-labelledby={film.titleId}
-      className="mt-12 grid items-start gap-6 lg:mt-16 lg:grid-cols-12 lg:gap-x-10"
+      className="mt-12 grid items-center gap-6 lg:mt-16 lg:grid-cols-12 lg:gap-x-10"
     >
       <div className="relative aspect-video overflow-hidden rounded-md bg-brand-950 lg:col-span-7">
         <DeferredPosterVideo
+          autoPlayInView
           controls
+          muted
+          loop
           playsInline
           preload="none"
           width={film.width}
@@ -195,7 +199,7 @@ function CommunityFilm() {
         </DeferredPosterVideo>
       </div>
 
-      <figcaption className="min-w-0 lg:col-span-5 lg:pt-1">
+      <figcaption className="min-w-0 lg:col-span-5">
         <p
           lang="en"
           className="flex items-center gap-3 text-xs font-semibold tracking-[0.2em] text-champagne-700 uppercase"
@@ -208,37 +212,18 @@ function CommunityFilm() {
           className="mt-3 text-2xl leading-snug font-semibold tracking-[0.01em] text-balance text-brand-950 lg:text-[1.75rem]"
         >
           一屆同窗，一生夥伴
-          <span className="sr-only">｜</span>
-          <span className="mt-1.5 block text-base font-medium tracking-normal text-slate-600 lg:text-lg">
-            EMRD 校友與同儕網絡（15 秒）
-          </span>
         </h3>
-        <p id={film.noteId} className="mt-4 text-base leading-relaxed text-pretty text-slate-600">
-          從一張戶外合照出發，八場活動的照片彼此相連，匯聚成畢業後依然同行的校友網絡。影片無聲音與旁白，畫面內容請見下方「影片文字說明」。
-        </p>
-
-        <details className="group/details mt-6 rounded-md border border-stroke bg-white">
-          <summary className="flex min-h-11 cursor-pointer list-none items-center gap-3 rounded-md px-4 py-2 text-[0.9375rem] font-medium text-brand-950 [&::-webkit-details-marker]:hidden">
-            <span className="flex-1">影片文字說明</span>
-            <ChevronDown
-              aria-hidden="true"
-              className="size-5 shrink-0 text-brand-600 transition-transform duration-200 group-open/details:rotate-180"
-            />
-          </summary>
-          <div className="border-t border-stroke px-4 py-4 text-sm leading-relaxed text-slate-700">
-            <ol className="space-y-3">
-              {filmScenes.map((scene) => (
-                <li key={scene.time}>
-                  <span className="font-semibold text-brand-950">
-                    {scene.time}｜{scene.label}：
-                  </span>
-                  {scene.body}
-                </li>
-              ))}
-            </ol>
-            <p className="mt-3 text-slate-600">全片無聲音、無旁白；畫面不出現任何個人姓名。</p>
-          </div>
-        </details>
+        {/* aria-describedby 只指向一句摘要；逐段畫面說明留在閱讀順序中，保有清單語意且不重複朗讀 */}
+        <div className="sr-only">
+          <p id={film.noteId}>EMRD 校友與同儕網絡短片，長度 15 秒，無聲音與旁白；畫面說明如下。</p>
+          <ol>
+            {filmScenes.map((scene) => (
+              <li key={scene.time}>
+                {scene.time}｜{scene.label}：{scene.body}
+              </li>
+            ))}
+          </ol>
+        </div>
       </figcaption>
     </figure>
   );

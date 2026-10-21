@@ -73,11 +73,13 @@ src/
 │  ├─ ntust-logo-vertical.png 直式標準字，品牌形象片結尾
 │  └─ emrd-seal.png         EMRD 學程徽章（商標審定號 01962663）
 ├─ content/home.ts          首頁所有文案與數據（年度更新請改這裡）
+├─ content/campus.ts        校園地圖（/campus）的建物、進駐單位、座標與 EMRD 空間
 ├─ lib/site.ts              聯絡資訊與所有對外連結（簡章 PDF、預約諮詢…）
 └─ components/
    ├─ ui/                   Container、Section、SectionHeading、ButtonLink、Tag、Logo
    ├─ layout/               Navbar、Footer
-   └─ sections/             Hero、StatStrip、BentoGrid、CurriculumTabs、Faculty、Timeline
+   ├─ sections/             Hero、StatStrip、BentoGrid、CurriculumTabs、Faculty、Timeline
+   └─ campus/               CampusMap（校園地圖互動元件）
 ```
 
 ## 內容維護
@@ -86,6 +88,8 @@ src/
 | --- | --- |
 | 招生簡章 PDF 連結、預約諮詢連結、電話 / E-mail | `src/lib/site.ts` |
 | Hero 文案、關鍵數據、課程、師資、招生時程、報考資格 | `src/content/home.ts` |
+| 學程名稱（導覽列、頁尾）| `src/lib/site.ts`（`programName`）|
+| 校園地圖的建物、進駐單位、EMRD 教室與辦公室 | `src/content/campus.ts`（地圖圖檔 `src/assets/campus/`）|
 
 每年 116、117… 學年度簡章公告後，請更新 `site.links.brochurePdf`、`brochureLabel`
 以及 `admissions` 的時程文字。

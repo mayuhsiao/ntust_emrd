@@ -24,9 +24,8 @@ type HeroBackdropProps = {
 /* 環境偵測（SSR 一律回傳 false，確保 hydration 標記一致）                 */
 /* ------------------------------------------------------------------ */
 
-/** 僅桌機版（64rem＝Tailwind lg）且未要求減少動態時自動播放 */
-const AUTOPLAY_QUERY =
-  "(min-width: 64rem) and (prefers-reduced-motion: no-preference)";
+/** 各種螢幕尺寸皆自動播放；使用者偏好減少動態時不播放（另於 getAutoplay 排除節省數據模式） */
+const AUTOPLAY_QUERY = "(prefers-reduced-motion: no-preference)";
 
 type NetworkInformationLike = Partial<EventTarget> & { saveData?: boolean };
 
@@ -219,7 +218,7 @@ function HeroVideo({
         <BlendSeams />
       </div>
 
-      {/* 控制鈕需 JavaScript 才能運作，hydration 後才顯示，也避免桌機版先閃現「播放影片」 */}
+      {/* 控制鈕需 JavaScript 才能運作，hydration 後才顯示，也避免自動播放前先閃現「播放影片」 */}
       {hydrated && !failed ? (
         <MediaControl
           label={active ? "暫停影片" : "播放影片"}
@@ -346,7 +345,7 @@ function HeroFallback() {
 
 /**
  * Hero 右側（行動版為下方）媒體區：
- * 有影片時以校徽靜態畫面墊底，桌機且環境允許時自動淡入影片，其他情況提供「播放影片」鈕；
+ * 有影片時以校徽靜態畫面墊底，環境允許時（未要求減少動態、未開啟節省數據）自動淡入影片，其他情況提供「播放影片」鈕；
  * 無影片時改顯示幾何點陣微動態。皆附暫停控制以符合 WCAG 2.2.2。
  */
 export function HeroBackdrop({

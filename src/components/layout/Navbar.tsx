@@ -48,6 +48,7 @@ const parentLinks = [
 
 /** 站內工具連結 */
 const siteLinks = [
+  { label: "校園地圖", href: "/campus" },
   { label: "網站導覽", href: "/sitemap" },
   { label: "聯絡我們", href: "/contact" },
 ] as const;
@@ -297,7 +298,7 @@ export function Navbar({ pathname }: { pathname: string | null }) {
           <Container className="flex h-full items-center justify-between gap-4 lg:max-xl:gap-3">
             <Link
               href={isHome ? "/#top" : "/"}
-              aria-label={`${site.name}（${isHome ? "回到頁首" : "回到首頁"}）`}
+              aria-label={`國立臺灣科技大學 ${site.programName}（${site.programAbbr}）（${isHome ? "回到頁首" : "回到首頁"}）`}
               onClick={closeMenu}
               className={cn(
                 "grid min-w-0 rounded-sm lg:shrink-0",

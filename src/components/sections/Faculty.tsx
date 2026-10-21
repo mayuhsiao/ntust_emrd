@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -82,14 +83,16 @@ export function Faculty() {
 
 function LeaderCard({ leader }: { leader: Leader }) {
   return (
-    <li className="flex flex-col rounded-md border border-stroke bg-white p-7 lg:grid lg:grid-cols-[13rem_minmax(0,1fr)] lg:items-center lg:gap-8">
+    <li className="flex flex-col rounded-md border border-stroke bg-white p-7 lg:grid lg:grid-cols-[14rem_minmax(0,1fr)] lg:items-center lg:gap-8">
       <div className="mb-6 flex items-center gap-4 lg:mb-0">
-        <span
-          aria-hidden="true"
-          className="grid size-14 shrink-0 place-items-center rounded-full bg-brand-50 text-xl font-semibold text-brand-800 ring-1 ring-brand-100"
-        >
-          {leader.name.charAt(0)}
-        </span>
+        {/* 姓名已在右側文字中，照片不重複朗讀 */}
+        <Image
+          src={leader.portrait}
+          alt=""
+          sizes="72px"
+          placeholder="blur"
+          className="aspect-3/4 w-18 shrink-0 rounded-md bg-brand-50 object-cover ring-1 ring-brand-100"
+        />
         <div className="min-w-0">
           <h3>
             <span className="block text-xs font-semibold tracking-[0.2em] text-champagne-700">

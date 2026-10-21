@@ -12,6 +12,7 @@
  * 本路由沒有動態參數，回傳單一空參數即可，匯出時輸出 out/search-index.json。
  */
 import { admissions, bento, curriculum, faculty, intro, requirements } from "@/content/home";
+import { campusSpots, spotTitle } from "@/content/campus";
 import thesesData from "@/content/theses.json";
 import { groupHref, groups, hrefFor, standalonePages, type IaGroup } from "@/lib/ia";
 import {
@@ -129,6 +130,22 @@ function iaDocs(): SearchDoc[] {
     });
   }
   docs.push(
+    {
+      type: "page",
+      title: "校園地圖",
+      href: site.routes.campus,
+      category: "網站資訊",
+      description: "臺科大公館校區互動校園地圖：點選建物即可標示位置與進駐單位，含 EMRD 學程辦公室、專屬教室與校友薈萃堂。",
+      keywords: ["地圖", "交通", "地址", "campus", "map"],
+      body: joinText(
+        campusSpots.flatMap((spot) => [
+          spotTitle(spot),
+          ...(spot.units ?? []),
+          ...(spot.emrd ?? []).map((note) => `${note.label} ${note.room}`),
+        ]),
+      ),
+      meta: "校園地圖",
+    },
     {
       type: "page",
       title: "網站導覽",

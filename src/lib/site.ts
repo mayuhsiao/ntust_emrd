@@ -11,6 +11,9 @@ export const site = {
   name: "國立臺灣科技大學 研發碩士在職專班",
   shortName: "NTUST EMRD",
   officialName: "高階科技研發碩士學位學程（EMRD）",
+  /** 導覽列與頁尾標準字旁的學程名稱（2026-10 依學程要求由「研發碩士在職專班」更名） */
+  programName: "高階研發碩士學位學程",
+  programAbbr: "EMRD",
   englishName: "Executive Master of Research and Development",
   college: "國立臺灣科技大學 工程學院",
   /** 正式網域，供 metadataBase、canonical 與 Open Graph 使用 */
@@ -55,6 +58,7 @@ export const site = {
     news: "/news",
     events: "/news/events",
     contact: "/contact",
+    campus: "/campus",
     alumniHall: "/alumni-hall",
     privacy: "/privacy",
     sitemap: "/sitemap",

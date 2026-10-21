@@ -8,6 +8,9 @@
  * 站內連結以 routeKey 指向 site.routes（next/link）；外部連結直接使用 site.links。
  */
 
+import type { StaticImageData } from "next/image";
+import tsaiMengLin from "@/assets/faculty/tsai-meng-lin.jpg";
+import yuChinYang from "@/assets/faculty/yu-chin-yang.jpg";
 import type { PhotoKey } from "@/content/photos";
 import type { RouteKey } from "@/lib/site";
 
@@ -530,6 +533,8 @@ export type Leader = {
   englishName: string;
   title: string;
   education: string;
+  /** 大頭照（取自「現任執行長 / 副執行長」頁 /faculty/executives，裁為 3:4） */
+  portrait: StaticImageData;
 };
 
 export type FacultyHighlight = {
@@ -551,6 +556,7 @@ export const faculty = {
       englishName: "Chin-Yang Yu",
       title: "臺科大材料系 教授",
       education: "英國曼徹斯特大學 化學博士",
+      portrait: yuChinYang,
     },
     {
       role: "副執行長",
@@ -558,6 +564,7 @@ export const faculty = {
       englishName: "Meng-Lin Tsai",
       title: "臺科大材料系 副教授",
       education: "國立清華大學 材料科學與工程博士",
+      portrait: tsaiMengLin,
     },
   ] satisfies readonly Leader[],
   metrics: [

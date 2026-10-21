@@ -25,6 +25,7 @@ type FooterLinkItem = {
 };
 
 const mapLinks: readonly FooterLinkItem[] = [
+  { label: "互動校園地圖", href: site.routes.campus },
   { label: "Google 地圖導航", href: site.links.googleMaps, external: true },
   { label: "臺科大校址圖", href: site.links.campusMap, external: true },
   { label: "校內配置圖", href: site.links.campusLayout, external: true },

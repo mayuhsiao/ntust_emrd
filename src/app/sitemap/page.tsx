@@ -72,6 +72,7 @@ export default function SitemapPage() {
     ...standalonePages
       .filter((page) => getPage(page.slug))
       .map((page) => ({ href: hrefFor(page.slug), label: page.label })),
+    { href: "/campus", label: "校園地圖" },
     { href: "/privacy", label: "隱私權政策" },
   ];
 
