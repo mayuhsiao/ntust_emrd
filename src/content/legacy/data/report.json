@@ -9,14 +9,14 @@
     "linkRecordPosts": 13,
     "orphanPosts": 0,
     "redirects": 919,
-    "assetRedirects": 352,
+    "assetRedirects": 350,
     "queryRedirects": 9,
-    "images": 425,
+    "images": 423,
     "files": 20,
-    "resizedImages": 49,
+    "resizedImages": 48,
     "convertedImages": 5,
-    "localImgTags": 418,
-    "localImgTagsWithSize": 418,
+    "localImgTags": 415,
+    "localImgTagsWithSize": 415,
     "imgAspectAdjusted": 4,
     "externalImages": 0,
     "ownedImagesDownloaded": 82,
@@ -50,7 +50,7 @@
       "news/videos": 9
     },
     "a11y": {
-      "altOverride": 7,
+      "altOverride": 5,
       "droppedExternal": 1,
       "externalToText": 54,
       "headingDemoted": 24,
@@ -63,16 +63,16 @@
       "textVersion": 6,
       "videoTitle": 10
     },
-    "privacyRemovedAssets": 3,
+    "privacyRemovedAssets": 5,
     "privacyPdfRedacted": 1,
     "privacyStudentIdHits": 0
   },
   "assetBytes": {
-    "total": 213668686,
-    "images": 197247116,
+    "total": 207924231,
+    "images": 191502661,
     "files": 16421570,
-    "originalTotal": 302668584,
-    "originalImages": 285526902
+    "originalTotal": 293963672,
+    "originalImages": 276821990
   },
   "imageProcessing": {
     "mode": "default",
@@ -86,11 +86,11 @@
     },
     "backupDir": "legacy-originals/",
     "backupManifest": "legacy-originals/manifest.json",
-    "backupBytes": 117131441,
+    "backupBytes": 108676639,
     "rollback": "python -X utf8 scripts/migrate_legacy.py --original-images（說明見 legacy-originals/README.md）",
-    "modified": 54,
-    "bytesBefore": 117131441,
-    "bytesAfter": 28851655,
+    "modified": 53,
+    "bytesBefore": 108676639,
+    "bytesAfter": 23357310,
     "items": [
       {
         "original": "/legacy/img/059117ef52-533636112.jpg",
@@ -351,19 +351,6 @@
         "heightAfter": 1333,
         "sha1Before": "1358c57115284ba51c28d4acdd5db84620531f98",
         "sha1After": "80be7786e9e8f28c8302e84ca5d1c28988b173ce"
-      },
-      {
-        "original": "/legacy/img/5abc0cf4a1-838765448.png",
-        "current": "/legacy/img/5abc0cf4a1-838765448.png",
-        "reason": "downscale",
-        "bytesBefore": 8454802,
-        "bytesAfter": 5494345,
-        "widthBefore": 2586,
-        "widthAfter": 2000,
-        "heightBefore": 3448,
-        "heightAfter": 2667,
-        "sha1Before": "b94896711e587bdd75a1c3c420a3bbd3044949f4",
-        "sha1After": "d4711fb078a2ac0d191f070d32f218069147742a"
       },
       {
         "original": "/legacy/img/5cb212cde5-23.jpg",
@@ -2337,16 +2324,6 @@
   "accessibility": {
     "note": "搬遷時的無障礙調整（規則見 migrate_legacy.py；重跑結果相同）：textVersion＝圖片後加上逐字轉寫的「文字版」（IMAGE_TEXT_OVERRIDES）；altOverride＝依路徑指定的 alt；junkAltCleared＝無意義的原站 alt改為空字串；singleImageAlt＝文章唯一的大圖以文章標題為 alt（圖片內容仍待人工轉寫為文字）；externalToText＝外站表情／LINE 按鈕改為文字；droppedExternal＝已失效的外站圖片移除；tableHeaders＝資料表格的標題列／caption；langEn＝英文區塊 lang=\"en\"；headingPromoted／headingDemoted／headingLevelsShifted＝標題層級；videoTitle＝YouTube 嵌入的標題。",
     "altOverride": [
-      {
-        "where": "page:faculty/executives",
-        "src": "/legacy/img/5abc0cf4a1-838765448.png",
-        "detail": "游進陽執行長 → 蔡孟霖副執行長"
-      },
-      {
-        "where": "page:contact",
-        "src": "/legacy/img/5abc0cf4a1-838765448.png",
-        "detail": "游進陽執行長 → 蔡孟霖副執行長"
-      },
       {
         "where": "post:76693",
         "src": "/legacy/img/e67e489937-youtube.png",
@@ -4340,6 +4317,25 @@
         "redirect": "/posts/93392"
       },
       {
+        "url": "https://emrd.ntust.edu.tw/var/file/39/1039/img/2784/120124061.jpg",
+        "what": "業界推薦頁的前任執行長與研華執行董事合照（非學生個資；115 年 11 月 1 日學程會議決議移除，推薦文字保留）",
+        "post": null,
+        "foundIn": [
+          "page:about/recommendations"
+        ],
+        "redirect": "/about/recommendations"
+      },
+      {
+        "url": "https://emrd.ntust.edu.tw/var/file/39/1039/img/3299/838765448.png",
+        "what": "前任副執行長大頭照（非學生個資；115 年 11 月 1 日學程會議決議更正現任副執行長，見 CONTENT_CORRECTIONS）",
+        "post": null,
+        "foundIn": [
+          "page:contact",
+          "page:faculty/executives"
+        ],
+        "redirect": "/faculty/executives"
+      },
+      {
         "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/0910mail-page-0001.jpg?1568790002",
         "what": "108 學年度學分抵免申請審核清單（內文圖片，亦為文章封面：全名、學號、課程成績）",
         "post": "76672",
@@ -4393,6 +4389,18 @@
         }
       ],
       "removedImage": [
+        {
+          "where": "page:about/recommendations",
+          "url": "https://emrd.ntust.edu.tw/var/file/39/1039/img/2784/120124061.jpg"
+        },
+        {
+          "where": "page:faculty/executives",
+          "url": "https://emrd.ntust.edu.tw/var/file/39/1039/img/3299/838765448.png"
+        },
+        {
+          "where": "page:contact",
+          "url": "https://emrd.ntust.edu.tw/var/file/39/1039/img/3299/838765448.png"
+        },
         {
           "where": "post:76672",
           "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/0910mail-page-0001.jpg?1568790002"

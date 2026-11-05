@@ -731,22 +731,6 @@
     "originalWidth": 145,
     "originalHeight": 150
   },
-  "https://emrd.ntust.edu.tw/var/file/39/1039/img/2784/120124061.jpg": {
-    "path": "/legacy/img/4f45d38244-120124061.jpg",
-    "kind": "img",
-    "bytes": 250110,
-    "originalBytes": 250110,
-    "contentType": "image/jpeg",
-    "filename": "120124061.jpg",
-    "resized": false,
-    "width": 960,
-    "height": 1280,
-    "sha1": "4ee0d6673607633de51be8e7d96c7350f70bc05e",
-    "originalPath": "/legacy/img/4f45d38244-120124061.jpg",
-    "originalSha1": "4ee0d6673607633de51be8e7d96c7350f70bc05e",
-    "originalWidth": 960,
-    "originalHeight": 1280
-  },
   "https://emrd.ntust.edu.tw/var/file/39/1039/img/2784/149458396.jpg": {
     "path": "/legacy/img/9be7f6e412-149458396.jpg",
     "kind": "img",
@@ -2974,25 +2958,6 @@
     "originalSha1": "d68a342ab438beb74fe80d17b0c4d51f289c27d0",
     "originalWidth": 800,
     "originalHeight": 533
-  },
-  "https://emrd.ntust.edu.tw/var/file/39/1039/img/3299/838765448.png": {
-    "path": "/legacy/img/5abc0cf4a1-838765448.png",
-    "kind": "img",
-    "bytes": 5494345,
-    "originalBytes": 8454802,
-    "contentType": "image/png",
-    "filename": "838765448.png",
-    "resized": true,
-    "sha1": "d4711fb078a2ac0d191f070d32f218069147742a",
-    "width": 2000,
-    "height": 2667,
-    "originalPath": "/legacy/img/5abc0cf4a1-838765448.png",
-    "originalSha1": "b94896711e587bdd75a1c3c420a3bbd3044949f4",
-    "originalWidth": 2586,
-    "originalHeight": 3448,
-    "maxWidth": 2000,
-    "derivedSpec": "v1;w2000;bmp2png1;q85",
-    "derivedFrom": "b94896711e587bdd75a1c3c420a3bbd3044949f4"
   },
   "https://emrd.ntust.edu.tw/var/file/39/1039/img/3315/001.jpg": {
     "path": "/legacy/img/187bcaac49-001.jpg",

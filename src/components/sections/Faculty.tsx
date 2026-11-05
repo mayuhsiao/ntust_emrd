@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, UserRound } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -86,13 +86,19 @@ function LeaderCard({ leader }: { leader: Leader }) {
     <li className="flex flex-col rounded-md border border-stroke bg-white p-7 lg:grid lg:grid-cols-[14rem_minmax(0,1fr)] lg:items-center lg:gap-8">
       <div className="mb-6 flex items-center gap-4 lg:mb-0">
         {/* 姓名已在右側文字中，照片不重複朗讀 */}
-        <Image
-          src={leader.portrait}
-          alt=""
-          sizes="72px"
-          placeholder="blur"
-          className="aspect-3/4 w-18 shrink-0 rounded-md bg-brand-50 object-cover ring-1 ring-brand-100"
-        />
+        {leader.portrait ? (
+          <Image
+            src={leader.portrait}
+            alt=""
+            sizes="72px"
+            placeholder="blur"
+            className="aspect-3/4 w-18 shrink-0 rounded-md bg-brand-50 object-cover ring-1 ring-brand-100"
+          />
+        ) : (
+          <div className="flex aspect-3/4 w-18 shrink-0 items-center justify-center rounded-md bg-brand-50 ring-1 ring-brand-100">
+            <UserRound aria-hidden="true" className="size-8 text-brand-300" />
+          </div>
+        )}
         <div className="min-w-0">
           <h3>
             <span className="block text-xs font-semibold tracking-[0.2em] text-champagne-700">

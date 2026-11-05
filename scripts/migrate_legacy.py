@@ -70,6 +70,7 @@ migrate_legacy.py — 舊版 EMRD 網站（https://emrd.ntust.edu.tw，rpage CMS
       線上出席紀錄、抽選結果的學號欄）不搬移或只搬移不含個資的部分，原處改為一段說明文字；原站檔案網址轉址到
       該文章；.legacy-cache/ 快照中的學號也先遮蔽。移除或修改前的原始檔移到 .private-originals/（不進版控、
       不部署），明細見 report.json 的 privacy。
+    * 內容更正（CONTENT_CORRECTIONS，任何模式都會套用）：學程決議更正、原站尚未修改的內容（例：現任副執行長）。
     * 內嵌的站內影片（<iframe src=".../xxx.mp4">）下載後仍以 <iframe> 嵌入。
     * 內文中的 data: URI 圖片（例：表情符號）解碼存成 /legacy/img/inline-*.png。
     * 列表中的 450 連結紀錄：若目標是站內文章且標題與列表相同、且未重複，直接使用該文章；
@@ -219,7 +220,8 @@ DATE_RE = re.compile(r"(?<!\d)(\d{4})\s*[-/.年]\s*(\d{1,2})\s*[-/.月]\s*(\d{1,
 #
 #   remove_assets  整個檔案不搬移：不下載、不放進 public/legacy/、不列為附件。內文中的該圖片／附件改為一段說明文字
 #                  （note；附在該文件內文最後，同一段只出現一次），沒有圖片的文章不設封面（同其他無圖文章）；
-#                  內文連結與原站檔案網址（redirects.json）都改連到 post 指定的文章。
+#                  內文連結與原站檔案網址（redirects.json）都改連到 post 指定的文章（或 page 指定的頁面）。
+#                  note 為空字串時不加說明文字；圖片是表格儲存格唯一的內容時整格不輸出，旁邊的文字占滿整列。
 #   pdf_pages      PDF 只保留 keep 列出的頁（1 起算；其餘頁連同只屬於它們的圖片、標籤結構一併移除），並清除作者
 #                  欄位與 XMP 中繼資料；附件大小標示依處理後的檔案。
 #   table_columns  指定文件（"post:<編號>"／"page:<slug>"）的表格中，表頭文字為 headers 的欄整欄移除。
@@ -249,6 +251,14 @@ PRIVACY_REDACTIONS: dict[str, dict] = {
             "what": "108 學年度學分抵免申請審核清單（內文圖片，亦為文章封面：全名、學號、課程成績）",
             "post": "76672", "note": PRIVACY_NOTE_GRADE_LIST,
         },
+        "emrd.ntust.edu.tw/var/file/39/1039/img/2784/120124061.jpg": {
+            "what": "業界推薦頁的前任執行長與研華執行董事合照（非學生個資；115 年 11 月 1 日學程會議決議移除，推薦文字保留）",
+            "page": "/about/recommendations", "note": "",
+        },
+        "emrd.ntust.edu.tw/var/file/39/1039/img/3299/838765448.png": {
+            "what": "前任副執行長大頭照（非學生個資；115 年 11 月 1 日學程會議決議更正現任副執行長，見 CONTENT_CORRECTIONS）",
+            "page": "/faculty/executives", "note": "",
+        },
     },
     "pdf_pages": {
         "emrd.ntust.edu.tw/app/index.php?file=attach/10/pta_54243_1779120_73735.pdf": {
@@ -271,6 +281,42 @@ PRIVACY_REDACTIONS: dict[str, dict] = {
         },
     },
 }
+# ---------------------------------------------------------------------------
+# 內容更正（CONTENT_CORRECTIONS）
+# ---------------------------------------------------------------------------
+# 1:1 搬移的例外：學程決議更正、原站尚未修改的內容（115 年 11 月 1 日會議決議，來源見各項）。鍵為文件，值為
+# （舊文字, 新文字），取代清洗後的 html。舊文字必須恰好出現一次，否則中止：原站內容變動時不會默默失效，也不會改到別處。
+# 過去活動文章圖說中的職稱（例：113 學年度「副執行長致詞」）是當時的事實，不更正。
+# 資料取自營建系教師頁（中文頁與英文師資列表）；兼任期間與正式照片待學程提供
+_DEPUTY_EXECUTIVE = [
+    ("蔡孟霖 Meng-Lin&nbsp;Tsai&nbsp;&nbsp;( 兼任期間：2024 年 08 月 - 至今 )", "蔡孟涵 Meng-Han&nbsp;Tsai"),
+    ("<td>臺科大 材料系 副教授<br> 國立清華大學材料科學與工程博士<br> 聯絡電話：(02) 2737-6537<br> "
+     "Email：mltsai@mail.ntust.edu.tw<br> 詳細介紹：<u><a href=\"http://mse-r.ntust.edu.tw/p/426-1019-30.php?Lang=zh-tw\">"
+     "個人網頁</a></u></td>",
+     "<td>臺科大 營建系 副教授<br> 國立臺灣大學博士<br> 聯絡電話：(02) 2737-6356<br> "
+     "Email：menghan@mail.ntust.edu.tw<br> 詳細介紹：<u><a href=\"https://www.ct.ntust.edu.tw/ct/users/view/74?itemid=213\">"
+     "個人網頁</a></u></td>"),
+]
+CONTENT_CORRECTIONS: dict[str, list[tuple[str, str]]] = {
+    "page:faculty/executives": _DEPUTY_EXECUTIVE,
+    "page:contact": _DEPUTY_EXECUTIVE,
+    "page:faculty/internal": [
+        ("<td>蔡孟霖&nbsp; 副教授兼EMRD副執行長</td>", "<td>蔡孟霖&nbsp; 副教授</td>"),
+        ("<td>蔡孟涵　副教授</td>", "<td>蔡孟涵　副教授兼EMRD副執行長</td>"),
+    ],
+}
+
+
+def apply_corrections(html: str, where: str) -> str:
+    """CONTENT_CORRECTIONS：依序取代指定文件的內容；舊文字不是恰好出現一次時中止。"""
+    for old, new in CONTENT_CORRECTIONS.get(where, []):
+        count = html.count(old)
+        if count != 1:
+            raise RuntimeError(f"內容更正：{where} 的舊文字應出現 1 次，實際 {count} 次：{old[:40]}")
+        html = html.replace(old, new)
+    return html
+
+
 # 臺科大學號樣式（M／B／D＋入學學年＋序號）：輸出前檢查所有頁面與文章，仍有符合者列入報告（privacy.studentIdPatternHits）
 STUDENT_ID_RE = re.compile(r"(?<![A-Za-z0-9])[MBD]1\d{7,8}(?![0-9])")
 
@@ -298,6 +344,11 @@ def privacy_asset_id(url: str) -> str:
 def privacy_removed(url: str) -> dict | None:
     """remove_assets 的規則（不搬移的檔案）；其他網址回傳 None。"""
     return PRIVACY_REDACTIONS["remove_assets"].get(privacy_asset_id(url))
+
+
+def privacy_target(rule: dict) -> str:
+    """remove_assets 的檔案改連到的站內網址：post 指定的文章，或 page 指定的頁面。"""
+    return rule.get("page") or f"/posts/{rule['post']}"
 
 
 def privacy_pdf_rule(url: str) -> dict | None:
@@ -363,8 +414,6 @@ SINGLE_IMAGE_MIN_WIDTH = 500
 
 # 依本地路徑指定 alt（重跑不會被原站的錯誤 alt 覆蓋）；內容為圖片上文字的逐字轉寫
 IMAGE_ALT_OVERRIDES = {
-    # 原站誤用執行長的 alt（「游進陽執行長」）
-    "/legacy/img/5abc0cf4a1-838765448.png": "蔡孟霖副執行長",
     # 以下為連結中的圖片（原站 alt 為「圖片」「4」「EVENT」，是連結唯一的名稱）
     "/legacy/img/e67e489937-youtube.png": "YouTube",
     "/legacy/img/0e197770de-emrd-fb.jpg": "Facebook 臺科大高階科技研發碩士在職專班 -EMRD CTO 技術長學程",
@@ -1703,7 +1752,7 @@ class AssetStore:
         """legacy-originals/manifest.json：本次被修改（縮圖／轉檔）的圖片與原始檔對照（依原始檔路徑排序）。
 
         另移除 public/ 中先前產生、本次已不再使用的衍生檔（例：--original-images 還原後的 .png）。
-        還原模式（--original-images）不修改 legacy-originals/（備份永不由腳本刪除）。
+        還原模式（--original-images）不修改 legacy-originals/（備份只有 remove_assets 會移到 .private-originals/）。
         """
         try:
             prev = json.loads(ORIGINALS_MANIFEST.read_text("utf-8"))
@@ -1945,11 +1994,12 @@ class Mapper:
         if rule:
             # 個資保護：不搬移的檔案 → 連到說明它的文章（在該文章本身則移除連結、只留文字，並加上說明）
             self.m.report.privacy_change("removedLink", {"where": ctx.where, "url": asset_key(absu)})
-            if ctx.where == f"post:{rule['post']}":
+            if ctx.where == f"post:{rule.get('post')}":
                 ctx.add_privacy_note(rule["note"])
                 return None, False
-            ctx.post_links.add(rule["post"])
-            return f"/posts/{rule['post']}", False
+            if rule.get("post"):
+                ctx.post_links.add(rule["post"])
+            return privacy_target(rule), False
         if not is_legacy_host(sp.hostname):
             host = (sp.hostname or "").lower()
             if host in OWNED_HOSTS or host in WEEBLY_MIRROR_HOSTS:
@@ -2362,7 +2412,12 @@ class Sanitizer:
             finally:
                 if name == "th":
                     self.in_th -= 1
-            return [self.append_all(cell, self.group_inline(kids, force=False))]
+            cell = self.append_all(cell, self.group_inline(kids, force=False))
+            # 個資保護（remove_assets）：不搬移的圖片是這一格唯一的內容時整格不輸出，不留空白欄
+            if not self.meaningful(cell) and any(privacy_removed(urljoin(self.ctx.base, img.get("src") or ""))
+                                                 for img in node.find_all("img")):
+                return []
+            return [cell]
         if name in ("caption", "figcaption"):
             return [self.append_all(self.new(name), self.conv_children(node, True))]
         if name == "blockquote":
@@ -3567,7 +3622,7 @@ class Migration:
                 self.attachment_from(att, ctx)
             for code in merges.get(slug, []):
                 html, items = self.merge_alias(code, slug, html, items, ctx)
-            html = self.with_privacy_notes(html, ctx)
+            html = apply_corrections(self.with_privacy_notes(html, ctx), ctx.where)
             referenced |= ctx.post_links
             self.out_pages[slug] = {
                 "slug": slug, "title": title, "legacyUrl": page_url(p["legacy"]),
@@ -3952,7 +4007,7 @@ class Migration:
                 continue
             src = f"{sp.path}?{sp.query}" if sp.query and not (sp.path or "").lower().startswith("/var/file/") \
                 else sp.path
-            add(src, f"/posts/{rule['post']}")
+            add(src, privacy_target(rule))
             self.privacy_redirects.append({"url": key, "source": src, "destination": r[src]})
         return [{"source": s, "destination": d} for s, d in sorted(r.items())]
 
@@ -4152,7 +4207,7 @@ class Migration:
                      "（removedImage／removedAttachment／removedLink／noteAdded／tableColumnRemoved）；"
                      "studentIdPatternHits＝輸出中仍符合學號樣式者（應為空）。移除或修改前的原始檔只留在本機 "
                      ".private-originals/（不進版控、不部署）。"),
-            "removedAssets": [{"url": k, "what": privacy_removed(k)["what"], "post": privacy_removed(k)["post"],
+            "removedAssets": [{"url": k, "what": privacy_removed(k)["what"], "post": privacy_removed(k).get("post"),
                                "foundIn": where_sorted(w),
                                "redirect": (privacy_redirect_of[k]["destination"] if k in privacy_redirect_of else None)}
                               for k, w in sorted(self.assets.privacy_skipped.items())],

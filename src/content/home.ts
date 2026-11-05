@@ -9,7 +9,6 @@
  */
 
 import type { StaticImageData } from "next/image";
-import tsaiMengLin from "@/assets/faculty/tsai-meng-lin.jpg";
 import yuChinYang from "@/assets/faculty/yu-chin-yang.jpg";
 import type { PhotoKey } from "@/content/photos";
 import type { RouteKey } from "@/lib/site";
@@ -49,7 +48,7 @@ export const hero = {
     items: [
       { label: "招生簡章", value: "預計 10 月底公告" },
       { label: "網路報名", value: "預計 11 月下旬起" },
-      { label: "招生名額", value: "30 名（115 學年度）" },
+      { label: "招生名額", value: "32 名（116 學年度）" },
     ],
     note: "時程依往年推估，以正式簡章為準",
   },
@@ -545,8 +544,8 @@ export type Leader = {
   englishName: string;
   title: string;
   education: string;
-  /** 大頭照（取自「現任執行長 / 副執行長」頁 /faculty/executives，裁為 3:4） */
-  portrait: StaticImageData;
+  /** 大頭照（裁為 3:4）；尚未取得照片時省略，卡片顯示佔位圖示 */
+  portrait?: StaticImageData;
 };
 
 export type FacultyHighlight = {
@@ -572,11 +571,10 @@ export const faculty = {
     },
     {
       role: "副執行長",
-      name: "蔡孟霖",
-      englishName: "Meng-Lin Tsai",
-      title: "臺科大材料系 副教授",
-      education: "國立清華大學 材料科學與工程博士",
-      portrait: tsaiMengLin,
+      name: "蔡孟涵",
+      englishName: "Meng-Han Tsai",
+      title: "臺科大營建系 副教授",
+      education: "國立臺灣大學 博士",
     },
   ] satisfies readonly Leader[],
   metrics: [
@@ -646,7 +644,7 @@ export const admissions = {
     "招生考試採書面審查 50%＋口試 50%。審查成績優異者（招生名額 50% 以內）得直接錄取、免參加口試。",
   notice:
     "下列時程依 115 學年度實際日程推估，正式日期以 116 學年度招生簡章公告為準。",
-  quota: "115 學年度招生名額 30 名",
+  quota: "116 學年度招生名額 32 名",
   /** 區塊底部延伸連結（招生資訊、招生公告、隨班附讀）的說明 */
   moreInfo: "歷年招生公告、報考常見 Q&A 與隨班附讀辦法，請見招生專區。",
   steps: [

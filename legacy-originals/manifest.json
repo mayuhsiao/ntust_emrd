@@ -260,19 +260,6 @@
     "sha1After": "80be7786e9e8f28c8302e84ca5d1c28988b173ce"
   },
   {
-    "original": "/legacy/img/5abc0cf4a1-838765448.png",
-    "current": "/legacy/img/5abc0cf4a1-838765448.png",
-    "reason": "downscale",
-    "bytesBefore": 8454802,
-    "bytesAfter": 5494345,
-    "widthBefore": 2586,
-    "widthAfter": 2000,
-    "heightBefore": 3448,
-    "heightAfter": 2667,
-    "sha1Before": "b94896711e587bdd75a1c3c420a3bbd3044949f4",
-    "sha1After": "d4711fb078a2ac0d191f070d32f218069147742a"
-  },
-  {
     "original": "/legacy/img/5cb212cde5-23.jpg",
     "current": "/legacy/img/5cb212cde5-23.jpg",
     "reason": "downscale",
