@@ -48,7 +48,7 @@ MEDIA_DIR = ROOT / "media" / "videos"
 FPS = 30
 DURATION = 15.0
 SLOGAN = "引領研發前瞻，鍛造卓越領導"
-SUBLINE = "工程學院　高階科技研發碩士在職專班"
+SUBLINE = "工程學院　高階科技研發碩士學位學程"
 
 
 def hex_bgr(h: str) -> np.ndarray:

@@ -3,7 +3,7 @@
  *
  * 資料來源（2026-10 擷取）：
  * - 原 EMRD 網站（已 1:1 搬遷至本站內頁）：特色簡介、課程地圖（112 學年度起適用）、師資、聯絡資訊
- * - 臺科大 115 學年度碩士在職專班招生簡章（報考資格、甄試方式、重要日程、學分費）
+ * - 臺科大 116 學年度碩士在職專班招生簡章（報考資格、甄試方式、重要日程、學分費）
  *
  * 站內連結以 routeKey 指向 site.routes（next/link）；外部連結直接使用 site.links。
  */
@@ -46,11 +46,11 @@ export const hero = {
   intake: {
     title: "116 學年度招生",
     items: [
-      { label: "招生簡章", value: "預計 10 月底公告" },
-      { label: "網路報名", value: "預計 11 月下旬起" },
-      { label: "招生名額", value: "32 名（116 學年度）" },
+      { label: "招生簡章", value: "已公告" },
+      { label: "網路報名", value: "115/11/27–12/10 17:00" },
+      { label: "招生名額", value: "EMRD 32 名、SEMI-EMRD 16 名" },
     ],
-    note: "時程依往年推估，以正式簡章為準",
+    note: "日程依 116 學年度招生簡章；實際招生名額以教育部核定為準",
   },
 } as const;
 
@@ -63,7 +63,7 @@ export const hero = {
  * Navbar 以 `/${href}` 組成首頁錨點（/#admissions），故 href 須維持 `#` 開頭。
  */
 export const utilityBar = {
-  notice: { label: "116 學年度招生簡章預計 10 月底公告", href: "#admissions" },
+  notice: { label: "116 學年度網路報名 11/27–12/10", href: "#admissions" },
 } as const;
 
 export type PathfinderItem = {
@@ -111,7 +111,7 @@ export const intro = {
   title: "全國首創的技術長養成學程",
   photo: "executivesInLecture" satisfies PhotoKey,
   paragraphs: [
-    "高階科技研發碩士在職專班（EMRD）自 104 學年度由臺科大工程學院首創，系統化培育企業技術長（CTO）人才，提供企業高階人員技術與管理的進修再造管道。",
+    "高階科技研發碩士學位學程（EMRD）自 104 學年度由臺科大工程學院首創，系統化培育企業技術長（CTO）人才，提供企業高階人員技術與管理的進修再造管道。",
     "學程以企業結合學界的雙贏模式運作：學員以任職公司未來 3–5 年的技術與產品藍圖作為畢業論文，並與授課師資、同學及企業高階經理人建立技術脈、產業脈與人脈。",
   ],
   points: [
@@ -211,14 +211,14 @@ export const community = {
 
 export const admissionsCta = {
   eyebrow: "ADMISSIONS 2027",
-  title: "116 學年度招生即將啟動",
+  title: "116 學年度招生簡章已公告",
   description:
-    "招生簡章預計 10 月底公告、11 月下旬起網路報名。歡迎下載簡章，或預約諮詢由學程辦公室協助評估報考資格。",
+    "115 年 11 月 27 日上午 9 點至 12 月 10 日下午 5 點網路報名，逾期恕不受理。歡迎下載簡章，或預約諮詢由學程辦公室協助評估報考資格。",
   photo: "graduation2025" satisfies PhotoKey,
   dates: [
-    { label: "招生簡章", value: "預計 10 月底公告" },
-    { label: "網路報名", value: "預計 11 月下旬至 12 月中旬" },
-    { label: "放榜", value: "預計 3 月中旬" },
+    { label: "網路報名", value: "115/11/27–12/10 17:00" },
+    { label: "口試", value: "116/2/19–2/21" },
+    { label: "放榜", value: "116/3/12" },
   ],
 } as const;
 
@@ -529,7 +529,7 @@ export const requirements = {
     {
       label: "學分費",
       value: "NT$11,000／學分",
-      detail: "每學期基本學分費 99,000 元，共收 5 學期；學雜費基數每學期 15,380 元（115 學年度標準）",
+      detail: "每學期基本學分費 99,000 元，共收 5 學期；學雜費基數每學期 15,380 元（116 學年度標準，實際以報教育部核備後公告為準）",
     },
   ] satisfies readonly Requirement[],
 } as const;
@@ -631,7 +631,7 @@ export const faculty = {
 export type TimelineStep = {
   step: number;
   title: string;
-  /** 依 115 學年度實際日程推估的 116 學年度時程 */
+  /** 116 學年度招生簡章「招生重要日程表」的時程 */
   period: string;
   description: string;
   details: readonly string[];
@@ -643,41 +643,44 @@ export const admissions = {
   description:
     "招生考試採書面審查 50%＋口試 50%。審查成績優異者（招生名額 50% 以內）得直接錄取、免參加口試。",
   notice:
-    "下列時程依 115 學年度實際日程推估，正式日期以 116 學年度招生簡章公告為準。",
-  quota: "116 學年度招生名額 32 名",
+    "日程取自 116 學年度碩士在職專班招生簡章；實際招生名額以教育部核定為準。",
+  quota: "116 學年度招生名額：EMRD 32 名、SEMI-EMRD 16 名",
   /** 區塊底部延伸連結（招生資訊、招生公告、隨班附讀）的說明 */
   moreInfo: "歷年招生公告、報考常見 Q&A 與隨班附讀辦法，請見招生專區。",
   steps: [
     {
       step: 1,
-      title: "招生簡章公告與線上報名",
-      period: "10 月底公告｜11 月下旬至 12 月中旬報名",
-      description: "一律網路報名並上傳審查資料，逾期恕不受理。",
-      details: ["報名費 NT$2,500", "報名期間系統 24 小時開放"],
+      title: "線上報名與資料上傳",
+      period: "115/11/27 9:00–12/10 17:00 網路報名｜115/12/11 17:00 資料上傳截止",
+      description: "一律網路報名並上傳審查資料，逾期恕不受理；截止前可能壅塞，請儘早報名。",
+      details: [
+        "EMRD 選考代碼 2690（SEMI-EMRD 為 2890）",
+        "報名費 NT$2,500，115/12/10 24:00 前繳交",
+      ],
     },
     {
       step: 2,
       title: "專業書面審查",
-      period: "1 月中旬公告書審成績與口試名單",
+      period: "116/1/18｜公告初試成績與口試名單",
       description:
-        "著重研發成就與領導歷練。必繳 EMRD 報考申請表、畢業證書與工作年資證明；自傳、推薦信、證照與得獎紀錄可加分。",
+        "著重研發成就與領導歷練。必繳 EMRD 報考申請表、畢業證書與工作年資證明；自傳，以及推薦信、學分證明、證照、得獎紀錄等有助審查的文件為選繳。",
       details: ["審查成績佔 50%", "優異者得直接錄取"],
     },
     {
       step: 3,
       title: "專家委員會綜合面試",
-      period: "2 月下旬至 3 月初",
+      period: "116/2/19–2/21｜口試日期於 116/1/18 公告",
       description:
         "由學程專家委員會進行綜合面試，深度了解您的研發歷程、管理視野與進修規劃。",
-      details: ["口試成績佔 50%", "到校實體口試", "口試費 NT$500"],
+      details: ["口試成績佔 50%", "到校實體口試", "口試費 NT$500（116/2/15–2/18 繳交）"],
     },
     {
       step: 4,
       title: "榜單公告與學位起航",
-      period: "3 月中旬放榜｜9 月入學",
+      period: "116/3/12 放榜｜9 月入學",
       description:
         "放榜後完成網路報到，9 月正式啟程，與科技產業菁英同儕共同展開兩年的研發戰略修練。",
-      details: ["網路報到與備取遞補", "9 月開學"],
+      details: ["116/3/23 下午 3 點前登記報到與遞補意願", "9 月開學"],
     },
   ] satisfies readonly TimelineStep[],
   eligibility: {
@@ -692,7 +695,8 @@ export const admissions = {
       {
         id: "experience",
         label: "取得學歷後累計 6 年以上工作年資",
-        detail: "年資計算至入學當年 8 月 31 日止，服義務役年資不列計。",
+        detail:
+          "年資計算至 116 年 8 月 31 日止，服義務役年資不列計。例：大學 110 年 8 月 31 日（含）以前、三專 108 年 8 月 31 日（含）以前、二／五專 107 年 8 月 31 日（含）以前畢業者。",
       },
       {
         id: "proof",
@@ -705,9 +709,23 @@ export const admissions = {
         detail: "報名繳費後不得以無法到校為由要求退費。",
       },
     ],
-    successMessage: "您已符合 EMRD 基本報考資格，歡迎下載簡章並準備報名。",
+    successMessage: "您初步符合 EMRD 基本報考資格，歡迎下載簡章並準備報名。",
     pendingMessage: "尚有條件未確認，歡迎來電或來信由學程辦公室協助判斷。",
     disclaimer:
-      "本檢視僅供參考，二／五專、三專學歷及同等學力之年資計算方式，請依當年度招生簡章規定。",
+      "本檢視僅供參考，同等學力之年資計算方式及其他規定，請依招生簡章。",
   },
+} as const;
+
+/**
+ * SEMI-EMRD 招生摘要（116 學年度簡章第 18 頁）：與 EMRD 同一份簡章與日程，報考資格相同。
+ * 只在「招生資訊」頁簡短說明，詳情請見該學程的網站。
+ */
+export const semiEmrdAdmissions = {
+  title: "SEMI-EMRD 招生資訊",
+  description:
+    "半導體高階經營暨研發碩士在職學位學程（SEMI-EMRD）與 EMRD 使用同一份招生簡章與日程，報考資格相同。招生名額 16 名，選考代碼 2890（EMRD 為 2690），研究領域為半導體材料、設備暨供應鏈相關領域，於臺北校本部上課。",
+  phone: "(02) 2737-6914",
+  phoneHref: "tel:+886227376914",
+  email: "semi-emrd@mail.ntust.edu.tw",
+  website: "https://semi-emrd.ntust.edu.tw",
 } as const;

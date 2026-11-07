@@ -1,7 +1,7 @@
 [
   {
     "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9Mek15TDNCMFlWODBNek00TUY4MU5UTTJPVGcwWHpjMU5UazRMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWJGWTKK303035IGJCUSGC41VXQPOOOKZWPP5400HG45PKPKCCTXLPA404ROJGKOSWTSLODGB035LKZTJDDCA034B0B4FCUSSS45FCXSLKMPKKDGA0EGGDZSTWCG35OP24SWXSUTRLGGSSUSUSUSUW00A4HHHH",
-    "destination": "/legacy/files/d76bf6497c-110-1-semi-emrd-r.pdf"
+    "destination": "/posts/93152"
   },
   {
     "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFNemt3TTE4M056QTFOVFUyWHpreE1URTNMbkJrWmc9PQ==&fname=WW54RPOKRK44VXHHVS04FCWTZSB4TSYWSSB0UWMPNPQLWSB5ROB4A0LLDGOKJGWXZTPOHD00A404MOWSXSMOICWSYSROXSGCHDYTLOB5WSROWXTWFHPOXSFCUS00HH25HCA0EGXWZSHC40WSWSB0YSMKIHXTQPSWXWECZS54IGOOYSUSTWDCUTJHDGVWICSXKO30POHCWSROMKXSQPUXPOSSSSRO54SWUSDCROFCNOXW41KKWW04DHHG",
@@ -21,7 +21,7 @@
   },
   {
     "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODBNamd3TjE4eE1qRTFNREF3WHpVek1qazFMbkJrWmc9PQ==&fname=WSGGKLQKUSWWA100HCLKROZWOPMOWTLOFGB0XSKKVX25004034YWYW54LOLKB0OKPOCCYXKKVS0410WWMOHCTSLO34B0NOYSVXVXDCTSROB0CDUWFHA4YWFC2040HHKKDGA0DGWTTWMOPO35WX24ZWYS44UXSSTSFC3030US20GCHHHH",
-    "destination": "/legacy/files/a63095fd05-file.pdf"
+    "destination": "/posts/92100"
   },
   {
     "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODFNelE0T1Y4NU1Ua3dPRFEwWHpnd05qazVMbkJrWmc9PQ==&fname=LOGGYSOKWW10OO00HCLKUSJGMOMO25WW203440NKQPXTLK40OKROFCPOWWOOKLOKWWTSZXHHVS0410WWMOHC40HCYSRKMKGCVXVXXWB0UWUS01UWECOKUSOKWWPOGGZXA4LKRKGDXSMOWTB1KLEGCGNK2135A5A4",
@@ -37,7 +37,7 @@
   },
   {
     "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF6TDNCMFlWODBOalUzTlY4ek5UTTJOakl5WHpVME5UTTFMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWUSWTZSB4KKMKDGFGQLIG41NP34SSFCB4YSFG00OOKLSSPOCCVXXXDG04FCXTVWXSTSLO50B01035IH35XWA0WSECWXPOUS5445FCRKPOOOYXDGA0EGGDVWSWGD24WX24ZWYS44UXSSTSFC3030US20GCHHHH",
-    "destination": "/legacy/files/14a42c92dc-110-02-semi.pdf"
+    "destination": "/posts/97528"
   },
   {
     "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MemM0TDNCMFlWODBNelV4TVY4ME16RTBOell5WHpRek5EZ3dMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1100VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHPODGSSKLECRKPOFDYXJCNO41HGXSKOHGICSTMO24NK44UXUTB0LKB4KOPKYSA4LKQKKKCGA500IG04GD34VWJGGDB1B430A1A1&cg=7718",
@@ -2173,7 +2173,7 @@
   },
   {
     "source": "/p/450-1039-121514,c0.php",
-    "destination": "https://docs.google.com/document/d/1bqj5TDY8Imgl0lrYxAfTPPNRdlWofbSI/edit?usp=sharing&ouid=114287001932454276657&rtpof=true&sd=true"
+    "destination": "https://docs.google.com/document/d/1bqj5TDY8Imgl0lrYxAfTPPNRdlWofbSI/edit?usp=sharing&rtpof=true&sd=true"
   },
   {
     "source": "/p/450-1039-123358,c0.php",
@@ -2301,7 +2301,7 @@
   },
   {
     "source": "/var/file/39/1039/img/2483/292098962.png",
-    "destination": "/legacy/img/27d2a8d3f8-292098962.png"
+    "destination": "/posts/86720"
   },
   {
     "source": "/var/file/39/1039/img/2483/303979353.jpg",
@@ -2337,11 +2337,11 @@
   },
   {
     "source": "/var/file/39/1039/img/2483/666228978.png",
-    "destination": "/legacy/img/2210a193b8-666228978.png"
+    "destination": "/posts/79643"
   },
   {
     "source": "/var/file/39/1039/img/2483/680657080.png",
-    "destination": "/legacy/img/765806112c-680657080.png"
+    "destination": "/posts/77121"
   },
   {
     "source": "/var/file/39/1039/img/2483/849059908.jpg",
@@ -2565,7 +2565,7 @@
   },
   {
     "source": "/var/file/39/1039/img/2872/328745126.png",
-    "destination": "/legacy/img/a8891a7588-328745126.png"
+    "destination": "/posts/93152"
   },
   {
     "source": "/var/file/39/1039/img/2872/428379185.pdf",
@@ -2573,11 +2573,11 @@
   },
   {
     "source": "/var/file/39/1039/img/2872/441869805.png",
-    "destination": "/legacy/img/a192f8ec36-441869805.png"
+    "destination": "/posts/97528"
   },
   {
     "source": "/var/file/39/1039/img/2872/456384782.pdf",
-    "destination": "/legacy/files/a63095fd05-file.pdf"
+    "destination": "/posts/92100"
   },
   {
     "source": "/var/file/39/1039/img/2872/483219899.docx",
@@ -3429,7 +3429,7 @@
   },
   {
     "source": "/var/file/39/1039/pictures/174/m/mczh-tw1920x700_large4766_561351980199.png",
-    "destination": "/legacy/img/55085abafd-mczh-tw1920x700-large4766-561351980199.png"
+    "destination": "/posts/81907"
   },
   {
     "source": "/var/file/39/1039/pictures/265/m/mczh-tw1920x700_large4111_90369723682.jpg",

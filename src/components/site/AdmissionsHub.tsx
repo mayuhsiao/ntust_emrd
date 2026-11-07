@@ -5,13 +5,20 @@ import { EligibilityChecklist } from "@/components/sections/EligibilityChecklist
 import { brochureVersionNote } from "@/components/site/admissionsBrochure";
 import { StepPeriod, eligibilityContact } from "@/components/sections/Timeline";
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import { admissions, admissionsCta, currentIntakeYear, hero } from "@/content/home";
+import {
+  admissions,
+  admissionsCta,
+  currentIntakeYear,
+  hero,
+  semiEmrdAdmissions,
+} from "@/content/home";
 import { site } from "@/lib/site";
 import { keepDateTogether } from "@/lib/text";
 
 const SCHEDULE_TITLE_ID = "admissions-hub-schedule-title";
 const BROCHURE_NOTE_ID = "admissions-hub-brochure-note";
 const STEPS_TITLE_ID = "admissions-hub-steps-title";
+const SEMI_TITLE_ID = "admissions-hub-semi-title";
 const LEGACY_TITLE_ID = "admissions-hub-legacy-title";
 
 /** 入學學年度的西元年（116 學年度 → 2027 年 9 月入學） */
@@ -32,6 +39,8 @@ const scheduleItems = [
 export const admissionsHubLead = `${currentIntakeYear} 學年度招生日程、入學流程與報考資格自我檢視；原網站的歷年招生資訊收錄於頁面下方。`;
 
 const sectionTitleClass = "text-xl font-semibold tracking-[0.01em] text-brand-950 sm:text-2xl";
+const semiLinkClass =
+  "font-medium text-brand-800 underline decoration-champagne-500 underline-offset-2 hover:text-brand-950 hover:decoration-brand-800";
 
 /**
  * 「招生資訊」頁（/admissions/info）的版型區塊：本學年度招生日程、入學流程摘要與報考資格自我檢視，
@@ -49,6 +58,7 @@ export function AdmissionsHub({ legacy }: { legacy: ReactNode }) {
         contact={eligibilityContact}
         headingLevel={2}
       />
+      <SemiEmrdSummary />
       <section aria-labelledby={LEGACY_TITLE_ID} className="border-t border-stroke pt-10">
         <h2 id={LEGACY_TITLE_ID} className={sectionTitleClass}>
           歷年招生資訊（原網站）
@@ -93,7 +103,7 @@ function ScheduleCard() {
         ))}
       </dl>
 
-      {/* 日期尚未經正式簡章確認，提示須維持可見 */}
+      {/* 招生名額以教育部核定為準，提示須維持可見 */}
       <p className="mt-4 flex items-start gap-2 text-sm leading-relaxed font-medium text-slate-700">
         <Info aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-brand-600" />
         {hero.intake.note}
@@ -123,6 +133,36 @@ function ScheduleCard() {
       {/* 版本說明：簡章尚未換成本學年度版本時補充「僅供參考」（與歷史招生公告提示共用） */}
       <p id={BROCHURE_NOTE_ID} className="mt-3 text-xs leading-relaxed text-slate-600">
         {brochureVersionNote}
+      </p>
+    </section>
+  );
+}
+
+function SemiEmrdSummary() {
+  return (
+    <section aria-labelledby={SEMI_TITLE_ID} className="border-t border-stroke pt-10">
+      <h2 id={SEMI_TITLE_ID} className={sectionTitleClass}>
+        {semiEmrdAdmissions.title}
+      </h2>
+      <p className="mt-3 text-base leading-relaxed text-pretty text-slate-700">
+        {semiEmrdAdmissions.description}
+      </p>
+      <p className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm leading-relaxed text-slate-700">
+        <a href={semiEmrdAdmissions.phoneHref} className={semiLinkClass}>
+          {semiEmrdAdmissions.phone}
+        </a>
+        <a href={`mailto:${semiEmrdAdmissions.email}`} className={semiLinkClass}>
+          {semiEmrdAdmissions.email}
+        </a>
+        <a
+          href={semiEmrdAdmissions.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={semiLinkClass}
+        >
+          SEMI-EMRD 網站
+          <span className="sr-only">（另開新視窗）</span>
+        </a>
       </p>
     </section>
   );

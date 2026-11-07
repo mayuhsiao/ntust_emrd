@@ -14,15 +14,15 @@ EMRD「學員與校友任職企業」Logo 牆動畫渲染器 —— 以程式生
              移到馬賽克位置：所有磚同時出發、先上下撐開空隙再左右滑入，路徑互不交錯；
              移動中的磚依移動距離前浮到各自的深度並提高不透明度，不會互相透字
   7.3–8.3 秒 中央浮現標題「EMRD 學員與校友任職企業」與企業家數（由資料計算）及資料來源小字
-  8.3–10 秒  收尾：臺科大白色橫式標誌＋研發碩士在職專班＋金色細線＋標題，牆面在後方柔和發光後定格；
+  8.3–10 秒  收尾：臺科大白色橫式標誌＋高階科技研發碩士學位學程＋金色細線＋標題，牆面在後方柔和發光後定格；
              馬賽克左右對稱（最外圈多出的企業於上下列各自置中）
 動態模糊一律依「磚塊本身的移動速度」連續漸增（smoothstep），不會在相鄰兩格之間突然由清晰變糊。
 
 資料來源：scripts/data/alumni-companies.json，格式為
   [{"name": "<資料中的正式名稱>", "display": "<畫面顯示名稱>", "count": <人數>}, ...]
-可由班級網站的 js/data.js 重新產生（只讀取成員資料中的 company／company_label 欄位，
+可由成員資料檔重新產生（只讀取 company／company_label 欄位，
 姓名、職稱等其他個人欄位一律不讀取、不輸出）：
-  python -X utf8 scripts/render_logo_wall.py --extract <班級網站網址>/js/data.js
+  python -X utf8 scripts/render_logo_wall.py --extract <成員資料檔路徑>
 自動清理規則：去除前後空白、合併被換行切斷的英文名稱、以「/、；」拆分多家公司、
 排除「待業」等非任職值與標示為「前服務單位」者、去除「股份有限公司／有限公司」與
 「美商／荷商」等字樣、合併同一企業的不同寫法（見 ALIASES）。
@@ -37,7 +37,7 @@ EMRD「學員與校友任職企業」Logo 牆動畫渲染器 —— 以程式生
   python -X utf8 scripts/render_logo_wall.py                        # 正式輸出 1920×1080
   python -X utf8 scripts/render_logo_wall.py --companies 其他名單.json --out 其他.mp4
   python -X utf8 scripts/render_logo_wall.py --title "EMRD 學員任職企業"   # 改標題（需客戶確認用語）
-  python -X utf8 scripts/render_logo_wall.py --program "高階科技研發碩士在職專班"
+  python -X utf8 scripts/render_logo_wall.py --program "高階科技研發碩士學位學程"
   python -X utf8 scripts/render_logo_wall.py --count-plus                   # 家數後加「+」（僅在確認名單不完整時使用）
 
 輸出：media/videos/emrd-logo-wall-10s.mp4（H.264 High、yuv420p、+faststart、無音軌）
@@ -99,7 +99,7 @@ OUT_POSTER = VIDEO_DIR / "emrd-logo-wall-poster.jpg"
 FPS = 30
 DURATION = 10.0
 TITLE = "EMRD 學員與校友任職企業"
-PROGRAM = "研發碩士在職專班"
+PROGRAM = "高階科技研發碩士學位學程"
 NOTE = "資料：114–115 級學員目前服務單位"
 PREVIEW_TIMES = "0.5,1.2,2.0,2.9,3.7,4.4,5.1,6.0,6.6,7.1,8.0,9.8"
 # 同分（任職人數 1）時優先排在鏡頭滑行路徑與標題旁的知名企業（依序）
@@ -116,7 +116,7 @@ tonemap = hv.Scene.tonemap
 
 
 # ---------------------------------------------------------------------------
-# 資料：由班級網站 data.js 擷取「服務單位」並正規化
+# 資料：由成員資料檔擷取「服務單位」並正規化
 # ---------------------------------------------------------------------------
 
 # 非任職狀態（整格等於下列字樣才排除）
@@ -1548,7 +1548,7 @@ def _render_time(t: float) -> np.ndarray:
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--companies", type=Path, default=COMPANIES_JSON, help="企業名單 JSON（預設 scripts/data/alumni-companies.json）")
-    ap.add_argument("--extract", metavar="DATA_JS", help="由班級網站 data.js（網址或檔案）重新產生 --companies 指定的 JSON 後結束")
+    ap.add_argument("--extract", metavar="DATA_JS", help="由成員資料檔（網址或檔案）重新產生 --companies 指定的 JSON 後結束")
     ap.add_argument("--logos", type=Path, default=LOGO_DIR, help="官方 logo 覆寫資料夾（預設 scripts/logos）")
     ap.add_argument("--note", default=NOTE, help="標題下方的資料說明小字（空字串則不顯示）")
     ap.add_argument("--title", default=TITLE, help=f"標題（預設「{TITLE}」）")

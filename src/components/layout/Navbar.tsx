@@ -336,7 +336,7 @@ export function Navbar({ pathname }: { pathname: string | null }) {
             {/*
               六個單元＋完整標準字已用滿 1280px 容器，主導覽列只留搜尋鈕與一個 CTA；
               簡章下載改列於工具列與「招生專區」面板（行動版選單底部亦有）。
-              CTA 圖示於 82rem（1312px）以下隱藏、lg–xl 左右內距縮為 px-4，騰出搜尋鈕（44px）的寬度。
+              CTA 不放圖示、lg–xl 左右內距縮為 px-4，騰出搜尋鈕（44px）。
             */}
             <div className="flex shrink-0 items-center gap-1">
               <SearchButton onLight={onLight} />
@@ -348,7 +348,6 @@ export function Navbar({ pathname }: { pathname: string | null }) {
                   title={consultationTitle}
                   className="lg:max-xl:px-4"
                 >
-                  <CalendarCheck aria-hidden="true" className="size-4 max-[82rem]:hidden" />
                   線上預約諮詢
                 </ButtonLink>
               </div>

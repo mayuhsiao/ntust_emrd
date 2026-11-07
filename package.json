@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "package:windows": "node scripts/build_windows_package.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.60.0",

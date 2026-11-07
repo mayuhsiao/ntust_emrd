@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(isPreview && previewUrl ? previewUrl : site.url),
   ...(isPreview ? { robots: { index: false, follow: false } } : {}),
   title: {
-    default: `${site.name}｜${site.officialName}`,
+    default: `${site.name}（${site.programAbbr}）`,
     template: `%s｜${site.shortName}`,
   },
   description,
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   keywords: [
     "臺科大",
     "EMRD",
-    "高階科技研發碩士",
+    "高階科技研發碩士學位學程",
     "碩士在職專班",
     "技術長學程",
     "CTO",

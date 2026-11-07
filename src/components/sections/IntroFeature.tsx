@@ -24,7 +24,7 @@ function withPhraseBreaks(text: string): ReactNode {
   ));
 }
 
-/** 專班簡介：Berkeley 式圖文區塊，左側品牌相框照片、右側特色敘述。 */
+/** 學程簡介：Berkeley 式圖文區塊，左側品牌相框照片、右側特色敘述。 */
 export function IntroFeature() {
   return (
     <Section id="about" aria-labelledby={TITLE_ID}>

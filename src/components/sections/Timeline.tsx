@@ -98,14 +98,14 @@ export function Timeline() {
 }
 
 /**
- * 入學流程的預計時程（首頁 Roadmap 與「招生資訊」頁共用）。
+ * 入學流程的時程（首頁 Roadmap 與「招生資訊」頁共用）。
  * 「公告｜報名」等複合時程拆成獨立行，寬度不足時不會從日期中間斷開；螢幕閱讀器以「，」分隔。
  */
 export function StepPeriod({ period }: { period: string }) {
   const periods = period.split("｜");
   return (
     <span className="min-w-0">
-      <span className="sr-only">預計時程：</span>
+      <span className="sr-only">時程：</span>
       {periods.map((part, index) => (
         <Fragment key={part}>
           {index > 0 ? <span className="sr-only">，</span> : null}

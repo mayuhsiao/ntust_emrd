@@ -26,7 +26,7 @@ const film = {
   },
   width: 1920,
   height: 1080,
-  size: "6.5 MB",
+  size: "7.7 MB",
   titleId: "community-film-title",
   noteId: "community-film-note",
 } as const;
@@ -60,7 +60,7 @@ const filmScenes: ReadonlyArray<{ time: string; label: string; body: ReactNode }
       <>
         光芒擴散為白底片尾卡：臺科大校徽與「國立臺灣科技大學」標準字（
         <span lang="en">NATIONAL TAIWAN UNIVERSITY OF SCIENCE AND TECHNOLOGY</span>
-        ）、「<span lang="en">NTUST EMRD</span>」、一道香檳金細線、標語「研發之路，同行致遠」，以及「高階科技研發碩士在職專班　校友與同儕網絡」。
+        ）、「<span lang="en">NTUST EMRD</span>」、一道香檳金細線、標語「研發之路，同行致遠」，以及「高階科技研發碩士學位學程　校友與同儕網絡」。
       </>
     ),
   },

@@ -39,10 +39,10 @@ python -X utf8 scripts/render_logo_wall.py
 
 ## 更新企業名單
 
-名單來自班級網站的成員資料，只擷取「服務單位」欄位（不讀取姓名、職稱等其他個人資料）：
+名單來自本機的成員資料檔，只擷取「服務單位」欄位（不讀取姓名、職稱等其他個人資料）：
 
 ```bash
-python -X utf8 scripts/render_logo_wall.py --extract <班級網站網址>/js/data.js   # 也可以傳本機檔案路徑
+python -X utf8 scripts/render_logo_wall.py --extract <成員資料檔路徑>
 ```
 
 也可以直接編輯 `scripts/data/alumni-companies.json`：`display` 是畫面上顯示的名稱，
@@ -57,8 +57,8 @@ python -X utf8 scripts/render_logo_wall.py --extract <班級網站網址>/js/dat
 # 若客戶希望更精確，可改用「EMRD 學員任職企業」）
 python -X utf8 scripts/render_logo_wall.py --title "EMRD 學員任職企業"
 
-# 班別名稱（預設「研發碩士在職專班」；品牌片／校友片片尾使用「高階科技研發碩士在職專班」，請客戶擇一統一）
-python -X utf8 scripts/render_logo_wall.py --program "高階科技研發碩士在職專班"
+# 學程名稱（預設為正式名稱「高階科技研發碩士學位學程」，與品牌片、校友片片尾一致）
+python -X utf8 scripts/render_logo_wall.py --program "高階科技研發碩士學位學程"
 
 # 家數預設顯示名單實際家數（例如「61 家企業」）；只有在確認實際任職企業多於名單時才加「+」
 python -X utf8 scripts/render_logo_wall.py --count-plus

@@ -20,7 +20,7 @@ migrate_legacy.py — 舊版 EMRD 網站（https://emrd.ntust.edu.tw，rpage CMS
     * 寬度超過 2000 px 的 JPEG／PNG／WebP／BMP 縮成 2000 px 寬（先依 EXIF 方向轉正、Pillow LANCZOS；
       JPEG 品質 85 漸進式、PNG optimize；格式不變）。
     * BMP 一律無損轉成 PNG（像素相同），引用（html、cover）改為 .png。
-    * 被修改（縮圖或轉檔）的原始檔在修改前逐位元組備份到 legacy-originals/img/（與 public/legacy/img 同檔名；
+    * 被修改（縮圖或轉檔）的原始檔在修改前備份到 legacy-originals/img/（已清除檔案資訊；與 public/legacy/img 同檔名；
       不在 public/ 下、不會部署），對照表在 legacy-originals/manifest.json；還原方式見 legacy-originals/README.md。
     * html 中每個本地 <img> 都帶 width／height（依實際檔案〔縮圖後〕的比例；原站有設定顯示寬度時沿用該寬度），
       前端不必讀檔判斷尺寸。
@@ -64,8 +64,9 @@ migrate_legacy.py — 舊版 EMRD 網站（https://emrd.ntust.edu.tw，rpage CMS
 搬移規則（1:1）：
     * attachments 只取原站附件區塊（.module-ptattach）；內文中的檔案連結留在內文，不重複列為附件。
     * 圖片只有「寬度超過 2000 px」與「BMP」兩種情況會被修改（見上方「圖片處理」）；其餘保留原始檔
-      （位元組完全相同）。--original-images 可完整還原為原始檔。附件（/legacy/files/）保留原檔，
+      （不重新編碼，只清除檔案資訊）。--original-images 可還原為備份的原始檔。附件（/legacy/files/）保留原檔，
       唯一的例外是下一項的個資保護。
+    * 圖片的檔案資訊（GPS、作者、著作權欄的電話等）一律清除，像素不變；Word／OpenDocument 附件清除作者欄位。
     * 個資保護（PRIVACY_REDACTIONS，任何模式都會套用）：原站公開過的學生個資（學分抵免審核清單、公聽會簽到單與
       線上出席紀錄、抽選結果的學號欄）不搬移或只搬移不含個資的部分，原處改為一段說明文字；原站檔案網址轉址到
       該文章；.legacy-cache/ 快照中的學號也先遮蔽。移除或修改前的原始檔移到 .private-originals/（不進版控、
@@ -134,6 +135,8 @@ from bs4.dammit import EntitySubstitution
 from bs4.element import CData, Comment, Declaration, Doctype, ProcessingInstruction
 from bs4.formatter import HTMLFormatter
 from PIL import Image, ImageOps
+
+from strip_image_metadata import blur_regions, redact_pdf_text, strip_image, strip_office
 
 # ---------------------------------------------------------------------------
 # 路徑與常數
@@ -224,60 +227,276 @@ DATE_RE = re.compile(r"(?<!\d)(\d{4})\s*[-/.年]\s*(\d{1,2})\s*[-/.月]\s*(\d{1,
 #                  note 為空字串時不加說明文字；圖片是表格儲存格唯一的內容時整格不輸出，旁邊的文字占滿整列。
 #   pdf_pages      PDF 只保留 keep 列出的頁（1 起算；其餘頁連同只屬於它們的圖片、標籤結構一併移除），並清除作者
 #                  欄位與 XMP 中繼資料；附件大小標示依處理後的檔案。
+#   pdf_text       PDF 中符合 patterns 的文字列、連結與無障礙替代文字移除（處理目前的檔案，重跑結果相同）。
 #   table_columns  指定文件（"post:<編號>"／"page:<slug>"）的表格中，表頭文字為 headers 的欄整欄移除。
-#   cache_scrub    指定文章（編號；原站 404／405／406／16 各種網址形式）在 .legacy-cache/ 快照中的個資以
-#                  replacement 取代：讀取快取時即改寫快照，--refresh 重新抓取時在寫入快取前遮蔽。
+#   image_blur     指定圖片（以原站圖片路徑為鍵）模糊 rects 區域的投影片（左、上、右、下，占寬高的比例），
+#                  keep 內的橢圓範圍維持清晰。
+#   cache_scrub    指定文章（編號；原站 404／405／406／16 各種網址形式）在 .legacy-cache/ 快照中的個資，依 subs 的
+#                  （規則運算式, 取代文字）改寫：讀取快取時即改寫快照，--refresh 重新抓取時在寫入快取前遮蔽。
+#                  快照是公開版本庫的一部分，所以內文的個資要在這裡處理，規則中不寫出個資本身。
 #
 # 被移除或被修改前的原始檔（含快照原文）由本腳本移到 .private-originals/（.gitignore 排除；不部署、不進 git），
 # 對照表為 .private-originals/manifest.json，說明見該資料夾的 README.txt。要恢復 remove_assets／pdf_pages 的
-# 某一項：從下表刪除該項後重跑本腳本即可，腳本會自 .private-originals/ 取回原檔（不需連網）。
+# 某一項：從下表刪除該項後重跑本腳本，腳本會自 .private-originals/ 取回原檔（不需連網）。外部連結在快照中已改寫成
+# 佔位網址，要另外把 .private-originals/legacy-cache/http/ 的快照原文複製回 .legacy-cache/http/；沒有複製時輸出會
+# 留下佔位網址，腳本會列為錯誤。刪除 image_blur、pdf_text、cache_scrub 的規則不會自動還原，要手動從該資料夾取回。
 #
 # 檔案以穩定識別碼比對（privacy_asset_id）：原站 downloadfile 網址取 file 參數（兩層 base64）解碼後的伺服器路徑，
 # 同一檔案的不同網址（有無 &cg=…、fname 不同）都會被比對到；其他網址取「主機＋路徑」（不含 ?時間戳；www.emrd.tw
 # 與其 Weebly 預覽主機視為同一主機）。
+# remove_assets、pdf_pages、pdf_text 的鍵是識別碼的 SHA-1 前 16 碼（privacy_key），what 只寫類型，明細只留在本機
+# .private-originals/privacy-report.json；
+# 新增規則時先計算：python -c "from migrate_legacy import privacy_key; print(privacy_key('網址'))"（在 scripts/ 執行）。
+# 快照中的外部網址改寫成 https://removed.invalid/<鍵>，所以規則仍然比對得到；原站網址不改。
+PRIVACY_REMOVED_HOST = "removed.invalid"
+_PRIVACY_URL = re.compile(r"""https?:(?:\\?/){2}(?:(?!&quot;|&\#39;|&lt;|&gt;)(?:\\/|[^\s"'<>\\)]))+""", re.I)
 PRIVACY_VERSION = 1     # PDF 處理方式（輸出設定等）變更時遞增，重跑時才會重新產生已處理過的檔案
 PRIVACY_NOTE_GRADE_LIST = "審核結果已個別通知申請人。為保護個人資料，本站不公開含姓名、學號與成績的審核清單。"
+PRIVACY_NOTE_PASS_LIST = "審核結果已個別通知申請人。為保護個人資料，本篇不公開通過名單。"
+PRIVACY_NOTE_PROGRAM_BROCHURE = "為保護個人資料，本站不提供「碩士在職專班學程簡介」PDF；如需相關資料，請洽學程辦公室。"
+PRIVACY_NOTE_ADMISSION_RESULT = "放榜與備取名單已個別通知考生。為保護個人資料，本站不提供名單連結；如有疑問，請洽學程辦公室。"
+PRIVACY_NOTE_EXAM_LIST = "初試成績與合於口試名單已個別通知考生。為保護個人資料，本站不提供名單連結；如有疑問，請洽學程辦公室。"
+PRIVACY_NOTE_ORAL_EXAM = "學位考試的連結與名單已個別通知口試相關人員。為保護個人資料，本站不提供此文件。"
+# 遮蔽的姓名（姓名中間一字以 Ｏ 取代）；內文的通過名單與指導學生名單都是這個格式
+_MASKED_NAME = r"[\u4e00-\u9fff]{1,2}[ＯO○◯〇][\u4e00-\u9fff]{1,2}"
+_TAGS = r"(?:<[^<>]*>|&lt;(?:(?!&gt;).)*?&gt;)*"
+_MASKED_NAME_TAGGED = r"[\u4e00-\u9fff]{1,2}" + _TAGS + r"[ＯO○◯〇]" + _TAGS + r"[\u4e00-\u9fff]{1,2}"
+_REMOVED = "（已移除）"
+_LINK_REMOVED = "（連結已移除）"
 PRIVACY_REDACTIONS: dict[str, dict] = {
     "remove_assets": {
-        "emrd.ntust.edu.tw/app/index.php?file=attach/4/pta_36965_3627801_99071.pdf": {
-            "what": "109 學年度學分抵免申請審核清單（附件「109-抵免學分申請結果公告.pdf」：全名、學號、課程成績）",
+        "8205133747c949d6": {
+            "what": "審核清單",
             "post": "82939", "note": PRIVACY_NOTE_GRADE_LIST,
         },
-        "emrd.ntust.edu.tw/app/index.php?file=attach/78/pta_43511_4314762_43480.pdf": {
-            "what": "110 學年度學分抵免申請審核清單（附件「110-抵免學分申請清單(公告).pdf」：全名、學號、課程成績）",
+        "c7d655b762162780": {
+            "what": "審核清單",
             "post": "93392", "note": PRIVACY_NOTE_GRADE_LIST,
         },
-        "www.emrd.tw/uploads/1/1/5/6/115637951/published/0910mail-page-0001.jpg": {
-            "what": "108 學年度學分抵免申請審核清單（內文圖片，亦為文章封面：全名、學號、課程成績）",
+        "5d440df93561ea81": {
+            "what": "審核清單",
             "post": "76672", "note": PRIVACY_NOTE_GRADE_LIST,
         },
-        "emrd.ntust.edu.tw/var/file/39/1039/img/2784/120124061.jpg": {
-            "what": "業界推薦頁的前任執行長與研華執行董事合照（非學生個資；115 年 11 月 1 日學程會議決議移除，推薦文字保留）",
+        # 通過名單、結果連結與學程簡介：115 年 11 月學程決定上線前移除
+        "24fb2c8b78464c19": {
+            "what": "通過名單",
+            "post": "86720", "note": PRIVACY_NOTE_PASS_LIST,
+        },
+        "56bd296f49657411": {
+            "what": "通過名單",
+            "post": "79643", "note": PRIVACY_NOTE_PASS_LIST,
+        },
+        "fadda40e867a0346": {
+            "what": "通過名單",
+            "post": "81907", "note": PRIVACY_NOTE_PASS_LIST,
+        },
+        "0593b3d55bc2a02a": {
+            "what": "通過名單",
+            "post": "76664", "note": PRIVACY_NOTE_PASS_LIST,
+        },
+        "0b2d03f481adbfd7": {
+            "what": "通過名單",
+            "post": "76685", "note": PRIVACY_NOTE_PASS_LIST,
+        },
+        "8618914ba21dd7ab": {
+            "what": "通過名單",
+            "post": "76691", "note": PRIVACY_NOTE_PASS_LIST,
+        },
+        "6fac3274b5692f43": {
+            "what": "審核清單",
+            "post": "116702", "note": PRIVACY_NOTE_GRADE_LIST,
+        },
+        "11123a22e4873fde": {
+            "what": "審核清單",
+            "post": "128451", "note": PRIVACY_NOTE_GRADE_LIST,
+        },
+        "b0b40808d8103504": {
+            "what": "名單連結",
+            "post": "123695", "note": PRIVACY_NOTE_ORAL_EXAM,
+        },
+        "edf369cfa7b9b48c": {
+            "what": "名單連結",
+            "post": "76690", "note": PRIVACY_NOTE_ADMISSION_RESULT,
+        },
+        "4b8644c8be299ac8": {
+            "what": "名單連結",
+            "post": "78149", "note": PRIVACY_NOTE_ADMISSION_RESULT,
+        },
+        "9b26bfe7f57909de": {
+            "what": "名單連結",
+            "post": "78149", "note": PRIVACY_NOTE_ADMISSION_RESULT,
+        },
+        "6e73d7034df631dc": {
+            "what": "名單連結",
+            "post": "89120", "note": PRIVACY_NOTE_ADMISSION_RESULT,
+        },
+        "dceda3e12d8763f2": {
+            "what": "名單連結",
+            "post": "89120", "note": PRIVACY_NOTE_ADMISSION_RESULT,
+        },
+        "2894fa59c4579a58": {
+            "what": "名單連結",
+            "post": "87508", "note": PRIVACY_NOTE_EXAM_LIST,
+        },
+        "0cca4bb674b3e9bc": {
+            "what": "通過名單",
+            "post": "77121", "note": PRIVACY_NOTE_PASS_LIST,
+        },
+        "425323258097ac75": {
+            "what": "通過名單",
+            "post": "93152", "note": PRIVACY_NOTE_PASS_LIST,
+        },
+        "5302e38052081ef8": {
+            "what": "通過名單",
+            "post": "93152", "note": PRIVACY_NOTE_PASS_LIST,
+        },
+        "018cde2856bb37b8": {
+            "what": "通過名單",
+            "post": "97528", "note": PRIVACY_NOTE_PASS_LIST,
+        },
+        "fe62f0923bb8c5d1": {
+            "what": "通過名單",
+            "post": "97528", "note": PRIVACY_NOTE_PASS_LIST,
+        },
+        "8b9e2b8a906da961": {
+            "what": "招生簡介",
+            "post": "92100", "note": PRIVACY_NOTE_PROGRAM_BROCHURE,
+        },
+        "5b150f5fade8d382": {
+            "what": "招生簡介",
+            "post": "92100", "note": PRIVACY_NOTE_PROGRAM_BROCHURE,
+        },
+        "f1a7dc2b1b8669f7": {
+            "what": "師資照片（會議決議）",
             "page": "/about/recommendations", "note": "",
         },
-        "emrd.ntust.edu.tw/var/file/39/1039/img/3299/838765448.png": {
-            "what": "前任副執行長大頭照（非學生個資；115 年 11 月 1 日學程會議決議更正現任副執行長，見 CONTENT_CORRECTIONS）",
+        "ee9b00f8c0fb1de0": {
+            "what": "師資照片（會議決議）",
             "page": "/faculty/executives", "note": "",
         },
     },
     "pdf_pages": {
-        "emrd.ntust.edu.tw/app/index.php?file=attach/10/pta_54243_1779120_73735.pdf": {
-            "what": ("112 學年度調整學分費公聽會會議紀錄（/study/tuition 附件）：保留第 1–3 頁會議紀錄，移除第 4–8 頁"
-                     "（現場照片與 Webex 參與者名單截圖、手寫簽到單、Webex 出席紀錄〔約 40 人的姓名與加入／離開時間〕）"),
+        "f24ecbc482af7f61": {
+            "what": "附件：移除部分頁面",
             "keep": [1, 2, 3],
+        },
+        "f7fbd5687dbce1e8": {
+            "what": "附件：移除部分頁面",
+            "keep": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15],
+        },
+        "9ecc7fcbd1d41620": {
+            "what": "附件：清除作者欄位",
+            "keep": [1, 2, 3, 4],
+        },
+        "21c08a1fbe5e5847": {
+            "what": "附件：清除作者欄位",
+            "keep": [1, 2, 3, 4],
+        },
+    },
+    "pdf_text": {
+        "f24ecbc482af7f61": {
+            "what": "附件：移除會議連結文字",
+            "patterns": [r"webex", r"j\.php", r"MTID", r"會議號", r"密碼", r"如附件簽到單"],
+        },
+        "6f187244e1864210": {
+            "what": "附件：移除會議連結文字",
+            "patterns": [r"webex"],
         },
     },
     "table_columns": {
-        "post:121858": {
-            "what": "112-2「談判理論與實務」修課名額抽選結果：移除學號欄（保留序號與已遮蔽的姓名）",
-            "headers": ["學號"],
+        "post:92909": {
+            "what": "表格：移除學生欄位",
+            "headers": ["主要指導學生", "共同指導學生"],
+        },
+    },
+    "image_blur": {
+        "/legacy/img/1fe7cff3fa-s-89505820-0.jpg": {
+            "what": "照片：模糊投影片文字",
+            "rects": [(0.175, 0.31, 0.625, 0.535), (0.0, 0.31, 0.08, 0.5), (0.665, 0.31, 0.86, 0.51)],
+            # 投影片下緣的姓名在後排人物之間：這些橢圓範圍（人物的頭）維持清晰
+            "keep": [
+                (0.15, 0.472, 0.176, 0.535),
+                (0.184, 0.488, 0.211, 0.548),
+                (0.204, 0.491, 0.241, 0.561),
+                (0.259, 0.488, 0.297, 0.552),
+                (0.289, 0.495, 0.307, 0.552),
+                (0.334, 0.495, 0.371, 0.561),
+                (0.383, 0.493, 0.407, 0.539),
+                (0.401, 0.488, 0.431, 0.545),
+                (0.468, 0.499, 0.485, 0.541),
+                (0.479, 0.488, 0.511, 0.545),
+                (0.527, 0.515, 0.541, 0.559),
+                (0.534, 0.501, 0.562, 0.559),
+                (0.569, 0.515, 0.599, 0.561),
+                (0.596, 0.495, 0.624, 0.548),
+            ],
+        },
+        "/legacy/img/a08c235e56-008.jpg": {
+            "what": "照片：模糊投影片文字",
+            "rects": [(0.39, 0.3, 0.98, 0.62)],
+        },
+        "/legacy/img/94c4639792-211242768.jpg": {
+            "what": "照片：模糊投影片文字",
+            "rects": [(0.43, 0.285, 0.965, 0.6)],
         },
     },
     "cache_scrub": {
         "121858": {
-            "what": "112-2「談判理論與實務」修課名額抽選結果表格中的學號 → 「（已移除）」",
-            "pattern": r"(?<![A-Za-z0-9])[MBD]1\d{7,8}(?![0-9])",
-            "replacement": "（已移除）",
+            "what": "內文：遮蔽名單或連結",
+            "subs": [
+                (r"(?s)<table\b.*?</table>", "<p>抽選結果已個別通知中選者。為保護個人資料，本篇不公開名單。</p>"),
+                (r"(?<![A-Za-z0-9])[MBD]1\d{7,8}(?![0-9])", _REMOVED),
+                (_MASKED_NAME, _REMOVED),
+            ],
+        },
+        "104028": {
+            "what": "內文：遮蔽名單或連結",
+            "subs": [
+                (r"(?s)<table\b.*?</table>", f"<p>{PRIVACY_NOTE_PASS_LIST}</p>"),
+                (_MASKED_NAME, _REMOVED),
+            ],
+        },
+        "76690": {
+            "what": "內文：遮蔽名單或連結",
+            "subs": [(r'(?<!href=")(?<!href=&quot;)https?://(?:goo\.gl|bit\.ly|is\.gd)/\w+', _LINK_REMOVED)],
+        },
+        "78149": {
+            "what": "內文：遮蔽名單或連結",
+            "subs": [(r'(?<!href=")(?<!href=&quot;)https?://(?:goo\.gl|bit\.ly|is\.gd)/\w+', _LINK_REMOVED)],
+        },
+        "89120": {
+            "what": "內文：遮蔽名單或連結",
+            "subs": [(r'(?<!href=")(?<!href=&quot;)https?://(?:goo\.gl|bit\.ly|is\.gd)/\w+', _LINK_REMOVED)],
+        },
+        "116702": {
+            "what": "內文：遮蔽名單或連結",
+            "subs": [(r"審核結果請參閱下方連結，", "審核結果已個別通知，"), (r"(?:&nbsp;|\s)*\(請點選\)", "")],
+        },
+        "128451": {
+            "what": "內文：遮蔽名單或連結",
+            "subs": [(r"審核結果請參閱下方連結，", "審核結果已個別通知，"), (r"(?:&nbsp;|\s)*\(請點選\)", "")],
+        },
+        "92909": {
+            "what": "內文：遮蔽名單或連結",
+            "subs": [(_MASKED_NAME_TAGGED, _REMOVED), (r"指導名額與名單", "指導名額")],
+        },
+        "76479": {
+            "what": "內文：遮蔽名單或連結",
+            "subs": [
+                (r"<a\b[^>]*mailto:[\w.+-]+@(?:gmail|hotmail)\.com[^>]*>[^<]*</a>", "請洽學程辦公室"),
+                (r"[\w.+-]+@(?:gmail|hotmail)\.com", _REMOVED),
+            ],
+        },
+        "103121": {
+            "what": "內文：遮蔽名單或連結",
+            "subs": [
+                (r"會議連結<a\b[^>]*webex[^>]*>[^<]*</a>", "（會議已結束，連結已移除）"),
+                (r"會議號:\s*[\d ]+(?:&nbsp;|\s)*密碼:\s*\d+(?:&nbsp;|\s)*\(進入線上會議室之名稱請以&quot;姓名全名&quot;登入\)", ""),
+            ],
+        },
+        "92308": {
+            "what": "內文：遮蔽名單或連結",
+            "subs": [(r"(?s)<a\b[^>]*webex\.com/meet/[^>]*>.*?</a>", "（說明會已結束，連結已移除）")],
         },
     },
 }
@@ -297,7 +516,30 @@ _DEPUTY_EXECUTIVE = [
      "Email：menghan@mail.ntust.edu.tw<br> 詳細介紹：<u><a href=\"https://www.ct.ntust.edu.tw/ct/users/view/74?itemid=213\">"
      "個人網頁</a></u></td>"),
 ]
+_WELCOME = [("歡迎以上幾位學員加入EMRD課程隨班附讀!", "歡迎學員加入EMRD課程隨班附讀!")]
+_CONGRATS = [("恭喜以下通過審核的隨班附讀學員，", "恭喜通過審核的隨班附讀學員，")]
 CONTENT_CORRECTIONS: dict[str, list[tuple[str, str]]] = {
+    # 名單已移除（PRIVACY_REDACTIONS）：指向名單的句子改寫
+    "post:104028": [("恭喜以下報名 111-01 學期臺科大 EMRD 隨班附讀之學員通過審核，錄取名單如下。",
+                     "恭喜報名 111-01 學期臺科大 EMRD 隨班附讀之學員通過審核。")],
+    "post:93152": [("恭喜以下報名110-01學期台科大EMRD半導體產業學分班之學員，通過審核錄取名單如下。",
+                    "恭喜報名110-01學期台科大EMRD半導體產業學分班之學員通過審核。")],
+    "post:97528": [("恭喜以下報名110-02學期台科大EMRD半導體產業學分班之學員，通過審核錄取名單如下。",
+                    "恭喜報名110-02學期台科大EMRD半導體產業學分班之學員通過審核。")],
+    "post:76685": _WELCOME,
+    "post:76691": _WELCOME,
+    "post:77121": _WELCOME,
+    "post:76664": _CONGRATS,
+    "post:81907": _CONGRATS,
+    "post:86720": _CONGRATS,
+    "post:76672": [("審核結果於會議複審，申請抵免學分申請結果如下圖。", "審核結果於會議複審。")],
+    "post:82939": [("審核結果於會議複審，申請抵免學分申請結果如下檔。", "審核結果於會議複審。")],
+    "post:93392": [("本學期學分抵免申請審核結果，各課程抵免學分之審核，申請抵免學分申請結果如下檔。", "本學期學分抵免申請審核已完成。")],
+    "post:116702": [("<p><strong>112 學年度學分抵免結果公告</strong></p>", "")],
+    "post:128451": [("<p><strong>113&nbsp;學年度學分抵免結果公告</strong></p>", "")],
+    "post:78149": [("<p><u>完成報到名單及備取生可遞補名單公告【研教組】</u></p>",
+                    "<p>完成報到名單及備取生可遞補名單公告【研教組】（連結已移除）</p>")],
+    "post:92100": [("&nbsp;&nbsp;半導體產業高階碩士在職專班 學程簡介&nbsp;</p>", "</p>")],
     "page:faculty/executives": _DEPUTY_EXECUTIVE,
     "page:contact": _DEPUTY_EXECUTIVE,
     "page:faculty/internal": [
@@ -341,9 +583,34 @@ def privacy_asset_id(url: str) -> str:
     return f"{host}{path}"
 
 
+def privacy_key(url: str) -> str:
+    """remove_assets 的鍵：識別碼的雜湊，版本庫中不留下檔案或連結的位置。快照中已改寫的網址，路徑就是鍵。"""
+    sp = urlsplit(url)
+    if sp.hostname == PRIVACY_REMOVED_HOST:
+        return sp.path.strip("/")
+    return hashlib.sha1(privacy_asset_id(url).encode("utf-8")).hexdigest()[:16]
+
+
 def privacy_removed(url: str) -> dict | None:
     """remove_assets 的規則（不搬移的檔案）；其他網址回傳 None。"""
-    return PRIVACY_REDACTIONS["remove_assets"].get(privacy_asset_id(url))
+    return PRIVACY_REDACTIONS["remove_assets"].get(privacy_key(url))
+
+
+def privacy_mask_urls(text: str) -> str:
+    """快照中被移除檔案的外部網址（雲端硬碟、短網址、招生網、預覽主機）改寫成不存在的佔位網址。
+    原站網址不改：它們是舊網址轉址的來源，也會隨原站下線失效。"""
+
+    def mask(m: re.Match) -> str:
+        url = html_unescape(m[0]).replace("\\/", "/")
+        try:
+            host = urlsplit(url).hostname
+            if host == PRIVACY_REMOVED_HOST or is_legacy_host(host) or not privacy_removed(url):
+                return m[0]
+        except ValueError:                      # 格式不正確的網址（例：未閉合的 IPv6）
+            return m[0]
+        return f"https://{PRIVACY_REMOVED_HOST}/{privacy_key(url)}"
+
+    return _PRIVACY_URL.sub(mask, text)
 
 
 def privacy_target(rule: dict) -> str:
@@ -353,20 +620,28 @@ def privacy_target(rule: dict) -> str:
 
 def privacy_pdf_rule(url: str) -> dict | None:
     """pdf_pages 的規則（只保留部分頁面的 PDF）；其他網址回傳 None。"""
-    return PRIVACY_REDACTIONS["pdf_pages"].get(privacy_asset_id(url))
+    return PRIVACY_REDACTIONS["pdf_pages"].get(privacy_key(url))
 
 
 def privacy_scrub(url: str, body: bytes) -> bytes:
-    """cache_scrub：指定文章的原站頁面（任何網址形式）遮蔽個資；其他網址原樣回傳（位元組不變）。"""
-    ref = parse_legacy(url)
-    if ref is None or ref.type not in ("404", "405", "406", "16"):
-        return body
-    rule = PRIVACY_REDACTIONS["cache_scrub"].get(ref.id or "")
-    if not rule:
-        return body
+    """快照內容遮蔽個資：cache_scrub 指定文章的原站頁面（任何網址形式），以及所有內容中被移除檔案的外部網址。
+    沒有符合時原樣回傳（位元組不變）。"""
     text = body.decode("utf-8", errors="surrogateescape")
-    new = re.sub(rule["pattern"], rule["replacement"], text)
+    new = text
+    ref = parse_legacy(url)
+    if ref is not None and ref.type in ("404", "405", "406", "16"):
+        rule = PRIVACY_REDACTIONS["cache_scrub"].get(ref.id or "")
+        for pattern, replacement in rule["subs"] if rule else ():
+            new = re.sub(pattern, replacement, new)
+    new = privacy_mask_urls(new)
     return body if new == text else new.encode("utf-8", errors="surrogateescape")
+
+
+def scrub_location(location: str | None) -> str | None:
+    """快取的轉址目的地：移除 Google 文件連結中識別擁有者帳號的 ouid 參數；被移除的檔案改成佔位網址。"""
+    if not location:
+        return location
+    return privacy_mask_urls(re.sub(r"([?&])ouid=\d+(&|$)", lambda m: m[1] if m[2] else "", location))
 
 # ---------------------------------------------------------------------------
 # HTML 清洗規則
@@ -931,15 +1206,19 @@ class Http:
                 scrubbed = self._scrub(url, key, body)
                 if scrubbed != body:            # 個資保護：快照中的個資（cache_scrub）一併改寫
                     write_if_changed(body_p, scrubbed)
+                location = scrub_location(meta.get("location"))
+                if location != meta.get("location"):
+                    meta["location"] = location
+                    write_if_changed(meta_p, json.dumps(meta, ensure_ascii=False, indent=1).encode("utf-8"))
                 with self._lock:
                     self.cached += 1
-                return Resp(url, meta["status"], meta.get("location"), meta.get("contentType", ""), scrubbed)
+                return Resp(url, meta["status"], location, meta.get("contentType", ""), scrubbed)
             except (OSError, ValueError, KeyError):
                 pass
         r = self.raw_get(url)
         body = self._scrub(url, key, r.content)
         loc = r.headers.get("Location")
-        resp = Resp(url, r.status_code, urljoin(url, loc) if loc else None,
+        resp = Resp(url, r.status_code, scrub_location(urljoin(url, loc)) if loc else None,
                     r.headers.get("Content-Type", ""), body)
         write_if_changed(body_p, body)
         write_if_changed(meta_p, json.dumps({
@@ -955,9 +1234,28 @@ class Http:
         """個資保護（cache_scrub）：遮蔽後的內容才進快照與後續處理；原文移到 .private-originals/（不進版控）。"""
         scrubbed = privacy_scrub(url, body)
         if scrubbed != body:
-            write_if_changed(PRIVATE_DIR / "legacy-cache" / "http" / f"{key}.body", body)
+            original = PRIVATE_DIR / "legacy-cache" / "http" / f"{key}.body"
+            if not original.exists():                   # 已有原文時不覆寫：body 可能已遮蔽過
+                write_if_changed(original, body)
             log(f"  個資保護：遮蔽快照 {url}（原文移到 .private-originals/legacy-cache/http/{key}.body）")
         return scrubbed
+
+    def scrub_cache(self) -> None:
+        """個資保護（cache_scrub）：快照可能有本次不會讀到的網址形式，開始前全部改寫一次。"""
+        for meta_p in sorted(self.dir.glob("*.json")):
+            body_p = meta_p.with_suffix(".body")
+            if not body_p.exists():
+                continue
+            meta = json.loads(meta_p.read_text("utf-8"))
+            url = meta.get("url") or ""
+            body = body_p.read_bytes()
+            scrubbed = self._scrub(url, meta_p.stem, body)
+            if scrubbed != body:
+                write_if_changed(body_p, scrubbed)
+            location = scrub_location(meta.get("location"))
+            if location != meta.get("location"):
+                meta["location"] = location
+                write_if_changed(meta_p, json.dumps(meta, ensure_ascii=False, indent=1).encode("utf-8"))
 
     def get_many(self, urls) -> dict[str, Resp | FetchError]:
         uniq = list(dict.fromkeys(urls))
@@ -1357,7 +1655,7 @@ class AssetStore:
     每筆紀錄同時保存兩組欄位：
       * 原始檔：originalPath／originalSha1／originalBytes／originalWidth／originalHeight（原站下載的位元組）
       * 目前檔案：path／sha1／bytes／width／height（縮圖或 BMP→PNG 之後、實際被引用的檔案）
-    被修改的原始檔在修改前逐位元組備份到 legacy-originals/（同子資料夾、同檔名），因此任何設定
+    被修改的原始檔在修改前備份到 legacy-originals/（同子資料夾、同檔名；已清除檔案資訊），因此任何設定
     （含 --original-images 還原）都能由原始檔重新產生，結果可重現。width／height 為顯示尺寸（已依 EXIF 方向）。
     """
 
@@ -1444,7 +1742,7 @@ class AssetStore:
                 self.probe_cache[u] = rec
         for u in todo:
             self.probes[u] = self.probe_cache[u]
-        write_json(self.probe_path, {k: self.probe_cache[k] for k in sorted(self.probe_cache)})
+        write_json(self.probe_path, {k: self.probe_cache[k] for k in sorted(self.probe_cache) if not privacy_removed(k)})
 
     # ---- 檔案雜湊（同一次執行內依路徑、大小、修改時間快取） ----
     def _sha1_of(self, path: Path) -> str | None:
@@ -1568,6 +1866,8 @@ class AssetStore:
         for _key, rec in sorted(self.records.items()):
             if rec.get("kind") == "img" and str(rec.get("originalPath", "")).startswith("/legacy/img/"):
                 groups.setdefault(rec["originalPath"], []).append(rec)
+        for op, recs in sorted(groups.items()):
+            self._clean_original(op, recs)
 
         def one(op):
             try:
@@ -1585,6 +1885,42 @@ class AssetStore:
             for rec in groups[op]:
                 self._apply(rec, cur)
 
+    def _clean_original(self, op: str, recs: list[dict]) -> None:
+        """個資保護：把「原始檔」換成清除檔案資訊（並依 image_blur 模糊）後的版本，並更新紀錄。
+        之後的流程都以它為原始檔，所以每次執行結果相同，公開版本庫也不會留下未清除的備份。"""
+        rec = recs[0]
+        src = self.original_source(rec)
+        if src is None or src == private_file(op):      # 本機保存的原檔不更動（還原後下次執行才清除）
+            return
+        data = src.read_bytes()
+        out = data
+        blur = PRIVACY_REDACTIONS["image_blur"].get(op)
+        spec = repr((blur["rects"], blur.get("keep"))) if blur else None
+        if blur and rec.get("privacyBlur") not in (None, spec) and not private_file(op).exists():
+            # 另一份複本沒有模糊前的原檔：不重複模糊，維持現狀
+            self.privacy_errors.append(f"{op}：模糊規則已變更，但找不到模糊前的原檔（.private-originals/），維持目前的檔案")
+            spec = rec["privacyBlur"]
+        elif blur and rec.get("privacyBlur") != spec:
+            if rec.get("privacyBlur"):                  # 規則改了：從模糊前的原檔重做
+                out = private_file(op).read_bytes()
+            else:
+                write_if_changed(private_file(op), data)    # 模糊前的原檔保存在本機（不進版控）
+            out = blur_regions(out, blur["rects"], blur.get("keep", ()))
+            log(f"  個資保護：模糊 {op} 的投影片（原檔移到 .private-originals/）")
+        out = strip_image(out, op)
+        for item in recs:
+            if blur:
+                item["privacyBlur"] = spec
+            if out != data:
+                digest = hashlib.sha1(out).hexdigest()
+                item["originalSha1"], item["originalBytes"] = digest, len(out)
+                if not item.get("derivedSpec"):
+                    item["sha1"], item["bytes"] = digest, len(out)
+        if out != data:
+            src.write_bytes(out)
+            with self._lock:
+                self._hash_cache.clear()
+
     @staticmethod
     def _apply(rec: dict, cur: dict) -> None:
         for k, v in cur.items():
@@ -1594,7 +1930,7 @@ class AssetStore:
                 rec[k] = v
 
     def _finalize(self, rec: dict, data: bytes | None = None) -> dict:
-        """單一原始檔 → 目前檔案的欄位。修改前先把原始檔逐位元組備份到 legacy-originals/（並驗證）。"""
+        """單一原始檔 → 目前檔案的欄位。修改前先把原始檔備份到 legacy-originals/（並驗證）。"""
         op = rec["originalPath"]
         if data is None:
             src = self.original_source(rec)
@@ -1622,6 +1958,7 @@ class AssetStore:
             digest, size, dims = rec["sha1"], rec["bytes"], (rec["width"], rec["height"])   # 沿用（不重新編碼）
         else:
             out_data, dims = derive_image(data, self.max_width, convert, resize)
+            out_data = strip_image(out_data, cur)
             write_if_changed(public_file(cur), out_data)
             digest, size = hashlib.sha1(out_data).hexdigest(), len(out_data)
         if cur != op and public_file(op).exists():
@@ -1658,6 +1995,32 @@ class AssetStore:
                 src = self.original_source(rec)
                 if src is not None:
                     write_if_changed(public_file(rec["path"]), src.read_bytes())
+            self._clean_attachment(key, rec)
+
+    def _clean_attachment(self, key: str, rec: dict) -> None:
+        """個資保護：PDF 依 pdf_text 移除文字；Word／OpenDocument 清除作者欄位。處理目前的檔案，重跑結果相同。"""
+        path = rec["path"]
+        cur = public_file(path)
+        rule = PRIVACY_REDACTIONS["pdf_text"].get(privacy_key(key))
+        is_office = PurePosixPath(path).suffix.lower() in (".docx", ".odt")
+        if not cur.exists() or not (rule or is_office):
+            return
+        data = cur.read_bytes()
+        out = redact_pdf_text(data, rule["patterns"]) if rule else strip_office(data)
+        if out != data:
+            original = private_file(rec.get("originalPath") or path)
+            if not original.exists():                   # 第一次處理前的檔案保存在本機（不進版控）
+                write_if_changed(original, data)
+            cur.write_bytes(out)
+            with self._lock:
+                self._hash_cache.clear()
+            log(f"  個資保護：處理 {path}")
+        digest = hashlib.sha1(out).hexdigest()
+        rec["sha1"], rec["bytes"] = digest, len(out)
+        if key in self.privacy_pdf:
+            self.privacy_pdf[key]["bytesAfter"] = len(out)
+        if not rec.get("privacySpec"):                      # pdf_pages 的 originalSha1 指保存在本機的原檔，不更動
+            rec["originalSha1"], rec["originalBytes"] = digest, len(out)
 
     def _redact_pdf_record(self, key: str, rec: dict, rule: dict) -> None:
         spec = f"v{PRIVACY_VERSION};pages{','.join(str(p) for p in rule['keep'])}"
@@ -1993,7 +2356,7 @@ class Mapper:
         rule = privacy_removed(absu)
         if rule:
             # 個資保護：不搬移的檔案 → 連到說明它的文章（在該文章本身則移除連結、只留文字，並加上說明）
-            self.m.report.privacy_change("removedLink", {"where": ctx.where, "url": asset_key(absu)})
+            self.m.report.privacy_change("removedLink", {"where": ctx.where, "key": privacy_key(absu)})
             if ctx.where == f"post:{rule.get('post')}":
                 ctx.add_privacy_note(rule["note"])
                 return None, False
@@ -2486,7 +2849,7 @@ class Sanitizer:
             if rule:
                 # 個資保護：不搬移的圖片（例：學分抵免審核清單）改為說明文字（附在內文最後）
                 ctx.add_privacy_note(rule["note"])
-                self.report.privacy_change("removedImage", {"where": ctx.where, "url": asset_key(absu)})
+                self.report.privacy_change("removedImage", {"where": ctx.where, "key": privacy_key(absu)})
                 return []
             if absu in DROPPED_EXTERNAL_IMAGES:
                 self.report.image_change("droppedExternal", ctx.where, absu, DROPPED_EXTERNAL_IMAGES[absu])
@@ -2552,6 +2915,11 @@ class Sanitizer:
         if not src:
             return []
         absu = urljoin(ctx.base, src)
+        rule = privacy_removed(absu)
+        if rule:
+            ctx.add_privacy_note(rule["note"])
+            self.report.privacy_change("removedLink", {"where": ctx.where, "key": privacy_key(absu)})
+            return []
         norm = normalize_iframe_src(absu)
         title = clean_text(node.get("title"))
         sp = urlsplit(absu)
@@ -3503,7 +3871,7 @@ class Migration:
         if rule:
             # 個資保護：不搬移的附件不列出，改為說明文字（附在內文最後）
             ctx.add_privacy_note(rule["note"])
-            self.report.privacy_change("removedAttachment", {"where": ctx.where, "url": asset_key(target),
+            self.report.privacy_change("removedAttachment", {"where": ctx.where, "key": privacy_key(target),
                                                              "label": raw.title})
             return
         href, _ = self.mapper.rewrite(raw.href, ctx)
@@ -3660,7 +4028,7 @@ class Migration:
             html = self.sanitizer.fragment(doc.editors, title, ctx, doc.gallery_before, doc.gallery_after)
             for att in doc.attachments:            # 附件只取原站附件區塊
                 self.attachment_from(att, ctx)
-            html = self.with_privacy_notes(html, ctx)
+            html = apply_corrections(self.with_privacy_notes(html, ctx), ctx.where)
             referenced |= (ctx.post_links - {pid})
             post = {"id": pid, "title": title, "legacyUrl": info.fetch_url}
             if doc.date:
@@ -3689,7 +4057,7 @@ class Migration:
                                                        pdoc.gallery_before, pdoc.gallery_after)
                 for att in pdoc.attachments:
                     self.attachment_from(att, ctx)
-                post["html"] = self.with_privacy_notes(post["html"], ctx)
+                post["html"] = apply_corrections(self.with_privacy_notes(post["html"], ctx), ctx.where)
                 post["attachments"] = ctx.attachments
                 cover = self.cover_of(ctx, post["html"])
                 if cover:
@@ -3707,14 +4075,19 @@ class Migration:
                     parts.append(self.sanitizer.link_paragraph(lp["href"], self.post_title(tid) or lp["title"]))
                 elif lp["href"]:
                     parts.append(self.sanitizer.link_paragraph(lp["href"], lp["title"]))
-                post["html"] = self.with_privacy_notes("\n".join(p for p in parts if p), ctx)
+                post["html"] = apply_corrections(self.with_privacy_notes("\n".join(p for p in parts if p), ctx), ctx.where)
                 cover = self.cover_of(ctx, post["html"])
                 if cover:
                     post["cover"] = cover
                 referenced |= (ctx.post_links - {lid})
                 lp["kind"] = "listBody"
             else:
-                post["html"] = self.sanitizer.link_paragraph(lp["href"], lp["title"])
+                rule = privacy_removed(lp.get("target") or "")
+                if rule:                # 個資保護：連結紀錄的目標不再提供，內文只留說明
+                    post["html"] = f"<p>{_entities(rule['note'])}</p>"
+                    self.report.privacy_change("noteAdded", {"where": f"post:{lid}", "note": rule["note"]})
+                else:
+                    post["html"] = self.sanitizer.link_paragraph(lp["href"], lp["title"])
                 lp["kind"] = "link"
             if lp["href"].startswith("/legacy/files/"):
                 rec = self.assets.record(lp["target"]) or {}
@@ -3898,6 +4271,9 @@ class Migration:
     def link450_destination(self, lid: str, rec: Link450) -> tuple[str, str]:
         """450 連結紀錄的轉址目標與依據（原站以 302 轉到 rec.target）。"""
         if rec.target:
+            rule = privacy_removed(rec.target)
+            if rule:
+                return privacy_target(rule), "個資保護：目標已移除，轉到說明文章"
             dst = self.internal_destination(rec.target)
             if dst:
                 return dst, "原站 302 的站內目標"
@@ -4200,19 +4576,23 @@ class Migration:
             n = len(STUDENT_ID_RE.findall(json.dumps(obj, ensure_ascii=False)))
             if n:
                 id_hits.append({"where": where, "count": n})
-        privacy_redirect_of = {x["url"]: x for x in self.privacy_redirects}
-        privacy = {
-            "note": ("個資保護（scripts/migrate_legacy.py 的 PRIVACY_REDACTIONS）：removedAssets＝不搬移的檔案（原處改為說明"
-                     "文字、原站網址轉址到 post 文章）；pdfPages＝只保留部分頁面的 PDF；changes＝各文件中的處理紀錄"
-                     "（removedImage／removedAttachment／removedLink／noteAdded／tableColumnRemoved）；"
-                     "studentIdPatternHits＝輸出中仍符合學號樣式者（應為空）。移除或修改前的原始檔只留在本機 "
-                     ".private-originals/（不進版控、不部署）。"),
+        for where, obj in ([(f"page:{s}", p) for s, p in self.out_pages.items()]
+                           + [(f"post:{i}", p) for i, p in self.out_posts.items()]):
+            if PRIVACY_REMOVED_HOST in json.dumps(obj, ensure_ascii=False):
+                self.assets.privacy_errors.append(f"{where}：輸出含佔位網址（規則已刪除但快照未還原，見 PRIVACY_REDACTIONS 的說明）")
+        # 明細（位置與說明）只留在本機；公開的報告只有數量
+        write_json(PRIVATE_DIR / "privacy-report.json", {
             "removedAssets": [{"url": k, "what": privacy_removed(k)["what"], "post": privacy_removed(k).get("post"),
-                               "foundIn": where_sorted(w),
-                               "redirect": (privacy_redirect_of[k]["destination"] if k in privacy_redirect_of else None)}
+                               "foundIn": where_sorted(w)}
                               for k, w in sorted(self.assets.privacy_skipped.items())],
             "pdfPages": [dict(url=k, **v) for k, v in sorted(self.assets.privacy_pdf.items())],
+            "redirects": self.privacy_redirects,
             "changes": {k: rep.privacy[k] for k in sorted(rep.privacy)},
+        })
+        privacy = {
+            "note": ("個資保護（scripts/migrate_legacy.py 的 PRIVACY_REDACTIONS）的處理數量；明細只留在本機 "
+                     ".private-originals/（不進版控、不部署）。studentIdPatternHits＝輸出中仍符合學號樣式者（應為空）。"),
+            "counts": {k: len(rep.privacy[k]) for k in sorted(rep.privacy)},
             "studentIdPatternHits": id_hits,
             "errors": list(self.assets.privacy_errors),
         }
@@ -4397,8 +4777,8 @@ class Migration:
                 "隱藏的手機版副本（display:none）依 src 去重。原站列表縮圖取自相片輯第一張，因此有相片輯的文章以其第一張為 cover。",
                 "attachments 只來自原站附件區塊（.module-ptattach）；內文中的檔案連結保留在內文。",
                 "圖片（客戶同意）：寬度超過 2000 px 者縮成 2000 px 寬（先依 EXIF 轉正、LANCZOS、JPEG 品質 85 漸進式、"
-                "PNG optimize、格式不變），BMP 無損轉成 PNG；其餘圖片保留原始檔（位元組相同、保留 EXIF）。被修改的原始檔"
-                "逐位元組備份在 legacy-originals/img/（不部署；對照表 legacy-originals/manifest.json，見 imageProcessing）。"
+                "PNG optimize、格式不變），BMP 無損轉成 PNG；其餘圖片不重新編碼（只清除檔案資訊）。被修改的原始檔"
+                "備份在 legacy-originals/img/（不部署；對照表 legacy-originals/manifest.json，見 imageProcessing）。"
                 "還原：python -X utf8 scripts/migrate_legacy.py --original-images。附件（/legacy/files/）保留原檔"
                 "（個資保護的例外見 privacy）。",
                 "html 中每個本地 <img> 都有 width／height：比例取自實際檔案（縮圖後、已依 EXIF 方向）；原站有設定顯示寬"
@@ -4421,6 +4801,7 @@ class Migration:
         }
 
     def run(self) -> None:
+        self.http.scrub_cache()
         t0 = time.time()
         self.load_ia()
         self.crawl_pages()
@@ -4456,7 +4837,7 @@ class Migration:
             f"下載失敗 {c['failedDownloads']}、失效連結紀錄 {c['linkItems404']}、已下架文章 {c['deadPosts']}")
         pv = self.report_obj["privacy"]
         log(f"個資保護：不搬移檔案 {c['privacyRemovedAssets']}、PDF 刪頁 {c['privacyPdfRedacted']}、"
-            f"移除表格欄 {len(pv['changes'].get('tableColumnRemoved', []))}；輸出中符合學號樣式 {c['privacyStudentIdHits']}"
+            f"移除表格欄 {pv['counts'].get('tableColumnRemoved', 0)}；輸出中符合學號樣式 {c['privacyStudentIdHits']}"
             + (f"；錯誤 {len(pv['errors'])}：" + "；".join(pv["errors"]) if pv["errors"] else ""))
         if c["privacyStudentIdHits"]:
             log("  警告：輸出中仍有符合學號樣式的文字，見 report.json 的 privacy.studentIdPatternHits")
@@ -4480,6 +4861,7 @@ def main(argv=None) -> int:
                     help="www.emrd.tw（客戶自有的舊 Weebly 網站，網域已失效）的 /uploads/ 圖片與檔案改由同一個 Weebly "
                          "網站的預覽主機（*.preview.editmysite.com）下載（預設啟用；--no-weebly-mirror 改為只檢查能否存取）")
     args = ap.parse_args(argv)
+    args.prune = args.prune or args.refresh     # 重新下載會留下未處理的重複檔案，一律清除
     if args.original_images and args.max_image_width not in (0, MAX_IMAGE_WIDTH):
         ap.error("--original-images 不可與 --max-image-width 同時使用")
     sys.setrecursionlimit(10000)

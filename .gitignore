@@ -45,6 +45,13 @@ next-env.d.ts
 
 # 個資保護：自網站移除或遮蔽前的原始檔（scripts/migrate_legacy.py 的 PRIVACY_REDACTIONS），只留本機、不進版控
 /.private-originals/
+/文件/
+/R-Page2/
+
+# Windows 部署包（scripts/build_windows_package.mjs）的建置產物
+/dist/
+/deploy/windows/bundle/*
+!/deploy/windows/bundle/.gitkeep
 
 # Python
 __pycache__/

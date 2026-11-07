@@ -144,12 +144,9 @@ export function Footer({ showCta = true }: FooterProps) {
               <span className="shrink-0 rounded-full bg-white p-0.5 ring-1 ring-white/30">
                 <Image src={emrdSeal} alt="" width={40} height={40} className="size-10" />
               </span>
-              <div>
-                <p className="text-sm font-medium text-white">{site.officialName}</p>
-                <p lang="en" className="mt-0.5 text-sm text-brand-200">
-                  {site.englishName}
-                </p>
-              </div>
+              <p lang="en" className="text-sm text-brand-200">
+                {site.englishName}
+              </p>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-pretty text-brand-100/80">
               {hero.subtitle}

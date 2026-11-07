@@ -1,6 +1,6 @@
 # NTUST EMRD Executive Portal
 
-國立臺灣科技大學 研發碩士在職專班（高階科技研發碩士學位學程，EMRD）官方形象首頁。
+國立臺灣科技大學 高階科技研發碩士學位學程（EMRD）官方形象首頁。
 
 - Next.js 16（App Router、Cache Components）＋ React 19
 - Tailwind CSS v4（設計 token 定義於 `src/app/globals.css`）
@@ -56,6 +56,23 @@ npm run lint
 1. GitHub 儲存庫 **Settings → Pages → Build and deployment → Source** 選擇 **GitHub Actions**。
 2. 第一次設定後，到 **Actions** 頁手動執行一次工作流程（或推送任一提交）。
 
+## Windows 一鍵部署包
+
+學校主機是 Windows 時，可以用單一執行檔部署：`EMRD-Server.exe` 內含整個網站，按兩下、輸入 Port 即可啟動，主機不需安裝 Node.js 或 IIS。
+
+- **相容性**：以 `windows/386` 建置，32 位元與 64 位元的 Windows 都用同一個檔案，支援 Windows 10／Server 2016 以上。
+- **內容**：靜態匯出（同預覽版，但設定 `NEXT_STATIC_RELEASE=1`，沒有預覽版提示列與 noindex）。[`deploy/windows`](deploy/windows) 的伺服器補上靜態主機沒有的舊站轉址（`legacy.go`，規則同 `src/proxy.ts`，改規則時兩邊都要改）、安全標頭與 gzip。
+- **與完整 Next 伺服器的差異**：圖片不經 AVIF／WebP 最佳化，直接提供已處理過的原圖；只提供 HTTP（HTTPS 由 IIS 或反向代理處理）。
+- **使用方式**：見 [`deploy/windows/README.txt`](deploy/windows/README.txt)，建置時會一起放進部署包。
+
+建置（需要 Node.js 與 Go，產物在 `dist/windows/`，內含 `EMRD-Windows-Deploy.zip`）：
+
+```bash
+GO=/path/to/go/bin/go npm run package:windows
+```
+
+請在 macOS 或 Linux 上建置：Next 16.4 在 Windows 上匯出時，換頁預先載入檔的路徑有問題（見上方「預覽網站」）。網站內容、`redirects.json` 或 `deploy/windows` 有更動時都要重新建置。伺服器的測試：`cd deploy/windows && go test ./...`。
+
 ## 專案結構
 
 ```
@@ -88,11 +105,12 @@ src/
 | --- | --- |
 | 招生簡章 PDF 連結、預約諮詢連結、電話 / E-mail | `src/lib/site.ts` |
 | Hero 文案、關鍵數據、課程、師資、招生時程、報考資格 | `src/content/home.ts` |
-| 學程名稱（導覽列、頁尾）| `src/lib/site.ts`（`programName`）|
+| 學程名稱（導覽列、頁尾、頁面標題）| `src/lib/site.ts`（`name`、`officialName`、`programName`）；分享圖 `src/app/opengraph-image.jpg` 與影片片尾（`scripts/render_*.py`）另外重製 |
 | 校園地圖的建物、進駐單位、EMRD 教室與辦公室 | `src/content/campus.ts`（地圖圖檔 `src/assets/campus/`）|
+| 舊站內容中不公開的個資 | `scripts/migrate_legacy.py` 的 `PRIVACY_REDACTIONS`，改完重跑腳本；新增的照片先跑 `python scripts/strip_image_metadata.py <資料夾>` 清除 GPS 等檔案資訊 |
 
-每年 116、117… 學年度簡章公告後，請更新 `site.links.brochurePdf`、`brochureLabel`
-以及 `admissions` 的時程文字。
+每年簡章公告後，請更新 `site.links.brochurePdf`、`brochureLabel`，以及 `src/content/home.ts` 的
+`currentIntakeYear`、`hero`、`utilityBar`、`pathfinder`、`admissionsCta`、`admissions`、`requirements`（學費）與 `semiEmrdAdmissions`。
 
 ## Hero 背景影片
 
@@ -120,7 +138,7 @@ media/videos/hero-poster.jpg    首格封面（選用，不部署）
 | 檔案 | 用途 | 大小 |
 | --- | --- | --- |
 | `hero-bg.mp4` ／ `hero-bg-480p.mp4` | Hero 背景（桌機／行動版） | 6.7 MB ／ 1.8 MB |
-| `emrd-alumni-15s.mp4` ／ `emrd-alumni-15s-480p.mp4` | 校友短片（桌機／行動版） | 6.5 MB ／ 1.3 MB |
+| `emrd-alumni-15s.mp4` ／ `emrd-alumni-15s-480p.mp4` | 校友短片（桌機／行動版） | 7.7 MB ／ 1.3 MB |
 | `emrd-alumni-poster.jpg` ／ `emrd-alumni-poster-960.jpg` | 校友短片封面（桌機／行動版） | 283 KB ／ 59 KB |
 
 替換原檔後，請以 ffmpeg 重新產生行動版（去除音軌、Lanczos 縮至 854 寬、H.264 High、CRF 26、最高 1 Mbps、faststart）：

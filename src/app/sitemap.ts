@@ -35,13 +35,16 @@ function isIndexablePost(post: LegacyPost) {
   return post.html.trim().length > 0 || post.attachments.length > 0;
 }
 
+/** 靜態匯出（trailingSlash）的頁面網址與 canonical 都有結尾斜線，sitemap 要一致 */
+const pageSuffix = process.env.NEXT_OUTPUT === "export" ? "/" : "";
+
 /**
  * 站內路徑 → 正式網址；& 與 ' 依 XML 規則跳脫（Next 不會替 sitemap 內容跳脫）。
- * 首頁輸出與 canonical 相同的 https://emrd.ntust.edu.tw（不帶結尾斜線）。
+ * 首頁輸出與 canonical 相同的網址：Next 伺服器不帶結尾斜線，靜態匯出帶結尾斜線。
  */
 function absolute(pathname: string) {
   const url = new URL(pathname, site.url);
-  const href = url.pathname === "/" && !url.search ? url.origin : url.href;
+  const href = url.pathname === "/" && !url.search && !pageSuffix ? url.origin : url.href;
   return href.replace(/&/g, "&amp;").replace(/'/g, "&apos;");
 }
 
@@ -54,7 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: Entry[] = [];
   const seen = new Set<string>();
   const add = (pathname: string, options: Omit<Entry, "url">) => {
-    const url = absolute(pathname);
+    const url = absolute(pathname === "/" ? pathname : `${pathname}${pageSuffix}`);
     if (seen.has(url)) return;
     seen.add(url);
     entries.push({ url, ...options });

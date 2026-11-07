@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Windows 部署包的建置產物（內含打包後的網站）
+    "deploy/windows/bundle/**",
+    "dist/**",
   ]),
 ]);
 

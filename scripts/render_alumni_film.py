@@ -93,7 +93,7 @@ TAGLINE = "一屆同窗，一生夥伴"
 TAGLINE_EN = "ONE COHORT  ·  PARTNERS FOR LIFE"
 TAG_CY, TAG_GAP = 628, 22  # 中文標語中心 y、中英兩行間距（1080p 像素）
 SLOGAN = "研發之路，同行致遠"
-SUBLINE = "高階科技研發碩士在職專班　校友與同儕網絡"
+SUBLINE = "高階科技研發碩士學位學程　校友與同儕網絡"
 
 CHAMPAGNE = hex_bgr("#DCC392")
 PAPER = hex_bgr("#F3F6FB")

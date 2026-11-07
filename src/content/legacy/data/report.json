@@ -9,17 +9,17 @@
     "linkRecordPosts": 13,
     "orphanPosts": 0,
     "redirects": 919,
-    "assetRedirects": 350,
-    "queryRedirects": 9,
-    "images": 423,
-    "files": 20,
+    "assetRedirects": 343,
+    "queryRedirects": 6,
+    "images": 414,
+    "files": 17,
     "resizedImages": 48,
     "convertedImages": 5,
-    "localImgTags": 415,
-    "localImgTagsWithSize": 415,
+    "localImgTags": 406,
+    "localImgTagsWithSize": 406,
     "imgAspectAdjusted": 4,
     "externalImages": 0,
-    "ownedImagesDownloaded": 82,
+    "ownedImagesDownloaded": 79,
     "ownedFilesDownloaded": 4,
     "ownedImagesDead": 0,
     "ownedUnrecoverable": 2,
@@ -30,14 +30,14 @@
     "deadPosts": 2,
     "datedListItems": 0,
     "datedPosts": 0,
-    "galleryImages": 65,
+    "galleryImages": 64,
     "galleryCaptions": 7,
-    "docsWithGallery": 34,
+    "docsWithGallery": 33,
     "inlineDataImages": 1,
     "deadLinksRewritten": 3,
     "mergedAliasPages": 1,
-    "duplicateContentAssets": 3,
-    "attachments": 9,
+    "duplicateContentAssets": 2,
+    "attachments": 6,
     "hiddenElementsDropped": 195,
     "anchors": 10,
     "fragmentLinksKept": 12,
@@ -56,23 +56,23 @@
       "headingDemoted": 24,
       "headingLevelsShifted": 2,
       "headingPromoted": 6,
-      "junkAltCleared": 72,
+      "junkAltCleared": 64,
       "langEn": 100,
-      "singleImageAlt": 53,
-      "tableHeaders": 10,
+      "singleImageAlt": 45,
+      "tableHeaders": 8,
       "textVersion": 6,
       "videoTitle": 10
     },
-    "privacyRemovedAssets": 5,
-    "privacyPdfRedacted": 1,
+    "privacyRemovedAssets": 14,
+    "privacyPdfRedacted": 4,
     "privacyStudentIdHits": 0
   },
   "assetBytes": {
-    "total": 207924231,
-    "images": 191502661,
-    "files": 16421570,
-    "originalTotal": 293963672,
-    "originalImages": 276821990
+    "total": 196322916,
+    "images": 182506246,
+    "files": 13816670,
+    "originalTotal": 280525179,
+    "originalImages": 265947341
   },
   "imageProcessing": {
     "mode": "default",
@@ -86,36 +86,36 @@
     },
     "backupDir": "legacy-originals/",
     "backupManifest": "legacy-originals/manifest.json",
-    "backupBytes": 108676639,
+    "backupBytes": 106764484,
     "rollback": "python -X utf8 scripts/migrate_legacy.py --original-images（說明見 legacy-originals/README.md）",
     "modified": 53,
-    "bytesBefore": 108676639,
-    "bytesAfter": 23357310,
+    "bytesBefore": 106764484,
+    "bytesAfter": 23323389,
     "items": [
       {
         "original": "/legacy/img/059117ef52-533636112.jpg",
         "current": "/legacy/img/059117ef52-533636112.jpg",
         "reason": "downscale",
-        "bytesBefore": 1651212,
+        "bytesBefore": 1632689,
         "bytesAfter": 453482,
         "widthBefore": 2394,
         "widthAfter": 2000,
         "heightBefore": 3452,
         "heightAfter": 2884,
-        "sha1Before": "d4b12a13567a295a6c5c8d7bc4660a73cce91dda",
+        "sha1Before": "e5ba1f1917f09e7820b63d5b3dfd6fd94258f2d6",
         "sha1After": "5603a739684ef5a4519cf8df68076930e1af0387"
       },
       {
         "original": "/legacy/img/06a7ceac4c-25.jpg",
         "current": "/legacy/img/06a7ceac4c-25.jpg",
         "reason": "downscale",
-        "bytesBefore": 1793527,
+        "bytesBefore": 1741131,
         "bytesAfter": 452589,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "07c30c6cb85c24622a005a7125501b46f93a30b2",
+        "sha1Before": "181af1cf633c36d28f927d130c18fa6baa540ea3",
         "sha1After": "53d41909955a216662411162524e262612f62917"
       },
       {
@@ -135,156 +135,156 @@
         "original": "/legacy/img/176f843136-15.jpg",
         "current": "/legacy/img/176f843136-15.jpg",
         "reason": "downscale",
-        "bytesBefore": 1330822,
+        "bytesBefore": 1284131,
         "bytesAfter": 343050,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "c1cddcf0290269f0be95122f56f587667b29d852",
+        "sha1Before": "c8a647e8a57d01fd24feaf570357b8ef20647534",
         "sha1After": "47f6a58e5f77a252086255301e0bce420ff98544"
       },
       {
         "original": "/legacy/img/188ff5186e-03.jpg",
         "current": "/legacy/img/188ff5186e-03.jpg",
         "reason": "downscale",
-        "bytesBefore": 3581304,
+        "bytesBefore": 3576091,
         "bytesAfter": 853641,
         "widthBefore": 3024,
         "widthAfter": 2000,
         "heightBefore": 4032,
         "heightAfter": 2667,
-        "sha1Before": "760df85b161f9a24569bd329f0d35f541452f2dd",
+        "sha1Before": "dac5e6b1223cf67986b64cccabcf695531eda937",
         "sha1After": "04874d727530c49413c37a73749154aa9129200b"
       },
       {
         "original": "/legacy/img/1b9d939e8f-20.jpg",
         "current": "/legacy/img/1b9d939e8f-20.jpg",
         "reason": "downscale",
-        "bytesBefore": 1608298,
+        "bytesBefore": 1557812,
         "bytesAfter": 418730,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "dcb4cd7a538c67851b7ae82a0aef0e15896210b7",
+        "sha1Before": "cf852869871c0ffccad71e814b2d2de30724336c",
         "sha1After": "9dc6dc6e2519416acb20ed2da60709c383566f2c"
       },
       {
         "original": "/legacy/img/1d84756543-08.jpg",
         "current": "/legacy/img/1d84756543-08.jpg",
         "reason": "downscale",
-        "bytesBefore": 1143474,
+        "bytesBefore": 1093884,
         "bytesAfter": 319993,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "1ea61cb1abf832cd2775f140f7556b95f309d1ae",
+        "sha1Before": "9a4fe4c41ece086a08d407f1910a88519eb005d3",
         "sha1After": "501d30f1bb5afbd0102c24ec7d7d83934629b219"
       },
       {
         "original": "/legacy/img/1fe7cff3fa-s-89505820-0.jpg",
         "current": "/legacy/img/1fe7cff3fa-s-89505820-0.jpg",
         "reason": "downscale",
-        "bytesBefore": 3696256,
-        "bytesAfter": 539003,
+        "bytesBefore": 3152606,
+        "bytesAfter": 505082,
         "widthBefore": 4032,
         "widthAfter": 2000,
         "heightBefore": 3024,
         "heightAfter": 1500,
-        "sha1Before": "148ab59938da04951dd2709072487c743b25da91",
-        "sha1After": "109840ec98a0521d307c797ced90191b3926d563"
+        "sha1Before": "3a871d4c5a3338f59fae6ad454c8b0ce8eef5860",
+        "sha1After": "43061cb3767f0b737d3f369370f5c86bdb97b758"
       },
       {
         "original": "/legacy/img/20258881dc-06.jpg",
         "current": "/legacy/img/20258881dc-06.jpg",
         "reason": "downscale",
-        "bytesBefore": 1288415,
+        "bytesBefore": 1247120,
         "bytesAfter": 340047,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "4584355b3969c32c49acdd3419cb48e8ef337051",
+        "sha1Before": "dc7f55d70a7811ac3eb39c36ad3173f3b05bb7f6",
         "sha1After": "2596d461316ad5980d7467a4f7d02f2eab3d41db"
       },
       {
         "original": "/legacy/img/2c4b170423-28.jpg",
         "current": "/legacy/img/2c4b170423-28.jpg",
         "reason": "downscale",
-        "bytesBefore": 1522158,
+        "bytesBefore": 1471038,
         "bytesAfter": 398956,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "14a25c04508041fcf027f88025bba609d7bd8942",
+        "sha1Before": "43885d4d117731fcad4174de1017f74e3174a503",
         "sha1After": "c7c9c23b52d15a717f8235c586d4b0d910b2a3ac"
       },
       {
         "original": "/legacy/img/3082abb8a3-s-89505825-0.jpg",
         "current": "/legacy/img/3082abb8a3-s-89505825-0.jpg",
         "reason": "downscale",
-        "bytesBefore": 2542082,
+        "bytesBefore": 2536357,
         "bytesAfter": 551027,
         "widthBefore": 4032,
         "widthAfter": 2000,
         "heightBefore": 3024,
         "heightAfter": 1500,
-        "sha1Before": "58107890cc27c310fa12d7a83265978f50ba62b4",
+        "sha1Before": "fa90793dac6cca70853650ea0c71629bf6692856",
         "sha1After": "0bfbaff0ab8fab97abbd5ed5ace25c6fcf7fa8ff"
       },
       {
         "original": "/legacy/img/32031428dd-27.jpg",
         "current": "/legacy/img/32031428dd-27.jpg",
         "reason": "downscale",
-        "bytesBefore": 1662416,
+        "bytesBefore": 1613516,
         "bytesAfter": 396663,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "70c74dcb6bea9e68d71364ff2bab1626c0177bb5",
+        "sha1Before": "e3a03eab0420151572aee2a28c2f34eb0169532b",
         "sha1After": "4d111a7f4f8c68e638630606d88d2889be5877ae"
       },
       {
         "original": "/legacy/img/3894e5a666-s-89579528-0.jpg",
         "current": "/legacy/img/3894e5a666-s-89579528-0.jpg",
         "reason": "downscale",
-        "bytesBefore": 3810785,
+        "bytesBefore": 3808923,
         "bytesAfter": 650832,
         "widthBefore": 4032,
         "widthAfter": 2000,
         "heightBefore": 3024,
         "heightAfter": 1500,
-        "sha1Before": "4344d4db2e639de19d55ae0416fdc1b8403f61c6",
+        "sha1Before": "df4ca2f540410ad288ac6378e48fb994a1c70782",
         "sha1After": "d2f0986ceb03b3c07a2bd2a75ae6e2a98e325415"
       },
       {
         "original": "/legacy/img/3d66db61fa-02.jpg",
         "current": "/legacy/img/3d66db61fa-02.jpg",
         "reason": "downscale",
-        "bytesBefore": 2488542,
+        "bytesBefore": 2443895,
         "bytesAfter": 550958,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "f0153375726ec74fb70a58931d7c674cf0cf0b79",
+        "sha1Before": "be27f21dbd35f21ef5cfe15755941a59418ec221",
         "sha1After": "d20c2e73130fba18a77b445c1003bc7867d80107"
       },
       {
         "original": "/legacy/img/4484a8000d-14.jpg",
         "current": "/legacy/img/4484a8000d-14.jpg",
         "reason": "downscale",
-        "bytesBefore": 1476113,
+        "bytesBefore": 1425582,
         "bytesAfter": 365540,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "b2f971a632297662af2de44be126025c3f4c6273",
+        "sha1Before": "a50e22070fdd969b2ebd884cd619b04bed8ac7b8",
         "sha1After": "f05b2f3778de4ff6610202ba4559c6f79c3d8304"
       },
       {
@@ -304,13 +304,13 @@
         "original": "/legacy/img/4a1e395245-715487136.jpg",
         "current": "/legacy/img/4a1e395245-715487136.jpg",
         "reason": "downscale",
-        "bytesBefore": 5100645,
+        "bytesBefore": 5076750,
         "bytesAfter": 514294,
         "widthBefore": 3600,
         "widthAfter": 2000,
         "heightBefore": 3600,
         "heightAfter": 2000,
-        "sha1Before": "c53f6c65991cd85783782198fa1561eec6c20cb4",
+        "sha1Before": "3207cd9592cfe6a568caf63c0bb73106f6c33588",
         "sha1After": "1f2e00e1bd717229f083038a1c3ea379a96a6a63"
       },
       {
@@ -330,52 +330,52 @@
         "original": "/legacy/img/547077b41a-09.jpg",
         "current": "/legacy/img/547077b41a-09.jpg",
         "reason": "downscale",
-        "bytesBefore": 852381,
+        "bytesBefore": 814172,
         "bytesAfter": 209874,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "1431013ae750f2c7f2117314d6cc4c19131c6392",
+        "sha1Before": "a9740f97159b086fed2b4c0c282d33fbc93a94d6",
         "sha1After": "57f7ca09fac5e5386a4b955bdee92ed034f55480"
       },
       {
         "original": "/legacy/img/561817e1a7-13.jpg",
         "current": "/legacy/img/561817e1a7-13.jpg",
         "reason": "downscale",
-        "bytesBefore": 564640,
+        "bytesBefore": 531850,
         "bytesAfter": 144709,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "1358c57115284ba51c28d4acdd5db84620531f98",
+        "sha1Before": "ad6b2ba5c635025caae0451b96115978f106fbe7",
         "sha1After": "80be7786e9e8f28c8302e84ca5d1c28988b173ce"
       },
       {
         "original": "/legacy/img/5cb212cde5-23.jpg",
         "current": "/legacy/img/5cb212cde5-23.jpg",
         "reason": "downscale",
-        "bytesBefore": 1353380,
+        "bytesBefore": 1302902,
         "bytesAfter": 368289,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "c5c803ea1b1d5bc8eaa5dd469abcf50804f55a18",
+        "sha1Before": "37fe79dd84b97f11aa4c56de9ea0506a8c7b30bd",
         "sha1After": "ff7da03be35b412f3acd07dc2c51a61e70ee32dd"
       },
       {
         "original": "/legacy/img/640c9a7dba-18.jpg",
         "current": "/legacy/img/640c9a7dba-18.jpg",
         "reason": "downscale",
-        "bytesBefore": 1277182,
+        "bytesBefore": 1227478,
         "bytesAfter": 328655,
         "widthBefore": 4244,
         "widthAfter": 2000,
         "heightBefore": 2827,
         "heightAfter": 1332,
-        "sha1Before": "92f8e7e78397ee722b5ef52aa8130c126d83e50a",
+        "sha1Before": "f9cbca1d5be1f9b71650df8bc95f5ae8efbb09c0",
         "sha1After": "c3726474bf176b579606a0a9606175fe0d764e41"
       },
       {
@@ -395,156 +395,156 @@
         "original": "/legacy/img/6cd18bd6c8-03.jpg",
         "current": "/legacy/img/6cd18bd6c8-03.jpg",
         "reason": "downscale",
-        "bytesBefore": 543151,
+        "bytesBefore": 509138,
         "bytesAfter": 150778,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "ebf5bb50e8efca3ff2ea7b981b938d19609fd321",
+        "sha1Before": "ca2317cb5fe40e498763cf5bb039248578aa5823",
         "sha1After": "13af1f8f0adc13fa003019bcd29b29a59a802a50"
       },
       {
         "original": "/legacy/img/6e2f8ad93f-s-89505811-0.jpg",
         "current": "/legacy/img/6e2f8ad93f-s-89505811-0.jpg",
         "reason": "downscale",
-        "bytesBefore": 2406565,
+        "bytesBefore": 2404659,
         "bytesAfter": 344851,
         "widthBefore": 3892,
         "widthAfter": 2000,
         "heightBefore": 2919,
         "heightAfter": 1500,
-        "sha1Before": "3f01b7a3e014939e55deb449fad52c13325f74a4",
+        "sha1Before": "b09d23759d42f8f6ca9f667c22117d42d8852860",
         "sha1After": "dba1ab4e50c663318c499dfd5e7028ab93eb57ad"
       },
       {
         "original": "/legacy/img/7444a94369-04.jpg",
         "current": "/legacy/img/7444a94369-04.jpg",
         "reason": "downscale",
-        "bytesBefore": 3217261,
+        "bytesBefore": 3212009,
         "bytesAfter": 609953,
         "widthBefore": 4032,
         "widthAfter": 2000,
         "heightBefore": 3024,
         "heightAfter": 1500,
-        "sha1Before": "2208258aec6fda293765397eafc53d212757614c",
+        "sha1Before": "3d26edb6164978c078ae00a27c553cb3ee614b49",
         "sha1After": "f99c6218dc82fefbb44bc853a4a437f2125d90a3"
       },
       {
         "original": "/legacy/img/7efc89c664-10.jpg",
         "current": "/legacy/img/7efc89c664-10.jpg",
         "reason": "downscale",
-        "bytesBefore": 996013,
+        "bytesBefore": 948368,
         "bytesAfter": 271013,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "5e9a37d60c0620aa726a3f09fbe03ae0308f2d63",
+        "sha1Before": "d10ec8e5675eb6bc302fa456904ec6b1d545e283",
         "sha1After": "694cd4cf06767065381291af3c986bcbe9cdfabd"
       },
       {
         "original": "/legacy/img/82bd647c7e-575270401.jpg",
         "current": "/legacy/img/82bd647c7e-575270401.jpg",
         "reason": "downscale",
-        "bytesBefore": 1666558,
+        "bytesBefore": 1648021,
         "bytesAfter": 461054,
         "widthBefore": 2394,
         "widthAfter": 2000,
         "heightBefore": 3452,
         "heightAfter": 2884,
-        "sha1Before": "b02154d88a172c744d913ea5e7b2151849c45be9",
+        "sha1Before": "90c7cfdb88f5281b9b24dccf2bacee32ddcc630f",
         "sha1After": "5c4ab33312704dac674f58f0a304cf6ad6cf9b05"
       },
       {
         "original": "/legacy/img/858d47a6cd-17.jpg",
         "current": "/legacy/img/858d47a6cd-17.jpg",
         "reason": "downscale",
-        "bytesBefore": 1280207,
+        "bytesBefore": 1230611,
         "bytesAfter": 324147,
         "widthBefore": 4244,
         "widthAfter": 2000,
         "heightBefore": 2827,
         "heightAfter": 1332,
-        "sha1Before": "6f24d5ce310a3540879caa5b5c8d1650a63952fa",
+        "sha1Before": "3b549e5ee92e2baadae1d0bb8565b77f74c949d1",
         "sha1After": "87e63d731339b1eb094d8fa6904899f345d1b388"
       },
       {
         "original": "/legacy/img/85993b565f-05.jpg",
         "current": "/legacy/img/85993b565f-05.jpg",
         "reason": "downscale",
-        "bytesBefore": 1288994,
+        "bytesBefore": 1243050,
         "bytesAfter": 355092,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "d958ef00f167c0feb35b844d4bd1de5fd8c54090",
+        "sha1Before": "f53dafeeb1a22e895fb35363fc24b7d1820f7a08",
         "sha1After": "b3d718379d97bfc3939e84a270de0628c5e94281"
       },
       {
         "original": "/legacy/img/86c29b1f07-07.jpg",
         "current": "/legacy/img/86c29b1f07-07.jpg",
         "reason": "downscale",
-        "bytesBefore": 589437,
+        "bytesBefore": 553980,
         "bytesAfter": 158241,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "450b90b3abca84052e861eb0ce35c323e60ae353",
+        "sha1Before": "daea17e68ec283da5a75805ef7ee5e720dd97186",
         "sha1After": "c0b84bf9f85f0a959a49f68521e7ea361b488246"
       },
       {
         "original": "/legacy/img/9c01578c44-s-89505803-0.jpg",
         "current": "/legacy/img/9c01578c44-s-89505803-0.jpg",
         "reason": "downscale",
-        "bytesBefore": 3324265,
+        "bytesBefore": 3322379,
         "bytesAfter": 450959,
         "widthBefore": 4032,
         "widthAfter": 2000,
         "heightBefore": 3024,
         "heightAfter": 1500,
-        "sha1Before": "c2a636baf20c3e4881e976ea76ee4a804698ca35",
+        "sha1Before": "83a03039b432210a5a4f982121154f074cee57d3",
         "sha1After": "6eec1133f3e6463c66c362a2872b1e80a11cd70f"
       },
       {
         "original": "/legacy/img/a6cba3ec30-01.jpg",
         "current": "/legacy/img/a6cba3ec30-01.jpg",
         "reason": "downscale",
-        "bytesBefore": 4000333,
+        "bytesBefore": 3995084,
         "bytesAfter": 481166,
         "widthBefore": 4032,
         "widthAfter": 2000,
         "heightBefore": 3024,
         "heightAfter": 1500,
-        "sha1Before": "e4b99911d0b76d6815c2a2fc5210b690779ed221",
+        "sha1Before": "b560880457718c09a5886a99122fe760f4ccd27c",
         "sha1After": "8b5af6d2c5efa8523c9c7e97c1faa3eb9dc3fbc7"
       },
       {
         "original": "/legacy/img/a6e32d8031-283429040.jpg",
         "current": "/legacy/img/a6e32d8031-283429040.jpg",
         "reason": "downscale",
-        "bytesBefore": 3490831,
+        "bytesBefore": 3469576,
         "bytesAfter": 481404,
         "widthBefore": 2937,
         "widthAfter": 2000,
         "heightBefore": 2463,
         "heightAfter": 1677,
-        "sha1Before": "ce3cda02feccf089393403c4ce1157376c47a5cf",
+        "sha1Before": "6faa778a948e5f01c03b4d289e9d3a58745f6add",
         "sha1After": "68da5dbed66c0ec3b1824e23dcfa804ea40e16a8"
       },
       {
         "original": "/legacy/img/a726182944-s-89505806-0.jpg",
         "current": "/legacy/img/a726182944-s-89505806-0.jpg",
         "reason": "downscale",
-        "bytesBefore": 2301021,
+        "bytesBefore": 2299135,
         "bytesAfter": 413123,
         "widthBefore": 3326,
         "widthAfter": 2000,
         "heightBefore": 2496,
         "heightAfter": 1501,
-        "sha1Before": "0248093c48d87e30d1feec4073d10240e99f1aa9",
+        "sha1Before": "9a26aa9125a6eee48c92b489a1206236a3b8a0bf",
         "sha1After": "9c09f70b878f3a19cbf2ba04219365e0deb12da3"
       },
       {
@@ -564,91 +564,91 @@
         "original": "/legacy/img/a9dc8864a0-s-89505827-0.jpg",
         "current": "/legacy/img/a9dc8864a0-s-89505827-0.jpg",
         "reason": "downscale",
-        "bytesBefore": 3492767,
+        "bytesBefore": 3490881,
         "bytesAfter": 557461,
         "widthBefore": 4032,
         "widthAfter": 2000,
         "heightBefore": 3024,
         "heightAfter": 1500,
-        "sha1Before": "7a34053d7f4b9a219a2c64bce125a7928fb341b9",
+        "sha1Before": "d9968e1020d0898c1c6f460f8893d1a43a2fcccf",
         "sha1After": "a1362cd4340fac69c140386a9685945628725afc"
       },
       {
         "original": "/legacy/img/b8d09f008f-img-68371.png",
         "current": "/legacy/img/b8d09f008f-img-68371.png",
         "reason": "downscale",
-        "bytesBefore": 4717741,
+        "bytesBefore": 4717643,
         "bytesAfter": 2630188,
         "widthBefore": 2984,
         "widthAfter": 2000,
         "heightBefore": 1232,
         "heightAfter": 826,
-        "sha1Before": "0e6247b81076607bf660ba2f7eba46f6d481234c",
+        "sha1Before": "cc1f7e48d55d92e38ff8036f5e62d90b1a046148",
         "sha1After": "3bb2f4b823b12dd2aa20a14fba80cd199ff8c1da"
       },
       {
         "original": "/legacy/img/b92b107767-26.jpg",
         "current": "/legacy/img/b92b107767-26.jpg",
         "reason": "downscale",
-        "bytesBefore": 1514799,
+        "bytesBefore": 1463363,
         "bytesAfter": 389899,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "ae7e6cc6b2ee96d8ec20bd2504be0e14e2e9b448",
+        "sha1Before": "03f36df8b559ca6c3612fc769888e522b914fa3d",
         "sha1After": "6b4e31df1b9881a191fc45acd1cf51adf02e039f"
       },
       {
         "original": "/legacy/img/c910c3835d-16.jpg",
         "current": "/legacy/img/c910c3835d-16.jpg",
         "reason": "downscale",
-        "bytesBefore": 625613,
+        "bytesBefore": 594984,
         "bytesAfter": 139278,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "ebf3fc2a69e436d8f2368a84b5d356f07a847fdd",
+        "sha1Before": "d3f4db620edc63548273db85a364f972bf8ac4ac",
         "sha1After": "c72dd1645913a7c831c505f2c0839729c410ceb7"
       },
       {
         "original": "/legacy/img/cd41d7859e-05.jpg",
         "current": "/legacy/img/cd41d7859e-05.jpg",
         "reason": "downscale",
-        "bytesBefore": 2999139,
+        "bytesBefore": 2997045,
         "bytesAfter": 574245,
         "widthBefore": 4032,
         "widthAfter": 2000,
         "heightBefore": 3024,
         "heightAfter": 1500,
-        "sha1Before": "3409cc964d9bd0d662db63a97b78f7b04446bf2a",
+        "sha1Before": "a37ccfa4e69859c3b1e17c4bc73f1aead64b80ee",
         "sha1After": "b9435698d9c07cb35ae702586ed38204e361c9b0"
       },
       {
         "original": "/legacy/img/d06803fd92-19.jpg",
         "current": "/legacy/img/d06803fd92-19.jpg",
         "reason": "downscale",
-        "bytesBefore": 715663,
+        "bytesBefore": 680926,
         "bytesAfter": 168440,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "3dd0227e25148e45c17c3ef01319a8bf91341c2b",
+        "sha1Before": "bec33f89541352d18a1e49364b12671724faec1a",
         "sha1After": "facf09ce707e11b8017c4c2e9a47d403ca648e16"
       },
       {
         "original": "/legacy/img/d4e9341ebc-22.jpg",
         "current": "/legacy/img/d4e9341ebc-22.jpg",
         "reason": "downscale",
-        "bytesBefore": 1104267,
+        "bytesBefore": 1062397,
         "bytesAfter": 293377,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "5e12f302d26242d1bd618d3b5f6ede5ab038fe6a",
+        "sha1Before": "8c32d5ef80d1166c20a25b1d737de49b32a665ca",
         "sha1After": "61465edbccb53d897c75b5371294f5c7f3eee916"
       },
       {
@@ -668,117 +668,117 @@
         "original": "/legacy/img/d82555ba2c-29.jpg",
         "current": "/legacy/img/d82555ba2c-29.jpg",
         "reason": "downscale",
-        "bytesBefore": 1533021,
+        "bytesBefore": 1483782,
         "bytesAfter": 403550,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "67c406f165a8062dee67e38d9237259c890a4969",
+        "sha1Before": "e5203ed19f4a9cae739a3314a7f6930265f47a44",
         "sha1After": "ef39231ff83099f29c1722a4e67ea8692288abc7"
       },
       {
         "original": "/legacy/img/d8a520b8e0-173525025.jpg",
         "current": "/legacy/img/d8a520b8e0-173525025.jpg",
         "reason": "downscale",
-        "bytesBefore": 4944947,
+        "bytesBefore": 4923670,
         "bytesAfter": 688473,
         "widthBefore": 3508,
         "widthAfter": 2000,
         "heightBefore": 4961,
         "heightAfter": 2828,
-        "sha1Before": "274b00109075e4e2e3156e7e1da8d4e14f08b92a",
+        "sha1Before": "103ba5e5f04600366dec9c8639133cecaf4eac5f",
         "sha1After": "4539802b0b1351e34e3520c3913ff20cde7b9d2b"
       },
       {
         "original": "/legacy/img/e0558bada8-s-89579529-0.jpg",
         "current": "/legacy/img/e0558bada8-s-89579529-0.jpg",
         "reason": "downscale",
-        "bytesBefore": 2862477,
+        "bytesBefore": 2860615,
         "bytesAfter": 571688,
         "widthBefore": 3811,
         "widthAfter": 2000,
         "heightBefore": 2858,
         "heightAfter": 1500,
-        "sha1Before": "f6b1f4fd0917793a2039df6672161471ee6ac2b8",
+        "sha1Before": "aa695b33ad12d0ca83ac53ce19ddfa4866ef0236",
         "sha1After": "9c47760f9041de78d0e61a9836f271e1cc1f352c"
       },
       {
         "original": "/legacy/img/e3049dce0d-11.jpg",
         "current": "/legacy/img/e3049dce0d-11.jpg",
         "reason": "downscale",
-        "bytesBefore": 727235,
+        "bytesBefore": 694947,
         "bytesAfter": 161912,
         "widthBefore": 4244,
         "widthAfter": 2000,
         "heightBefore": 2827,
         "heightAfter": 1332,
-        "sha1Before": "7c1ad71ecb123714c1a2e273dfcb36a32010903d",
+        "sha1Before": "f55713aeb88012227b5c377668260c5a14f0be47",
         "sha1After": "ad04c1888d24953bf30c7012611960dccf8f1917"
       },
       {
         "original": "/legacy/img/e996243362-24.jpg",
         "current": "/legacy/img/e996243362-24.jpg",
         "reason": "downscale",
-        "bytesBefore": 1738722,
+        "bytesBefore": 1686031,
         "bytesAfter": 433331,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "6f77f54e5b4607d1753abdc4a04dcdb13f80d16c",
+        "sha1Before": "3d00165249630691ad14dbf547705e2ac532008b",
         "sha1After": "f0c5b8fbced0321171dfa3695b950898ffd13635"
       },
       {
         "original": "/legacy/img/ee598411a3-s-89505828.jpg",
         "current": "/legacy/img/ee598411a3-s-89505828.jpg",
         "reason": "downscale",
-        "bytesBefore": 1719001,
+        "bytesBefore": 1717115,
         "bytesAfter": 555175,
         "widthBefore": 2617,
         "widthAfter": 2000,
         "heightBefore": 1963,
         "heightAfter": 1500,
-        "sha1Before": "1767b8acbd0ebfbe80915597af2a072b0d7eec5e",
+        "sha1Before": "ce41a6a605a5c6f1a2e380e2f7f187db1438418f",
         "sha1After": "d9140ad01d74fd1c9c8a730b40bb1f4d396fcfb7"
       },
       {
         "original": "/legacy/img/f6c527145e-335307601.jpg",
         "current": "/legacy/img/f6c527145e-335307601.jpg",
         "reason": "downscale",
-        "bytesBefore": 1068754,
+        "bytesBefore": 1045157,
         "bytesAfter": 481942,
         "widthBefore": 2189,
         "widthAfter": 2000,
         "heightBefore": 2479,
         "heightAfter": 2265,
-        "sha1Before": "8b659ea922e618bce899fb5b27a4e6f7f648e29f",
+        "sha1Before": "7b66b7dc1efc6148a7836e0fcb48f9cd49b7160b",
         "sha1After": "14898343e5453662c3fd6677b3121dca7054aebb"
       },
       {
         "original": "/legacy/img/f9ae87e2d8-01.jpg",
         "current": "/legacy/img/f9ae87e2d8-01.jpg",
         "reason": "downscale",
-        "bytesBefore": 735939,
+        "bytesBefore": 700203,
         "bytesAfter": 188183,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "f08a702b1e7d2581384e30071d4f176f4996d859",
+        "sha1Before": "d6a5114a232a8d6be54aaa12a87eb43d62bb8261",
         "sha1After": "f51619203ff3a6d122209867bf162af3ea983289"
       },
       {
         "original": "/legacy/img/fe10eef4af-12.jpg",
         "current": "/legacy/img/fe10eef4af-12.jpg",
         "reason": "downscale",
-        "bytesBefore": 1750112,
+        "bytesBefore": 1693614,
         "bytesAfter": 465636,
         "widthBefore": 4242,
         "widthAfter": 2000,
         "heightBefore": 2828,
         "heightAfter": 1333,
-        "sha1Before": "401e62b30b04a3ff47dcc4b0049a0540cebdd498",
+        "sha1Before": "bd9fa548c9c2ccd613751142dfe8e80a2acdc1e3",
         "sha1After": "e134ef097bb57983f36e7344652592059b73c7f7"
       }
     ],
@@ -942,16 +942,6 @@
         "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/108%E5%B9%B4%E6%8B%9B%E7%94%9F%E7%B0%A1%E7%AB%A0.pdf",
         "path": "/legacy/files/622ea079fa-108.pdf",
         "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/108%E5%B9%B4%E6%8B%9B%E7%94%9F%E7%B0%A1%E7%AB%A0.pdf"
-      },
-      {
-        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/10801_orig.png",
-        "path": "/legacy/img/4d0dd7e2d1-10801-orig.png",
-        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/10801_orig.png"
-      },
-      {
-        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/1386402255_orig.png",
-        "path": "/legacy/img/b01688353c-1386402255-orig.png",
-        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/1386402255_orig.png"
       },
       {
         "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/180312-0029_orig.jpg",
@@ -1249,11 +1239,6 @@
         "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/0919.png?1568951546"
       },
       {
-        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/10701.png?1533781408",
-        "path": "/legacy/img/4160ae034d-10701.png",
-        "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/10701.png?1533781408"
-      },
-      {
         "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/1943968127.png?1531808420",
         "path": "/legacy/img/186c08bbf3-1943968127.png",
         "fetchedFrom": "https://115637951-491297898992377255.preview.editmysite.com/uploads/1/1/5/6/115637951/published/1943968127.png?1531808420"
@@ -1366,13 +1351,6 @@
   "deadExternalImages": [],
   "queryRedirects": [
     {
-      "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9Mek15TDNCMFlWODBNek00TUY4MU5UTTJPVGcwWHpjMU5UazRMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWJGWTKK303035IGJCUSGC41VXQPOOOKZWPP5400HG45PKPKCCTXLPA404ROJGKOSWTSLODGB035LKZTJDDCA034B0B4FCUSSS45FCXSLKMPKKDGA0EGGDZSTWCG35OP24SWXSUTRLGGSSUSUSUSUW00A4HHHH",
-      "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9Mek15TDNCMFlWODBNek00TUY4MU5UTTJPVGcwWHpjMU5UazRMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWJGWTKK303035IGJCUSGC41VXQPOOOKZWPP5400HG45PKPKCCTXLPA404ROJGKOSWTSLODGB035LKZTJDDCA034B0B4FCUSSS45FCXSLKMPKKDGA0EGGDZSTWCG35OP24SWXSUTRLGGSSUSUSUSUW00A4HHHH",
-      "path": "/app/index.php",
-      "query": "Action=downloadfile&file=WVhSMFlXTm9Mek15TDNCMFlWODBNek00TUY4MU5UTTJPVGcwWHpjMU5UazRMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWJGWTKK303035IGJCUSGC41VXQPOOOKZWPP5400HG45PKPKCCTXLPA404ROJGKOSWTSLODGB035LKZTJDDCA034B0B4FCUSSS45FCXSLKMPKKDGA0EGGDZSTWCG35OP24SWXSUTRLGGSSUSUSUSUW00A4HHHH",
-      "destination": "/legacy/files/d76bf6497c-110-1-semi-emrd-r.pdf"
-    },
-    {
       "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFNemt3TTE4M056QTFOVFUyWHpreE1URTNMbkJrWmc9PQ==&fname=WW54RPOKRK44VXHHVS04FCWTZSB4TSYWSSB0UWMPNPQLWSB5ROB4A0LLDGOKJGWXZTPOHD00A404MOWSXSMOICWSYSROXSGCHDYTLOB5WSROWXTWFHPOXSFCUS00HH25HCA0EGXWZSHC40WSWSB0YSMKIHXTQPSWXWECZS54IGOOYSUSTWDCUTJHDGVWICSXKO30POHCWSROMKXSQPUXPOSSSSRO54SWUSDCROFCNOXW41KKWW04DHHG",
       "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFNemt3TTE4M056QTFOVFUyWHpreE1URTNMbkJrWmc9PQ==&fname=WW54RPOKRK44VXHHVS04FCWTZSB4TSYWSSB0UWMPNPQLWSB5ROB4A0LLDGOKJGWXZTPOHD00A404MOWSXSMOICWSYSROXSGCHDYTLOB5WSROWXTWFHPOXSFCUS00HH25HCA0EGXWZSHC40WSWSB0YSMKIHXTQPSWXWECZS54IGOOYSUSTWDCUTJHDGVWICSXKO30POHCWSROMKXSQPUXPOSSSSRO54SWUSDCROFCNOXW41KKWW04DHHG",
       "path": "/app/index.php",
@@ -1401,13 +1379,6 @@
       "destination": "/legacy/files/aee4e251b1-1110723-112.pdf"
     },
     {
-      "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODBNamd3TjE4eE1qRTFNREF3WHpVek1qazFMbkJrWmc9PQ==&fname=WSGGKLQKUSWWA100HCLKROZWOPMOWTLOFGB0XSKKVX25004034YWYW54LOLKB0OKPOCCYXKKVS0410WWMOHCTSLO34B0NOYSVXVXDCTSROB0CDUWFHA4YWFC2040HHKKDGA0DGWTTWMOPO35WX24ZWYS44UXSSTSFC3030US20GCHHHH",
-      "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODBNamd3TjE4eE1qRTFNREF3WHpVek1qazFMbkJrWmc9PQ==&fname=WSGGKLQKUSWWA100HCLKROZWOPMOWTLOFGB0XSKKVX25004034YWYW54LOLKB0OKPOCCYXKKVS0410WWMOHCTSLO34B0NOYSVXVXDCTSROB0CDUWFHA4YWFC2040HHKKDGA0DGWTTWMOPO35WX24ZWYS44UXSSTSFC3030US20GCHHHH",
-      "path": "/app/index.php",
-      "query": "Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODBNamd3TjE4eE1qRTFNREF3WHpVek1qazFMbkJrWmc9PQ==&fname=WSGGKLQKUSWWA100HCLKROZWOPMOWTLOFGB0XSKKVX25004034YWYW54LOLKB0OKPOCCYXKKVS0410WWMOHCTSLO34B0NOYSVXVXDCTSROB0CDUWFHA4YWFC2040HHKKDGA0DGWTTWMOPO35WX24ZWYS44UXSSTSFC3030US20GCHHHH",
-      "destination": "/legacy/files/a63095fd05-file.pdf"
-    },
-    {
       "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODFNelE0T1Y4NU1Ua3dPRFEwWHpnd05qazVMbkJrWmc9PQ==&fname=LOGGYSOKWW10OO00HCLKUSJGMOMO25WW203440NKQPXTLK40OKROFCPOWWOOKLOKWWTSZXHHVS0410WWMOHC40HCYSRKMKGCVXVXXWB0UWUS01UWECOKUSOKWWPOGGZXA4LKRKGDXSMOWTB1KLEGCGNK2135A5A4",
       "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODFNelE0T1Y4NU1Ua3dPRFEwWHpnd05qazVMbkJrWmc9PQ==&fname=LOGGYSOKWW10OO00HCLKUSJGMOMO25WW203440NKQPXTLK40OKROFCPOWWOOKLOKWWTSZXHHVS0410WWMOHC40HCYSRKMKGCVXVXXWB0UWUS01UWECOKUSOKWWPOGGZXA4LKRKGDXSMOWTB1KLEGCGNK2135A5A4",
       "path": "/app/index.php",
@@ -1420,13 +1391,6 @@
       "path": "/app/index.php",
       "query": "Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODFOREEyTTE4M05UZzFOekE1WHpVd056QTFMbkJrWmc9PQ==&fname=WW54RPOKRK44A1HHHCLKRKZWQOTWWT14QO3435HGTX25LK40FCNKA0540054JGEGWW54UX05A404LK14RKPKTSMO34B0NOYSVXVXXWTSPOA401SWUSKK45FCMKPO5115DGA0NOXTVWNK3535DG34YSNKUTXTQPOOYSDCFCDGGGTSSTUSNO44UT054410NPYWVWXSLO25WSRO50XSA1NP04VSYSB4MKA434DC01QKYWLKXX11EDEGNKMOMKPKNPMKDGJCXS20QPA1IGPKROB4YW54WS10FCROLOPOTTIHTSEGROWW14JGA0ICOPRKWTGCUTMPCGRO14B045KLDGGGYWDCUSPOA1YXVSNOFC14MKMOJG35KLQKQK10TX51UTA0POB4EG0120GCXXOKPO04POMP",
       "destination": "/legacy/files/a19fe16105-111.pdf"
-    },
-    {
-      "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF6TDNCMFlWODBOalUzTlY4ek5UTTJOakl5WHpVME5UTTFMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWUSWTZSB4KKMKDGFGQLIG41NP34SSFCB4YSFG00OOKLSSPOCCVXXXDG04FCXTVWXSTSLO50B01035IH35XWA0WSECWXPOUS5445FCRKPOOOYXDGA0EGGDVWSWGD24WX24ZWYS44UXSSTSFC3030US20GCHHHH",
-      "source": "/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF6TDNCMFlWODBOalUzTlY4ek5UTTJOakl5WHpVME5UTTFMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWUSWTZSB4KKMKDGFGQLIG41NP34SSFCB4YSFG00OOKLSSPOCCVXXXDG04FCXTVWXSTSLO50B01035IH35XWA0WSECWXPOUS5445FCRKPOOOYXDGA0EGGDVWSWGD24WX24ZWYS44UXSSTSFC3030US20GCHHHH",
-      "path": "/app/index.php",
-      "query": "Action=downloadfile&file=WVhSMFlXTm9MelF6TDNCMFlWODBOalUzTlY4ek5UTTJOakl5WHpVME5UTTFMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1144VWUSWTZSB4KKMKDGFGQLIG41NP34SSFCB4YSFG00OOKLSSPOCCVXXXDG04FCXTVWXSTSLO50B01035IH35XWA0WSECWXPOUS5445FCRKPOOOYXDGA0EGGDVWSWGD24WX24ZWYS44UXSSTSFC3030US20GCHHHH",
-      "destination": "/legacy/files/14a42c92dc-110-02-semi.pdf"
     }
   ],
   "redirectSourcesNeedingEscape": [
@@ -1498,12 +1462,12 @@
       "id": "87508",
       "title": "[招生] EMRD-110招生初試成績與合於口試名單公告!",
       "kind": "link",
-      "href": "https://www.admission.ntust.edu.tw/var/file/52/1052/img/2675/118417770.html#32690",
-      "external": true,
+      "href": "/posts/87508",
+      "external": false,
       "collections": [
         "news"
       ],
-      "legacyTarget": "https://www.admission.ntust.edu.tw/var/file/52/1052/img/2675/118417770.html#32690"
+      "legacyTarget": "https://removed.invalid/2894fa59c4579a58"
     },
     {
       "id": "92371",
@@ -1576,12 +1540,12 @@
       "id": "123695",
       "title": "[公告] 113/04/18 學位考試視訊口試連結",
       "kind": "link",
-      "href": "https://drive.google.com/file/d/1qxrewc5WS7cnOrAsZFScDxWXEjFFSYW6/view?usp=drive_link",
-      "external": true,
+      "href": "/posts/123695",
+      "external": false,
       "collections": [
         "news"
       ],
-      "legacyTarget": "https://drive.google.com/file/d/1qxrewc5WS7cnOrAsZFScDxWXEjFFSYW6/view?usp=drive_link"
+      "legacyTarget": "https://removed.invalid/b0b40808d8103504"
     },
     {
       "id": "126569",
@@ -1665,7 +1629,7 @@
       "where": "post:92909",
       "elements": 195,
       "text": [
-        "劉Ｏ祥"
+        "（已移除）"
       ]
     }
   ],
@@ -1727,11 +1691,6 @@
     },
     {
       "where": "post:81752",
-      "images": 1,
-      "captions": 0
-    },
-    {
-      "where": "post:81907",
       "images": 1,
       "captions": 0
     },
@@ -1946,7 +1905,7 @@
       "id": "87508",
       "source": "/p/450-1039-87508,c0.php",
       "destination": "/posts/87508",
-      "basis": "連結型文章"
+      "basis": "個資保護：目標已移除，轉到說明文章"
     },
     {
       "id": "89230",
@@ -2125,7 +2084,7 @@
     {
       "id": "121514",
       "source": "/p/450-1039-121514,c0.php",
-      "destination": "https://docs.google.com/document/d/1bqj5TDY8Imgl0lrYxAfTPPNRdlWofbSI/edit?usp=sharing&ouid=114287001932454276657&rtpof=true&sd=true",
+      "destination": "https://docs.google.com/document/d/1bqj5TDY8Imgl0lrYxAfTPPNRdlWofbSI/edit?usp=sharing&rtpof=true&sd=true",
       "basis": "原站 302 的站外目標（絕對網址）"
     },
     {
@@ -2138,7 +2097,7 @@
       "id": "123695",
       "source": "/p/450-1039-123695,c0.php",
       "destination": "/posts/123695",
-      "basis": "連結型文章"
+      "basis": "個資保護：目標已移除，轉到說明文章"
     },
     {
       "id": "125063",
@@ -2201,12 +2160,6 @@
       "duplicateOf": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODFNelE0T1Y4NU1Ua3dPRFEwWHpnd05qazVMbkJrWmc9PQ==&fname=LOGGYSOKWW10OO00HCLKUSJGMOMO25WW203440NKQPXTLK40OKROFCPOWWOOKLOKWWTSZXHHVS0410WWMOHC40HCYSRKMKGCVXVXXWB0UWUS01UWECOKUSOKWWPOGGZXA4LKRKGDXSMOWTB1KLEGCGNK2135A5A4",
       "path": "/legacy/files/10652d365e-q-a.pdf",
       "droppedPath": "/legacy/files/1edb6264e1-428379185.pdf"
-    },
-    {
-      "url": "https://emrd.ntust.edu.tw/var/file/39/1039/img/2872/456384782.pdf",
-      "duplicateOf": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelEzTDNCMFlWODBNamd3TjE4eE1qRTFNREF3WHpVek1qazFMbkJrWmc9PQ==&fname=WSGGKLQKUSWWA100HCLKROZWOPMOWTLOFGB0XSKKVX25004034YWYW54LOLKB0OKPOCCYXKKVS0410WWMOHCTSLO34B0NOYSVXVXDCTSROB0CDUWFHA4YWFC2040HHKKDGA0DGWTTWMOPO35WX24ZWYS44UXSSTSFC3030US20GCHHHH",
-      "path": "/legacy/files/a63095fd05-file.pdf",
-      "droppedPath": "/legacy/files/9de1f7295b-456384782.pdf"
     },
     {
       "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/emrd-190603-0040_orig.jpg",
@@ -2719,11 +2672,6 @@
     ],
     "junkAltCleared": [
       {
-        "where": "post:76664",
-        "src": "/legacy/img/4d0dd7e2d1-10801-orig.png",
-        "detail": "圖片"
-      },
-      {
         "where": "post:76667",
         "src": "/legacy/img/c566847e16-904531660.jpg",
         "detail": "圖片"
@@ -2732,11 +2680,6 @@
         "where": "post:76668",
         "src": "/legacy/img/68987e8ffc-760261387.png",
         "detail": "report"
-      },
-      {
-        "where": "post:76685",
-        "src": "/legacy/img/b01688353c-1386402255-orig.png",
-        "detail": "圖片"
       },
       {
         "where": "post:76686",
@@ -2751,11 +2694,6 @@
       {
         "where": "post:76690",
         "src": "/legacy/img/b06c5da990-join.jpg",
-        "detail": "圖片"
-      },
-      {
-        "where": "post:76691",
-        "src": "/legacy/img/4160ae034d-10701.png",
         "detail": "圖片"
       },
       {
@@ -2954,11 +2892,6 @@
         "detail": "4"
       },
       {
-        "where": "post:77121",
-        "src": "/legacy/img/765806112c-680657080.png",
-        "detail": "p"
-      },
-      {
         "where": "post:77122",
         "src": "/legacy/img/777ccd1170-641469119.jpg",
         "detail": "p"
@@ -2977,11 +2910,6 @@
         "where": "post:78374",
         "src": "/legacy/img/2512d387de-919797624.png",
         "detail": "PIC"
-      },
-      {
-        "where": "post:79643",
-        "src": "/legacy/img/2210a193b8-666228978.png",
-        "detail": "pic"
       },
       {
         "where": "post:79852",
@@ -3024,11 +2952,6 @@
         "detail": "p"
       },
       {
-        "where": "post:86720",
-        "src": "/legacy/img/27d2a8d3f8-292098962.png",
-        "detail": "list"
-      },
-      {
         "where": "post:89120",
         "src": "/legacy/img/d61b3af05d-03.png",
         "detail": "1"
@@ -3044,19 +2967,9 @@
         "detail": "web"
       },
       {
-        "where": "post:93152",
-        "src": "/legacy/img/a8891a7588-328745126.png",
-        "detail": "PIC"
-      },
-      {
         "where": "post:93842",
         "src": "/legacy/img/0bfe4a9476-501873670.png",
         "detail": "pic"
-      },
-      {
-        "where": "post:97528",
-        "src": "/legacy/img/a192f8ec36-441869805.png",
-        "detail": "PIC"
       },
       {
         "where": "post:130704",
@@ -3573,16 +3486,6 @@
     ],
     "singleImageAlt": [
       {
-        "where": "post:76664",
-        "src": "/legacy/img/4d0dd7e2d1-10801-orig.png",
-        "detail": "108-01學期 隨班附讀通過名單公告"
-      },
-      {
-        "where": "post:76685",
-        "src": "/legacy/img/b01688353c-1386402255-orig.png",
-        "detail": "107-02學期 隨班附讀通過名單"
-      },
-      {
         "where": "post:76687",
         "src": "/legacy/img/27b0cb6a54-mczh-tw1920x700-large4183-894035321337.png",
         "detail": "2021年3月20日EMRD校友回娘家之財金講座 (歡迎報名參加)"
@@ -3591,11 +3494,6 @@
         "where": "post:76689",
         "src": "/legacy/img/65a71d54cf-31395956-1970071213306470-6923211569970329872-n-orig.jpg",
         "detail": "107-01學期 EMRD 隨班附讀報名資訊"
-      },
-      {
-        "where": "post:76691",
-        "src": "/legacy/img/4160ae034d-10701.png",
-        "detail": "107-01學期 隨班附讀通過名單"
       },
       {
         "where": "post:76694",
@@ -3663,11 +3561,6 @@
         "detail": "108.09.11 EMRD第一次海外參訪紀錄"
       },
       {
-        "where": "post:77121",
-        "src": "/legacy/img/765806112c-680657080.png",
-        "detail": "EMRD 108-02學期隨班附讀通過名單"
-      },
-      {
         "where": "post:77122",
         "src": "/legacy/img/777ccd1170-641469119.jpg",
         "detail": "108.12.13 裕隆車之道體驗中心參訪"
@@ -3713,11 +3606,6 @@
         "detail": "109.07.29 院外籍生參訪EMRD學長任職企業－亞旭Askey"
       },
       {
-        "where": "post:81907",
-        "src": "/legacy/img/55085abafd-mczh-tw1920x700-large4766-561351980199.png",
-        "detail": "110-01學期 隨班附讀通過名單"
-      },
-      {
         "where": "post:82901",
         "src": "/legacy/img/b99f84a23d-mczh-tw1920x700-large3457-30068620496.jpg",
         "detail": "109.08.23 EMRD迎新送舊烤肉會精彩剪影!"
@@ -3741,11 +3629,6 @@
         "where": "post:85066",
         "src": "/legacy/img/da5f7b059f-mczh-tw1920x700-large3705-458852444008.png",
         "detail": "EMRD在職專班 LINE好友募集中!"
-      },
-      {
-        "where": "post:86720",
-        "src": "/legacy/img/27d2a8d3f8-292098962.png",
-        "detail": "109-02學期 隨班附讀通過名單公告"
       },
       {
         "where": "post:87511",
@@ -3783,19 +3666,9 @@
         "detail": "先修學分班-111-01學期半導體產業學分班SEMI-EMRD招生中!"
       },
       {
-        "where": "post:93152",
-        "src": "/legacy/img/a8891a7588-328745126.png",
-        "detail": "110-01學期半導體產業學分班通過名單!"
-      },
-      {
         "where": "post:93842",
         "src": "/legacy/img/0bfe4a9476-501873670.png",
         "detail": "110.09.18 110級新生及半導體產業學分班線上開學典禮!"
-      },
-      {
-        "where": "post:97528",
-        "src": "/legacy/img/a192f8ec36-441869805.png",
-        "detail": "110-02學期半導體產業學分班通過名單!"
       },
       {
         "where": "post:98650",
@@ -3896,29 +3769,6 @@
         ],
         "firstRow": [
           "工程學院"
-        ]
-      },
-      {
-        "where": "post:104028",
-        "changes": [
-          "header-row"
-        ],
-        "firstRow": [
-          "審核",
-          "編號",
-          "姓名"
-        ]
-      },
-      {
-        "where": "post:121858",
-        "changes": [
-          "caption",
-          "header-row"
-        ],
-        "firstRow": [
-          "序號",
-          "學號",
-          "姓名"
         ]
       },
       {
@@ -4029,16 +3879,6 @@
     ],
     "needsTranscription": [
       {
-        "where": "post:76664",
-        "src": "/legacy/img/4d0dd7e2d1-10801-orig.png",
-        "alt": "108-01學期 隨班附讀通過名單公告"
-      },
-      {
-        "where": "post:76685",
-        "src": "/legacy/img/b01688353c-1386402255-orig.png",
-        "alt": "107-02學期 隨班附讀通過名單"
-      },
-      {
         "where": "post:76687",
         "src": "/legacy/img/27b0cb6a54-mczh-tw1920x700-large4183-894035321337.png",
         "alt": "2021年3月20日EMRD校友回娘家之財金講座 (歡迎報名參加)"
@@ -4047,11 +3887,6 @@
         "where": "post:76689",
         "src": "/legacy/img/65a71d54cf-31395956-1970071213306470-6923211569970329872-n-orig.jpg",
         "alt": "107-01學期 EMRD 隨班附讀報名資訊"
-      },
-      {
-        "where": "post:76691",
-        "src": "/legacy/img/4160ae034d-10701.png",
-        "alt": "107-01學期 隨班附讀通過名單"
       },
       {
         "where": "post:76694",
@@ -4119,11 +3954,6 @@
         "alt": "108.09.11 EMRD第一次海外參訪紀錄"
       },
       {
-        "where": "post:77121",
-        "src": "/legacy/img/765806112c-680657080.png",
-        "alt": "EMRD 108-02學期隨班附讀通過名單"
-      },
-      {
         "where": "post:77122",
         "src": "/legacy/img/777ccd1170-641469119.jpg",
         "alt": "108.12.13 裕隆車之道體驗中心參訪"
@@ -4169,11 +3999,6 @@
         "alt": "109.07.29 院外籍生參訪EMRD學長任職企業－亞旭Askey"
       },
       {
-        "where": "post:81907",
-        "src": "/legacy/img/55085abafd-mczh-tw1920x700-large4766-561351980199.png",
-        "alt": "110-01學期 隨班附讀通過名單"
-      },
-      {
         "where": "post:82901",
         "src": "/legacy/img/b99f84a23d-mczh-tw1920x700-large3457-30068620496.jpg",
         "alt": "109.08.23 EMRD迎新送舊烤肉會精彩剪影!"
@@ -4197,11 +4022,6 @@
         "where": "post:85066",
         "src": "/legacy/img/da5f7b059f-mczh-tw1920x700-large3705-458852444008.png",
         "alt": "EMRD在職專班 LINE好友募集中!"
-      },
-      {
-        "where": "post:86720",
-        "src": "/legacy/img/27d2a8d3f8-292098962.png",
-        "alt": "109-02學期 隨班附讀通過名單公告"
       },
       {
         "where": "post:87511",
@@ -4239,19 +4059,9 @@
         "alt": "先修學分班-111-01學期半導體產業學分班SEMI-EMRD招生中!"
       },
       {
-        "where": "post:93152",
-        "src": "/legacy/img/a8891a7588-328745126.png",
-        "alt": "110-01學期半導體產業學分班通過名單!"
-      },
-      {
         "where": "post:93842",
         "src": "/legacy/img/0bfe4a9476-501873670.png",
         "alt": "110.09.18 110級新生及半導體產業學分班線上開學典禮!"
-      },
-      {
-        "where": "post:97528",
-        "src": "/legacy/img/a192f8ec36-441869805.png",
-        "alt": "110-02學期半導體產業學分班通過名單!"
       },
       {
         "where": "post:98650",
@@ -4296,131 +4106,19 @@
     ]
   },
   "privacy": {
-    "note": "個資保護（scripts/migrate_legacy.py 的 PRIVACY_REDACTIONS）：removedAssets＝不搬移的檔案（原處改為說明文字、原站網址轉址到 post 文章）；pdfPages＝只保留部分頁面的 PDF；changes＝各文件中的處理紀錄（removedImage／removedAttachment／removedLink／noteAdded／tableColumnRemoved）；studentIdPatternHits＝輸出中仍符合學號樣式者（應為空）。移除或修改前的原始檔只留在本機 .private-originals/（不進版控、不部署）。",
-    "removedAssets": [
-      {
-        "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF2Y0hSaFh6TTJPVFkxWHpNMk1qYzRNREZmT1Rrd056RXVjR1Jt&fname=WW54RPOKNPSSTXKK00VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHA450OOCDPKIC40TTZXHCNO5020VWB4WSICWSNO4035CCGDMLA0WSEC45B4YSOKYSB0YW54PL15EDXWPK10&cg=7718",
-        "what": "109 學年度學分抵免申請審核清單（附件「109-抵免學分申請結果公告.pdf」：全名、學號、課程成績）",
-        "post": "82939",
-        "foundIn": [
-          "post:82939"
-        ],
-        "redirect": "/posts/82939"
-      },
-      {
-        "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MemM0TDNCMFlWODBNelV4TVY4ME16RTBOell5WHpRek5EZ3dMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1100VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHPODGSSKLECRKPOFDYXJCNO41HGXSKOHGICSTMO24NK44UXUTB0LKB4KOPKYSA4LKQKKKCGA500IG04GD34VWJGGDB1B430A1A1&cg=7718",
-        "what": "110 學年度學分抵免申請審核清單（附件「110-抵免學分申請清單(公告).pdf」：全名、學號、課程成績）",
-        "post": "93392",
-        "foundIn": [
-          "post:93392"
-        ],
-        "redirect": "/posts/93392"
-      },
-      {
-        "url": "https://emrd.ntust.edu.tw/var/file/39/1039/img/2784/120124061.jpg",
-        "what": "業界推薦頁的前任執行長與研華執行董事合照（非學生個資；115 年 11 月 1 日學程會議決議移除，推薦文字保留）",
-        "post": null,
-        "foundIn": [
-          "page:about/recommendations"
-        ],
-        "redirect": "/about/recommendations"
-      },
-      {
-        "url": "https://emrd.ntust.edu.tw/var/file/39/1039/img/3299/838765448.png",
-        "what": "前任副執行長大頭照（非學生個資；115 年 11 月 1 日學程會議決議更正現任副執行長，見 CONTENT_CORRECTIONS）",
-        "post": null,
-        "foundIn": [
-          "page:contact",
-          "page:faculty/executives"
-        ],
-        "redirect": "/faculty/executives"
-      },
-      {
-        "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/0910mail-page-0001.jpg?1568790002",
-        "what": "108 學年度學分抵免申請審核清單（內文圖片，亦為文章封面：全名、學號、課程成績）",
-        "post": "76672",
-        "foundIn": [
-          "post:76672"
-        ],
-        "redirect": null
-      }
-    ],
-    "pdfPages": [
-      {
-        "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MekV3TDNCMFlWODFOREkwTTE4eE56YzVNVEl3WHpjek56TTFMbkJrWmc9PQ==&fname=WW54RPOKRK44VXHHVS04TSWTKKMOTSYW20QKTSHCUT05XWTSZWUSA001GGECB0SSSSTSWWMPA40441JGYWJGMO25KL34WTWSA1YTA4FCWSMKPODGCCLKWXXX44XWXXKKA4NO41WTXSTWA1MO50JCYSWS44UXKKB0WS303054WSA4JG54A4US211524LKNOWTPK30WTRL20A040NPZTZT30SS14YWXWA4DGDCRPUSNOKKQLXXLOHG30MOFC30NP25WSJCXSGCIHRLIGB5ROB4PPUWCCOKB4QK44POXT15FG04TXXTVWXSOKLKUSFGRLHG",
-        "path": "/legacy/files/aee4e251b1-1110723-112.pdf",
-        "what": "112 學年度調整學分費公聽會會議紀錄（/study/tuition 附件）：保留第 1–3 頁會議紀錄，移除第 4–8 頁（現場照片與 Webex 參與者名單截圖、手寫簽到單、Webex 出席紀錄〔約 40 人的姓名與加入／離開時間〕）",
-        "rule": "pdf_pages",
-        "keptPages": [
-          1,
-          2,
-          3
-        ],
-        "pagesBefore": 8,
-        "bytesBefore": 1159450,
-        "bytesAfter": 439338
-      }
-    ],
-    "changes": {
-      "noteAdded": [
-        {
-          "where": "post:76672",
-          "note": "審核結果已個別通知申請人。為保護個人資料，本站不公開含姓名、學號與成績的審核清單。"
-        },
-        {
-          "where": "post:82939",
-          "note": "審核結果已個別通知申請人。為保護個人資料，本站不公開含姓名、學號與成績的審核清單。"
-        },
-        {
-          "where": "post:93392",
-          "note": "審核結果已個別通知申請人。為保護個人資料，本站不公開含姓名、學號與成績的審核清單。"
-        }
-      ],
-      "removedAttachment": [
-        {
-          "where": "post:82939",
-          "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MelF2Y0hSaFh6TTJPVFkxWHpNMk1qYzRNREZmT1Rrd056RXVjR1Jt&fname=WW54RPOKNPSSTXKK00VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHA450OOCDPKIC40TTZXHCNO5020VWB4WSICWSNO4035CCGDMLA0WSEC45B4YSOKYSB0YW54PL15EDXWPK10&cg=7718",
-          "label": "109-抵免學分申請結果公告.pdf"
-        },
-        {
-          "where": "post:93392",
-          "url": "https://emrd.ntust.edu.tw/app/index.php?Action=downloadfile&file=WVhSMFlXTm9MemM0TDNCMFlWODBNelV4TVY4ME16RTBOell5WHpRek5EZ3dMbkJrWmc9PQ==&fname=WW54RPOKRK44CD1100VWTSXW1430GDB1WS34YSGCLPNPCCA5NKB4YS54WWECTTOKZTPOTTKKJCB0NK14QO30MO25EC2435HCLPYT00PKNKTSGHPODGSSKLECRKPOFDYXJCNO41HGXSKOHGICSTMO24NK44UXUTB0LKB4KOPKYSA4LKQKKKCGA500IG04GD34VWJGGDB1B430A1A1&cg=7718",
-          "label": "110-抵免學分申請清單(公告).pdf"
-        }
-      ],
-      "removedImage": [
-        {
-          "where": "page:about/recommendations",
-          "url": "https://emrd.ntust.edu.tw/var/file/39/1039/img/2784/120124061.jpg"
-        },
-        {
-          "where": "page:faculty/executives",
-          "url": "https://emrd.ntust.edu.tw/var/file/39/1039/img/3299/838765448.png"
-        },
-        {
-          "where": "page:contact",
-          "url": "https://emrd.ntust.edu.tw/var/file/39/1039/img/3299/838765448.png"
-        },
-        {
-          "where": "post:76672",
-          "url": "https://www.emrd.tw/uploads/1/1/5/6/115637951/published/0910mail-page-0001.jpg?1568790002"
-        }
-      ],
-      "tableColumnRemoved": [
-        {
-          "where": "post:121858",
-          "headers": [
-            "學號"
-          ],
-          "cellsRemoved": 11
-        }
-      ]
+    "note": "個資保護（scripts/migrate_legacy.py 的 PRIVACY_REDACTIONS）的處理數量；明細只留在本機 .private-originals/（不進版控、不部署）。studentIdPatternHits＝輸出中仍符合學號樣式者（應為空）。",
+    "counts": {
+      "noteAdded": 20,
+      "removedAttachment": 5,
+      "removedImage": 13,
+      "removedLink": 11,
+      "tableColumnRemoved": 1
     },
     "studentIdPatternHits": [],
     "errors": []
   },
   "droppedElements": {
-    "colgroup": 6,
+    "colgroup": 4,
     "hidden(display:none)": 195,
     "noscript": 1,
     "script": 1
@@ -4438,7 +4136,7 @@
     "以行內樣式 display:none 隱藏的元素不搬移（見 hiddenElementsDropped）。",
     "相片輯（.mcarousel figure）位於 .mpgdetail 之外，已依原站 DOM 順序輸出為 <figure><img><figcaption>（見 galleries）；隱藏的手機版副本（display:none）依 src 去重。原站列表縮圖取自相片輯第一張，因此有相片輯的文章以其第一張為 cover。",
     "attachments 只來自原站附件區塊（.module-ptattach）；內文中的檔案連結保留在內文。",
-    "圖片（客戶同意）：寬度超過 2000 px 者縮成 2000 px 寬（先依 EXIF 轉正、LANCZOS、JPEG 品質 85 漸進式、PNG optimize、格式不變），BMP 無損轉成 PNG；其餘圖片保留原始檔（位元組相同、保留 EXIF）。被修改的原始檔逐位元組備份在 legacy-originals/img/（不部署；對照表 legacy-originals/manifest.json，見 imageProcessing）。還原：python -X utf8 scripts/migrate_legacy.py --original-images。附件（/legacy/files/）保留原檔（個資保護的例外見 privacy）。",
+    "圖片（客戶同意）：寬度超過 2000 px 者縮成 2000 px 寬（先依 EXIF 轉正、LANCZOS、JPEG 品質 85 漸進式、PNG optimize、格式不變），BMP 無損轉成 PNG；其餘圖片不重新編碼（只清除檔案資訊）。被修改的原始檔備份在 legacy-originals/img/（不部署；對照表 legacy-originals/manifest.json，見 imageProcessing）。還原：python -X utf8 scripts/migrate_legacy.py --original-images。附件（/legacy/files/）保留原檔（個資保護的例外見 privacy）。",
     "html 中每個本地 <img> 都有 width／height：比例取自實際檔案（縮圖後、已依 EXIF 方向）；原站有設定顯示寬（或只設高）時沿用為顯示尺寸、另一邊依實際比例換算，沒有設定時為實際檔案的像素尺寸。前端不需讀檔取得尺寸。cover 欄位的型別（types.ts）沒有尺寸欄位，因此 cover 不另附尺寸。",
     "不同原站網址但內容完全相同的檔案共用一個本地檔（見 duplicateContentAssets）。",
     "已下架的原站網址（302 回首頁）在內文中改寫為首頁或明確的後繼頁面，並加入轉址（見 deadLinksRewritten）。",

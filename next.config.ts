@@ -63,8 +63,11 @@ const securityHeaders = [
  *  - robots.ts、sitemap.ts 等 Route Handler 以 generateStaticParams 宣告為靜態（說明見 app/robots.ts）；
  *  - NEXT_PUBLIC_SITE_PREVIEW：根版面據此輸出 noindex 與預覽版提示列（全站 HTML 排除索引）；
  *    robots.txt 改為全站禁止，但部署於子路徑時搜尋引擎不會讀取它，PDF／圖片等檔案無法以 noindex 排除。
+ * NEXT_STATIC_RELEASE=1：正式部署用的靜態匯出（Windows 部署包，scripts/build_windows_package.mjs），
+ * 不是預覽版：不輸出 noindex 與預覽版提示列；轉址與安全標頭由 deploy/windows 的伺服器提供。
  */
 const isStaticExport = process.env.NEXT_OUTPUT === "export";
+const isStaticRelease = process.env.NEXT_STATIC_RELEASE === "1";
 /** 子路徑部署（例：/ntust_emrd）；與 src/lib/basePath.ts 讀取同一個變數，正式網域部署時為空 */
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -79,7 +82,7 @@ const nextConfig: NextConfig = {
         },
       }),
   env: {
-    NEXT_PUBLIC_SITE_PREVIEW: isStaticExport ? "1" : "",
+    NEXT_PUBLIC_SITE_PREVIEW: isStaticExport && !isStaticRelease ? "1" : "",
   },
   ...(isStaticExport
     ? { experimental: { useCache: true } }
