@@ -9,6 +9,7 @@
  */
 
 import type { StaticImageData } from "next/image";
+import mengHanTsai from "@/assets/faculty/meng-han-tsai.jpg";
 import yuChinYang from "@/assets/faculty/yu-chin-yang.jpg";
 import type { PhotoKey } from "@/content/photos";
 import type { RouteKey } from "@/lib/site";
@@ -575,6 +576,7 @@ export const faculty = {
       englishName: "Meng-Han Tsai",
       title: "臺科大營建系 副教授",
       education: "國立臺灣大學 博士",
+      portrait: mengHanTsai,
     },
   ] satisfies readonly Leader[],
   metrics: [

@@ -540,7 +540,12 @@ CONTENT_CORRECTIONS: dict[str, list[tuple[str, str]]] = {
     "post:78149": [("<p><u>完成報到名單及備取生可遞補名單公告【研教組】</u></p>",
                     "<p>完成報到名單及備取生可遞補名單公告【研教組】（連結已移除）</p>")],
     "post:92100": [("&nbsp;&nbsp;半導體產業高階碩士在職專班 學程簡介&nbsp;</p>", "</p>")],
-    "page:faculty/executives": _DEPUTY_EXECUTIVE,
+    "page:faculty/executives": _DEPUTY_EXECUTIVE + [
+        # 照片取自營建系教師頁（2026-11-14 學程提供連結）；比例與執行長照片相同
+        ("<td>臺科大 營建系 副教授<br>",
+         '<td><img alt="蔡孟涵副執行長" height="256" src="/images/faculty/meng-han-tsai.jpg" width="200"></td>'
+         "<td>臺科大 營建系 副教授<br>"),
+    ],
     "page:contact": _DEPUTY_EXECUTIVE,
     "page:faculty/internal": [
         ("<td>蔡孟霖&nbsp; 副教授兼EMRD副執行長</td>", "<td>蔡孟霖&nbsp; 副教授</td>"),
